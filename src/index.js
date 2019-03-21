@@ -5,6 +5,7 @@ import './index.scss';
 import {
     Route,
     BrowserRouter,
+    Redirect,
     Switch
 } from "react-router-dom";
 import App from "./App";
@@ -12,21 +13,15 @@ import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
 import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
-import {
-    createBrowserHistory
-} from 'history';
 
 console.log(process.env.PUBLIC_URL);
 
-const history = createBrowserHistory({
-    basename: process.env.PUBLIC_URL,
-});
-
 const routing = (
-    <BrowserRouter history={history}>
+    <BrowserRouter>
         <div>
             <Header/>
             <Switch>
+                <Route exact path={process.env.PUBLIC_URL} render={() => <Redirect to="/" />} />
                 <Route exact path="/" component={App} />
                 <Route component={NotFound} />
             </Switch>
