@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import {
     Route,
-    Router,
+    BrowserRouter,
     Switch
 } from "react-router-dom";
 import App from "./App";
@@ -21,16 +21,16 @@ console.log(process.env.PUBLIC_URL);
 const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
 
 const routing = (
-    <Router history={hashHistory}>
+    <BrowserRouter basename={process.env.PUBLIC_URL} history={hashHistory}>
         <div>
             <Header/>
             <Switch>
-                <Route path={ process.env.PUBLIC_URL + "/" } component={App} />
+                <Route exact path="/" component={App} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
         </div>
-    </Router>
+    </BrowserRouter >
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
