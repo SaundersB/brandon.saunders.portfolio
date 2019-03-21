@@ -17,12 +17,12 @@ import * as serviceWorker from './serviceWorker';
 console.log(process.env.PUBLIC_URL);
 
 const routing = (
-    <Router basename="/brandon.saunders.portfolio">
+    <Router basename={ process.env.PUBLIC_URL }>
         <div >
             <Header />
             <Switch>
-                <Route path={process.env.PUBLIC_URL + "/"} component={App} />
-                <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
+                <Route path={ process.env.PUBLIC_URL + "/"} component={App} />
+                <Route path={ process.env.PUBLIC_URL + "/contact"} component={Contact} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
