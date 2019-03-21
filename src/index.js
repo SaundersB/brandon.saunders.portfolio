@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import {
     Route,
-    BrowserRouter,
-    Redirect,
+    HashRouter,
     Switch
 } from "react-router-dom";
 import App from "./App";
@@ -17,17 +16,16 @@ import * as serviceWorker from './serviceWorker';
 console.log(process.env.PUBLIC_URL);
 
 const routing = (
-    <BrowserRouter basename="/brandon.saunders.portfolio">
+    <HashRouter basename="/brandon.saunders.portfolio">
         <div>
             <Header/>
             <Switch>
-                <Route exact path={process.env.PUBLIC_URL} render={() => <Redirect to="/" />} />
                 <Route exact path="/" component={App} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
         </div>
-    </BrowserRouter >
+    </HashRouter >
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
