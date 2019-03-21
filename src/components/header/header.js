@@ -12,7 +12,7 @@ class Header extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="contact">Contact</Nav.Link>
+                            <Nav.Link href="mailto:BrandonNSaunders@gmail.com">Contact</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>;
