@@ -17,7 +17,7 @@ import * as serviceWorker from './serviceWorker';
 console.log(process.env.PUBLIC_URL);
 
 const routing = (
-    <BrowserRouter>
+    <BrowserRouter basename="/brandon.saunders.portfolio">
         <div>
             <Header/>
             <Switch>
