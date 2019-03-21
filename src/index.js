@@ -20,13 +20,12 @@ console.log(process.env.PUBLIC_URL);
 
 const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
 
-
 const routing = (
     <Router history={hashHistory}>
-        <div >
-            <Header />
+        <div>
+            <Header/>
             <Switch>
-                <Route path="/" component={App} />
+                <Route path={ process.env.PUBLIC_URL + "/" } component={App} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
