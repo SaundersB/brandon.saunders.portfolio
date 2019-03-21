@@ -14,6 +14,8 @@ import Footer from './components/footer/footer.js';
 import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
 
+console.log(process.env.PUBLIC_URL);
+
 const routing = (
     <Router basename="/brandon.saunders.portfolio">
         <div >
