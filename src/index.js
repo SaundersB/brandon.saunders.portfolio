@@ -25,7 +25,7 @@ const routing = (
         <div>
             <Header/>
             <Switch>
-                <Route exact path="/" component={App} />
+                <Route exact path="/brandon.saunders.portfolio/" component={App} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
