@@ -19,7 +19,7 @@ const routing = (
         <div >
             <Header />
             <Switch>
-                <Route exact path={process.env.PUBLIC_URL} component={App} />
+                <Route path={process.env.PUBLIC_URL + "/"} component={App} />
                 <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
                 <Route component={NotFound} />
             </Switch>
