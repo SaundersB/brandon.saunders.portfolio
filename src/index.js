@@ -10,6 +10,7 @@ import {
 import App from "./App";
 import Contact from "./components/contact/contact";
 import Header from './components/header/header.js';
+import Footer from './components/footer/footer.js';
 import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
 
@@ -22,6 +23,7 @@ const routing = (
                 <Route path="/contact" component={Contact} />
                 <Route component={NotFound} />
             </Switch>
+            <Footer/>
         </div>
     </Router>
 );
