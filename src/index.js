@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import {
     Route,
-    HashRouter,
+    BrowserRouter,
     Switch
 } from "react-router-dom";
 import App from "./App";
@@ -13,24 +13,26 @@ import Footer from './components/footer/footer.js';
 import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
 import {
-    createHashHistory
+    createBrowserHistory
 } from 'history';
 
 console.log(process.env.PUBLIC_URL);
 
-const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
+const history = createBrowserHistory({
+    basename: process.env.PUBLIC_URL,
+});
 
 const routing = (
-    <HashRouter basename={process.env.PUBLIC_URL} history={hashHistory}>
+    <BrowserRouter history={history}>
         <div>
             <Header/>
             <Switch>
-                <Route exact path="/brandon.saunders.portfolio/" component={App} />
+                <Route exact path="/" component={App} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
         </div>
-    </HashRouter >
+    </BrowserRouter >
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
