@@ -1,28 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.scss';
 import {
     Route,
-    NavLink,
     BrowserRouter as Router,
     Switch
 } from "react-router-dom";
 import App from "./App";
 import Contact from "./components/contact/contact";
+import Header from './components/header/header.js';
 import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
 
+
 const routing = (
     <Router>
-        <div>
-            <ul>
-                <li>
-                    <NavLink activeClassName="active" to="/contact">
-                        Contact
-                    </NavLink>
-                </li>
-            </ul>
-            <hr />
+        <div >
+            <Header />
             <Switch>
                 <Route exact path="/" component={App} />
                 <Route path="/contact" component={Contact} />
