@@ -1,8 +1,15 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-const projectName = "";
 
 class ProjectSelector extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+        console.log("Clicked!");
+        window.open(this.props.url);
+    }
     render()
     {
         return(<div>
@@ -12,7 +19,7 @@ class ProjectSelector extends React.Component {
                     <Card.Text>
                         {this.props.description}
                     </Card.Text>
-                    <Button variant="primary">More Information</Button>
+                    <Button onClick={this.handleClick} variant="primary">More Information</Button>
                 </Card.Body>
             </Card>
         </div>);
