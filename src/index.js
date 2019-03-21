@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import {
     Route,
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch
 } from "react-router-dom";
 import App from "./App";
