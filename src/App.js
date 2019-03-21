@@ -4,6 +4,11 @@ import ProjectSelector from './components/project_selector/project_selector';
 
 let projects = [
     {
+        "name": "Heart Cup",
+        "description": "",
+        "url": "https://heartcup.com"
+    },
+    {
         "name": "Pet Photo iOS App",
         "description": "Get your pet's attention when taking photos with other pet noises! Simply press the button of the respective pet sound and when your pet is looking at the camera tap anywhere on the screen. You'll see a small preview window in the bottom left corner of the screen. Tap the window to save the photo to your camera roll!",
         "url": "https://itunes.apple.com/us/app/petphoto/id1178333966?mt=8"
