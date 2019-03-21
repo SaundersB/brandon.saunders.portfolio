@@ -4,24 +4,29 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import {
     Route,
-    BrowserRouter as Router,
+    Router,
     Switch
 } from "react-router-dom";
 import App from "./App";
-import Contact from "./components/contact/contact";
 import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
 import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
+import {
+    createHashHistory
+} from 'history';
 
 console.log(process.env.PUBLIC_URL);
 
+const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
+
+
 const routing = (
-    <Router basename={ process.env.PUBLIC_URL }>
+    <Router history={hashHistory}>
         <div >
             <Header />
             <Switch>
-                <Route path={ "/"} component={App} />
+                <Route path="/" component={App} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
