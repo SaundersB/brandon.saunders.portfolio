@@ -15,7 +15,7 @@ import NotFound from "./pages/notfound/notfound";
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-    <Router>
+    <Router basename="/brandon.saunders.portfolio">
         <div >
             <Header />
             <Switch>
