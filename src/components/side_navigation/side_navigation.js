@@ -66,9 +66,6 @@ class SideNavigation extends React.Component
                     <Nav id="about">
                         <Text>About</Text>
                     </Nav>
-                    <Nav id="skills">
-                        <Text>Skills</Text>
-                    </Nav>
                     <Nav id="projects" >
                         <Text>Projects</Text>
                     </Nav>

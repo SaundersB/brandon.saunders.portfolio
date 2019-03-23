@@ -55,7 +55,10 @@ $button-color: #006ff0;
     display: inline-block;
 }
 
-
+.maximize-window-minus-sidebar {
+    height: 100vh;
+    width: calc(100vw - 240px);
+}
 
 .body-wrapper {
     height: 100vh;
