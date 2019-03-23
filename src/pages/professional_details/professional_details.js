@@ -6,7 +6,7 @@ class ProfessionalDetails extends React.Component {
     render()
     {
         return(
-            <div className="container center-text" >
+            <div className="center-text" >
                 <h1>Brandon Saunders</h1>
                 <p>Software Engineer who enjoys learning new things...</p>
                 <h3>Projects</h3>
