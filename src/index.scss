@@ -53,6 +53,13 @@ $button-color: #006ff0;
     margin: 1em;
     @extend %auto-padding;
     display: inline-block;
+    width: 30vw;
+    height: auto;
+}
+
+.project-image {
+    display: inline-block;
+    height: auto;
 }
 
 .maximize-window-minus-sidebar {
