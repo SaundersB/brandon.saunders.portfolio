@@ -5,7 +5,6 @@ class ProfessionalDetails extends React.Component {
     {
         return(
             <div className="center-text" >
-                <h1>Brandon Saunders</h1>
                 <p>Software Engineer who enjoys learning new things...</p>
             </div>
         );

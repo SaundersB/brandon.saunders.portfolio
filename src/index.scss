@@ -5,7 +5,8 @@ $page-background-color: #fffeee;
 
 
 .center-text {
-    text-align: center
+    text-align: center;
+    margin: auto;
 }
 
 .project-menu {
@@ -22,4 +23,5 @@ $page-background-color: #fffeee;
 
 .body-wrapper {
     height: 100vh;
+    width: 100vw;
 }
