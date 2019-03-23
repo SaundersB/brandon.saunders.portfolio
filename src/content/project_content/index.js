@@ -3,6 +3,7 @@ import xandr_reward_card_landing from '../../assets/images/xandrrewardcard.png';
 import pet_photo_screenshot from '../../assets/images/pet_photo.png';
 import multiplier_finder_screenshot from '../../assets/images/multiplier_finder.png';
 import space_invaders_screenshot from '../../assets/images/space_invaders.png';
+import metal_alloy_x_ray_automation from '../../assets/images/metal_alloy_x_ray_automation.png';
 
 let projects = [
     {
@@ -31,9 +32,15 @@ let projects = [
     },
     {
         "name": "Space Invaders",
-        "description": "Learn or brush up on your multiplication tables with this iOS app. Similar to the traditional method of writing your multiplication tables and answers on flash card, you can practice for free. Select the set of times tables you would like to practice and swipe left and right to reveal the answer. Swipe down to return to the selection menu.",
+        "description": "A modern rendition of the class Space Invaders written in the JavaScript Phaser library.",
         "url": "http://saundersb.github.io/SpaceInvaders/",
         "imageUrl": space_invaders_screenshot
+    },
+    {
+        "name": "Metal Alloy X-Ray Automation",
+        "description": "The automated QA process for an X-Ray metal concentration analysis gun written in Java for an Android application that controls the gun.",
+        "url": "https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0",
+        "imageUrl": metal_alloy_x_ray_automation
     },
 ];
 
