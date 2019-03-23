@@ -8,7 +8,8 @@ let experience = [
             "•\tMaintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
         "developmentToolsUsed": "AWS, Drupal, Docker, IntelliJ IDEA, GitLab VCS, GitLab CI/CD",
         "programmingLanguagesUsed": "",
-        "companyURL": "https://www.jnrcorp.com/"
+        "companyURL": "https://www.jnrcorp.com/",
+        "companyDescription": "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
     },
     {
         "companyName": "Heart Cup Inc",
@@ -21,7 +22,8 @@ let experience = [
             "Developing a Swift based iOS app.",
         "developmentToolsUsed": "",
         "programmingLanguagesUsed": "",
-        "companyURL": "https://www.heartcup.com/"
+        "companyURL": "https://www.heartcup.com/",
+        "companyDescription": "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!"
     },
     {
         "companyName": "Vantage LED",
@@ -42,7 +44,8 @@ let experience = [
             "• Internal CRM PHP workflows and API integrations. ",
         "developmentToolsUsed": "",
         "programmingLanguagesUsed": "",
-        "companyURL": "https://www.vantageled.com/"
+        "companyURL": "https://www.vantageled.com/",
+        "companyDescription": "Vantage LED operates in the digital signage industry through designing, engineering, and delivering innovative LED displays driven by revolutionary cloud-based software."
     },
     {
         "companyName": "Tribogenics",
@@ -54,7 +57,8 @@ let experience = [
             "Internal Watson support tools written in PowerShell, BASH/Shell, and Java.",
         "developmentToolsUsed": "",
         "programmingLanguagesUsed": "",
-        "companyURL": "https://www.linkedin.com/company/tribogenics/"
+        "companyURL": "https://www.linkedin.com/company/tribogenics/",
+        "companyDescription": "Tribogenics is a transformative X-ray technology company developing affordable and highly portable solutions for materials analysis and imaging. The Tribogenics range of X-ray sources includes the X-Change™ cartridge, the world’s smallest turnkey X-ray source designed for use in revolutionary new XRF systems. Tribogenics was founded in 2011 and employs scientists and engineers at a world-class facility in Los Angeles, CA. Our advisors include luminaries in business, scientific and medical fields. The company is backed by a consortium of investors and recently closed a round led by Nikon and Peter Thiel's Founders Fund."
     },
 ];
 

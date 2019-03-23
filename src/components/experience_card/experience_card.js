@@ -1,7 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import {Tab, Tabs} from 'react-bootstrap';
+import {Button, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
+import NavLink from 'react-bootstrap/NavLink';
+import Nav from 'react-bootstrap/Nav';
 
 class ExperienceCard extends React.Component
 {
@@ -29,7 +31,12 @@ class ExperienceCard extends React.Component
                         {this.props.programmingLanguagesUsed}
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
-                        <Card.Link href={this.props.companyURL}>Company Site</Card.Link>
+                        {this.props.companyDescription}
+                        <Nav variant="pills" className="flex-column">
+                            <Nav.Item>
+                                <Nav.Link  href={this.props.companyURL}>{this.props.companyName} Website</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
                     </Tab>
                 </Tabs>
                 <Card.Footer className="text-muted">Tenure: { this.getCompanyTenure() }</Card.Footer>
