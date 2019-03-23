@@ -6,6 +6,7 @@ import space_invaders_screenshot from '../../assets/images/space_invaders.png';
 import metal_alloy_x_ray_automation from '../../assets/images/metal_alloy_x_ray_automation.png';
 import digital_signage_virtual_scoreboard_screenshot from '../../assets/images/virtual_scoreboard.png';
 import digital_signage_4K_content_player_screenshot from '../../assets/images/digital_signage_content_player.png';
+import digital_signage_electronic_shelf_label_screenshot from '../../assets/images/electronic_shelf_labels.png';
 
 let projects = [
     {
@@ -37,6 +38,12 @@ let projects = [
         "description": "Digital Signage 4K Android content player for the express usage of scheduling video, images, and advertisements.",
         "url": "https://www.dropbox.com/s/arwoyv376wftec6/java_digital_signage_player.mov?dl=0",
         "imageUrl": digital_signage_4K_content_player_screenshot
+    },
+    {
+        "name": "Electronic Shelf Label Price Integration",
+        "description": "Integration and automation of price updates on e-Paper Electronic Shelf Labels.",
+        "url": "",
+        "imageUrl": digital_signage_electronic_shelf_label_screenshot
     },
     {
         "name": "Digital Signage Virtual Scoreboard",

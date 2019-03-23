@@ -10,6 +10,14 @@ class ProjectSelector extends React.Component {
         console.log("Clicked!");
         window.open(this.props.url);
     }
+    getProjectURL(projectUrl){
+        if(typeof projectUrl === 'undefined' || projectUrl === ''){
+            return '';
+        }
+        return (
+            <Button onClick={this.handleClick} variant="primary">More Information</Button>
+        );
+    }
     render()
     {
         return(<div>
@@ -20,7 +28,7 @@ class ProjectSelector extends React.Component {
                     <Card.Text>
                         {this.props.description}
                     </Card.Text>
-                    <Button onClick={this.handleClick} variant="primary">More Information</Button>
+                    { this.getProjectURL(this.props.url) }
                 </Card.Body>
             </Card>
         </div>);
