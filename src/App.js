@@ -32,8 +32,8 @@ class App extends Component
                     <PortfolioHeader/>
                     <HashRouter history={history}>
                         <Switch>
-                            <Route exact path="/" component={ProfessionalDetails} />
-                            <Route path="/projects" component={Projects} />
+                            <Route exact path="/" component={Projects} />
+                            <Route path="/about" component={ProfessionalDetails} />
                             <Route path="/experience" component={ProfessionalExperience} />
                             <Route component={NotFound} />
                         </Switch>

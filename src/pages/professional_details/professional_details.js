@@ -2,7 +2,6 @@ import React from "react";
 import Figure from 'react-bootstrap/es/Figure';
 import personal_profile_pic from '../../assets/images/profile_picture.png';
 import {Card} from 'react-bootstrap';
-import NavLink from 'react-bootstrap/NavLink';
 
 class ProfessionalDetails extends React.Component {
     render()
