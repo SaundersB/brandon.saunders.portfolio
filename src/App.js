@@ -1,27 +1,26 @@
 import React, {Component} from 'react';
 import './App.css';
-import ProjectSelector from './components/project_selector/project_selector';
-import projects from '../src/content/project_content';
+import {
+    Route,
+    Switch
+} from "react-router-dom";
+import ProfessionalDetails from './pages/professional_details/professional_details';
+import NotFound from './pages/notfound/notfound';
+import Header from './components/header/header.js';
+import Footer from './components/footer/footer.js';
 
 class App extends Component
 {
-
     render()
     {
         return (
-            <div className="container" class="center-text">
-                <h1>Brandon Saunders</h1>
-                <p>Software Engineer who enjoys learning new things...</p>
-                <h3>Projects</h3>
-                <div className="col">
-                    {projects.map(function(object, i) {
-                        return (
-                            <div class="row project-menu">
-                                <ProjectSelector key={i} {...object} />
-                            </div>);
-                        }
-                    )}
-                </div>
+            <div>
+                <Header/>
+                <Switch>
+                    <Route path="/" component={ProfessionalDetails} />
+                    <Route component={NotFound} />
+                </Switch>
+                <Footer/>
             </div>
         );
     }

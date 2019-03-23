@@ -15,7 +15,7 @@ class Header extends React.Component {
                             <Nav.Link href="mailto:BrandonNSaunders@gmail.com">Contact</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
-                </Navbar>;
+                </Navbar>
             </div>
         );
     }

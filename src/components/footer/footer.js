@@ -1,6 +1,6 @@
 import React from "react";
 import "../../index.scss";
-import { Navbar, Nav} from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 class Footer extends React.Component {
     render()
@@ -12,7 +12,7 @@ class Footer extends React.Component {
                     <div className="text-center">
                         <div>&copy; { (new Date().getFullYear()) }</div>
                     </div>
-                </Navbar>;
+                </Navbar>
             </div>
         );
     }
