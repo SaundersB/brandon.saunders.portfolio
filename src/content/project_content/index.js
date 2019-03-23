@@ -1,10 +1,11 @@
+import heart_cup_landing from'../../assets/images/heart_cup_landing_page.png';
 
 let projects = [
     {
         "name": "Heart Cup",
-        "description": "",
+        "description": "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!",
         "url": "https://heartcup.com",
-        "imageUrl": "https://d2p6nkfn96o91b.cloudfront.net/home/logo-gradient.png"
+        "imageUrl": heart_cup_landing
     },
     {
         "name": "Pet Photo iOS App",

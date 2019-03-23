@@ -13,10 +13,10 @@ class App extends Component
                 <h1>Brandon Saunders</h1>
                 <p>Software Engineer who enjoys learning new things...</p>
                 <h3>Projects</h3>
-                <div>
-                {projects.map(function(object, i){
-                    return <ProjectSelector key={i} {...object} />;
-                })}
+                <div className="col" class="project-menu">
+                    {projects.map(function(object, i) {
+                        return <ProjectSelector key={i} {...object} />;
+                    })}
                 </div>
             </div>
         );
