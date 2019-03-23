@@ -28,8 +28,12 @@ class SideNavigation extends React.Component
         this.setState({ selectedPath: arg.path });
         console.log("State: " + arg.path);
         switch (arg.path) {
-            case "home": {
+            case "about": {
                 history.push('/');
+                break;
+            }
+            case "skills": {
+                history.push('/skills');
                 break;
             }
             case "projects": {
@@ -57,8 +61,11 @@ class SideNavigation extends React.Component
                     defaultSelectedPath="home"
                     theme={theme}
                     onItemSelection={this.onItemSelection}>
-                    <Nav id="home">
-                        <Text>Home</Text>
+                    <Nav id="about">
+                        <Text>About</Text>
+                    </Nav>
+                    <Nav id="skills">
+                        <Text>Skills</Text>
                     </Nav>
                     <Nav id="projects" >
                         <Text>Projects</Text>

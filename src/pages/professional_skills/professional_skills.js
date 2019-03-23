@@ -4,6 +4,7 @@ class ProfessionalSkills extends React.Component {
     render()
     {
         return(<div>
+            Skills
         </div>);
     }
 }

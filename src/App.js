@@ -12,6 +12,7 @@ import {
 import Projects from './pages/projects/projects';
 import ProfessionalDetails from './pages/professional_details/professional_details';
 import ProfessionalExperience from './pages/professional_experience/professional_experience';
+import ProfessionalSkills from './pages/professional_skills/professional_skills';
 import NotFound from './pages/notfound/notfound';
 import PortfolioHeader from './components/portfolio_header/portfolio_header';
 import Navigation from './components/side_navigation/side_navigation.js';
@@ -34,6 +35,7 @@ class App extends Component
                     <HashRouter history={history}>
                         <Switch>
                             <Route exact path="/" component={ProfessionalDetails} />
+                            <Route path="/skills" component={ProfessionalSkills} />
                             <Route path="/projects" component={Projects} />
                             <Route path="/experience" component={ProfessionalExperience} />
                             <Route component={NotFound} />
