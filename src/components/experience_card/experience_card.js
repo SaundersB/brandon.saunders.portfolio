@@ -1,14 +1,29 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import {Badge, Button, Tab, Tabs} from 'react-bootstrap';
+import {Badge, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
-import NavLink from 'react-bootstrap/NavLink';
-import Nav from 'react-bootstrap/Nav';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 class ExperienceCard extends React.Component
 {
-    getBulletPoints(descriptionString){
+    getDevelopmentInfoRow(developmentType, itemString, badgeType){
+        if(typeof itemString === 'undefined' || itemString === ''){
+            return '';
+        }
+        return (
+            <ListGroup.Item>
+                <div className="row">
+                    <div className="col-3">
+                        {developmentType} Used:
+                    </div>
+                    <div className="col-9">
+                        {this.getBadges(itemString, badgeType)}
+                    </div>
+                </div>
+            </ListGroup.Item>
+        );
+    }
+    static getBulletPoints(descriptionString){
         let bulletItems = descriptionString.split('* ');
         let listItems = bulletItems.map((item) => {
                 return (
@@ -51,40 +66,15 @@ class ExperienceCard extends React.Component
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
                     <Tab eventKey="description" title="Description" className="card-text left-align-text">
-                        {this.getBulletPoints(this.props.experience)}
+                        {ExperienceCard.getBulletPoints(this.props.experience)}
                     </Tab>
                     <Tab eventKey="development" title="Development Info" className="card-text">
                         <ListGroup>
-                            <ListGroup.Item>
-                                <div className="row">
-                                    <div className="col-3">
-                                        Programming Languages Used:
-                                    </div>
-                                    <div className="col-9">
-                                        {this.getBadges(this.props.programmingLanguagesUsed, 'primary')}
-                                    </div>
-                                </div>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                <div className="row">
-                                    <div className="col-3">
-                                        Frameworks Used:
-                                    </div>
-                                    <div className="col-9">
-                                        {this.getBadges(this.props.frameworksUsed, 'info')}
-                                    </div>
-                                </div>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                <div className="row">
-                                    <div className="col-3">
-                                        Development Tools Used:
-                                    </div>
-                                    <div className="col-9">
-                                        {this.getBadges(this.props.developmentToolsUsed, 'secondary')}
-                                    </div>
-                                </div>
-                            </ListGroup.Item>
+                            {this.getDevelopmentInfoRow('Programming Languages ', this.props.programmingLanguagesUsed, 'primary')}
+                            {this.getDevelopmentInfoRow('Markup Languages ', this.props.markupLanguagesUsed, 'dark')}
+                            {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props.stylesheetLanguagesUsed, 'secondary')}
+                            {this.getDevelopmentInfoRow('Frameworks Languages ', this.props.frameworksUsed, 'info')}
+                            {this.getDevelopmentInfoRow('Development Tools ', this.props.developmentToolsUsed, 'secondary')}
                         </ListGroup>
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
