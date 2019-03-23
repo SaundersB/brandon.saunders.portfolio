@@ -4,15 +4,13 @@ let experience = [
         "workType": "Full Time",
         "startDate": "07-2018",
         "endDate": "Current",
-        "experience": "Develop enterprise software systems in the prepaid incentive market using Drupal, MySQL, MongoDB, NodeJS, and PHP. Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
-            "•\tMaintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
+        "experience": "Develop enterprise software systems in the prepaid incentive market using Drupal, MySQL, MongoDB, NodeJS, and PHP. * Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
+            "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
         "developmentToolsUsed": "AWS, Docker, IntelliJ IDEA, GitLab VCS, GitLab CI/CD",
         "programmingLanguagesUsed": "PHP, JavaScript, MySQL, MongoDB",
         "frameworksUsed": "Drupal, ExpressJS, Laravel, VueJS, React, CakePHP",
         "companyURL": "https://www.jnrcorp.com/",
-        "companyDescription": "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior. Accomplishments:\n" +
-            "* Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
-            "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP."
+        "companyDescription": "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
     },
     {
         "companyName": "Heart Cup Inc",

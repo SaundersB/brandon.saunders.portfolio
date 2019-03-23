@@ -8,6 +8,18 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 class ExperienceCard extends React.Component
 {
+    getBulletPoints(descriptionString){
+        let bulletItems = descriptionString.split('* ');
+        let listItems = bulletItems.map((item) => {
+                return (
+                    <li key={item} className="card-row">
+                        {item}
+                    </li>
+                );
+            }
+        );
+        return <ul>{listItems}</ul>;
+    }
     getBadges(itemString, badgeType){
         if(typeof itemString === 'undefined'){
             return;
@@ -38,8 +50,8 @@ class ExperienceCard extends React.Component
                 <Card.Header>{this.props.companyName}
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
-                    <Tab eventKey="description" title="Description" className="card-text">
-                        {this.props.experience}
+                    <Tab eventKey="description" title="Description" className="left-align-text">
+                        {this.getBulletPoints(this.props.experience)}
                     </Tab>
                     <Tab eventKey="development" title="Development Info" className="card-text">
                         <ListGroup>
@@ -77,7 +89,7 @@ class ExperienceCard extends React.Component
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
                         <ListGroup>
-                            <ListGroup.Item>
+                            <ListGroup.Item className="left-align-text">
                                 {this.props.companyDescription}
                             </ListGroup.Item>
                             <ListGroup.Item>
