@@ -50,7 +50,7 @@ class ExperienceCard extends React.Component
                 <Card.Header>{this.props.companyName}
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
-                    <Tab eventKey="description" title="Description" className="left-align-text">
+                    <Tab eventKey="description" title="Description" className="card-text left-align-text">
                         {this.getBulletPoints(this.props.experience)}
                     </Tab>
                     <Tab eventKey="development" title="Development Info" className="card-text">
@@ -89,11 +89,15 @@ class ExperienceCard extends React.Component
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
                         <ListGroup>
-                            <ListGroup.Item className="left-align-text">
-                                {this.props.companyDescription}
+                            <ListGroup.Item>
+                                <div className="row left-align-text">
+                                    {this.props.companyDescription}
+                                </div>
                             </ListGroup.Item>
                             <ListGroup.Item>
-                                <Card.Link href={this.props.companyURL}>{this.props.companyName} Website</Card.Link>
+                                <Card.Link href={this.props.companyURL}>
+                                    {this.props.companyName} Website
+                                </Card.Link>
                             </ListGroup.Item>
                         </ListGroup>
                     </Tab>
