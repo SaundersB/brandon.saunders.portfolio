@@ -2,6 +2,7 @@ import React from 'react';
 import {SideNav, Nav} from 'react-sidenav';
 import styled from 'styled-components';
 import {NavigationContainer as BaseNavigation} from '../../containers/containers';
+import history from '../../router/history';
 
 const theme = {
     selectionColor: '#FFF',
@@ -28,12 +29,15 @@ class SideNavigation extends React.Component
         console.log("State: " + arg.path);
         switch (arg.path) {
             case "home": {
+                history.push('/');
                 break;
             }
             case "projects": {
+                history.push('/projects');
                 break;
             }
             case "experience": {
+                history.push('/experience');
                 break;
             }
             case "contact": {

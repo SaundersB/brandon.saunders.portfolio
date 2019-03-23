@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import App from "./App";
@@ -10,9 +9,7 @@ console.log(process.env.PUBLIC_URL);
 // basename="/brandon.saunders.portfolio"
 const routing = (
     <div className="application">
-        <HashRouter>
-            <App/>
-        </HashRouter>
+        <App/>
     </div>
 );
 
