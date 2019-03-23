@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
-import { HashRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from './serviceWorker';
 
 console.log(process.env.PUBLIC_URL);
 // basename="/brandon.saunders.portfolio"
 const routing = (
-    <HashRouter>
-        <App/>
-    </HashRouter >
+    <div className="application">
+        <HashRouter>
+            <App/>
+        </HashRouter>
+    </div>
 );
 
 ReactDOM.render(routing, document.getElementById('root'));

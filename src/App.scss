@@ -1,0 +1,25 @@
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+$header-background-color: #4c8ef0;
+$page-background-color: #fffeee;
+
+
+
+.center-text {
+  text-align: center
+}
+
+.project-menu {
+  margin: 1em;
+  padding: auto;
+  display: inline-block;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
