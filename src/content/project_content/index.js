@@ -4,6 +4,7 @@ import pet_photo_screenshot from '../../assets/images/pet_photo.png';
 import multiplier_finder_screenshot from '../../assets/images/multiplier_finder.png';
 import space_invaders_screenshot from '../../assets/images/space_invaders.png';
 import metal_alloy_x_ray_automation from '../../assets/images/metal_alloy_x_ray_automation.png';
+import digital_signage_virtual_scoreboard_screenshot from '../../assets/images/virtual_scoreboard.png';
 
 let projects = [
     {
@@ -35,6 +36,12 @@ let projects = [
         "description": "A modern rendition of the class Space Invaders written in the JavaScript Phaser library.",
         "url": "http://saundersb.github.io/SpaceInvaders/",
         "imageUrl": space_invaders_screenshot
+    },
+    {
+        "name": "Digital Signage Virtual Scoreboard",
+        "description": "Electro-Mech hardware console integration with a virtual scoreboard on an LED digital sign. Additionally, an Android application to control the virtual scoreboard on the LED digital sign.",
+        "url": "https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0",
+        "imageUrl": digital_signage_virtual_scoreboard_screenshot
     },
     {
         "name": "Metal Alloy X-Ray Automation",
