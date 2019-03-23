@@ -49,12 +49,20 @@ $button-color: #006ff0;
     @extend %center-text;
 }
 
-.project-menu {
+%menu {
     margin: 1em;
     @extend %auto-padding;
     display: inline-block;
+}
+
+.project-menu {
+    @extend %menu;
     width: 30vw;
     height: auto;
+}
+
+.generic-menu {
+    @extend %menu;
 }
 
 .project-image {

@@ -11,7 +11,7 @@ class ProfessionalSkills extends React.Component {
                 <div className="col">
                     {experience.map(function(object, i) {
                             return (
-                                <div className="row project-menu" key={i}>
+                                <div className="row generic-menu" key={i}>
                                     {/*<ExperienceCard key={i} {...object} />*/}
                                 </div>
                             );
