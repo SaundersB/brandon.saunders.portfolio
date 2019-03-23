@@ -13,11 +13,8 @@ class ProjectSelector extends React.Component {
     render()
     {
         return(<div>
-            <Card>
-                <img
-                    src={this.props.imageUrl}
-                    alt="new"
-                />
+            <Card style={{ width: '35rem' }}>
+                <Card.Img variant="top" src={this.props.imageUrl} />
                 <Card.Body>
                     <Card.Title>{this.props.name}</Card.Title>
                     <Card.Text>

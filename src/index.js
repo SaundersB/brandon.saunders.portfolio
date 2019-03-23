@@ -11,6 +11,7 @@ import App from "./App";
 import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
 import NotFound from "./pages/notfound/notfound";
+import ProfessionalDetails from "./pages/professional_details/professional_details";
 import * as serviceWorker from './serviceWorker';
 
 console.log(process.env.PUBLIC_URL);
@@ -21,6 +22,7 @@ const routing = (
             <Header/>
             <Switch>
                 <Route exact path="/" component={App} />
+                <Route path="/professional_details" component={ProfessionalDetails} />
                 <Route component={NotFound} />
             </Switch>
             <Footer/>
