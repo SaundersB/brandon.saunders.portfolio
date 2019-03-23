@@ -13,9 +13,10 @@ class ProfessionalDetails extends React.Component {
                 <div className="col">
                     {projects.map(function(object, i) {
                             return (
-                                <div className="row project-menu">
-                                    <ProjectSelector key={i} {...object} />
-                                </div>);
+                                <div className="row project-menu" key={i}>
+                                    <ProjectSelector  key={i} {...object} />
+                                </div>
+                            );
                         }
                     )}
                 </div>

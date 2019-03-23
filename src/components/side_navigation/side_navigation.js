@@ -32,10 +32,10 @@ class SideNavigation extends React.Component
                     theme={theme}
                     onItemSelection={this.onItemSelection}>
                     <Nav id="1">
-                        <Text>Dashboard</Text>
+                        <Text>Home</Text>
                     </Nav>
                     <Nav id="2">
-                        <Text>Users</Text>
+                        <Text href="google.com">Contact</Text>
                     </Nav>
                 </SideNav>
             </Navigation>
