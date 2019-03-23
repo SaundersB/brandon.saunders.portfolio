@@ -30,7 +30,7 @@ class App extends Component
         return (
             <AppContainer>
                 <Navigation/>
-                <Body class='body-wrapper'>
+                <Body className='maximize-window'>
                     <PortfolioHeader/>
                     <HashRouter history={history}>
                         <Switch>

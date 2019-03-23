@@ -7,7 +7,7 @@ class Projects extends React.Component
     render()
     {
         return (
-            <div className="center-text">
+            <div className="center-alignment">
                 <h3>Projects</h3>
                 <div className="col">
                     {projects.map(function(object, i) {

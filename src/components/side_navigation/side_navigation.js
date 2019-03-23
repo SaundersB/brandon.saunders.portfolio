@@ -17,6 +17,7 @@ const Navigation = styled(BaseNavigation)`
   color: #8d97ad;
   font-size: 1em;
   letter-spacing: 2px;
+  height: auto;
   width: 240px;
   line-height: 22px;
 `;
@@ -56,8 +57,9 @@ class SideNavigation extends React.Component
     render()
     {
         return (
-            <Navigation>
+            <Navigation className='maximize-window'>
                 <SideNav
+                    className='maximize-window'
                     defaultSelectedPath="home"
                     theme={theme}
                     onItemSelection={this.onItemSelection}>

@@ -5,7 +5,7 @@ class PortfolioHeader extends React.Component
     render()
     {
         return (
-            <div className="center-text" >
+            <div className="center-alignment" >
                 <h1 >Brandon Saunders</h1>
             </div>
         );

@@ -4,14 +4,38 @@
 $page-background-color: #fffeee;
 
 
-.center-text {
+%center-text {
     text-align: center;
+}
+
+%auto-margin {
     margin: auto;
+}
+
+%auto-padding {
+    padding: auto;
+}
+
+%full-height {
+    height: 100%;
+}
+
+%full-width {
+    width: 100%;
+}
+
+.maximize-window {
+    @extend %full-height;
+    @extend %full-height;
+}
+
+.center-alignment {
+    @extend %center-text;
 }
 
 .project-menu {
     margin: 1em;
-    padding: auto;
+    @extend %auto-padding;
     display: inline-block;
 }
 
