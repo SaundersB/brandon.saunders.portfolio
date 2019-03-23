@@ -16,7 +16,6 @@ import ProfessionalSkills from './pages/professional_skills/professional_skills'
 import NotFound from './pages/notfound/notfound';
 import PortfolioHeader from './components/portfolio_header/portfolio_header';
 import Navigation from './components/side_navigation/side_navigation.js';
-import Footer from './components/footer/footer.js';
 import history from './router/history';
 
 const AppContainer = styled(BaseAppContainer)`
@@ -42,7 +41,6 @@ class App extends Component
                         </Switch>
                     </HashRouter>
                 </Body>
-                <Footer/>
             </AppContainer>
         );
     }
