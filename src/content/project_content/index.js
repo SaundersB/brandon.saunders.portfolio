@@ -1,4 +1,5 @@
-import heart_cup_landing from'../../assets/images/heart_cup_landing_page.png';
+import heart_cup_landing from '../../assets/images/heart_cup_landing_page.png';
+import xandr_reward_card_landing from '../../assets/images/xandrrewardcard.png';
 import pet_photo_screenshot from '../../assets/images/pet_photo.png';
 import multiplier_finder_screenshot from '../../assets/images/multiplier_finder.png';
 
@@ -8,6 +9,12 @@ let projects = [
         "description": "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!",
         "url": "https://heartcup.com",
         "imageUrl": heart_cup_landing
+    },
+    {
+        "name": "Xandr Reward Card",
+        "description": "AT&T owned Xandr Advertising prepaid debit card incentive program. Web portal for employees to send redemption codes to other coworkers. Employees can then redeem their redemption code for a physical or virtual prepaid debit card.",
+        "url": "https://xandrrewardcard.com",
+        "imageUrl": xandr_reward_card_landing
     },
     {
         "name": "Pet Photo iOS App",
