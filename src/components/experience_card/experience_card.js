@@ -71,6 +71,7 @@ class ExperienceCard extends React.Component
                     <Tab eventKey="development" title="Development Info" className="card-text">
                         <ListGroup>
                             {this.getDevelopmentInfoRow('Programming Languages ', this.props.programmingLanguagesUsed, 'primary')}
+                            {this.getDevelopmentInfoRow('Scripting Languages ', this.props.scriptingLanguagesUsed, 'info')}
                             {this.getDevelopmentInfoRow('Markup Languages ', this.props.markupLanguagesUsed, 'dark')}
                             {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props.stylesheetLanguagesUsed, 'secondary')}
                             {this.getDevelopmentInfoRow('Frameworks Languages ', this.props.frameworksUsed, 'info')}

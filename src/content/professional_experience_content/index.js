@@ -8,6 +8,7 @@ let experience = [
             "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
         "developmentToolsUsed": "AWS, Docker, IntelliJ IDEA, GitLab VCS, GitLab CI/CD",
         "programmingLanguagesUsed": "PHP, JavaScript, MySQL, MongoDB",
+        "scriptingLanguagesUsed": "BASH/Shell",
         "markupLanguagesUsed": "HTML, XML",
         "stylesheetLanguagesUsed": "CSS",
         "frameworksUsed": "Drupal, ExpressJS, Laravel, VueJS, React, CakePHP",
@@ -25,6 +26,7 @@ let experience = [
             "* Developing a Swift based iOS app.",
         "developmentToolsUsed": "Docker",
         "programmingLanguagesUsed": "JavaScript, PHP",
+        "scriptingLanguagesUsed": "BASH/Shell",
         "markupLanguagesUsed": "HTML",
         "stylesheetLanguagesUsed": "CSS, SASS/SCSS",
         "frameworksUsed": "VueJS, Laravel",
@@ -49,10 +51,11 @@ let experience = [
             "* Android bluetooth beacon waypoint triangulation application.\n" +
             "* Internal CRM PHP workflows and API integrations. ",
         "developmentToolsUsed": "TeamCity",
-        "programmingLanguagesUsed": "",
-        "markupLanguagesUsed": "",
-        "stylesheetLanguagesUsed": "",
-        "frameworksUsed": "",
+        "programmingLanguagesUsed": "Python, Java, ActionScript, JavaScript, PHP, C++",
+        "scriptingLanguagesUsed": "BASH/Shell/PowerShell",
+        "markupLanguagesUsed": "HTML, XML",
+        "stylesheetLanguagesUsed": "CSS",
+        "frameworksUsed": "Vue, Laravel",
         "companyURL": "https://www.vantageled.com/",
         "companyDescription": "Vantage LED operates in the digital signage industry through designing, engineering, and delivering innovative LED displays driven by revolutionary cloud-based software."
     },
@@ -66,11 +69,31 @@ let experience = [
             "* Internal Watson support tools written in PowerShell, BASH/Shell, and Java.",
         "developmentToolsUsed": "",
         "programmingLanguagesUsed": "",
+        "scriptingLanguagesUsed": "BASH/Shell/PowerShell",
         "markupLanguagesUsed": "",
         "stylesheetLanguagesUsed": "",
         "frameworksUsed": "",
         "companyURL": "https://www.linkedin.com/company/tribogenics/",
         "companyDescription": "Tribogenics is a transformative X-ray technology company developing affordable and highly portable solutions for materials analysis and imaging. The Tribogenics range of X-ray sources includes the X-Change™ cartridge, the world’s smallest turnkey X-ray source designed for use in revolutionary new XRF systems. Tribogenics was founded in 2011 and employs scientists and engineers at a world-class facility in Los Angeles, CA. Our advisors include luminaries in business, scientific and medical fields. The company is backed by a consortium of investors and recently closed a round led by Nikon and Peter Thiel's Founders Fund."
+    },
+    {
+        "companyName": "Bumblebee Wireless",
+        "workType": "Full Time (Summer), Part Time (School in Session)",
+        "startDate": "08-2013",
+        "endDate": "07-2015",
+        "experience": "Repaired Apple, Samsung, LG, HTC, and several other popular celluar brands. \n" +
+            "* Repaired laptop and desktop PCs in a fast paced environment. \n" +
+            "* Computer virus removal and software repair.Responsible for managing employees through payroll, hiring, and the creation of a commission based incentive program.\n" +
+            "* Implemented cell phone/computer repair point of sale terminals for multiple kiosk locations. \n" +
+            "* Trained cell phone repair technicians to repair Apple, Samsung, LG, HTC, and several other popular celluar brands.",
+        "developmentToolsUsed": "",
+        "programmingLanguagesUsed": "",
+        "scriptingLanguagesUsed": "BASH/Shell/PowerShell",
+        "markupLanguagesUsed": "",
+        "stylesheetLanguagesUsed": "",
+        "frameworksUsed": "Magento",
+        "companyURL": "https://www.linkedin.com/company/bumblebee-wireless/about/",
+        "companyDescription": "Bumblebee Wireless™ Leaders in Buying, Selling, Repairing and Customizing Wireless Technologies.  We specialize in buying, selling, unlocking and repairing handheld wireless electronics. Bumblebee Wireless is the largest phone, laptop and tablet service and sales franchise in Coachella Valley."
     },
 ];
 
