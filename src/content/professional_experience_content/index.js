@@ -11,7 +11,7 @@ let experience = [
         "scriptingLanguagesUsed": "BASH/Shell",
         "markupLanguagesUsed": "HTML, XML",
         "stylesheetLanguagesUsed": "CSS",
-        "frameworksUsed": "Drupal, ExpressJS, Laravel, VueJS, React, CakePHP",
+        "frameworksUsed": "Drupal, ExpressJS, Laravel, VueJS, React, CakePHP, Codeception",
         "companyURL": "https://www.jnrcorp.com/",
         "companyDescription": "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
     },
@@ -29,7 +29,7 @@ let experience = [
         "scriptingLanguagesUsed": "BASH/Shell",
         "markupLanguagesUsed": "HTML",
         "stylesheetLanguagesUsed": "CSS, SASS/SCSS",
-        "frameworksUsed": "VueJS, Laravel",
+        "frameworksUsed": "VueJS, Laravel, Codeception, Jest, Mocha",
         "companyURL": "https://www.heartcup.com/",
         "companyDescription": "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!"
     },
@@ -55,7 +55,7 @@ let experience = [
         "scriptingLanguagesUsed": "BASH/Shell/PowerShell",
         "markupLanguagesUsed": "HTML, XML",
         "stylesheetLanguagesUsed": "CSS",
-        "frameworksUsed": "Vue, Laravel",
+        "frameworksUsed": "Vue, Laravel, Qt, Adobe Flex, Selenium",
         "companyURL": "https://www.vantageled.com/",
         "companyDescription": "Vantage LED operates in the digital signage industry through designing, engineering, and delivering innovative LED displays driven by revolutionary cloud-based software."
     },
@@ -67,8 +67,8 @@ let experience = [
         "experience": "Development and support of the Watson X-Ray Fluorescence gun through the delivery of new Android software features and internal support software solutions.\n" +
             "* Automation of the Watson XRF gun via Java serial Bluetooth communication to an Arduino powered robot for the intended purpose of validating metal alloy identification accuracy.\n" +
             "* Internal Watson support tools written in PowerShell, BASH/Shell, and Java.",
-        "developmentToolsUsed": "",
-        "programmingLanguagesUsed": "",
+        "developmentToolsUsed": "Android Studio, Jira, Pivotal Tracker",
+        "programmingLanguagesUsed": "Java, Python",
         "scriptingLanguagesUsed": "BASH/Shell/PowerShell",
         "markupLanguagesUsed": "",
         "stylesheetLanguagesUsed": "",
