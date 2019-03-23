@@ -22,20 +22,50 @@ const Navigation = styled(BaseNavigation)`
 
 class SideNavigation extends React.Component
 {
-
+    state = { selectedPath: "1" };
+    onItemSelection = arg => {
+        this.setState({ selectedPath: arg.path });
+        console.log("State: " + arg.path);
+        switch (arg.path) {
+            case "home": {
+                break;
+            }
+            case "projects": {
+                break;
+            }
+            case "experience": {
+                break;
+            }
+            case "contact": {
+                window.location.href = "mailto:BrandonNSaunders@gmail.com";
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    };
     render()
     {
         return (
             <Navigation>
                 <SideNav
-                    defaultSelectedPath="1"
+                    defaultSelectedPath="home"
                     theme={theme}
                     onItemSelection={this.onItemSelection}>
-                    <Nav id="1">
+                    <Nav id="home">
                         <Text>Home</Text>
                     </Nav>
-                    <Nav id="2">
-                        <Text href="google.com">Contact</Text>
+                    <Nav id="projects" >
+                        <Text>Projects</Text>
+                    </Nav>
+                    <Nav id="experience" >
+                        <Text>Experience</Text>
+                    </Nav>
+                    <Nav id="contact" >
+                        <Text>
+                            Contact
+                        </Text>
                     </Nav>
                 </SideNav>
             </Navigation>
