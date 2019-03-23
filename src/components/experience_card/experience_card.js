@@ -76,8 +76,14 @@ class ExperienceCard extends React.Component
                         </ListGroup>
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
-                        {this.props.companyDescription}
-                        <Card.Link href={this.props.companyURL}>{this.props.companyName} Website</Card.Link>
+                        <ListGroup>
+                            <ListGroup.Item>
+                                {this.props.companyDescription}
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <Card.Link href={this.props.companyURL}>{this.props.companyName} Website</Card.Link>
+                            </ListGroup.Item>
+                        </ListGroup>
                     </Tab>
                 </Tabs>
                 <Card.Footer className="text-muted">Tenure: { this.getCompanyTenure() }</Card.Footer>

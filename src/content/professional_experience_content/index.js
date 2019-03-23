@@ -10,7 +10,9 @@ let experience = [
         "programmingLanguagesUsed": "PHP, JavaScript, MySQL, MongoDB",
         "frameworksUsed": "Drupal, ExpressJS, Laravel, VueJS, React, CakePHP",
         "companyURL": "https://www.jnrcorp.com/",
-        "companyDescription": "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
+        "companyDescription": "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior. Accomplishments:\n" +
+            "* Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
+            "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP."
     },
     {
         "companyName": "Heart Cup Inc",
@@ -18,9 +20,9 @@ let experience = [
         "startDate": "05-2017",
         "endDate": "Current",
         "experience": "Building a social network platform for community driven charitable giving that aims to improve the quality of life for individuals everywhere.\n" +
-            "Developing the web interface for site engagement using the VueJS framework.\n" +
-            "Developing a RESTful API using the Laravel framework.\n" +
-            "Developing a Swift based iOS app.",
+            "* Developing the web interface for site engagement using the VueJS framework.\n" +
+            "* Developing a RESTful API using the Laravel framework.\n" +
+            "* Developing a Swift based iOS app.",
         "developmentToolsUsed": "Docker",
         "programmingLanguagesUsed": "JavaScript, PHP",
         "frameworksUsed": "VueJS, Laravel",
@@ -34,16 +36,16 @@ let experience = [
         "endDate": "07-2018",
         "experience": "Develop software for digital signage, internal business tools, and work to develop digital signage solutions in the Electronic Shelving Label and scoreboard markets.\n" +
             "Accomplishments:\n" +
-            "• LED digital signage content player using the Quasar, Cordova, and ElectronJS frameworks.\n" +
-            "• Cloud based digital signage management software.\n" +
-            "• Internal sales force lead capturing website.\n" +
-            "• Python and Flash virtual scoreboards with hardware integration into\n" +
+            "* LED digital signage content player using the Quasar, Cordova, and ElectronJS frameworks.\n" +
+            "* Cloud based digital signage management software.\n" +
+            "* Internal sales force lead capturing website.\n" +
+            "* Python and Flash virtual scoreboards with hardware integration into\n" +
             "3rd party traditional scoreboards.\n" +
-            "• Integrated e-paper electronic shelving displays for price tag\n" +
+            "* Integrated e-paper electronic shelving displays for price tag\n" +
             "applications and meeting room signage.\n" +
-            "• Android digital signage content player.\n" +
-            "• Android bluetooth beacon waypoint triangulation application.\n" +
-            "• Internal CRM PHP workflows and API integrations. ",
+            "* Android digital signage content player.\n" +
+            "* Android bluetooth beacon waypoint triangulation application.\n" +
+            "* Internal CRM PHP workflows and API integrations. ",
         "developmentToolsUsed": "TeamCity",
         "programmingLanguagesUsed": "",
         "frameworksUsed": "",
@@ -56,8 +58,8 @@ let experience = [
         "startDate": "07-2015",
         "endDate": "06-2016",
         "experience": "Development and support of the Watson X-Ray Fluorescence gun through the delivery of new Android software features and internal support software solutions.\n" +
-            "Automation of the Watson XRF gun via Java serial Bluetooth communication to an Arduino powered robot for the intended purpose of validating metal alloy identification accuracy.\n" +
-            "Internal Watson support tools written in PowerShell, BASH/Shell, and Java.",
+            "* Automation of the Watson XRF gun via Java serial Bluetooth communication to an Arduino powered robot for the intended purpose of validating metal alloy identification accuracy.\n" +
+            "* Internal Watson support tools written in PowerShell, BASH/Shell, and Java.",
         "developmentToolsUsed": "",
         "programmingLanguagesUsed": "",
         "frameworksUsed": "",
