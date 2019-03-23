@@ -1,27 +1,40 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Tab, Tabs} from 'react-bootstrap';
+import moment from 'moment';
 
 class ExperienceCard extends React.Component
 {
+    getCompanyTenure(){
+        let startDate = moment(this.props.startDate, 'MM-YYYY');
+        if(this.props.endDate === 'Current'){
+            return moment(this.props.startDate, 'MM-YYYY').fromNow(true).toLocaleString();
+        } else {
+            let endDate = moment(this.props.endDate, 'MM-YYYY');
+            return moment(startDate).from(endDate, true).toLocaleString();
+        }
+    }
     render()
     {
         return (
-            <Card style={{ width: '50rem' }}>
-                <Card.Body>
-                    <Card.Title>{this.props.companyName}</Card.Title>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>
-                            <Card.Subtitle className="mb-2">Start Date: {this.props.startDate}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2">End Date: {this.props.endDate}</Card.Subtitle>
-                        </ListGroupItem>
-                    </ListGroup>
-                    <Card.Text>
+            <Card style={{ width: '35rem' }}>
+                <Card.Header>{this.props.companyName}
+                </Card.Header>
+                <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
+                    <Tab eventKey="description" title="Description">
                         {this.props.experience}
-                    </Card.Text>
-                    <Card.Link href="#">Company Site</Card.Link>
-                </Card.Body>
-            </Card>);
+                    </Tab>
+                    <Tab eventKey="development" title="Development Info">
+                        {this.props.developmentToolsUsed}
+                        {this.props.programmingLanguagesUsed}
+                    </Tab>
+                    <Tab eventKey="company" title="Company Info">
+                        <Card.Link href={this.props.companyURL}>Company Site</Card.Link>
+                    </Tab>
+                </Tabs>
+                <Card.Footer className="text-muted">Tenure: { this.getCompanyTenure() }</Card.Footer>
+            </Card>
+        );
     }
 }
 
