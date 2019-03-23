@@ -5,6 +5,7 @@ import multiplier_finder_screenshot from '../../assets/images/multiplier_finder.
 import space_invaders_screenshot from '../../assets/images/space_invaders.png';
 import metal_alloy_x_ray_automation from '../../assets/images/metal_alloy_x_ray_automation.png';
 import digital_signage_virtual_scoreboard_screenshot from '../../assets/images/virtual_scoreboard.png';
+import digital_signage_4K_content_player_screenshot from '../../assets/images/digital_signage_content_player.png';
 
 let projects = [
     {
@@ -32,10 +33,10 @@ let projects = [
         "imageUrl": multiplier_finder_screenshot
     },
     {
-        "name": "Space Invaders",
-        "description": "A modern rendition of the class Space Invaders written in the JavaScript Phaser library.",
-        "url": "http://saundersb.github.io/SpaceInvaders/",
-        "imageUrl": space_invaders_screenshot
+        "name": "Digital Signage 4K LED/LCD Content Player",
+        "description": "Digital Signage 4K Android content player for the express usage of scheduling video, images, and advertisements.",
+        "url": "https://www.dropbox.com/s/arwoyv376wftec6/java_digital_signage_player.mov?dl=0",
+        "imageUrl": digital_signage_4K_content_player_screenshot
     },
     {
         "name": "Digital Signage Virtual Scoreboard",
@@ -49,6 +50,12 @@ let projects = [
         "url": "https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0",
         "imageUrl": metal_alloy_x_ray_automation
     },
+    {
+        "name": "Space Invaders",
+        "description": "A modern rendition of the class Space Invaders written in the JavaScript Phaser library.",
+        "url": "http://saundersb.github.io/SpaceInvaders/",
+        "imageUrl": space_invaders_screenshot
+    }
 ];
 
 
