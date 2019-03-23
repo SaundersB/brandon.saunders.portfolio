@@ -2,7 +2,7 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 $page-background-color: #fffeee;
-
+$button-color: #006ff0;
 
 %center-text {
     text-align: center;
@@ -26,6 +26,14 @@ $page-background-color: #fffeee;
 
 .card-text {
     margin: 15px;
+}
+
+.card-button {
+    background-color: $button-color;
+}
+
+.card-row {
+    margin: auto;
 }
 
 .maximize-window {

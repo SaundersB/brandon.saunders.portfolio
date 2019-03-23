@@ -1,12 +1,27 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import {Button, Tab, Tabs} from 'react-bootstrap';
+import {Badge, Button, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
 import NavLink from 'react-bootstrap/NavLink';
 import Nav from 'react-bootstrap/Nav';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 class ExperienceCard extends React.Component
 {
+    getBadges(itemString, badgeType){
+        if(typeof itemString === 'undefined'){
+            return;
+        }
+        let developmentTools = itemString.split(', ');
+        return developmentTools.map((tool) => {
+                return (
+                    <Badge pill variant={badgeType} key={tool} className="card-row">
+                        {tool}
+                    </Badge>
+                );
+            }
+        )
+    }
     getCompanyTenure(){
         let startDate = moment(this.props.startDate, 'MM-YYYY');
         if(this.props.endDate === 'Current'){
@@ -27,16 +42,42 @@ class ExperienceCard extends React.Component
                         {this.props.experience}
                     </Tab>
                     <Tab eventKey="development" title="Development Info" className="card-text">
-                        {this.props.developmentToolsUsed}
-                        {this.props.programmingLanguagesUsed}
+                        <ListGroup>
+                            <ListGroup.Item>
+                                <div className="row">
+                                    <div className="col-3">
+                                        Programming Languages Used:
+                                    </div>
+                                    <div className="col-9">
+                                        {this.getBadges(this.props.programmingLanguagesUsed, 'primary')}
+                                    </div>
+                                </div>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <div className="row">
+                                    <div className="col-3">
+                                        Frameworks Used:
+                                    </div>
+                                    <div className="col-9">
+                                        {this.getBadges(this.props.frameworksUsed, 'info')}
+                                    </div>
+                                </div>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <div className="row">
+                                    <div className="col-3">
+                                        Development Tools Used:
+                                    </div>
+                                    <div className="col-9">
+                                        {this.getBadges(this.props.developmentToolsUsed, 'secondary')}
+                                    </div>
+                                </div>
+                            </ListGroup.Item>
+                        </ListGroup>
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
                         {this.props.companyDescription}
-                        <Nav variant="pills" className="flex-column">
-                            <Nav.Item>
-                                <Nav.Link  href={this.props.companyURL}>{this.props.companyName} Website</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
+                        <Card.Link href={this.props.companyURL}>{this.props.companyName} Website</Card.Link>
                     </Tab>
                 </Tabs>
                 <Card.Footer className="text-muted">Tenure: { this.getCompanyTenure() }</Card.Footer>
