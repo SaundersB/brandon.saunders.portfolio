@@ -21,14 +21,14 @@ class ExperienceCard extends React.Component
                 <Card.Header>{this.props.companyName}
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
-                    <Tab eventKey="description" title="Description">
+                    <Tab eventKey="description" title="Description" className="card-text">
                         {this.props.experience}
                     </Tab>
-                    <Tab eventKey="development" title="Development Info">
+                    <Tab eventKey="development" title="Development Info" className="card-text">
                         {this.props.developmentToolsUsed}
                         {this.props.programmingLanguagesUsed}
                     </Tab>
-                    <Tab eventKey="company" title="Company Info">
+                    <Tab eventKey="company" title="Company Info" className="card-text">
                         <Card.Link href={this.props.companyURL}>Company Site</Card.Link>
                     </Tab>
                 </Tabs>

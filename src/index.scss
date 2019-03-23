@@ -24,6 +24,10 @@ $page-background-color: #fffeee;
     width: 100%;
 }
 
+.card-text {
+    margin: 15px;
+}
+
 .maximize-window {
     @extend %full-height;
     @extend %full-height;
