@@ -13,7 +13,7 @@ class App extends Component
                 <h1>Brandon Saunders</h1>
                 <p>Software Engineer who enjoys learning new things...</p>
                 <h3>Projects</h3>
-                <div className="col">
+                <div className="col project-menu-container">
                     {projects.map(function(object, i) {
                         return (
                             <div class="row project-menu">
