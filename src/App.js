@@ -28,7 +28,7 @@ class App extends Component
         return (
             <AppContainer>
                 <Navigation/>
-                <Body class="body-wrapper">
+                <Body className="body-wrapper">
                     <PortfolioHeader/>
                     <HashRouter history={history}>
                         <Switch>
