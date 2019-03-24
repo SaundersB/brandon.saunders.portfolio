@@ -3,9 +3,20 @@ import './side_navigation.scss';
 import { scaleRotate as Menu } from 'react-burger-menu'
 import history from '../../router/history';
 
+//var isMenuOpen = function(state) {
+//    return state.isOpen;
+//};
+
 class SideNavigation extends React.Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.state = { menuOpen: false };
+    }
+
     handleClick = (path) => {
+        this.setState({menuOpen: false});
         switch (path) {
             case 'about': {
                 history.push('/about');
@@ -36,7 +47,7 @@ class SideNavigation extends React.Component
     render()
     {
         return (
-            <Menu>
+            <Menu isOpen={ this.state.menuOpen }>
                 <div id="projects" className="menu-item" onClick={this.handleClick.bind(this, 'projects')}>Projects</div>
                 <div id="experience" className="menu-item"  onClick={this.handleClick.bind(this, 'experience')}>Experience</div>
                 <div id="about" className="menu-item"  onClick={this.handleClick.bind(this, 'about')}>About</div>
