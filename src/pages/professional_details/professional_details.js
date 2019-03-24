@@ -16,9 +16,6 @@ class ProfessionalDetails extends React.Component {
                         alt="171x180"
                         src={personal_profile_pic}
                     />
-                    <Figure.Caption>
-
-                    </Figure.Caption>
                     <Card style={{ width: '35rem' }}>
                         <Card.Body>
                             <Card.Title>Introduction</Card.Title>

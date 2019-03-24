@@ -1,6 +1,6 @@
 import React from 'react';
 import './side_navigation.scss';
-import { slide as Menu } from 'react-burger-menu'
+import { scaleRotate as Menu } from 'react-burger-menu'
 import history from '../../router/history';
 
 class SideNavigation extends React.Component
