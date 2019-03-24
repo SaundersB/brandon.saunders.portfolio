@@ -61,8 +61,9 @@ class ExperienceCard extends React.Component
     render()
     {
         return (
-            <Card style={{ width: '35rem' }}>
-                <Card.Header>{this.props.companyName}
+            <Card>
+                <Card.Header>
+                    {this.props.companyName}
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
                     <Tab eventKey="description" title="Description" className="card-text left-align-text">

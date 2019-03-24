@@ -18,7 +18,7 @@ class ProfessionalDetails extends React.Component {
                                 alt="171x180"
                                 src={personal_profile_pic}
                             />
-                            <Card style={{ width: '35rem' }}>
+                            <Card>
                                 <Card.Body>
                                     <Card.Title>Introduction</Card.Title>
                                     <Card.Text className="left-align-text">

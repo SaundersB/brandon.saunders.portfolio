@@ -1,9 +1,7 @@
 import React from 'react';
 import projects from '../../content/project_content';
 import ProjectSelector from '../../components/project_selector/project_selector';
-import {Container} from 'react-bootstrap';
-import Col from 'react-bootstrap/es/Col';
-import Row from 'react-bootstrap/Row';
+import {Container, Row} from 'react-bootstrap';
 
 class Projects extends React.Component
 {
