@@ -27,8 +27,8 @@ class ProfessionalDetails extends React.Component {
                                         Currently working at <Card.Link href="#/experience">JNR Incorporated</Card.Link> in Irvine, CA as a software engineer in the prepaid incentive market.
                                         Open to new opportunities for both full time and freelance work.
                                         <br/><br/>
-                                        <Card.Link className="center-alignment" href="mailto:BrandonNSaunders@gmail.com">Contact me</Card.Link>
                                     </Card.Text>
+                                    <Card.Link className="center-alignment" href="mailto:BrandonNSaunders@gmail.com">Contact me</Card.Link>
                                 </Card.Body>
                             </Card>
                         </Figure>
