@@ -11,17 +11,15 @@ class Projects extends React.Component
     {
         return (
             <Container className="center-alignment">
-            {/*<div className="center-alignment">*/}
-                        <h3>Projects</h3>
-                        {projects.map(function(object, i) {
-                                return (
-                                    <Row xs={12} md={8}>
-                                        <ProjectSelector key={i} {...object} />
-                                    </Row>
-                                );
-                            },
-                        )}
-            {/*</div>*/}
+                    <h3>Projects</h3>
+                    {projects.map(function(object, i) {
+                            return (
+                                <Row xs={12} md={8}>
+                                    <ProjectSelector key={i} {...object} />
+                                </Row>
+                            );
+                        },
+                    )}
             </Container>
         );
     }
