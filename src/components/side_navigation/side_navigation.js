@@ -1,11 +1,7 @@
 import React from 'react';
 import './side_navigation.scss';
-import { scaleRotate as Menu } from 'react-burger-menu'
+import { elastic as Menu } from 'react-burger-menu';
 import history from '../../router/history';
-
-//var isMenuOpen = function(state) {
-//    return state.isOpen;
-//};
 
 class SideNavigation extends React.Component
 {
