@@ -1,6 +1,6 @@
 import React from 'react';
 import './side_navigation.scss';
-import { elastic as Menu } from 'react-burger-menu';
+import { pushRotate as Menu } from 'react-burger-menu';
 import history from '../../router/history';
 
 class SideNavigation extends React.Component
@@ -43,7 +43,7 @@ class SideNavigation extends React.Component
     render()
     {
         return (
-            <Menu isOpen={ this.state.menuOpen }>
+            <Menu  pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }  isOpen={ this.state.menuOpen }>
                 <div id="projects" className="menu-item" onClick={this.handleClick.bind(this, 'projects')}>Projects</div>
                 <div id="experience" className="menu-item"  onClick={this.handleClick.bind(this, 'experience')}>Experience</div>
                 <div id="about" className="menu-item"  onClick={this.handleClick.bind(this, 'about')}>About</div>

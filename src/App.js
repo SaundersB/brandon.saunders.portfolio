@@ -26,9 +26,9 @@ class App extends Component
     render()
     {
         return (
-            <AppContainer>
-                <Navigation/>
-                <Body className="body-wrapper">
+            <AppContainer id="outer-container">
+                <Navigation burgerButtonClassName="menu"/>
+                <Body className="body-wrapper" id="page-wrap">
                     <PortfolioHeader/>
                     <HashRouter history={history}>
                         <Switch>
