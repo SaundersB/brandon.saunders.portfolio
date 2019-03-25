@@ -9,7 +9,7 @@ class PortfolioHeader extends React.Component
             <Container>
                 <Row className='header-spacing' xs={12}>
                     <Col>
-                        <h1>Brandon Saunders</h1>
+                        <h1 className="portfolio-header">Brandon Saunders</h1>
                     </Col>
                 </Row>
             </Container>
