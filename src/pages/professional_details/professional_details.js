@@ -7,7 +7,7 @@ class ProfessionalDetails extends React.Component {
     render()
     {
         return(
-            <Container className="center-alignment">
+            <Container className="center-alignment image-spacing">
                 <Row >
                     <Col>
                         <Figure >

@@ -230,6 +230,11 @@ $breakpoints: (
     height: auto;
 }
 
+.image-spacing {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .maximize-window-minus-sidebar {
     height: 100vh;
     width: calc(100vw - 240px);
