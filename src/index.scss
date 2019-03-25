@@ -15,12 +15,23 @@ $breakpoints: (
     border-bottom: #000000;
 }
 
+%center-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
 @include media-breakpoint-up(xs) {
     .portfolio-header {
         font-size: 3rem;
     }
     .secondary-portfolio-header {
         font-size: 2rem;
+    }
+    .header-spacing {
+        margin-top: 4rem;
+        text-align: center;
     }
 }
 
@@ -31,6 +42,10 @@ $breakpoints: (
     .secondary-portfolio-header {
         font-size: 2rem;
     }
+    .header-spacing {
+        margin-top: 1rem;
+        text-align: center;
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -39,6 +54,10 @@ $breakpoints: (
     }
     .secondary-portfolio-header {
         font-size: 3rem;
+    }
+    .header-spacing {
+        margin-top: 1rem;
+        text-align: center;
     }
 }
 
@@ -49,14 +68,12 @@ $breakpoints: (
     .secondary-portfolio-header {
         font-size: 3rem;
     }
+    .header-spacing {
+        margin-top: 1rem;
+        text-align: center;
+    }
 }
 
-%center-text {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-}
 
 %auto-margin {
     margin: auto;
@@ -223,7 +240,4 @@ $breakpoints: (
     width: 100vw;
 }
 
-.header-spacing {
-    margin-top: 5rem;
-    text-align: center;
-}
+
