@@ -13,10 +13,10 @@ class ExperienceCard extends React.Component
         return (
             <ListGroup.Item>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-5">
                         {developmentType} Used:
                     </div>
-                    <div className="col-9">
+                    <div className="col-7">
                         {this.getBadges(itemString, badgeType)}
                     </div>
                 </div>
