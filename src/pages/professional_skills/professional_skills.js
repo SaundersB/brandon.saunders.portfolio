@@ -7,7 +7,7 @@ class ProfessionalSkills extends React.Component {
     {
         return(
             <div className="center-alignment">
-                <h3>Skills</h3>
+                <h3 className="secondary-portfolio-header border-line">Skills</h3>
                 <div className="col">
                     {experience.map(function(object, i) {
                             return (

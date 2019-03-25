@@ -8,7 +8,7 @@ class ProfessionalExperience extends React.Component {
     {
         return(
             <Container>
-                <h3 className="center-alignment">Experience</h3>
+                <h3 className="center-alignment secondary-portfolio-header border-line">Experience</h3>
                     {experience.map(function(object, i) {
                             return (
                                 <Row xs={12} md={8} key={i + "-row"}>

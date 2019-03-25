@@ -9,7 +9,7 @@ class Projects extends React.Component
     {
         return (
             <Container className="center-alignment">
-                    <h3>Projects</h3>
+                    <h3 className="secondary-portfolio-header border-line">Projects</h3>
                     {projects.map(function(object, i) {
                             return (
                                 <Row xs={12} md={8} key={i + "-row"}>
