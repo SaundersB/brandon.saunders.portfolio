@@ -158,6 +158,12 @@ $breakpoints: (
     }
 }
 
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 1em;
+    }
+}
+
 .menu {
     margin: auto;
 }
