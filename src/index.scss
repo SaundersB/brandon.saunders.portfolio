@@ -33,6 +33,9 @@ $breakpoints: (
         margin-top: 4rem;
         text-align: center;
     }
+    .project-video {
+        min-height: 15rem;
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -71,6 +74,9 @@ $breakpoints: (
     .header-spacing {
         margin-top: 1rem;
         text-align: center;
+    }
+    .project-video {
+        min-height: 25rem;
     }
 }
 
@@ -235,8 +241,8 @@ $breakpoints: (
 }
 
 .project-video {
-    min-height: 35rem;
     width: auto;
+    height: auto;
 }
 
 .image-spacing {
