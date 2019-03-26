@@ -225,9 +225,18 @@ $breakpoints: (
     margin: auto;
 }
 
+.project {
+    display:inline-block;
+}
+
 .project-image {
     display: inline-block;
     height: auto;
+}
+
+.project-video {
+    min-height: 35rem;
+    width: auto;
 }
 
 .image-spacing {

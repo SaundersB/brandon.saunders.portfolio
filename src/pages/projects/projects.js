@@ -12,7 +12,7 @@ class Projects extends React.Component
                     <h3 className="secondary-portfolio-header border-line">Projects</h3>
                     {projects.map(function(object, i) {
                             return (
-                                <Row xs={12} md={8} key={i + "-row"}>
+                                <Row xs={12} md={8} key={i + "-row"} >
                                     <ProjectSelector key={i} {...object} />
                                 </Row>
                             );

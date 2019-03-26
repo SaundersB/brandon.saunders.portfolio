@@ -45,6 +45,7 @@ let projects = [
         "name": "Digital Signage 4K LED/LCD Content Player",
         "description": "Digital Signage 4K Android content player for the express usage of scheduling video, images, and advertisements.",
         "url": "https://www.dropbox.com/s/arwoyv376wftec6/java_digital_signage_player.mov?dl=0",
+        "videoUrl": "https://www.youtube.com/embed/HvbtS2QyCNk",
         "imageUrl": digital_signage_4K_content_player_screenshot,
         "organization": "vantage_led",
         "tags": "Java"
@@ -61,6 +62,7 @@ let projects = [
         "name": "Digital Signage Virtual Scoreboard",
         "description": "Electro-Mech hardware console integration with a virtual scoreboard on an LED digital sign. Additionally, an Android application to control the virtual scoreboard on the LED digital sign.",
         "url": "https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0",
+        "videoUrl": "https://www.youtube.com/embed/VA_siC4pF8k",
         "imageUrl": digital_signage_virtual_scoreboard_screenshot,
         "organization": "vantage_led",
         "tags": "Python, ActionScript"
@@ -69,6 +71,7 @@ let projects = [
         "name": "Metal Alloy X-Ray Automation",
         "description": "The automated QA process for an X-Ray metal concentration analysis gun written in Java for an Android application that controls the gun.",
         "url": "https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0",
+        "videoUrl": "https://www.youtube.com/embed/AsneadNXPMA",
         "imageUrl": metal_alloy_x_ray_automation,
         "organization": "tribogenics",
         "tags": "Java"

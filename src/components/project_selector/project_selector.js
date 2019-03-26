@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Button} from 'react-bootstrap';
+import {Card, Button, Col} from 'react-bootstrap';
 
 class ProjectSelector extends React.Component
 {
@@ -25,12 +25,25 @@ class ProjectSelector extends React.Component
         );
     }
 
+    getProjectImageOrVideo(){
+        if (typeof this.props.videoUrl === 'undefined' || this.props.videoUrl === '') {
+            return <Card.Img className="project-image" variant="top" src={this.props.imageUrl}/>;
+        } else {
+            return (
+                <iframe className="project-video" src={this.props.videoUrl} frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen/>
+            )
+        }
+
+    }
+
     render()
     {
         return (
-            <div>
+            <Col className="project">
                 <Card>
-                    <Card.Img className="project-image" variant="top" src={this.props.imageUrl}/>
+                    {this.getProjectImageOrVideo()}
                     <Card.Body>
                         <Card.Title>{this.props.name}</Card.Title>
                         <Card.Text>
@@ -39,7 +52,7 @@ class ProjectSelector extends React.Component
                         {this.getProjectURL(this.props.url)}
                     </Card.Body>
                 </Card>
-            </div>);
+            </Col>);
     }
 }
 
