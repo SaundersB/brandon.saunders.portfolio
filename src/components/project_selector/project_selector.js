@@ -17,7 +17,8 @@ class ProjectSelector extends React.Component
 
     getProjectURL(projectUrl)
     {
-        if (typeof projectUrl === 'undefined' || projectUrl === '') {
+        if (typeof projectUrl === 'undefined' || projectUrl === ''
+            || typeof this.props.videoUrl !== 'undefined' && this.props.videoUrl !== '') {
             return '';
         }
         return (
