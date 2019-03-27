@@ -37,7 +37,7 @@ class ProjectSelector extends React.Component
             )
         }
     }
-    getBadges(itemString, badgeType, pillType=true){
+    getBadges(itemString, badgeType, pillType){
         if(typeof itemString === 'undefined'){
             return;
         }
@@ -65,7 +65,7 @@ class ProjectSelector extends React.Component
         } catch (e) {
         }
     }
-    getBadgeRow(developmentType, itemString, badgeType){
+    getBadgeRow(developmentType, itemString, badgeType, pillType=true){
         if(typeof itemString === 'undefined' || itemString === ''){
             return '';
         }
@@ -76,7 +76,7 @@ class ProjectSelector extends React.Component
                         {developmentType}:
                     </div>
                     <div className="col-7">
-                        {this.getBadges(itemString, badgeType)}
+                        {this.getBadges(itemString, badgeType, pillType)}
                     </div>
                 </div>
             </ListGroup.Item>
