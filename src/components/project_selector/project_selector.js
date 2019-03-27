@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Button, Col} from 'react-bootstrap';
+import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
 
 class ProjectSelector extends React.Component
 {
@@ -18,7 +18,7 @@ class ProjectSelector extends React.Component
     getProjectURL(projectUrl)
     {
         if (typeof projectUrl === 'undefined' || projectUrl === ''
-            || typeof this.props.videoUrl !== 'undefined' && this.props.videoUrl !== '') {
+            || (typeof this.props.videoUrl !== 'undefined' && this.props.videoUrl !== '')) {
             return '';
         }
         return (
@@ -36,8 +36,42 @@ class ProjectSelector extends React.Component
                     allowFullScreen/>
             )
         }
-
     }
+    getBadges(itemString, badgeType){
+        if(typeof itemString === 'undefined'){
+            return;
+        }
+        try {
+            let developmentTools = itemString.split(', ');
+            return developmentTools.map((tool) => {
+                    return (
+                        <Badge pill variant={badgeType} key={tool} className="card-row">
+                            {tool}
+                        </Badge>
+                    );
+                }
+            )
+        } catch (e) {
+        }
+    }
+    getDevelopmentInfoRow(developmentType, itemString, badgeType){
+        if(typeof itemString === 'undefined' || itemString === ''){
+            return '';
+        }
+        return (
+            <ListGroup.Item>
+                <div className="row">
+                    <div className="col-5">
+                        {developmentType}:
+                    </div>
+                    <div className="col-7">
+                        {this.getBadges(itemString, badgeType)}
+                    </div>
+                </div>
+            </ListGroup.Item>
+        );
+    }
+
 
     render()
     {
@@ -52,6 +86,9 @@ class ProjectSelector extends React.Component
                         </Card.Text>
                         {this.getProjectURL(this.props.url)}
                     </Card.Body>
+                    <ListGroup>
+                        {this.getDevelopmentInfoRow('Project Tags', this.props.tags, 'primary')}
+                    </ListGroup>
                 </Card>
             </Col>);
     }
