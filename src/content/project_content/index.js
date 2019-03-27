@@ -17,7 +17,7 @@ let projects = [
             ' ability to change lives. So join us on our quest to become a community built on giving!',
         'url': 'https://heartcup.com',
         'imageUrl': heart_cup_landing,
-        'organization': 'heart_cup',
+        'organization': 'Heart Cup',
         'tags': 'VueJS, Laravel, PHP, JavaScript',
     },
     {
@@ -27,7 +27,7 @@ let projects = [
             ' or virtual prepaid debit card.',
         'url': 'https://xandrrewardcard.com',
         'imageUrl': xandr_reward_card_landing,
-        'organization': 'jnr',
+        'organization': 'JNR Inc.',
         'tags': 'VueJS, Laravel, PHP, JavaScript',
     },
     {
@@ -38,7 +38,7 @@ let projects = [
             ' your camera roll!',
         'url': 'https://itunes.apple.com/us/app/petphoto/id1178333966?mt=8',
         'imageUrl': pet_photo_screenshot,
-        'organization': 'open_source',
+        'organization': 'Open Source',
         'tags': 'Swift',
     },
     {
@@ -49,7 +49,7 @@ let projects = [
             'down to return to the selection menu.',
         'url': 'https://itunes.apple.com/us/app/multiplier-finder/id1178339564',
         'imageUrl': multiplier_finder_screenshot,
-        'organization': 'open_source',
+        'organization': 'Open Source',
         'tags': 'Swift',
     },
     {
@@ -59,7 +59,7 @@ let projects = [
         'url': 'https://www.dropbox.com/s/arwoyv376wftec6/java_digital_signage_player.mov?dl=0',
         'videoUrl': 'https://www.youtube.com/embed/HvbtS2QyCNk',
         'imageUrl': digital_signage_4K_content_player_screenshot,
-        'organization': 'vantage_led',
+        'organization': 'Vantage LED',
         'tags': 'Java',
     },
     {
@@ -67,7 +67,7 @@ let projects = [
         'description': 'Integration and automation of price updates on e-Paper Electronic Shelf Labels.',
         'url': '',
         'imageUrl': digital_signage_electronic_shelf_label_screenshot,
-        'organization': 'vantage_led',
+        'organization': 'Vantage LED',
         'tags': 'Java',
     },
     {
@@ -77,7 +77,7 @@ let projects = [
         'url': 'https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0',
         'videoUrl': '',
         'imageUrl': digital_signage_virtual_scoreboard_screenshot,
-        'organization': 'vantage_led',
+        'organization': 'Vantage LED',
         'tags': 'Python, ActionScript',
     },
     {
@@ -86,7 +86,7 @@ let projects = [
         'url': 'https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0',
         'videoUrl': 'https://www.youtube.com/embed/VA_siC4pF8k',
         'imageUrl': '',
-        'organization': 'vantage_led',
+        'organization': 'Vantage LED',
         'tags': 'Java',
     },
     {
@@ -96,7 +96,7 @@ let projects = [
         'url': 'https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0',
         'videoUrl': 'https://www.youtube.com/embed/AsneadNXPMA',
         'imageUrl': metal_alloy_x_ray_automation,
-        'organization': 'tribogenics',
+        'organization': 'Tribogenics',
         'tags': 'Java',
     },
     {
@@ -109,7 +109,7 @@ let projects = [
         'url': 'https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0',
         'videoUrl': '',
         'imageUrl': metal_alloy_x_ray_automation,
-        'organization': 'tribogenics',
+        'organization': 'Tribogenics',
         'tags': 'BASH, PowerShell',
     },
     {
@@ -117,7 +117,7 @@ let projects = [
         'description': 'A modern rendition of the class Space Invaders written in the JavaScript Phaser library.',
         'url': 'http://saundersb.github.io/SpaceInvaders/',
         'imageUrl': space_invaders_screenshot,
-        'organization': 'college',
+        'organization': 'College',
         'tags': 'JavaScript, Phaser',
     },
 ];

@@ -37,24 +37,35 @@ class ProjectSelector extends React.Component
             )
         }
     }
-    getBadges(itemString, badgeType){
+    getBadges(itemString, badgeType, pillType=true){
         if(typeof itemString === 'undefined'){
             return;
         }
         try {
             let developmentTools = itemString.split(', ');
-            return developmentTools.map((tool) => {
-                    return (
-                        <Badge pill variant={badgeType} key={tool} className="card-row">
-                            {tool}
-                        </Badge>
-                    );
-                }
-            )
+            if(pillType) {
+                return developmentTools.map((tool) => {
+                        return (
+                            <Badge pill variant={badgeType} key={tool} className="card-row">
+                                {tool}
+                            </Badge>
+                        );
+                    }
+                )
+            } else {
+                return developmentTools.map((tool) => {
+                        return (
+                            <Badge variant={badgeType} key={tool} className="card-row">
+                                {tool}
+                            </Badge>
+                        );
+                    }
+                )
+            }
         } catch (e) {
         }
     }
-    getDevelopmentInfoRow(developmentType, itemString, badgeType){
+    getBadgeRow(developmentType, itemString, badgeType){
         if(typeof itemString === 'undefined' || itemString === ''){
             return '';
         }
@@ -87,7 +98,8 @@ class ProjectSelector extends React.Component
                         {this.getProjectURL(this.props.url)}
                     </Card.Body>
                     <ListGroup>
-                        {this.getDevelopmentInfoRow('Project Tags', this.props.tags, 'primary')}
+                        {this.getBadgeRow('Organization', this.props.organization, 'secondary', false)}
+                        {this.getBadgeRow('Project Tags', this.props.tags, 'primary')}
                     </ListGroup>
                 </Card>
             </Col>);
