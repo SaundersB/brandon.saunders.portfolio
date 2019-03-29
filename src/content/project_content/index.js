@@ -8,6 +8,7 @@ import digital_signage_virtual_scoreboard_screenshot from '../../assets/images/v
 import digital_signage_4K_content_player_screenshot from '../../assets/images/digital_signage_content_player.png';
 import digital_signage_electronic_shelf_label_screenshot from '../../assets/images/electronic_shelf_labels.png';
 import nexofuelcard from '../../assets/images/nexofuelcard.png';
+import portfolio from '../../assets/images/portfolio_site.png';
 
 let projects = [
     {
@@ -40,6 +41,14 @@ let projects = [
         'imageUrl': nexofuelcard,
         'organization': 'JNR Inc.',
         'tags': 'Drupal, PHP',
+    },
+    {
+        'name': 'Portfolio Site',
+        'description': 'The current website you\'re viewing is a React based portfolio site highlighting my experience and projects.',
+        'url': 'https://saundersb.github.io/brandon.saunders.portfolio',
+        'imageUrl': portfolio,
+        'organization': 'Open Source',
+        'tags': 'React, JavaScript',
     },
     {
         'name': 'Pet Photo iOS App',
