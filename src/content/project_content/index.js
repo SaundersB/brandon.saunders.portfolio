@@ -7,6 +7,7 @@ import metal_alloy_x_ray_automation from '../../assets/images/metal_alloy_x_ray_
 import digital_signage_virtual_scoreboard_screenshot from '../../assets/images/virtual_scoreboard.png';
 import digital_signage_4K_content_player_screenshot from '../../assets/images/digital_signage_content_player.png';
 import digital_signage_electronic_shelf_label_screenshot from '../../assets/images/electronic_shelf_labels.png';
+import nexofuelcard from '../../assets/images/nexofuelcard.png';
 
 let projects = [
     {
@@ -29,6 +30,16 @@ let projects = [
         'imageUrl': xandr_reward_card_landing,
         'organization': 'JNR Inc.',
         'tags': 'VueJS, Laravel, PHP, JavaScript',
+    },
+    {
+        'name': 'Hyundai Nexo Fuel Card',
+        'description': 'Hyundai provides a prepaid debit card with each Hyundai Nexo hydrogen fuel car. Once a ' +
+            'recipient receives their fuel card they have the ability to activate, check their account balance and' +
+            'see transactions made with their card.',
+        'url': 'https://nexofuelcard.com',
+        'imageUrl': nexofuelcard,
+        'organization': 'JNR Inc.',
+        'tags': 'Drupal, PHP',
     },
     {
         'name': 'Pet Photo iOS App',
