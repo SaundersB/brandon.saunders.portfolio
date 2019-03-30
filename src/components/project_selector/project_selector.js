@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
 import PopupModal from '../../components/popup_modal/popup_modal';
+import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../helpers/constants';
 
 class ProjectSelector extends React.Component
 {
@@ -104,15 +105,15 @@ class ProjectSelector extends React.Component
                 <Card>
                     {this.getProjectImageOrVideo()}
                     <Card.Body>
-                        <Card.Title>{this.props.name}</Card.Title>
+                        <Card.Title>{this.props[PROJECT_TAGS_NAME]}</Card.Title>
                         <Card.Text>
                             {this.props.description}
                         </Card.Text>
-                        {this.getProjectURL(this.props.url)}
+                        {this.getProjectURL(this.props[PROJECT_URL_NAME])}
                     </Card.Body>
                     <ListGroup>
-                        {this.getBadgeRow('Organization', this.props.organization, 'secondary', false)}
-                        {this.getBadgeRow('Project Tags', this.props.tags, 'primary')}
+                        {this.getBadgeRow('Organization', this.props[ORGANIZATION_KEY_NAME], 'secondary', false)}
+                        {this.getBadgeRow('Project Tags', this.props[PROJECT_TAGS_NAME], 'primary')}
                     </ListGroup>
                     <PopupModal
                         isOpen={this.state.showModal}/>
