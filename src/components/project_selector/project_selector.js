@@ -36,7 +36,7 @@ class ProjectSelector extends React.Component
             return '';
         }
         return (
-            <Button onClick={this.handleExternalClick} variant="primary">More Information</Button>
+            <Button onClick={this.handleExternalClick} size="sm" variant="outline-primary">More Information</Button>
         );
     }
 
