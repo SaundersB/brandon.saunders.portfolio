@@ -1,35 +1,60 @@
 import React from 'react';
 import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
-import PopupModal from '../../components/popup_modal/popup_modal';
+import Modal from 'react-modal';
 import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../helpers/constants';
 import RelationshipBuilder from '../../helpers/relationship_builder';
 
+const customStyles = {
+    content : {
+        top                   : '50%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-50%',
+        transform             : 'translate(-50%, -50%)'
+    }
+};
+
 class ProjectSelector extends React.Component
 {
-    constructor(props, context)
+    constructor(props)
     {
-        super(props, context);
+        super(props);
         this.state = {
-            showModal: false
+            showModal: false,
+            modalData: 'Hello'
         };
-        this.relationshipBuilder = new RelationshipBuilder();
-        this.handleOpenModal = this.handleOpenModal.bind(this);
-        this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleExternalClick = this.handleExternalClick.bind(this);
+        this.relationshipBuilder = new RelationshipBuilder();
+    }
+
+    componentDidMount() {
+        Modal.setAppElement('body');
     }
 
     handleClick(tag){
         console.log(this.relationshipBuilder.getAssociatedOrganizationsByTag(tag));
+        this.setState({
+            showModal: true
+        });
+    }
+    openModal() {
+        this.setState({showModal: true});
     }
 
-    handleOpenModal () {
-        this.setState({ showModal: true });
+    afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        this.subtitle.style.color = '#f00';
     }
 
-    handleCloseModal () {
-        this.setState({ showModal: false });
+    closeModal() {
+        this.setState({showModal: false});
     }
+
     handleExternalClick()
     {
         window.open(this.props.url);
@@ -51,7 +76,7 @@ class ProjectSelector extends React.Component
             return <Card.Img className="project-image" variant="top" src={this.props.imageUrl}/>;
         } else {
             return (
-                <iframe className="project-video" src={this.props.videoUrl} frameBorder="0"
+                <iframe title={this.props.name} className="project-video" src={this.props.videoUrl} frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen/>
             )
@@ -77,11 +102,9 @@ class ProjectSelector extends React.Component
             } else {
                 return developmentTools.map((tool) => {
                         return (
-                            <div key={tool}  onClick={this.handleClick.bind(this)}>
-                                <Badge variant={badgeType} key={tool} className="card-row">
-                                        {tool}
-                                </Badge>
-                            </div>
+                            <Badge onClick={this.toggleModal} variant={badgeType} key={tool} className="card-row">
+                                    {tool}
+                            </Badge>
                         );
                     }
                 )
@@ -128,8 +151,16 @@ class ProjectSelector extends React.Component
                         {this.getBadgeRow('Project Tags', this.props[PROJECT_TAGS_NAME], 'primary')}
                         { ProjectSelector.getListGroupItem('External Link', this.getProjectURL(this.props[PROJECT_URL_NAME])) }
                     </ListGroup>
-                    <PopupModal
-                        isOpen={this.state.showModal}/>
+                    <button onClick={this.toggleModal}>
+                        Open the modal
+                    </button>
+                    <Modal
+                        isOpen={this.state.showModal}
+                        style={customStyles}>
+                        <h2 ref={subtitle => this.subtitle = subtitle}>{ this.props.modalData }</h2>
+                        <div>{ this.props.modalData }</div>
+                        <button onClick={this.closeModal}>close</button>
+                    </Modal>
                 </Card>
             </Col>);
     }
