@@ -3,7 +3,17 @@ import Card from 'react-bootstrap/Card';
 import {Badge, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
 import ListGroup from 'react-bootstrap/ListGroup';
-import {COMPANY_NAME} from '../../helpers/constants';
+import {
+    COMPANY_DESCRIPTION_NAME,
+    COMPANY_NAME,
+    COMPANY_URL_NAME,
+    DEVELOPMENT_TOOLS_USED_NAME, END_DATE_NAME,
+    EXPERIENCE_NAME,
+    FRAMEWORKS_USED_NAME,
+    MARKUP_LANGUAGES_USED_NAME, PROGRAMMING_LANGUAGES_USED_NAME,
+    SCRIPTING_LANGUAGES_USED_NAME, START_DATE_NAME,
+    STYLESHEET_LANGUAGES_USED_NAME,
+} from '../../helpers/constants';
 
 class ExperienceCard extends React.Component
 {
@@ -51,11 +61,11 @@ class ExperienceCard extends React.Component
         )
     }
     getCompanyTenure(){
-        let startDate = moment(this.props.startDate, 'MM-YYYY');
-        if(this.props.endDate === 'Current'){
-            return moment(this.props.startDate, 'MM-YYYY').fromNow(true).toLocaleString();
+        let startDate = moment(this.props[START_DATE_NAME], 'MM-YYYY');
+        if(this.props[END_DATE_NAME] === 'Current'){
+            return moment(this.props[START_DATE_NAME], 'MM-YYYY').fromNow(true).toLocaleString();
         } else {
-            let endDate = moment(this.props.endDate, 'MM-YYYY');
+            let endDate = moment(this.props[END_DATE_NAME], 'MM-YYYY');
             return moment(startDate).from(endDate, true).toLocaleString();
         }
     }
@@ -64,32 +74,32 @@ class ExperienceCard extends React.Component
         return (
             <Card>
                 <Card.Header>
-                    {this.props.COMPANY_NAME}
+                    {this.props[COMPANY_NAME]}
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
                     <Tab eventKey="description" title="Description" className="card-text left-align-text">
-                        {ExperienceCard.getBulletPoints(this.props.experience)}
+                        {ExperienceCard.getBulletPoints(this.props[EXPERIENCE_NAME])}
                     </Tab>
                     <Tab eventKey="development" title="Development Info" className="card-text">
                         <ListGroup>
-                            {this.getDevelopmentInfoRow('Programming Languages ', this.props.programmingLanguagesUsed, 'primary')}
-                            {this.getDevelopmentInfoRow('Scripting Languages ', this.props.scriptingLanguagesUsed, 'info')}
-                            {this.getDevelopmentInfoRow('Markup Languages ', this.props.markupLanguagesUsed, 'dark')}
-                            {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props.stylesheetLanguagesUsed, 'secondary')}
-                            {this.getDevelopmentInfoRow('Frameworks Languages ', this.props.frameworksUsed, 'info')}
-                            {this.getDevelopmentInfoRow('Development Tools ', this.props.developmentToolsUsed, 'secondary')}
+                            {this.getDevelopmentInfoRow('Programming Languages ', this.props[PROGRAMMING_LANGUAGES_USED_NAME], 'primary')}
+                            {this.getDevelopmentInfoRow('Scripting Languages ', this.props[SCRIPTING_LANGUAGES_USED_NAME], 'info')}
+                            {this.getDevelopmentInfoRow('Markup Languages ', this.props[MARKUP_LANGUAGES_USED_NAME], 'dark')}
+                            {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props[STYLESHEET_LANGUAGES_USED_NAME], 'secondary')}
+                            {this.getDevelopmentInfoRow('Frameworks Languages ', this.props[FRAMEWORKS_USED_NAME], 'info')}
+                            {this.getDevelopmentInfoRow('Development Tools ', this.props[DEVELOPMENT_TOOLS_USED_NAME], 'secondary')}
                         </ListGroup>
                     </Tab>
                     <Tab eventKey="company" title="Company Info" className="card-text">
                         <ListGroup>
                             <ListGroup.Item>
                                 <div className="row left-align-text card-row">
-                                    {this.props.companyDescription}
+                                    {this.props[COMPANY_DESCRIPTION_NAME]}
                                 </div>
                             </ListGroup.Item>
                             <ListGroup.Item>
-                                <Card.Link href={this.props.companyURL} >
-                                    {this.props.companyName} Website
+                                <Card.Link href={this.props[COMPANY_URL_NAME]} >
+                                    {this.props[COMPANY_NAME]} Website
                                 </Card.Link>
                             </ListGroup.Item>
                         </ListGroup>

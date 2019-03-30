@@ -111,8 +111,8 @@ class ProjectSelector extends React.Component
                         {this.getProjectURL(this.props.url)}
                     </Card.Body>
                     <ListGroup>
-                        {this.getBadgeRow('Organization', this.props.ORGANIZATION_KEY_NAME, 'secondary', false)}
-                        {this.getBadgeRow('Project Tags', this.props.PROJECT_TAGS_NAME, 'primary')}
+                        {this.getBadgeRow('Organization', this.props.organization, 'secondary', false)}
+                        {this.getBadgeRow('Project Tags', this.props.tags, 'primary')}
                     </ListGroup>
                     <PopupModal
                         isOpen={this.state.showModal}/>
