@@ -83,18 +83,21 @@ class ProjectSelector extends React.Component
         if(typeof itemString === 'undefined' || itemString === ''){
             return '';
         }
-        return (
-            <ListGroup.Item>
-                <div className="row">
-                    <div className="col-5">
-                        {developmentType}:
-                    </div>
-                    <div className="col-7">
-                        {this.getBadges(itemString, badgeType, pillType)}
-                    </div>
+        let badge = this.getBadges(itemString, badgeType, pillType);
+        return ProjectSelector.getListGroupItem(developmentType, badge);
+    }
+
+    static getListGroupItem(header, value){
+        return (<ListGroup.Item>
+            <div className="row">
+                <div className="col-5">
+                    {header}:
                 </div>
-            </ListGroup.Item>
-        );
+                <div className="col-7">
+                    {value}
+                </div>
+            </div>
+        </ListGroup.Item>);
     }
 
 
@@ -109,11 +112,11 @@ class ProjectSelector extends React.Component
                         <Card.Text>
                             {this.props.description}
                         </Card.Text>
-                        {this.getProjectURL(this.props[PROJECT_URL_NAME])}
                     </Card.Body>
                     <ListGroup>
                         {this.getBadgeRow('Organization', this.props[ORGANIZATION_KEY_NAME], 'secondary', false)}
                         {this.getBadgeRow('Project Tags', this.props[PROJECT_TAGS_NAME], 'primary')}
+                        { ProjectSelector.getListGroupItem('External Link', this.getProjectURL(this.props[PROJECT_URL_NAME])) }
                     </ListGroup>
                     <PopupModal
                         isOpen={this.state.showModal}/>
