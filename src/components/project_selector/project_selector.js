@@ -1,7 +1,6 @@
 import React from 'react';
 import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
 import PopupModal from '../../components/popup_modal/popup_modal';
-import {ORGANIZATION_KEY_NAME} from '../../helpers/constants';
 
 class ProjectSelector extends React.Component
 {
