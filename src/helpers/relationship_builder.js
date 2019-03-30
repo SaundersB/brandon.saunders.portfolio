@@ -5,7 +5,7 @@ import {
     DEVELOPMENT_TOOLS_USED_NAME,
     FRAMEWORKS_USED_NAME,
     MARKUP_LANGUAGES_USED_NAME,
-    PROGRAMMING_LANGUAGES_USED_NAME,
+    PROGRAMMING_LANGUAGES_USED_NAME, PROJECT_TAGS_NAME,
     SCRIPTING_LANGUAGES_USED_NAME,
     STYLESHEET_LANGUAGES_USED_NAME,
     TAG_KEY,
@@ -17,47 +17,51 @@ class RelationshipBuilder
 {
     getAssociatedOrganizationsByTag(tags)
     {
-        let summary = {};
+        let summary = {
+            [PROJECT_TAGS_NAME]: {
+            },
+        };
         if (typeof tags === 'undefined') {
             return [];
         }
         let tagValues = tags.split(', ');
         tagValues.forEach((tag) => {
-            summary[TAG_KEY] = {
-                [TAG_NAME]: tag
+            summary[PROJECT_TAGS_NAME][tag] = {
+                [TAG_NAME]: tag,
+                "organizations": []
             };
         });
-
-        let organizationsTechnologies = this.getOrganizationsTechnologies();
-        console.log(organizationsTechnologies);
-
-        tagValues.forEach((tag) => {
-            let tagObject = summary[TAG_KEY];
-            tagObject.organizations = [];
-            organizationsTechnologies.forEach((organizationsTech) => {
-                if(organizationsTech.technologies.includes(tag)){
-                    let alreadyMatchedTaggedOrganizations = tagObject["organizations"];
-                    let matchedTagCompanyName = organizationsTech[COMPANY_NAME];
-                    let matchedTagTechnologies = organizationsTech["technologies"];
-                    let summaryObject = {
-                        [COMPANY_NAME]: matchedTagCompanyName,
-                        "technologies": matchedTagTechnologies,
-                    };
-                    if(alreadyMatchedTaggedOrganizations.length > 0) {
-                        let newOrgs = [];
-                        alreadyMatchedTaggedOrganizations.forEach((organization) => {
-                            let tagsCompanyName = organization[COMPANY_NAME];
-                            if(tagsCompanyName !== matchedTagCompanyName){
-                                newOrgs.push(summaryObject);
-                            }
-                        });
-                        alreadyMatchedTaggedOrganizations.push(newOrgs);
-                    } else {
-                        alreadyMatchedTaggedOrganizations.push(summaryObject);
+        try {
+            let organizationsTechnologies = this.getOrganizationsTechnologies();
+            tagValues.forEach((tag) => {
+                let tagObject = summary[PROJECT_TAGS_NAME][tag];
+                organizationsTechnologies.forEach((organizationsTech) => {
+                    if (organizationsTech.technologies.includes(tag)) {
+                        let alreadyMatchedTaggedOrganizations = tagObject.organizations;
+                        let matchedTagCompanyName = organizationsTech[COMPANY_NAME];
+                        let matchedTagTechnologies = organizationsTech["technologies"];
+                        let summaryObject = {
+                            [COMPANY_NAME]: matchedTagCompanyName,
+                            "technologies": matchedTagTechnologies,
+                        };
+                        if (alreadyMatchedTaggedOrganizations.length > 0) {
+                            let newOrgs = [];
+                            alreadyMatchedTaggedOrganizations.forEach((organization) => {
+                                let tagsCompanyName = organization[COMPANY_NAME];
+                                if (tagsCompanyName !== matchedTagCompanyName) {
+                                    newOrgs.push(summaryObject);
+                                }
+                            });
+                            alreadyMatchedTaggedOrganizations.push(...newOrgs);
+                        } else {
+                            alreadyMatchedTaggedOrganizations.push(summaryObject);
+                        }
                     }
-                }
+                });
             });
-        });
+        } catch (e) {
+            console.log(e);
+        }
 
         return summary;
     }
