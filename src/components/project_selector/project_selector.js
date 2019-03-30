@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
 import PopupModal from '../../components/popup_modal/popup_modal';
 import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../helpers/constants';
+import RelationshipBuilder from '../../helpers/relationship_builder';
 
 class ProjectSelector extends React.Component
 {
@@ -11,7 +12,8 @@ class ProjectSelector extends React.Component
         this.state = {
             showModal: false
         };
-
+        this.relationshipBuilder = new RelationshipBuilder();
+        console.log(this.relationshipBuilder.getAssociatedOrganizationsByTag(this.props[PROJECT_TAGS_NAME]));
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCloseModal = this.handleCloseModal.bind(this);
         this.handleExternalClick = this.handleExternalClick.bind(this);

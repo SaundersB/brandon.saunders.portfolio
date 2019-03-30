@@ -27,7 +27,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://heartcup.com',
         [PROJECT_IMAGE_URL_NAME]: heart_cup_landing,
         [ORGANIZATION_KEY_NAME]: 'Heart Cup',
-        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript',
+        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, Docker, Cordova, CSS, SASS/SCSS, HTML, BASH/Shell',
     },
     {
         [PROJECT_NAME]: 'Xandr Reward Card',
@@ -37,7 +37,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://xandrrewardcard.com',
         [PROJECT_IMAGE_URL_NAME]: xandr_reward_card_landing,
         [ORGANIZATION_KEY_NAME]: 'JNR Inc.',
-        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript',
+        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, LAMP',
     },
     {
         [PROJECT_NAME]: 'Hyundai Nexo Fuel Card',
@@ -47,7 +47,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://nexofuelcard.com',
         [PROJECT_IMAGE_URL_NAME]: nexofuelcard,
         [ORGANIZATION_KEY_NAME]: 'JNR Inc.',
-        [PROJECT_TAGS_NAME]: 'Drupal, PHP',
+        [PROJECT_TAGS_NAME]: 'Drupal, PHP, GitLab VCS, Gitlab CI/CD',
     },
     {
         [PROJECT_NAME]: 'Portfolio Site',

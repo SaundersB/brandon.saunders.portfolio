@@ -22,3 +22,6 @@ export const STYLESHEET_LANGUAGES_USED_NAME = "stylesheetLanguagesUsed";
 export const FRAMEWORKS_USED_NAME = "frameworksUsed";
 export const COMPANY_URL_NAME = "companyURL";
 export const COMPANY_DESCRIPTION_NAME = "companyDescription";
+
+export const TAG_KEY = "tag";
+export const TAG_NAME = "tagName";

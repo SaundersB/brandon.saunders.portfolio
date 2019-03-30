@@ -42,7 +42,7 @@ let experience = [
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell",
         [MARKUP_LANGUAGES_USED_NAME]: "HTML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS, SASS/SCSS",
-        [FRAMEWORKS_USED_NAME]: "VueJS, Laravel, Codeception, Jest, Mocha",
+        [FRAMEWORKS_USED_NAME]: "VueJS, Laravel, Codeception, Jest, Mocha, Cordova",
         [COMPANY_URL_NAME]: "https://www.heartcup.com/",
         [COMPANY_DESCRIPTION_NAME]: "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!"
     },
