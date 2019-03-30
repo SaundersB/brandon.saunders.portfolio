@@ -35,7 +35,6 @@ class SideNavigation extends React.Component
                 break;
             }
             default: {
-                console.log("None");
                 break;
             }
         }

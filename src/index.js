@@ -4,9 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import App from "./App";
 import * as serviceWorker from './serviceWorker';
-
-console.log(process.env.PUBLIC_URL);
-// basename="/brandon.saunders.portfolio"
 const routing = (
     <div className="application">
         <App/>

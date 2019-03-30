@@ -11,7 +11,6 @@ class ProjectSelector extends React.Component
 
     handleClick()
     {
-        console.log('Clicked!');
         window.open(this.props.url);
     }
 
