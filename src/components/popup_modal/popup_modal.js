@@ -45,7 +45,6 @@ class PopupModal extends React.Component {
     render() {
         return (
             <div>
-
                 <Modal
                     isOpen={this.state.modalIsOpen}
                     onAfterOpen={this.afterOpenModal}

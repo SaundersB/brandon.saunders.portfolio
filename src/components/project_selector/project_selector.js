@@ -6,17 +6,21 @@ import RelationshipBuilder from '../../helpers/relationship_builder';
 
 class ProjectSelector extends React.Component
 {
-    constructor(props)
+    constructor(props, context)
     {
-        super(props);
+        super(props, context);
         this.state = {
             showModal: false
         };
         this.relationshipBuilder = new RelationshipBuilder();
-        console.log(this.relationshipBuilder.getAssociatedOrganizationsByTag(this.props[PROJECT_TAGS_NAME]));
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.handleExternalClick = this.handleExternalClick.bind(this);
+    }
+
+    handleClick(tag){
+        console.log(this.relationshipBuilder.getAssociatedOrganizationsByTag(tag));
     }
 
     handleOpenModal () {
@@ -62,18 +66,22 @@ class ProjectSelector extends React.Component
             if(pillType) {
                 return developmentTools.map((tool) => {
                         return (
-                            <Badge pill variant={badgeType} key={tool} className="card-row">
-                                {tool}
-                            </Badge>
+                            <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
+                                <Badge pill variant={badgeType} key={tool} className="card-row">
+                                    {tool}
+                                </Badge>
+                            </div>
                         );
                     }
                 )
             } else {
                 return developmentTools.map((tool) => {
                         return (
-                            <Badge variant={badgeType} key={tool} className="card-row">
-                                    {tool}
-                            </Badge>
+                            <div key={tool}  onClick={this.handleClick.bind(this)}>
+                                <Badge variant={badgeType} key={tool} className="card-row">
+                                        {tool}
+                                </Badge>
+                            </div>
                         );
                     }
                 )

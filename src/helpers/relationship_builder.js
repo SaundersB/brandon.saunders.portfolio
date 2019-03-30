@@ -15,7 +15,7 @@ import {
 
 class RelationshipBuilder
 {
-    getAssociatedOrganizationsByTag(tags)
+    getAssociatedOrganizationsByTags(tags)
     {
         let summary = {
             [PROJECT_TAGS_NAME]: {
@@ -58,6 +58,49 @@ class RelationshipBuilder
                         }
                     }
                 });
+            });
+        } catch (e) {
+            console.log(e);
+        }
+
+        return summary;
+    }
+
+    getAssociatedOrganizationsByTag(tag)
+    {
+        let summary = {
+            [TAG_NAME]: tag,
+            "organizations": [],
+            "otherProjects": []
+        };
+        if (typeof tag === 'undefined') {
+            return [];
+        }
+
+        try {
+            let organizationsTechnologies = this.getOrganizationsTechnologies();
+            organizationsTechnologies.forEach((organizationsTech) => {
+                if (organizationsTech.technologies.includes(tag)) {
+                    let alreadyMatchedTaggedOrganizations = summary.organizations;
+                    let matchedTagCompanyName = organizationsTech[COMPANY_NAME];
+                    let matchedTagTechnologies = organizationsTech["technologies"];
+                    let summaryObject = {
+                        [COMPANY_NAME]: matchedTagCompanyName,
+                        "technologies": matchedTagTechnologies,
+                    };
+                    if (alreadyMatchedTaggedOrganizations.length > 0) {
+                        let newOrgs = [];
+                        alreadyMatchedTaggedOrganizations.forEach((organization) => {
+                            let tagsCompanyName = organization[COMPANY_NAME];
+                            if (tagsCompanyName !== matchedTagCompanyName) {
+                                newOrgs.push(summaryObject);
+                            }
+                        });
+                        alreadyMatchedTaggedOrganizations.push(...newOrgs);
+                    } else {
+                        alreadyMatchedTaggedOrganizations.push(summaryObject);
+                    }
+                }
             });
         } catch (e) {
             console.log(e);
