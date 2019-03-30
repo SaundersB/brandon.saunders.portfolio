@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, {Component} from 'react';
 import {
     HashRouter,
@@ -16,6 +17,13 @@ import NotFound from './pages/notfound/notfound';
 import PortfolioHeader from './components/portfolio_header/portfolio_header';
 import Navigation from './components/side_navigation/side_navigation.js';
 import history from './router/history';
+
+function initializeReactGA() {
+    ReactGA.initialize('UA-53484838-6');
+    ReactGA.pageview('/homepage');
+}
+
+initializeReactGA();
 
 const AppContainer = styled(BaseAppContainer)`
 `;
