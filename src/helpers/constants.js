@@ -1,5 +1,9 @@
 
 // Project Keys
+export const PROJECT_NAME = "name";
+export const PROJECT_DESCRIPTION_NAME = "description";
+export const PROJECT_URL_NAME = "url";
+export const PROJECT_IMAGE_URL_NAME = 'imageUrl';
 export const PROJECT_TAGS_NAME = "tags";
 export const ORGANIZATION_KEY_NAME = "organization";
 

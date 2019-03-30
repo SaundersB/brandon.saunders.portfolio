@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import {Badge, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
 import ListGroup from 'react-bootstrap/ListGroup';
+import {COMPANY_NAME} from '../../helpers/constants';
 
 class ExperienceCard extends React.Component
 {
@@ -63,7 +64,7 @@ class ExperienceCard extends React.Component
         return (
             <Card>
                 <Card.Header>
-                    {this.props.companyName}
+                    {this.props.COMPANY_NAME}
                 </Card.Header>
                 <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
                     <Tab eventKey="description" title="Description" className="card-text left-align-text">
