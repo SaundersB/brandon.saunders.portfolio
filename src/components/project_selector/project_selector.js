@@ -1,7 +1,8 @@
 import React from 'react';
-import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
+import {Card, Button, Col, Badge, ListGroup, Row} from 'react-bootstrap';
 import Modal from 'react-modal';
 import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../helpers/constants';
+import TagRelationships from '../tag_relationships/tag_relationships';
 import RelationshipBuilder from '../../helpers/relationship_builder';
 
 const customStyles = {
@@ -39,7 +40,8 @@ class ProjectSelector extends React.Component
     handleClick(tag){
         console.log(this.relationshipBuilder.getAssociatedOrganizationsByTag(tag));
         this.setState({
-            showModal: true
+            showModal: true,
+            modalData: this.relationshipBuilder.getAssociatedOrganizationsByTag(tag),
         });
     }
     openModal() {
@@ -102,7 +104,7 @@ class ProjectSelector extends React.Component
             } else {
                 return developmentTools.map((tool) => {
                         return (
-                            <Badge onClick={this.toggleModal} variant={badgeType} key={tool} className="card-row">
+                            <Badge variant={badgeType} key={tool} className="card-row">
                                     {tool}
                             </Badge>
                         );
@@ -157,9 +159,12 @@ class ProjectSelector extends React.Component
                     <Modal
                         isOpen={this.state.showModal}
                         style={customStyles}>
-                        <h2 ref={subtitle => this.subtitle = subtitle}>{ this.props.modalData }</h2>
-                        <div>{ this.props.modalData }</div>
-                        <button onClick={this.closeModal}>close</button>
+                        <TagRelationships {...this.state.modalData}/>
+                        <Row xs={12} md={8}>
+                            <Col>
+                                <button onClick={this.closeModal}>close</button>
+                            </Col>
+                        </Row>
                     </Modal>
                 </Card>
             </Col>);
