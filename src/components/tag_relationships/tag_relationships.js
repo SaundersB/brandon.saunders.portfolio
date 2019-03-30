@@ -6,26 +6,27 @@ import ProjectSelector from '../../pages/projects/projects';
 class TagRelationships extends React.Component{
     render()
     {
+        if(typeof this.props.tagName === 'undefined' || this.props.tagName === '') {
+            return (<div/>);
+        }
+
         return (<div>
             <Row xs={12} md={8}>
                 <Col className="text-center">
-                    {this.props.tagName}
+                    Organizations {this.props.tagName} Utilized:
                 </Col>
             </Row>
-            <Row xs={12} md={8} >
-                <div className="col-5">
-                    Organizations Utilized:
-                </div>
-                <div className="col-7">
+            <Row xs={12} md={8}>
+                <Col>
                     {this.props.organizations.map(function(organization, i) {
                             return (
-                                <Col className="text-center">
-                                    { organization.companyName }
-                                </Col>
+                                    <Row xs={12} md={8} key={organization.companyName + i} className="text-center">
+                                        { organization.companyName }
+                                    </Row>
                             );
                         },
                     )}
-                </div>
+                </Col>
             </Row>
         </div>);
     }

@@ -38,10 +38,16 @@ class ProjectSelector extends React.Component
     }
 
     handleClick(tag){
-        console.log(this.relationshipBuilder.getAssociatedOrganizationsByTag(tag));
+        let organizationalData = this.relationshipBuilder.getAssociatedOrganizationsByTag(tag);
+        console.log(organizationalData);
+
+        if(organizationalData.organizations.length <= 0){
+            console.log("No organizational data");
+            return;
+        }
         this.setState({
             showModal: true,
-            modalData: this.relationshipBuilder.getAssociatedOrganizationsByTag(tag),
+            modalData: organizationalData,
         });
     }
     openModal() {
@@ -153,9 +159,6 @@ class ProjectSelector extends React.Component
                         {this.getBadgeRow('Project Tags', this.props[PROJECT_TAGS_NAME], 'primary')}
                         { ProjectSelector.getListGroupItem('External Link', this.getProjectURL(this.props[PROJECT_URL_NAME])) }
                     </ListGroup>
-                    <button onClick={this.toggleModal}>
-                        Open the modal
-                    </button>
                     <Modal
                         isOpen={this.state.showModal}
                         style={customStyles}>
