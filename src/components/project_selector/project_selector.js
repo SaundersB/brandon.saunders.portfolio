@@ -1,15 +1,30 @@
 import React from 'react';
 import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
+import PopupModal from '../../components/popup_modal/popup_modal';
+import {ORGANIZATION_KEY_NAME} from '../../helpers/constants';
 
 class ProjectSelector extends React.Component
 {
     constructor(props)
     {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        this.state = {
+            showModal: false
+        };
+
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.handleExternalClick = this.handleExternalClick.bind(this);
     }
 
-    handleClick()
+    handleOpenModal () {
+        this.setState({ showModal: true });
+    }
+
+    handleCloseModal () {
+        this.setState({ showModal: false });
+    }
+    handleExternalClick()
     {
         window.open(this.props.url);
     }
@@ -21,7 +36,7 @@ class ProjectSelector extends React.Component
             return '';
         }
         return (
-            <Button onClick={this.handleClick} variant="primary">More Information</Button>
+            <Button onClick={this.handleExternalClick} variant="primary">More Information</Button>
         );
     }
 
@@ -55,7 +70,7 @@ class ProjectSelector extends React.Component
                 return developmentTools.map((tool) => {
                         return (
                             <Badge variant={badgeType} key={tool} className="card-row">
-                                {tool}
+                                    {tool}
                             </Badge>
                         );
                     }
@@ -97,9 +112,11 @@ class ProjectSelector extends React.Component
                         {this.getProjectURL(this.props.url)}
                     </Card.Body>
                     <ListGroup>
-                        {this.getBadgeRow('Organization', this.props.organization, 'secondary', false)}
-                        {this.getBadgeRow('Project Tags', this.props.tags, 'primary')}
+                        {this.getBadgeRow('Organization', this.props.ORGANIZATION_KEY_NAME, 'secondary', false)}
+                        {this.getBadgeRow('Project Tags', this.props.PROJECT_TAGS_NAME, 'primary')}
                     </ListGroup>
+                    <PopupModal
+                        isOpen={this.state.showModal}/>
                 </Card>
             </Col>);
     }

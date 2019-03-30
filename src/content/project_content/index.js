@@ -9,7 +9,8 @@ import digital_signage_4K_content_player_screenshot from '../../assets/images/di
 import digital_signage_electronic_shelf_label_screenshot from '../../assets/images/electronic_shelf_labels.png';
 import nexofuelcard from '../../assets/images/nexofuelcard.png';
 import portfolio from '../../assets/images/portfolio_site.png';
-
+import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME} from '../../helpers/constants';
+console.log([ORGANIZATION_KEY_NAME]);
 let projects = [
     {
         'name': 'Heart Cup',
@@ -19,8 +20,8 @@ let projects = [
             ' ability to change lives. So join us on our quest to become a community built on giving!',
         'url': 'https://heartcup.com',
         'imageUrl': heart_cup_landing,
-        'organization': 'Heart Cup',
-        'tags': 'VueJS, Laravel, PHP, JavaScript',
+        [ORGANIZATION_KEY_NAME]: 'Heart Cup',
+        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript',
     },
     {
         'name': 'Xandr Reward Card',
@@ -29,8 +30,8 @@ let projects = [
             ' or virtual prepaid debit card.',
         'url': 'https://xandrrewardcard.com',
         'imageUrl': xandr_reward_card_landing,
-        'organization': 'JNR Inc.',
-        'tags': 'VueJS, Laravel, PHP, JavaScript',
+        ORGANIZATION_KEY_NAME: 'JNR Inc.',
+        PROJECT_TAGS_NAME: 'VueJS, Laravel, PHP, JavaScript',
     },
     {
         'name': 'Hyundai Nexo Fuel Card',
@@ -39,16 +40,16 @@ let projects = [
             'see transactions made with their card.',
         'url': 'https://nexofuelcard.com',
         'imageUrl': nexofuelcard,
-        'organization': 'JNR Inc.',
-        'tags': 'Drupal, PHP',
+        ORGANIZATION_KEY_NAME: 'JNR Inc.',
+        PROJECT_TAGS_NAME: 'Drupal, PHP',
     },
     {
         'name': 'Portfolio Site',
         'description': 'The current website you\'re viewing is a React based portfolio site highlighting my experience and projects.',
         'url': 'https://saundersb.github.io/brandon.saunders.portfolio',
         'imageUrl': portfolio,
-        'organization': 'Open Source',
-        'tags': 'React, JavaScript',
+        ORGANIZATION_KEY_NAME: 'Open Source',
+        PROJECT_TAGS_NAME: 'React, JavaScript',
     },
     {
         'name': 'Pet Photo iOS App',
@@ -58,8 +59,8 @@ let projects = [
             ' your camera roll!',
         'url': 'https://itunes.apple.com/us/app/petphoto/id1178333966?mt=8',
         'imageUrl': pet_photo_screenshot,
-        'organization': 'Open Source',
-        'tags': 'Swift',
+        ORGANIZATION_KEY_NAME: 'Open Source',
+        PROJECT_TAGS_NAME: 'Swift',
     },
     {
         'name': 'Multiplier Finder',
@@ -69,8 +70,8 @@ let projects = [
             'down to return to the selection menu.',
         'url': 'https://itunes.apple.com/us/app/multiplier-finder/id1178339564',
         'imageUrl': multiplier_finder_screenshot,
-        'organization': 'Open Source',
-        'tags': 'Swift',
+        ORGANIZATION_KEY_NAME: 'Open Source',
+        PROJECT_TAGS_NAME: 'Swift',
     },
     {
         'name': 'Digital Signage 4K LED/LCD Content Player',
@@ -79,16 +80,16 @@ let projects = [
         'url': 'https://www.dropbox.com/s/arwoyv376wftec6/java_digital_signage_player.mov?dl=0',
         'videoUrl': 'https://www.youtube.com/embed/HvbtS2QyCNk',
         'imageUrl': digital_signage_4K_content_player_screenshot,
-        'organization': 'Vantage LED',
-        'tags': 'Java',
+        ORGANIZATION_KEY_NAME: 'Vantage LED',
+        PROJECT_TAGS_NAME: 'Java',
     },
     {
         'name': 'Electronic Shelf Label Price Integration',
         'description': 'Integration and automation of price updates on e-Paper Electronic Shelf Labels.',
         'url': '',
         'imageUrl': digital_signage_electronic_shelf_label_screenshot,
-        'organization': 'Vantage LED',
-        'tags': 'Java',
+        ORGANIZATION_KEY_NAME: 'Vantage LED',
+        PROJECT_TAGS_NAME: 'Java',
     },
     {
         'name': 'Digital Signage Virtual Scoreboard',
@@ -97,8 +98,8 @@ let projects = [
         'url': 'https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0',
         'videoUrl': '',
         'imageUrl': digital_signage_virtual_scoreboard_screenshot,
-        'organization': 'Vantage LED',
-        'tags': 'Python, ActionScript',
+        ORGANIZATION_KEY_NAME: 'Vantage LED',
+        PROJECT_TAGS_NAME: 'Python, ActionScript',
     },
     {
         'name': 'Digital Signage Virtual Scoreboard Android Application',
@@ -106,8 +107,8 @@ let projects = [
         'url': 'https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0',
         'videoUrl': 'https://www.youtube.com/embed/VA_siC4pF8k',
         'imageUrl': '',
-        'organization': 'Vantage LED',
-        'tags': 'Java',
+        ORGANIZATION_KEY_NAME: 'Vantage LED',
+        PROJECT_TAGS_NAME: 'Java',
     },
     {
         'name': 'Watson Metal Alloy X-Ray Automation',
@@ -116,8 +117,8 @@ let projects = [
         'url': 'https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0',
         'videoUrl': 'https://www.youtube.com/embed/AsneadNXPMA',
         'imageUrl': metal_alloy_x_ray_automation,
-        'organization': 'Tribogenics',
-        'tags': 'Java',
+        ORGANIZATION_KEY_NAME: 'Tribogenics',
+        PROJECT_TAGS_NAME: 'Java',
     },
     {
         'name': 'Watson Metal Alloy X-Ray Gun Internal Development Tool Suite',
@@ -129,16 +130,16 @@ let projects = [
         'url': 'https://www.dropbox.com/s/dt2b66rkuyot9t0/metal_alloy_automated_qa.mov?dl=0',
         'videoUrl': '',
         'imageUrl': metal_alloy_x_ray_automation,
-        'organization': 'Tribogenics',
-        'tags': 'BASH, PowerShell',
+        ORGANIZATION_KEY_NAME: 'Tribogenics',
+        PROJECT_TAGS_NAME: 'BASH, PowerShell',
     },
     {
         'name': 'Space Invaders',
         'description': 'A modern rendition of the class Space Invaders written in the JavaScript Phaser library.',
         'url': 'http://saundersb.github.io/SpaceInvaders/',
         'imageUrl': space_invaders_screenshot,
-        'organization': 'College',
-        'tags': 'JavaScript, Phaser',
+        ORGANIZATION_KEY_NAME: 'College',
+        PROJECT_TAGS_NAME: 'JavaScript, Phaser',
     },
 ];
 
