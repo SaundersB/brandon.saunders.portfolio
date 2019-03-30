@@ -2,8 +2,12 @@ import React from "react";
 import experience from '../../content/professional_experience_content';
 import ExperienceCard from '../../components/experience_card/experience_card';
 import {Container, Row} from 'react-bootstrap';
+import {COMPANY_NAME} from '../../helpers/constants';
+import {getOrganizationKey} from '../../helpers/string_helpers';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 class ProfessionalExperience extends React.Component {
+
     render()
     {
         return(
@@ -12,7 +16,12 @@ class ProfessionalExperience extends React.Component {
                     {experience.map(function(object, i) {
                             return (
                                 <Row xs={12} md={8} key={i + "-row"}>
-                                    <ExperienceCard className="center-alignment card " key={i} {...object} />
+                                    <ScrollableAnchor id={getOrganizationKey(object[COMPANY_NAME])}>
+                                        <ExperienceCard className="center-alignment card "
+                                                        id={getOrganizationKey(object[COMPANY_NAME])}
+                                                        key={getOrganizationKey(object[COMPANY_NAME])}
+                                                        {...object} />
+                                    </ScrollableAnchor>
                                 </Row>
                             );
                         },

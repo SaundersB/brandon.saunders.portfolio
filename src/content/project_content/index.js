@@ -11,7 +11,7 @@ import nexofuelcard from '../../assets/images/nexofuelcard.png';
 import portfolio from '../../assets/images/portfolio_site.png';
 import {
     ORGANIZATION_KEY_NAME, PROJECT_DESCRIPTION_NAME,
-    PROJECT_IMAGE_URL_NAME,
+    PROJECT_IMAGE_URL_NAME, PROJECT_KEY,
     PROJECT_NAME,
     PROJECT_TAGS_NAME,
     PROJECT_URL_NAME,
@@ -19,6 +19,7 @@ import {
 
 let projects = [
     {
+        [PROJECT_KEY]: 'heart_cup',
         [PROJECT_NAME]: 'Heart Cup',
         [PROJECT_DESCRIPTION_NAME]: 'Heart Cup was founded on the simple idea of connecting people with their communities - one place,' +
             ' one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about.' +
@@ -30,6 +31,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, Docker, Cordova, CSS, SASS/SCSS, HTML, BASH/Shell',
     },
     {
+        [PROJECT_KEY]: 'xandr',
         [PROJECT_NAME]: 'Xandr Reward Card',
         [PROJECT_DESCRIPTION_NAME]: 'AT&T owned Xandr Advertising prepaid debit card incentive program. Web portal for employees to' +
             ' send redemption codes to other coworkers. Employees can then redeem their redemption code for a physical' +
@@ -40,6 +42,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, LAMP',
     },
     {
+        [PROJECT_KEY]: 'nexo',
         [PROJECT_NAME]: 'Hyundai Nexo Fuel Card',
         [PROJECT_DESCRIPTION_NAME]: 'Hyundai provides a prepaid debit card with each Hyundai Nexo hydrogen fuel car. Once a ' +
             'recipient receives their fuel card they have the ability to activate, check their account balance and' +
@@ -50,6 +53,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Drupal, PHP, GitLab VCS, Gitlab CI/CD',
     },
     {
+        [PROJECT_KEY]: 'portfolio',
         [PROJECT_NAME]: 'Portfolio Site',
         [PROJECT_DESCRIPTION_NAME]: 'The current website you\'re viewing is a React based portfolio site highlighting my experience and projects.',
         [PROJECT_URL_NAME]: 'https://saundersb.github.io/brandon.saunders.portfolio',
@@ -58,6 +62,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'React, JavaScript',
     },
     {
+        [PROJECT_KEY]: 'pet_photo',
         [PROJECT_NAME]: 'Pet Photo iOS App',
         [PROJECT_DESCRIPTION_NAME]: 'Get your pet\'s attention when taking photos with other pet noises! Simply press the button of' +
             ' the respective pet sound and when your pet is looking at the camera tap anywhere on the screen. You\'ll' +
@@ -69,6 +74,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Swift',
     },
     {
+        [PROJECT_KEY]: 'multiplier_finder',
         [PROJECT_NAME]: 'Multiplier Finder',
         [PROJECT_DESCRIPTION_NAME]: 'Learn or brush up on your multiplication tables with this iOS app. Similar to the traditional ' +
             'method of writing your multiplication tables and answers on flash card, you can practice for free. Select ' +
@@ -80,6 +86,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Swift',
     },
     {
+        [PROJECT_KEY]: 'digital_sign_4k',
         [PROJECT_NAME]: 'Digital Signage 4K LED/LCD Content Player',
         [PROJECT_DESCRIPTION_NAME]: 'Digital Signage 4K Android content player for the express usage of scheduling video, images,' +
             ' and advertisements.',
@@ -90,6 +97,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Java',
     },
     {
+        [PROJECT_KEY]: 'electronic_shelf_label',
         [PROJECT_NAME]: 'Electronic Shelf Label Price Integration',
         [PROJECT_DESCRIPTION_NAME]: 'Integration and automation of price updates on e-Paper Electronic Shelf Labels.',
         [PROJECT_URL_NAME]: '',
@@ -98,6 +106,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Java',
     },
     {
+        [PROJECT_KEY]: 'digital_signage_virtual_scoreboard',
         [PROJECT_NAME]: 'Digital Signage Virtual Scoreboard',
         [PROJECT_DESCRIPTION_NAME]: 'Electro-Mech hardware console integration with a virtual scoreboard on an LED digital sign. ' +
             'Additionally, an Android application to control the virtual scoreboard on the LED digital sign.',
@@ -108,6 +117,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Python, ActionScript',
     },
     {
+        [PROJECT_KEY]: 'digital_signage_android_app',
         [PROJECT_NAME]: 'Digital Signage Virtual Scoreboard Android Application',
         [PROJECT_DESCRIPTION_NAME]: 'Android application to control a virtual scoreboard that will be displayed on a digital LED sign.',
         [PROJECT_URL_NAME]: 'https://www.dropbox.com/s/5injzv6o6lsnkrt/tablet_scoreboard_controller.mov?dl=0',
@@ -117,6 +127,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Java',
     },
     {
+        [PROJECT_KEY]: 'watson_gun_automation',
         [PROJECT_NAME]: 'Watson Metal Alloy X-Ray Automation',
         [PROJECT_DESCRIPTION_NAME]: 'The automated QA process for a Watson X-Ray metal concentration analysis gun written in Java ' +
             'for an Android application that controls the gun.',
@@ -127,6 +138,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'Java',
     },
     {
+        [PROJECT_KEY]: 'watson_gun_development_tools',
         [PROJECT_NAME]: 'Watson Metal Alloy X-Ray Gun Internal Development Tool Suite',
         [PROJECT_DESCRIPTION_NAME]: 'Each Watson X-Ray gun required interfacing by several teams in the organization. Before I ' +
             'joined each team relied upon the software team to investigate issues. I wrote an interactive command line ' +
@@ -140,6 +152,7 @@ let projects = [
         [PROJECT_TAGS_NAME]: 'BASH, PowerShell',
     },
     {
+        [PROJECT_KEY]: 'space_invaders',
         [PROJECT_NAME]: 'Space Invaders',
         [PROJECT_DESCRIPTION_NAME]: 'A modern rendition of the class Space Invaders written in the JavaScript Phaser library.',
         [PROJECT_URL_NAME]: 'http://saundersb.github.io/SpaceInvaders/',

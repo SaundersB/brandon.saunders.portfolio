@@ -39,7 +39,6 @@ class ProjectSelector extends React.Component
 
     handleClick(tag){
         let organizationalData = this.relationshipBuilder.getAssociatedOrganizationsByTag(tag);
-        console.log(organizationalData);
 
         if(organizationalData.organizations.length <= 0){
             console.log("No organizational data");

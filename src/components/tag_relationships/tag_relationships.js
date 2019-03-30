@@ -1,9 +1,13 @@
 import React from 'react';
-import projects from '../../content/project_content';
 import {Col, Row} from 'react-bootstrap';
-import ProjectSelector from '../../pages/projects/projects';
+import {getOrganizationKey} from '../../helpers/string_helpers';
 
 class TagRelationships extends React.Component{
+    static getOrgLink(organization){
+        let orgURL = getOrganizationKey(organization.companyName);
+        return <a href={'#' + orgURL}>{organization.companyName}</a>
+    }
+
     render()
     {
         if(typeof this.props.tagName === 'undefined' || this.props.tagName === '') {
@@ -21,7 +25,7 @@ class TagRelationships extends React.Component{
                     {this.props.organizations.map(function(organization, i) {
                             return (
                                     <Row xs={12} md={8} key={organization.companyName + i} className="text-center">
-                                        { organization.companyName }
+                                        {TagRelationships.getOrgLink(organization)}
                                     </Row>
                             );
                         },

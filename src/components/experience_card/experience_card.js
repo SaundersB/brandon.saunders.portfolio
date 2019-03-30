@@ -14,6 +14,8 @@ import {
     SCRIPTING_LANGUAGES_USED_NAME, START_DATE_NAME,
     STYLESHEET_LANGUAGES_USED_NAME,
 } from '../../helpers/constants';
+import {getOrganizationKey} from '../../helpers/string_helpers';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 class ExperienceCard extends React.Component
 {
@@ -72,7 +74,7 @@ class ExperienceCard extends React.Component
     render()
     {
         return (
-            <Card>
+            <Card id={getOrganizationKey(this.props[COMPANY_NAME])}>
                 <Card.Header>
                     {this.props[COMPANY_NAME]}
                 </Card.Header>
