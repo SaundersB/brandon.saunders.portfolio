@@ -161,7 +161,7 @@ class ExperienceCard extends React.Component
     getCompanyTenure(){
         let startDate = moment(this.props[START_DATE_NAME], 'MM-YYYY');
         if(this.props[END_DATE_NAME] === 'Current'){
-            return moment(this.props[START_DATE_NAME], 'MM-YYYY').fromNow(true).toLocaleString();
+            return "Currently employed for " + moment(this.props[START_DATE_NAME], 'MM-YYYY').fromNow(true).toLocaleString();
         } else {
             let endDate = moment(this.props[END_DATE_NAME], 'MM-YYYY');
             return moment(startDate).from(endDate, true).toLocaleString();
