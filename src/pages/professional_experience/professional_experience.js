@@ -4,8 +4,22 @@ import ExperienceCard from '../../components/experience_card/experience_card';
 import {Container, Row} from 'react-bootstrap';
 import {COMPANY_NAME} from '../../helpers/constants';
 import {getOrganizationKey} from '../../helpers/string_helpers';
+import scrollToElement from 'scroll-to-element';
+import history from '../../router/history';
 
 class ProfessionalExperience extends React.Component {
+    componentDidMount() {
+        this.jumpToHash();
+    }
+    componentDidUpdate() {
+        this.jumpToHash();
+    }
+    jumpToHash = () => {
+        const hash = history.location.hash;
+        if (hash) {
+            scrollToElement(hash, { offset: -120 });
+        }
+    };
 
     render()
     {

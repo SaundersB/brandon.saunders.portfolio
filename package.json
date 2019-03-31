@@ -19,11 +19,13 @@
     "react-router": "latest",
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.1",
+    "react-router-hash-scroll": "^0.2.7",
     "react-scripts": "2.1.8",
     "react-scrollable-anchor": "^0.6.1",
     "react-sidebar": "^3.0.2",
     "react-sidenav": "^3.1.9",
     "react-tabs": "^3.0.0",
+    "scroll-to-element": "^2.0.3",
     "styled-components": "^3.4.10"
   },
   "scripts": {

@@ -74,7 +74,9 @@ class ExperienceCard extends React.Component
     render()
     {
         return (
-            <Card id={getOrganizationKey(this.props[COMPANY_NAME])}>
+            <Card id={getOrganizationKey(this.props[COMPANY_NAME])}
+                  ref={getOrganizationKey(this.props[COMPANY_NAME])}
+                  name={getOrganizationKey(this.props[COMPANY_NAME])}>
                 <Card.Header>
                     {this.props[COMPANY_NAME]}
                 </Card.Header>
