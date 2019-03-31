@@ -2,13 +2,16 @@ import React from 'react';
 import {Badge} from 'react-bootstrap';
 import history from '../../router/history';
 import {getOrganizationKey} from '../../helpers/string_helpers';
-
+import {organizationNameExistsInOrganizations} from '../../helpers/organization_helper';
 
 class BadgeTag extends React.Component {
     handleBadgeClick(badgeClickEventType){
-        console.log(badgeClickEventType);
+        if(!organizationNameExistsInOrganizations(this.props.name)){
+            // No Organization was found
+            return;
+        }
         switch (badgeClickEventType) {
-            case "organization": {
+            case 'organization': {
                 history.push('/experience#' + getOrganizationKey(this.props.name));
                 break;
             }
