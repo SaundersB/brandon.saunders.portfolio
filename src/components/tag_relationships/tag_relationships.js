@@ -1,13 +1,8 @@
 import React from 'react';
 import {Col, Row} from 'react-bootstrap';
-import {getOrganizationKey} from '../../helpers/string_helpers';
+import AnchorTagNavigationLink from './anchor_tag_navigation_link';
 
 class TagRelationships extends React.Component{
-    static getOrgLink(organization){
-        let orgURL = getOrganizationKey(organization.companyName);
-        return <a name={'/#experience#' + orgURL } href={'/#experience#' + orgURL } id={orgURL} className="nav-link">{organization.companyName}</a>
-    }
-
     render()
     {
         if(typeof this.props.tagName === 'undefined' || this.props.tagName === '') {
@@ -24,9 +19,9 @@ class TagRelationships extends React.Component{
                 <Col>
                     {this.props.organizations.map(function(organization, i) {
                             return (
-                                    <Row xs={12} md={8} key={organization.companyName + i} className="text-center">
-                                        {TagRelationships.getOrgLink(organization)}
-                                    </Row>
+                                <Row xs={12} md={8} key={organization.companyName + i} className="text-center">
+                                    <AnchorTagNavigationLink {...organization}/>
+                                </Row>
                             );
                         },
                     )}
