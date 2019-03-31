@@ -192,7 +192,7 @@ class ProjectSelector extends React.Component
                 <Card>
                     {this.getProjectImageOrVideo()}
                     <Card.Body>
-                        <Card.Title>{this.props[PROJECT_TAGS_NAME]}</Card.Title>
+                        <Card.Title>{this.props[PROJECT_NAME]}</Card.Title>
                         <Card.Text>
                             {this.props.description}
                         </Card.Text>
