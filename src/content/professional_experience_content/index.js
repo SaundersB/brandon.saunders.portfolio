@@ -20,11 +20,11 @@ let experience = [
         [EXPERIENCE_NAME]: "Develop enterprise software systems in the prepaid incentive market using Drupal, MySQL, MongoDB, NodeJS, and PHP. * Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
             "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
         [DEVELOPMENT_TOOLS_USED_NAME]: "AWS, Docker, IntelliJ IDEA, GitLab VCS, GitLab CI/CD",
-        [PROGRAMMING_LANGUAGES_USED_NAME]: "PHP, JavaScript, MySQL, MongoDB",
+        [PROGRAMMING_LANGUAGES_USED_NAME]: "PHP, JavaScript, SQL, MongoDB",
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell",
         [MARKUP_LANGUAGES_USED_NAME]: "HTML, XML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS",
-        [FRAMEWORKS_USED_NAME]: "Drupal, ExpressJS, Laravel, VueJS, React, CakePHP, Codeception",
+        [FRAMEWORKS_USED_NAME]: "Drupal, MySQL, ExpressJS, Laravel, VueJS, React, CakePHP, Codeception",
         [COMPANY_URL_NAME]: "https://www.jnrcorp.com/",
         [COMPANY_DESCRIPTION_NAME]: "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
     },
@@ -38,11 +38,11 @@ let experience = [
             "* Developing a RESTful API using the Laravel framework.\n" +
             "* Developing a Swift based iOS app.",
         [DEVELOPMENT_TOOLS_USED_NAME]: "Docker",
-        [PROGRAMMING_LANGUAGES_USED_NAME]: "JavaScript, PHP",
+        [PROGRAMMING_LANGUAGES_USED_NAME]: "JavaScript, PHP, SQL",
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell",
         [MARKUP_LANGUAGES_USED_NAME]: "HTML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS, SASS/SCSS",
-        [FRAMEWORKS_USED_NAME]: "VueJS, Laravel, Codeception, Jest, Mocha, Cordova",
+        [FRAMEWORKS_USED_NAME]: "VueJS, MySQL, Laravel, Codeception, Jest, Mocha, Cordova",
         [COMPANY_URL_NAME]: "https://www.heartcup.com/",
         [COMPANY_DESCRIPTION_NAME]: "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!"
     },
