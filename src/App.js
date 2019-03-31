@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga';
 import React, {Component} from 'react';
 import {
-    HashRouter,
+    Router,
     Route,
     Switch,
 } from 'react-router-dom';
@@ -38,14 +38,14 @@ class App extends Component
                 <Navigation burgerButtonClassName="menu"/>
                 <Body className="body-wrapper" id="page-wrap">
                     <PortfolioHeader/>
-                    <HashRouter history={history}>
+                    <Router history={history}>
                         <Switch>
                             <Route exact path="/" component={Projects} />
                             <Route path="/about" component={ProfessionalDetails} />
                             <Route path="/experience" component={ProfessionalExperience} />
                             <Route component={NotFound} />
                         </Switch>
-                    </HashRouter>
+                    </Router>
                 </Body>
             </AppContainer>
         );
