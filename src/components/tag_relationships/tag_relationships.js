@@ -1,14 +1,11 @@
 import React from 'react';
 import {Col, Row} from 'react-bootstrap';
 import {getOrganizationKey} from '../../helpers/string_helpers';
-import history from '../../router/history';
-import { Link } from 'react-router-dom';
 
 class TagRelationships extends React.Component{
     static getOrgLink(organization){
         let orgURL = getOrganizationKey(organization.companyName);
-//        history.go('#' + orgURL);
-        return <Link to="/about">About</Link>
+        return <a href={"/#experience#" + orgURL}>{organization.companyName}</a>
     }
 
     render()
