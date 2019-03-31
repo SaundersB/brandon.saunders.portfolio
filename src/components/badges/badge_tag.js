@@ -15,7 +15,6 @@ class BadgeTag extends React.Component {
                 break;
             }
             case 'project': {
-                console.log("project");
                 break;
             }
             default: {}
