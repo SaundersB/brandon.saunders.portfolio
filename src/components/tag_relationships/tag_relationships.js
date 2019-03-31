@@ -25,7 +25,7 @@ class TagRelationships extends React.Component{
                         <ListGroup.Item>
                                 {this.getOrganizations().map(function(organization, i) {
                                         return (
-                                            <div className="col" key={organization + i}>
+                                            <div className="col text-center" key={organization + i}>
                                                 <AnchorTagNavigationLink {...organization}/>
                                             </div>
                                         );
