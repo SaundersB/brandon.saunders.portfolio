@@ -18,7 +18,7 @@ class AnchorTagNavigationLink extends React.Component
     {
         let orgKey = getOrganizationKey(this.props.companyName);
         let orgURL = '/experience#' + orgKey;
-        return <div id={ orgURL } className="btn btn-link" onClick={this.handleClick.bind(this, orgURL)}>{this.props.companyName}</div>
+        return <div id={ orgURL } className="btn btn-link text-center" onClick={this.handleClick.bind(this, orgURL)}>{this.props.companyName}</div>
     }
 }
 
