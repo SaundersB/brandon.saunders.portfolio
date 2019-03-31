@@ -7,6 +7,8 @@ import RelationshipBuilder from '../../helpers/relationship_builder';
 import * as ReactDOM from 'react-dom';
 import CustomListGroup from './custom_list_group';
 import BadgeFactory from './badge_factory';
+import BadgeTag from './badge_tag';
+import history from '../../router/history';
 
 const customStyles = {
     content : {
@@ -140,7 +142,10 @@ class ProjectSelector extends React.Component
             } else {
                 return developmentTools.map((tool) => {
                         return (
-                            BadgeFactory.createNewBadge(tool, badgeType)
+                            <BadgeTag key={tool}
+                                      name={tool}
+                                      badgeType={badgeType}
+                            />
                         )
                     }
                 )
