@@ -31,5 +31,4 @@ class TagRelationships extends React.Component{
     }
 }
 
-
 export default TagRelationships;

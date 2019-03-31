@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../helpers/constants';
 import TagRelationships from '../tag_relationships/tag_relationships';
 import RelationshipBuilder from '../../helpers/relationship_builder';
+import * as ReactDOM from 'react-dom';
 
 const customStyles = {
     content : {
@@ -23,18 +24,32 @@ class ProjectSelector extends React.Component
         super(props);
         this.state = {
             showModal: false,
-            modalData: 'Hello'
+            modalData: ''
         };
         this.openModal = this.openModal.bind(this);
         this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleExternalClick = this.handleExternalClick.bind(this);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
         this.relationshipBuilder = new RelationshipBuilder();
     }
-
     componentDidMount() {
         Modal.setAppElement('body');
+    }
+
+    handleClickOutside(e) {
+        try {
+            if(this.node) {
+                const domNode = ReactDOM.findDOMNode(this.node);
+                if(domNode === e.target) {
+                    this.closeModal();
+                    return;
+                }
+            }
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     handleClick(tag){
@@ -43,6 +58,11 @@ class ProjectSelector extends React.Component
         if(organizationalData.organizations.length <= 0){
             console.log("No organizational data");
             return;
+        }
+        if (!this.state.showModal) {
+            document.addEventListener('click', this.handleClickOutside, false);
+        } else {
+            document.removeEventListener('click', this.handleClickOutside, false);
         }
         this.setState({
             showModal: true,
@@ -65,6 +85,16 @@ class ProjectSelector extends React.Component
     handleExternalClick()
     {
         window.open(this.props.url);
+    }
+
+    getEnhancedPopup(){
+        return (<Modal
+            ref={node => { this.node = node; }}
+            isOpen={this.state.showModal}
+            style={customStyles}
+            disableOnClickOutside={false}>
+            <TagRelationships {...this.state.modalData}/>
+        </Modal>);
     }
 
     getProjectURL(projectUrl)
@@ -141,7 +171,7 @@ class ProjectSelector extends React.Component
     }
 
 
-    render()
+    render(evt)
     {
         return (
             <Col className="project">
@@ -158,16 +188,7 @@ class ProjectSelector extends React.Component
                         {this.getBadgeRow('Project Tags', this.props[PROJECT_TAGS_NAME], 'primary')}
                         { ProjectSelector.getListGroupItem('External Link', this.getProjectURL(this.props[PROJECT_URL_NAME])) }
                     </ListGroup>
-                    <Modal
-                        isOpen={this.state.showModal}
-                        style={customStyles}>
-                        <TagRelationships {...this.state.modalData}/>
-                        <Row xs={12} md={8}>
-                            <Col>
-                                <button onClick={this.closeModal}>close</button>
-                            </Col>
-                        </Row>
-                    </Modal>
+                    { this.getEnhancedPopup() }
                 </Card>
             </Col>);
     }
