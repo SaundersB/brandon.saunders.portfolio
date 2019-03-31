@@ -18,7 +18,7 @@ class TagRelationships extends React.Component{
                 <Card>
                     <Card.Body>
                         <Card.Title>
-                            Organizations {this.props.tagName} Utilized
+                            {this.props.relationshipType} {this.props.tagName} Utilized
                         </Card.Title>
                     </Card.Body>
                     <ListGroup>

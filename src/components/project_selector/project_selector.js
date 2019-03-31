@@ -5,7 +5,7 @@ import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../
 import TagRelationships from '../tag_relationships/tag_relationships';
 import RelationshipBuilder from '../../helpers/relationship_builder';
 import * as ReactDOM from 'react-dom';
-import BadgeTag from './badge_tag';
+import BadgeTag from '../badges/badge_tag';
 
 const customStyles = {
     content : {
@@ -64,6 +64,7 @@ class ProjectSelector extends React.Component
         } else {
             document.removeEventListener('click', this.handleClickOutside, false);
         }
+        organizationalData['relationshipType'] = 'Organizations';
         this.setState({
             showModal: true,
             modalData: organizationalData,
@@ -139,7 +140,9 @@ class ProjectSelector extends React.Component
             } else {
                 return developmentTools.map((tool) => {
                         return (
-                            <BadgeTag key={tool}
+                            <BadgeTag
+                                      entityType="organization"
+                                      key={tool}
                                       name={tool}
                                       badgeType={badgeType}
                             />

@@ -3,6 +3,9 @@ import Card from 'react-bootstrap/Card';
 import {Badge, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
 import ListGroup from 'react-bootstrap/ListGroup';
+import TagRelationships from '../tag_relationships/tag_relationships';
+import Modal from 'react-modal';
+
 import {
     COMPANY_DESCRIPTION_NAME,
     COMPANY_NAME,
@@ -14,16 +17,102 @@ import {
     SCRIPTING_LANGUAGES_USED_NAME, START_DATE_NAME,
     STYLESHEET_LANGUAGES_USED_NAME,
 } from '../../helpers/constants';
-import {getOrganizationKey} from '../../helpers/string_helpers';
+import {getKey} from '../../helpers/string_helpers';
 import RelationshipBuilder from '../../helpers/relationship_builder';
+import * as ReactDOM from 'react-dom';
+
+const customStyles = {
+    content : {
+        top                   : '50%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-50%',
+        transform             : 'translate(-50%, -50%)'
+    }
+};
 
 class ExperienceCard extends React.Component
 {
     constructor(props){
         super(props);
+        this.state = {
+            showModal: false,
+            modalData: ''
+        };
+        this.openModal = this.openModal.bind(this);
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleExternalClick = this.handleExternalClick.bind(this);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
         this.relationshipBuilder = new RelationshipBuilder();
-        console.log(this.relationshipBuilder.getAssociatedProjectsByTag('Java'));
     }
+    componentDidMount() {
+        Modal.setAppElement('body');
+    }
+
+    handleClickOutside(e) {
+        try {
+            if(this.node) {
+                const domNode = ReactDOM.findDOMNode(this.node);
+                if(domNode === e.target) {
+                    this.closeModal();
+                }
+            }
+        } catch (e) {
+            console.error(e);
+        }
+    }
+    handleClick(tag){
+        let projectsData = this.relationshipBuilder.getAssociatedProjectsByTag(tag);
+        projectsData['relationshipType'] = 'Projects';
+
+        if(projectsData.length <= 0){
+            console.log("No project data");
+            return;
+        }
+        if (!this.state.showModal) {
+            document.addEventListener('click', this.handleClickOutside, false);
+        } else {
+            document.removeEventListener('click', this.handleClickOutside, false);
+        }
+        this.setState({
+            showModal: true,
+            modalData: projectsData,
+        });
+    }
+
+    openModal() {
+        this.setState({showModal: true});
+    }
+
+    afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        this.subtitle.style.color = '#f00';
+    }
+
+    closeModal() {
+        this.setState({showModal: false});
+    }
+
+    handleExternalClick()
+    {
+        window.open(this.props.url);
+    }
+
+
+    getEnhancedPopup(){
+        return (<Modal
+            ref={node => { this.node = node; }}
+            isOpen={this.state.showModal}
+            style={customStyles}
+            disableOnClickOutside={false}>
+            <TagRelationships {...this.state.modalData}/>
+        </Modal>);
+    }
+
+
     getDevelopmentInfoRow(developmentType, itemString, badgeType){
         if(typeof itemString === 'undefined' || itemString === ''){
             return '';
@@ -60,9 +149,11 @@ class ExperienceCard extends React.Component
         let developmentTools = itemString.split(', ');
         return developmentTools.map((tool) => {
                 return (
-                    <Badge pill variant={badgeType} key={tool} className="card-row">
+                    <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
+                        <Badge pill variant={badgeType} key={tool} className="card-row">
                         {tool}
                     </Badge>
+                    </div>
                 );
             }
         )
@@ -79,9 +170,9 @@ class ExperienceCard extends React.Component
     render()
     {
         return (
-            <Card id={getOrganizationKey(this.props[COMPANY_NAME])}
-                  ref={getOrganizationKey(this.props[COMPANY_NAME])}
-                  name={getOrganizationKey(this.props[COMPANY_NAME])}>
+            <Card id={getKey(this.props[COMPANY_NAME])}
+                  ref={getKey(this.props[COMPANY_NAME])}
+                  name={getKey(this.props[COMPANY_NAME])}>
                 <Card.Header>
                     {this.props[COMPANY_NAME]}
                 </Card.Header>
@@ -116,6 +207,7 @@ class ExperienceCard extends React.Component
                     <div className="card-row"/>
                 </Tabs>
                 <Card.Footer className="text-muted">Tenure: { this.getCompanyTenure() }</Card.Footer>
+                { this.getEnhancedPopup() }
             </Card>
         );
     }

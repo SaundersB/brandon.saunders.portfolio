@@ -1,5 +1,5 @@
 import React from 'react';
-import {getOrganizationKey} from '../../helpers/string_helpers';
+import {getKey} from '../../helpers/string_helpers';
 import history from '../../router/history';
 import {Button} from 'react-bootstrap';
 class AnchorTagNavigationLink extends React.Component
@@ -17,7 +17,7 @@ class AnchorTagNavigationLink extends React.Component
 
     render()
     {
-        let orgKey = getOrganizationKey(this.props.companyName);
+        let orgKey = getKey(this.props.companyName);
         let orgURL = '/experience#' + orgKey;
         return (
                 <div id={ orgURL }
