@@ -1,11 +1,18 @@
 import React from 'react';
 import {Card, Button, Col, Badge, ListGroup, Row} from 'react-bootstrap';
 import Modal from 'react-modal';
-import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../helpers/constants';
+import {
+    COMPANY_NAME,
+    ORGANIZATION_KEY_NAME,
+    PROJECT_NAME,
+    PROJECT_TAGS_NAME,
+    PROJECT_URL_NAME,
+} from '../../helpers/constants';
 import TagRelationships from '../tag_relationships/tag_relationships';
 import RelationshipBuilder from '../../helpers/relationship_builder';
 import * as ReactDOM from 'react-dom';
 import BadgeTag from '../badges/badge_tag';
+import {getKey} from '../../helpers/string_helpers';
 
 const customStyles = {
     content : {
@@ -178,7 +185,10 @@ class ProjectSelector extends React.Component
     render(evt)
     {
         return (
-            <Col className="project">
+            <Col className="project"
+                 id={getKey(this.props[PROJECT_NAME])}
+                 ref={getKey(this.props[PROJECT_NAME])}
+                 name={getKey(this.props[PROJECT_NAME])}>
                 <Card>
                     {this.getProjectImageOrVideo()}
                     <Card.Body>
