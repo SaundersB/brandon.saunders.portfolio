@@ -15,7 +15,6 @@ import {
     STYLESHEET_LANGUAGES_USED_NAME,
 } from '../../helpers/constants';
 import {getOrganizationKey} from '../../helpers/string_helpers';
-import ScrollableAnchor from 'react-scrollable-anchor'
 
 class ExperienceCard extends React.Component
 {
