@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import {Badge, Tab, Tabs} from 'react-bootstrap';
+import {Badge, Col, Row, Tab, Tabs} from 'react-bootstrap';
 import moment from 'moment';
 import ListGroup from 'react-bootstrap/ListGroup';
 import TagRelationships from '../tag_relationships/tag_relationships';
@@ -118,7 +118,7 @@ class ExperienceCard extends React.Component
             return '';
         }
         return (
-            <ListGroup.Item>
+            <ListGroup.Item >
                 <div className="row">
                     <div className="col-5">
                         {developmentType} Used:
@@ -176,11 +176,11 @@ class ExperienceCard extends React.Component
                 <Card.Header>
                     {this.props[COMPANY_NAME]}
                 </Card.Header>
-                <Tabs defaultActiveKey="description" id="uncontrolled-tab-example">
-                    <Tab eventKey="description" title="Description" className="card-text left-align-text">
+                <Tabs defaultActiveKey="description" id="uncontrolled-tab">
+                    <Tab eventKey="description" title="Description" className="card-text left-align-text custom-tabs">
                         {ExperienceCard.getBulletPoints(this.props[EXPERIENCE_NAME])}
                     </Tab>
-                    <Tab eventKey="development" title="Development Info" className="card-text">
+                    <Tab eventKey="development" title="Development Info" className="card-text custom-tabs">
                         <ListGroup>
                             {this.getDevelopmentInfoRow('Programming Languages ', this.props[PROGRAMMING_LANGUAGES_USED_NAME], 'primary')}
                             {this.getDevelopmentInfoRow('Scripting Languages ', this.props[SCRIPTING_LANGUAGES_USED_NAME], 'info')}
@@ -190,7 +190,7 @@ class ExperienceCard extends React.Component
                             {this.getDevelopmentInfoRow('Development Tools ', this.props[DEVELOPMENT_TOOLS_USED_NAME], 'secondary')}
                         </ListGroup>
                     </Tab>
-                    <Tab eventKey="company" title="Company Info" className="card-text">
+                    <Tab eventKey="company" title="Company Info" className="card-text custom-tabs">
                         <ListGroup>
                             <ListGroup.Item>
                                 <div className="row left-align-text card-row">
