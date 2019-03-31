@@ -5,10 +5,7 @@ import {ORGANIZATION_KEY_NAME, PROJECT_TAGS_NAME, PROJECT_URL_NAME} from '../../
 import TagRelationships from '../tag_relationships/tag_relationships';
 import RelationshipBuilder from '../../helpers/relationship_builder';
 import * as ReactDOM from 'react-dom';
-import CustomListGroup from './custom_list_group';
-import BadgeFactory from './badge_factory';
 import BadgeTag from './badge_tag';
-import history from '../../router/history';
 
 const customStyles = {
     content : {

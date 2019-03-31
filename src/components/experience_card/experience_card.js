@@ -15,9 +15,15 @@ import {
     STYLESHEET_LANGUAGES_USED_NAME,
 } from '../../helpers/constants';
 import {getOrganizationKey} from '../../helpers/string_helpers';
+import RelationshipBuilder from '../../helpers/relationship_builder';
 
 class ExperienceCard extends React.Component
 {
+    constructor(props){
+        super(props);
+        this.relationshipBuilder = new RelationshipBuilder();
+        console.log(this.relationshipBuilder.getAssociatedProjectsByTag('Java'));
+    }
     getDevelopmentInfoRow(developmentType, itemString, badgeType){
         if(typeof itemString === 'undefined' || itemString === ''){
             return '';

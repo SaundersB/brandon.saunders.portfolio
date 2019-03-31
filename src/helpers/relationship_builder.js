@@ -1,15 +1,17 @@
 import React from 'react';
 import experience from '../content/professional_experience_content';
+import projects from '../content/project_content';
 import {
     COMPANY_NAME,
     DEVELOPMENT_TOOLS_USED_NAME,
     FRAMEWORKS_USED_NAME,
     MARKUP_LANGUAGES_USED_NAME,
-    PROGRAMMING_LANGUAGES_USED_NAME, PROJECT_TAGS_NAME,
+    PROGRAMMING_LANGUAGES_USED_NAME, PROJECT_NAME, PROJECT_TAGS_NAME,
     SCRIPTING_LANGUAGES_USED_NAME,
     STYLESHEET_LANGUAGES_USED_NAME,
     TAG_NAME,
 } from './constants';
+import {remove_duplicates_es6} from './array_helpers';
 
 
 class RelationshipBuilder
@@ -129,6 +131,56 @@ class RelationshipBuilder
             summaryObject["technologies"] = technologies;
             summary.push(summaryObject);
         });
+        return summary;
+    }
+
+    getProjectsTags() {
+        let summary = [];
+        projects.forEach((project) => {
+            let summaryObject = {};
+            let projectTags = project[PROJECT_TAGS_NAME].split(', ');
+            summaryObject[PROJECT_NAME] = project[PROJECT_NAME];
+            summaryObject["tags"] = projectTags;
+            summary.push(summaryObject);
+        });
+        return summary;
+    }
+
+    getAssociatedProjectsByTag(tag){
+        let summary = {
+            [TAG_NAME]: tag,
+            "projects": [],
+        };
+        if (typeof tag === 'undefined') {
+            return [];
+        }
+        try {
+            let projectsTags = this.getProjectsTags();
+            projectsTags.forEach((project) => {
+                if (project[PROJECT_TAGS_NAME].includes(tag)) {
+                    let alreadyMatchedProjectTag = summary.projects;
+                    let matchedProjectTagName = project[PROJECT_NAME];
+                    let summaryObject = {
+                        [PROJECT_NAME]: matchedProjectTagName,
+                    };
+                    if (alreadyMatchedProjectTag.length > 0) {
+                        let newProjects = [];
+                        alreadyMatchedProjectTag.forEach((alreadyMatchedProject) => {
+                            let tagsCompanyName = alreadyMatchedProject[PROJECT_NAME];
+                            if (tagsCompanyName !== matchedProjectTagName) {
+                                newProjects.push(summaryObject);
+                            }
+                        });
+                        alreadyMatchedProjectTag.push(summaryObject);
+                    } else {
+                        alreadyMatchedProjectTag.push(summaryObject);
+                    }
+                }
+            });
+            console.log(summary);
+        } catch (e) {
+            console.log(e);
+        }
         return summary;
     }
 }
