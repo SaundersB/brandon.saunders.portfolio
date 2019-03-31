@@ -148,9 +148,14 @@ class ExperienceCard extends React.Component
         }
         let developmentTools = itemString.split(', ');
         return developmentTools.map((tool) => {
+                let projects = this.relationshipBuilder.getAssociatedProjectsByTag(tool);
+                let clickable = '';
+                if(projects.projects.length > 0){
+                    clickable = 'mouse-pointer'
+                }
                 return (
                     <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
-                        <Badge pill variant={badgeType} key={tool} className="card-row">
+                        <Badge pill variant={badgeType} key={tool} className={"card-row " + clickable}>
                         {tool}
                     </Badge>
                     </div>

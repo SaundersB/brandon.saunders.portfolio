@@ -135,13 +135,18 @@ class ProjectSelector extends React.Component
             let developmentTools = itemString.split(', ');
             if(pillType) {
                 return developmentTools.map((tool) => {
-                        return (
-                            <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
-                                <Badge pill variant={badgeType} key={tool} className="card-row">
-                                    {tool}
-                                </Badge>
-                            </div>
-                        );
+                    let organizations = this.relationshipBuilder.getAssociatedOrganizationsByTag(tool);
+                    let clickable = '';
+                    if(organizations.organizations.length > 0){
+                        clickable = 'mouse-pointer'
+                    }
+                    return (
+                        <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
+                            <Badge pill variant={badgeType} key={tool} className={"card-row " + clickable}>
+                                {tool}
+                            </Badge>
+                        </div>
+                    );
                     }
                 )
             } else {

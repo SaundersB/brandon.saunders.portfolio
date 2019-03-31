@@ -177,7 +177,6 @@ class RelationshipBuilder
                     }
                 }
             });
-            console.log(summary);
         } catch (e) {
             console.log(e);
         }
