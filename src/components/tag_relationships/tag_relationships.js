@@ -8,7 +8,6 @@ class TagRelationships extends React.Component{
         return remove_duplicates_es6(this.props.organizations);
     }
     getProjects(){
-        console.log(this.props.projects);
         return this.props.projects;
     }
     render()

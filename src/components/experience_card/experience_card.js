@@ -68,7 +68,7 @@ class ExperienceCard extends React.Component
         let projectsData = this.relationshipBuilder.getAssociatedProjectsByTag(tag);
         projectsData['relationshipType'] = 'Projects';
 
-        if(projectsData.length <= 0){
+        if(projectsData.projects.length <= 0){
             console.log("No project data");
             return;
         }
