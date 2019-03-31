@@ -5,9 +5,9 @@ import {getOrganizationKey} from '../../helpers/string_helpers';
 class TagRelationships extends React.Component{
     static getOrgLink(organization){
         let orgURL = getOrganizationKey(organization.companyName);
-        return <a href={"/#experience#" + orgURL}>{organization.companyName}</a>
+        return <a href={'/#experience#' + orgURL} id={orgURL}>{organization.companyName}</a>
     }
-
+    
     render()
     {
         if(typeof this.props.tagName === 'undefined' || this.props.tagName === '') {
