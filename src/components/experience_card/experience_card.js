@@ -176,36 +176,42 @@ class ExperienceCard extends React.Component
                 <Card.Header>
                     {this.props[COMPANY_NAME]}
                 </Card.Header>
-                <Tabs defaultActiveKey="description" id="uncontrolled-tab">
-                    <Tab eventKey="description" title="Description" className="card-text left-align-text custom-tabs">
-                        {ExperienceCard.getBulletPoints(this.props[EXPERIENCE_NAME])}
-                    </Tab>
-                    <Tab eventKey="development" title="Development Info" className="card-text custom-tabs">
-                        <ListGroup>
-                            {this.getDevelopmentInfoRow('Programming Languages ', this.props[PROGRAMMING_LANGUAGES_USED_NAME], 'primary')}
-                            {this.getDevelopmentInfoRow('Scripting Languages ', this.props[SCRIPTING_LANGUAGES_USED_NAME], 'info')}
-                            {this.getDevelopmentInfoRow('Markup Languages ', this.props[MARKUP_LANGUAGES_USED_NAME], 'dark')}
-                            {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props[STYLESHEET_LANGUAGES_USED_NAME], 'secondary')}
-                            {this.getDevelopmentInfoRow('Frameworks Languages ', this.props[FRAMEWORKS_USED_NAME], 'info')}
-                            {this.getDevelopmentInfoRow('Development Tools ', this.props[DEVELOPMENT_TOOLS_USED_NAME], 'secondary')}
-                        </ListGroup>
-                    </Tab>
-                    <Tab eventKey="company" title="Company Info" className="card-text custom-tabs">
-                        <ListGroup>
-                            <ListGroup.Item>
-                                <div className="row left-align-text card-row">
-                                    {this.props[COMPANY_DESCRIPTION_NAME]}
+                <Row xs={12} md={12}>
+                    <Col>
+                        <Tabs defaultActiveKey="description" id="uncontrolled-tab" className="justify-content-center">
+                            <Tab eventKey="description" title="Description" className="left-align-text custom-tabs">
+                                <div className="card-text">
+                                    {ExperienceCard.getBulletPoints(this.props[EXPERIENCE_NAME])}
                                 </div>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                <Card.Link href={this.props[COMPANY_URL_NAME]} >
-                                    {this.props[COMPANY_NAME]} Website
-                                </Card.Link>
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Tab>
-                    <div className="card-row"/>
-                </Tabs>
+                            </Tab>
+                            <Tab eventKey="development" title="Development Info" className="card-text custom-tabs">
+                                <ListGroup>
+                                    {this.getDevelopmentInfoRow('Programming Languages ', this.props[PROGRAMMING_LANGUAGES_USED_NAME], 'primary')}
+                                    {this.getDevelopmentInfoRow('Scripting Languages ', this.props[SCRIPTING_LANGUAGES_USED_NAME], 'info')}
+                                    {this.getDevelopmentInfoRow('Markup Languages ', this.props[MARKUP_LANGUAGES_USED_NAME], 'dark')}
+                                    {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props[STYLESHEET_LANGUAGES_USED_NAME], 'secondary')}
+                                    {this.getDevelopmentInfoRow('Frameworks Languages ', this.props[FRAMEWORKS_USED_NAME], 'info')}
+                                    {this.getDevelopmentInfoRow('Development Tools ', this.props[DEVELOPMENT_TOOLS_USED_NAME], 'secondary')}
+                                </ListGroup>
+                            </Tab>
+                            <Tab eventKey="company" title="Company Info" className="card-text custom-tabs">
+                                <ListGroup>
+                                    <ListGroup.Item>
+                                        <div className="row left-align-text card-row">
+                                            {this.props[COMPANY_DESCRIPTION_NAME]}
+                                        </div>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Card.Link href={this.props[COMPANY_URL_NAME]} >
+                                            {this.props[COMPANY_NAME]} Website
+                                        </Card.Link>
+                                    </ListGroup.Item>
+                                </ListGroup>
+                            </Tab>
+                            <div className="card-row"/>
+                        </Tabs>
+                    </Col>
+                </Row>
                 <Card.Footer className="text-muted">Tenure: { this.getCompanyTenure() }</Card.Footer>
                 { this.getEnhancedPopup() }
             </Card>
