@@ -17,14 +17,33 @@ class AnchorTagNavigationLink extends React.Component
 
     render()
     {
-        let orgKey = getKey(this.props.companyName);
-        let orgURL = '/experience#' + orgKey;
+        let url;
+        let name;
+        switch (this.props.entityType) {
+            case 'Organizations': {
+                name = this.props.companyName;
+                let key = getKey(name);
+                url = '/experience#' + key;
+                break;
+            }
+            case 'Projects': {
+                name = this.props.name;
+                let key = getKey(name);
+                url = '/#' + key;
+                break;
+            }
+            default: {
+                console.log("No entity type detected");
+                return;
+            }
+        }
+
         return (
-                <div id={ orgURL }
+                <div id={ url }
                      className="btn btn-link text-center"
-                     onClick={this.handleClick.bind(this, orgURL)}>
+                     onClick={this.handleClick.bind(this, url)}>
                     <Button variant="outline-primary" size="sm" block>
-                        {this.props.companyName}
+                        {name}
                     </Button>
                 </div>
         )
