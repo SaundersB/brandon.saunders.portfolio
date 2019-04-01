@@ -1,7 +1,7 @@
 import {
     COMPANY_DESCRIPTION_NAME,
     COMPANY_NAME,
-    COMPANY_URL_NAME, DEVELOPMENT_TOOLS_USED_NAME, END_DATE_NAME, EXPERIENCE_NAME,
+    COMPANY_URL_NAME, DEVELOPMENT_PROCESSES_USED_NAME, DEVELOPMENT_TOOLS_USED_NAME, END_DATE_NAME, EXPERIENCE_NAME,
     FRAMEWORKS_USED_NAME,
     MARKUP_LANGUAGES_USED_NAME,
     PROGRAMMING_LANGUAGES_USED_NAME,
@@ -19,12 +19,13 @@ let experience = [
         [END_DATE_NAME]: "Current",
         [EXPERIENCE_NAME]: "Develop enterprise software systems in the prepaid incentive market using Drupal, MySQL, MongoDB, NodeJS, and PHP. * Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
             "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
-        [DEVELOPMENT_TOOLS_USED_NAME]: "AWS, Docker, IntelliJ IDEA, GitLab VCS, GitLab CI/CD",
+        [DEVELOPMENT_TOOLS_USED_NAME]: "AWS, Docker, IntelliJ IDEA, GitLab, Wrike, PHPMyAdmin",
         [PROGRAMMING_LANGUAGES_USED_NAME]: "PHP, JavaScript, SQL, MongoDB",
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell",
         [MARKUP_LANGUAGES_USED_NAME]: "HTML, XML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS",
         [FRAMEWORKS_USED_NAME]: "Drupal, MySQL, ExpressJS, Laravel, VueJS, React, CakePHP, Codeception",
+        [DEVELOPMENT_PROCESSES_USED_NAME]: "Scrum, Kanban, Continuous Integration, Continuous Deployment",
         [COMPANY_URL_NAME]: "https://www.jnrcorp.com/",
         [COMPANY_DESCRIPTION_NAME]: "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
     },
@@ -43,6 +44,7 @@ let experience = [
         [MARKUP_LANGUAGES_USED_NAME]: "HTML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS, SASS/SCSS",
         [FRAMEWORKS_USED_NAME]: "VueJS, MySQL, Laravel, Codeception, Jest, Mocha, Cordova",
+        [DEVELOPMENT_PROCESSES_USED_NAME]: "Scrum, Continuous Integration, Continuous Deployment",
         [COMPANY_URL_NAME]: "https://www.heartcup.com/",
         [COMPANY_DESCRIPTION_NAME]: "Heart Cup was founded on the simple idea of connecting people with their communities - one place, one cause, one heart at a time. Heart Cup empowers you to take up causes that you are passionate about. It enables you to make an impact where you think change is needed. This is a place where “likes” have the ability to change lives. So join us on our quest to become a community built on giving!"
     },
@@ -63,12 +65,13 @@ let experience = [
             "* Android digital signage content player.\n" +
             "* Android bluetooth beacon waypoint triangulation application.\n" +
             "* Internal CRM PHP workflows and API integrations. ",
-        [DEVELOPMENT_TOOLS_USED_NAME]: "TeamCity",
+        [DEVELOPMENT_TOOLS_USED_NAME]: "Docker, IntelliJ IDEA, PyCharm, TeamCity",
         [PROGRAMMING_LANGUAGES_USED_NAME]: "Python, Java, ActionScript, JavaScript, PHP, C++",
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell/PowerShell",
         [MARKUP_LANGUAGES_USED_NAME]: "HTML, XML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS",
         [FRAMEWORKS_USED_NAME]: "Vue, Laravel, Qt, Adobe Flex, Selenium",
+        [DEVELOPMENT_PROCESSES_USED_NAME]: "Scrum, Kanban, Continuous Integration, Continuous Deployment",
         [COMPANY_URL_NAME]: "https://www.vantageled.com/",
         [COMPANY_DESCRIPTION_NAME]: "Vantage LED operates in the digital signage industry through designing, engineering, and delivering innovative LED displays driven by revolutionary cloud-based software."
     },
@@ -82,10 +85,11 @@ let experience = [
             "* Internal Watson support tools written in PowerShell, BASH/Shell, and Java.",
         [DEVELOPMENT_TOOLS_USED_NAME]: "Android Studio, Jira, Pivotal Tracker",
         [PROGRAMMING_LANGUAGES_USED_NAME]: "Java, Python",
-        [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell/PowerShell",
-        [MARKUP_LANGUAGES_USED_NAME]: "",
+        [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell, PowerShell",
+        [MARKUP_LANGUAGES_USED_NAME]: "XML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "",
-        [FRAMEWORKS_USED_NAME]: "",
+        [DEVELOPMENT_PROCESSES_USED_NAME]: "Kanban, Agile (Sprints)",
+        [FRAMEWORKS_USED_NAME]: "Android",
         [COMPANY_URL_NAME]: "https://www.linkedin.com/company/tribogenics/",
         [COMPANY_DESCRIPTION_NAME]: "Tribogenics is a transformative X-ray technology company developing affordable and highly portable solutions for materials analysis and imaging. The Tribogenics range of X-ray sources includes the X-Change™ cartridge, the world’s smallest turnkey X-ray source designed for use in revolutionary new XRF systems. Tribogenics was founded in 2011 and employs scientists and engineers at a world-class facility in Los Angeles, CA. Our advisors include luminaries in business, scientific and medical fields. The company is backed by a consortium of investors and recently closed a round led by Nikon and Peter Thiel's Founders Fund."
     },
@@ -104,7 +108,8 @@ let experience = [
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell/PowerShell",
         [MARKUP_LANGUAGES_USED_NAME]: "",
         [STYLESHEET_LANGUAGES_USED_NAME]: "",
-        [FRAMEWORKS_USED_NAME]: "Magento",
+        [FRAMEWORKS_USED_NAME]: "",
+        [DEVELOPMENT_PROCESSES_USED_NAME]: "",
         [COMPANY_URL_NAME]: "https://www.linkedin.com/company/bumblebee-wireless/about/",
         [COMPANY_DESCRIPTION_NAME]: "Bumblebee Wireless™ Leaders in Buying, Selling, Repairing and Customizing Wireless Technologies.  We specialize in buying, selling, unlocking and repairing handheld wireless electronics. Bumblebee Wireless is the largest phone, laptop and tablet service and sales franchise in Coachella Valley."
     },

@@ -28,7 +28,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://heartcup.com',
         [PROJECT_IMAGE_URL_NAME]: heart_cup_landing,
         [ORGANIZATION_KEY_NAME]: 'Heart Cup Inc',
-        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, Docker, Cordova, CSS, SASS/SCSS, HTML, BASH/Shell',
+        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, Docker, Cordova, CSS, SASS/SCSS, HTML, BASH/Shell, AWS, Jest, Mocha',
     },
     {
         [PROJECT_KEY]: 'xandr',
@@ -39,7 +39,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://xandrrewardcard.com',
         [PROJECT_IMAGE_URL_NAME]: xandr_reward_card_landing,
         [ORGANIZATION_KEY_NAME]: 'JNR Incorporated',
-        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, LAMP',
+        [PROJECT_TAGS_NAME]: 'VueJS, Laravel, PHP, JavaScript, LAMP, Docker, MySQL, SQL, AWS',
     },
     {
         [PROJECT_KEY]: 'nexo',
@@ -50,7 +50,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://nexofuelcard.com',
         [PROJECT_IMAGE_URL_NAME]: nexofuelcard,
         [ORGANIZATION_KEY_NAME]: 'JNR Incorporated',
-        [PROJECT_TAGS_NAME]: 'Drupal, PHP, GitLab VCS, Gitlab CI/CD',
+        [PROJECT_TAGS_NAME]: 'Drupal, PHP, MySQL, SQL, GitLab, Continuous Integration and Deployment, AWS',
     },
     {
         [PROJECT_KEY]: 'portfolio',
@@ -71,7 +71,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://itunes.apple.com/us/app/petphoto/id1178333966?mt=8',
         [PROJECT_IMAGE_URL_NAME]: pet_photo_screenshot,
         [ORGANIZATION_KEY_NAME]: 'Open Source',
-        [PROJECT_TAGS_NAME]: 'Swift',
+        [PROJECT_TAGS_NAME]: 'Swift, iOS',
     },
     {
         [PROJECT_KEY]: 'multiplier_finder',
@@ -83,7 +83,7 @@ let projects = [
         [PROJECT_URL_NAME]: 'https://itunes.apple.com/us/app/multiplier-finder/id1178339564',
         [PROJECT_IMAGE_URL_NAME]: multiplier_finder_screenshot,
         [ORGANIZATION_KEY_NAME]: 'Open Source',
-        [PROJECT_TAGS_NAME]: 'Swift',
+        [PROJECT_TAGS_NAME]: 'Swift, iOS',
     },
     {
         [PROJECT_KEY]: 'digital_sign_4k',
@@ -94,7 +94,7 @@ let projects = [
         'videoUrl': 'https://www.youtube.com/embed/HvbtS2QyCNk',
         [PROJECT_IMAGE_URL_NAME]: digital_signage_4K_content_player_screenshot,
         [ORGANIZATION_KEY_NAME]: 'Vantage LED',
-        [PROJECT_TAGS_NAME]: 'Java',
+        [PROJECT_TAGS_NAME]: 'Java, Android, VLC, XML',
     },
     {
         [PROJECT_KEY]: 'electronic_shelf_label',
@@ -103,7 +103,7 @@ let projects = [
         [PROJECT_URL_NAME]: '',
         [PROJECT_IMAGE_URL_NAME]: digital_signage_electronic_shelf_label_screenshot,
         [ORGANIZATION_KEY_NAME]: 'Vantage LED',
-        [PROJECT_TAGS_NAME]: 'Java',
+        [PROJECT_TAGS_NAME]: 'Java, Android, WebSockets, RESTful API',
     },
     {
         [PROJECT_KEY]: 'digital_signage_virtual_scoreboard',
@@ -114,7 +114,7 @@ let projects = [
         'videoUrl': '',
         [PROJECT_IMAGE_URL_NAME]: digital_signage_virtual_scoreboard_screenshot,
         [ORGANIZATION_KEY_NAME]: 'Vantage LED',
-        [PROJECT_TAGS_NAME]: 'Python, ActionScript',
+        [PROJECT_TAGS_NAME]: 'Python, ActionScript, Adobe Flex',
     },
     {
         [PROJECT_KEY]: 'digital_signage_android_app',
@@ -124,7 +124,7 @@ let projects = [
         'videoUrl': 'https://www.youtube.com/embed/VA_siC4pF8k',
         [PROJECT_IMAGE_URL_NAME]: '',
         [ORGANIZATION_KEY_NAME]: 'Vantage LED',
-        [PROJECT_TAGS_NAME]: 'Java',
+        [PROJECT_TAGS_NAME]: 'Java, Android, XML',
     },
     {
         [PROJECT_KEY]: 'watson_gun_automation',
@@ -135,7 +135,7 @@ let projects = [
         'videoUrl': 'https://www.youtube.com/embed/AsneadNXPMA',
         [PROJECT_IMAGE_URL_NAME]: metal_alloy_x_ray_automation,
         [ORGANIZATION_KEY_NAME]: 'Tribogenics',
-        [PROJECT_TAGS_NAME]: 'Java',
+        [PROJECT_TAGS_NAME]: 'Java, Android, XML',
     },
     {
         [PROJECT_KEY]: 'watson_gun_development_tools',
@@ -149,7 +149,7 @@ let projects = [
         'videoUrl': '',
         [PROJECT_IMAGE_URL_NAME]: metal_alloy_x_ray_automation,
         [ORGANIZATION_KEY_NAME]: 'Tribogenics',
-        [PROJECT_TAGS_NAME]: 'BASH, PowerShell',
+        [PROJECT_TAGS_NAME]: 'BASH, PowerShell, Android Debug Bridge',
     },
     {
         [PROJECT_KEY]: 'space_invaders',

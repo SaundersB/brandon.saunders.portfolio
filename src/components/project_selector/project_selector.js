@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
+import {Card, Button, Col, ListGroup} from 'react-bootstrap';
 import Modal from 'react-modal';
 import {
     ORGANIZATION_KEY_NAME,
