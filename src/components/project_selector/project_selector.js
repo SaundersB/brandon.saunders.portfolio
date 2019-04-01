@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Button, Col, ListGroup} from 'react-bootstrap';
+import {Card, Button, Col, ListGroup, Badge} from 'react-bootstrap';
 import Modal from 'react-modal';
 import {
     ORGANIZATION_KEY_NAME,
@@ -175,8 +175,10 @@ class ProjectSelector extends React.Component
     static getListGroupItem(header, value){
         return (<ListGroup.Item>
             <div className="row">
-                <div className="col-5">
-                    {header}:
+                <div className="col-5 vertical-align">
+                    <h6>
+                        {header}:
+                    </h6>
                 </div>
                 <div className="col-7">
                     {value}
@@ -202,7 +204,7 @@ class ProjectSelector extends React.Component
                         </Card.Text>
                     </Card.Body>
                     <ListGroup>
-                        {this.getBadgeRow('Organization', this.props[ORGANIZATION_KEY_NAME], 'secondary', false)}
+                        {this.getBadgeRow('Organization', this.props[ORGANIZATION_KEY_NAME], 'info', false)}
                         {this.getBadgeRow('Project Tags', this.props[PROJECT_TAGS_NAME], 'primary')}
                         { ProjectSelector.getListGroupItem('External Link', this.getProjectURL(this.props[PROJECT_URL_NAME])) }
                     </ListGroup>

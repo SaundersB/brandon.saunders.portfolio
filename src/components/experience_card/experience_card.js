@@ -120,8 +120,10 @@ class ExperienceCard extends React.Component
         return (
             <ListGroup.Item >
                 <div className="row">
-                    <div className="col-5">
-                        {developmentType} Used:
+                    <div className="col-5 vertical-align">
+                        <h6>
+                            {developmentType} Used:
+                        </h6>
                     </div>
                     <div className="col-7">
                         {this.getBadges(itemString, badgeType)}
