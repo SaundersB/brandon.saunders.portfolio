@@ -1,4 +1,3 @@
-import React from 'react';
 import experience from '../content/professional_experience_content';
 import projects from '../content/project_content';
 import {
@@ -11,7 +10,6 @@ import {
     STYLESHEET_LANGUAGES_USED_NAME,
     TAG_NAME,
 } from './constants';
-import {remove_duplicates_es6} from './array_helpers';
 
 
 class RelationshipBuilder
@@ -19,8 +17,7 @@ class RelationshipBuilder
     getAssociatedOrganizationsByTags(tags)
     {
         let summary = {
-            [PROJECT_TAGS_NAME]: {
-            },
+            [PROJECT_TAGS_NAME]: {},
         };
         if (typeof tags === 'undefined') {
             return [];
@@ -29,7 +26,7 @@ class RelationshipBuilder
         tagValues.forEach((tag) => {
             summary[PROJECT_TAGS_NAME][tag] = {
                 [TAG_NAME]: tag,
-                "organizations": []
+                'organizations': [],
             };
         });
         try {
@@ -40,10 +37,10 @@ class RelationshipBuilder
                     if (organizationsTech.technologies.includes(tag)) {
                         let alreadyMatchedTaggedOrganizations = tagObject.organizations;
                         let matchedTagCompanyName = organizationsTech[COMPANY_NAME];
-                        let matchedTagTechnologies = organizationsTech["technologies"];
+                        let matchedTagTechnologies = organizationsTech['technologies'];
                         let summaryObject = {
                             [COMPANY_NAME]: matchedTagCompanyName,
-                            "technologies": matchedTagTechnologies,
+                            'technologies': matchedTagTechnologies,
                         };
                         if (alreadyMatchedTaggedOrganizations.length > 0) {
                             let newOrgs = [];
@@ -71,8 +68,8 @@ class RelationshipBuilder
     {
         let summary = {
             [TAG_NAME]: tag,
-            "organizations": [],
-            "otherProjects": []
+            'organizations': [],
+            'otherProjects': [],
         };
         if (typeof tag === 'undefined') {
             return [];
@@ -84,10 +81,10 @@ class RelationshipBuilder
                 if (organizationsTech.technologies.includes(tag)) {
                     let alreadyMatchedTaggedOrganizations = summary.organizations;
                     let matchedTagCompanyName = organizationsTech[COMPANY_NAME];
-                    let matchedTagTechnologies = organizationsTech["technologies"];
+                    let matchedTagTechnologies = organizationsTech['technologies'];
                     let summaryObject = {
                         [COMPANY_NAME]: matchedTagCompanyName,
-                        "technologies": matchedTagTechnologies,
+                        'technologies': matchedTagTechnologies,
                     };
                     if (alreadyMatchedTaggedOrganizations.length > 0) {
                         let newOrgs = [];
@@ -109,7 +106,8 @@ class RelationshipBuilder
         return summary;
     }
 
-    getOrganizationsTechnologies() {
+    getOrganizationsTechnologies()
+    {
         let summary = [];
         experience.forEach((company) => {
             let summaryObject = {};
@@ -128,28 +126,30 @@ class RelationshipBuilder
                 ...frameworksArray,
             ];
             summaryObject[COMPANY_NAME] = company[COMPANY_NAME];
-            summaryObject["technologies"] = technologies;
+            summaryObject['technologies'] = technologies;
             summary.push(summaryObject);
         });
         return summary;
     }
 
-    getProjectsTags() {
+    getProjectsTags()
+    {
         let summary = [];
         projects.forEach((project) => {
             let summaryObject = {};
             let projectTags = project[PROJECT_TAGS_NAME].split(', ');
             summaryObject[PROJECT_NAME] = project[PROJECT_NAME];
-            summaryObject["tags"] = projectTags;
+            summaryObject['tags'] = projectTags;
             summary.push(summaryObject);
         });
         return summary;
     }
 
-    getAssociatedProjectsByTag(tag){
+    getAssociatedProjectsByTag(tag)
+    {
         let summary = {
             [TAG_NAME]: tag,
-            "projects": [],
+            'projects': [],
         };
         if (typeof tag === 'undefined') {
             return [];
@@ -181,6 +181,19 @@ class RelationshipBuilder
             console.log(e);
         }
         return summary;
+    }
+
+    organizationDoesExist(organizationName)
+    {
+        let companyExists = false;
+        experience.forEach((company) => {
+                let companyName = company[COMPANY_NAME];
+                if (companyName === organizationName) {
+                    companyExists = true;
+                }
+            },
+        );
+        return companyExists;
     }
 }
 

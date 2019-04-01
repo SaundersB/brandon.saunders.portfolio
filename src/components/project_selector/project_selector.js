@@ -1,8 +1,7 @@
 import React from 'react';
-import {Card, Button, Col, Badge, ListGroup, Row} from 'react-bootstrap';
+import {Card, Button, Col, Badge, ListGroup} from 'react-bootstrap';
 import Modal from 'react-modal';
 import {
-    COMPANY_NAME,
     ORGANIZATION_KEY_NAME,
     PROJECT_NAME,
     PROJECT_TAGS_NAME,
@@ -132,37 +131,33 @@ class ProjectSelector extends React.Component
             return;
         }
         try {
-            let developmentTools = itemString.split(', ');
+            let badgesToCreate = itemString.split(', ');
             if(pillType) {
-                return developmentTools.map((tool) => {
-                    let organizations = this.relationshipBuilder.getAssociatedOrganizationsByTag(tool);
-                    let clickable = '';
-                    if(organizations.organizations.length > 0){
-                        clickable = 'mouse-pointer'
-                    }
+                return badgesToCreate.map((developmentTool) => {
                     return (
-                        <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
-                            <Badge pill variant={badgeType} key={tool} className={"card-row " + clickable}>
-                                {tool}
+                        <div key={developmentTool}  onClick={this.handleClick.bind(this, developmentTool)}>
+                            <Badge pill variant={badgeType} key={developmentTool} className={"card-row "}>
+                                {developmentTool}
                             </Badge>
                         </div>
                     );
                     }
                 )
             } else {
-                return developmentTools.map((tool) => {
-                        return (
-                            <BadgeTag
-                                      entityType="organization"
-                                      key={tool}
-                                      name={tool}
-                                      badgeType={badgeType}
-                            />
-                        )
+                return badgesToCreate.map((organizationName) => {
+                    return (
+                        <BadgeTag
+                                  entityType="organization"
+                                  key={organizationName}
+                                  name={organizationName}
+                                  badgeType={badgeType}
+                        />
+                    )
                     }
                 )
             }
         } catch (e) {
+            console.error(e);
         }
     }
     getBadgeRow(developmentType, itemString, badgeType, pillType=true){

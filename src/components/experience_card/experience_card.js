@@ -156,8 +156,8 @@ class ExperienceCard extends React.Component
                 return (
                     <div key={tool}  onClick={this.handleClick.bind(this, tool)}>
                         <Badge pill variant={badgeType} key={tool} className={"card-row " + clickable}>
-                        {tool}
-                    </Badge>
+                            {tool}
+                        </Badge>
                     </div>
                 );
             }

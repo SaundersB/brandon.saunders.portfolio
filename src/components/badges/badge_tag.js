@@ -3,8 +3,15 @@ import {Badge} from 'react-bootstrap';
 import history from '../../router/history';
 import {getKey} from '../../helpers/string_helpers';
 import {organizationNameExistsInOrganizations} from '../../helpers/organization_helper';
+import RelationshipBuilder from '../../helpers/relationship_builder';
 
 class BadgeTag extends React.Component {
+    constructor(props)
+    {
+        super(props);
+        this.relationshipBuilder = new RelationshipBuilder();
+    }
+
     handleBadgeClick(badgeClickEventType){
         switch (this.props.entityType) {
             case 'organization': {
@@ -35,12 +42,32 @@ class BadgeTag extends React.Component {
 
     render()
     {
+        let clickable = '';
+        switch (this.props.entityType) {
+            case 'organization': {
+                try {
+                    let organizationDoesExist = this.relationshipBuilder.organizationDoesExist(this.props.name);
+                    if (organizationDoesExist) {
+                        clickable = 'mouse-pointer'
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+                break;
+            }
+            case 'project': {
+
+                break;
+            }
+            default: {}
+        }
+
         return (
             <Badge
                    variant={this.props.badgeType}
                    key={this.props.name}
                    onClick={this.handleBadgeClick.bind(this, this.props.entityType)}
-                   className="card-row">
+                   className={"card-row " + clickable}>
                 {this.props.name}
             </Badge>
         )

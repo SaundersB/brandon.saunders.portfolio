@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Col, ListGroup, Row} from 'react-bootstrap';
+import {Card, ListGroup, Row} from 'react-bootstrap';
 import AnchorTagNavigationLink from './anchor_tag_navigation_link';
 import {remove_duplicates_es6} from '../../helpers/array_helpers';
 
