@@ -175,12 +175,10 @@ class ProjectSelector extends React.Component
     static getListGroupItem(header, value){
         return (<ListGroup.Item>
             <div className="row">
-                <div className="col-5 vertical-align">
-                    <h6>
-                        {header}:
-                    </h6>
+                <div className="col-5 vertical-align card-row-header">
+                    {header}:
                 </div>
-                <div className="col-7">
+                <div className="col-7 center-alignment">
                     {value}
                 </div>
             </div>
