@@ -56,7 +56,14 @@ class BadgeTag extends React.Component {
                 break;
             }
             case 'project': {
-
+                try {
+                    let organizationalData = this.relationshipBuilder.getAssociatedOrganizationsByTag(this.props.name);
+                    if(organizationalData.organizations.length > 0){
+                        clickable = 'mouse-pointer'
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
                 break;
             }
             default: {}
@@ -64,6 +71,7 @@ class BadgeTag extends React.Component {
 
         return (
             <Badge
+                pill
                    variant={this.props.badgeType}
                    key={this.props.name}
                    onClick={this.handleBadgeClick.bind(this, this.props.entityType)}

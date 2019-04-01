@@ -134,11 +134,15 @@ class ProjectSelector extends React.Component
             let badgesToCreate = itemString.split(', ');
             if(pillType) {
                 return badgesToCreate.map((developmentTool) => {
+                    console.log(developmentTool);
                     return (
                         <div key={developmentTool}  onClick={this.handleClick.bind(this, developmentTool)}>
-                            <Badge pill variant={badgeType} key={developmentTool} className={"card-row "}>
-                                {developmentTool}
-                            </Badge>
+                            <BadgeTag
+                            entityType="project"
+                            key={developmentTool}
+                            name={developmentTool}
+                            badgeType={badgeType}
+                            />
                         </div>
                     );
                     }
