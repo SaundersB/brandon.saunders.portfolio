@@ -9,7 +9,7 @@ import Modal from 'react-modal';
 import {
     COMPANY_DESCRIPTION_NAME,
     COMPANY_NAME,
-    COMPANY_URL_NAME,
+    COMPANY_URL_NAME, DEVELOPMENT_PROCESSES_USED_NAME,
     DEVELOPMENT_TOOLS_USED_NAME, END_DATE_NAME,
     EXPERIENCE_NAME,
     FRAMEWORKS_USED_NAME,
@@ -197,6 +197,7 @@ class ExperienceCard extends React.Component
                                     {this.getDevelopmentInfoRow('Stylesheet Languages  ', this.props[STYLESHEET_LANGUAGES_USED_NAME], 'secondary')}
                                     {this.getDevelopmentInfoRow('Frameworks Languages ', this.props[FRAMEWORKS_USED_NAME], 'info')}
                                     {this.getDevelopmentInfoRow('Development Tools ', this.props[DEVELOPMENT_TOOLS_USED_NAME], 'secondary')}
+                                    {this.getDevelopmentInfoRow('Development Processes ', this.props[DEVELOPMENT_PROCESSES_USED_NAME], 'primary')}
                                 </ListGroup>
                             </Tab>
                             <Tab eventKey="company" title="Company Info" className="card-text custom-tabs">
