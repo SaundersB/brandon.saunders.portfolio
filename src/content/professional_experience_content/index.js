@@ -19,21 +19,37 @@ let experience = [
         [END_DATE_NAME]: "Current",
         [EXPERIENCE_NAME]: "Develop enterprise software systems in the prepaid incentive market using Drupal, MySQL, MongoDB, NodeJS, and PHP. * Planning and developing the next iteration of incentive program software systems with scalability and new business programs in mind.\n" +
             "* Maintain 10-20 enterprise prepaid incentive programs written using Drupal and CakePHP.\n",
-        [DEVELOPMENT_TOOLS_USED_NAME]: "AWS, Docker, IntelliJ IDEA, GitLab, Wrike, PHPMyAdmin",
-        [PROGRAMMING_LANGUAGES_USED_NAME]: "PHP, JavaScript, SQL, MongoDB",
+        [DEVELOPMENT_TOOLS_USED_NAME]: "AWS, Docker, GitLab, Wrike, JIRA",
+        [PROGRAMMING_LANGUAGES_USED_NAME]: "PHP, JavaScript, SQL",
         [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell",
         [MARKUP_LANGUAGES_USED_NAME]: "HTML, XML",
         [STYLESHEET_LANGUAGES_USED_NAME]: "CSS",
-        [FRAMEWORKS_USED_NAME]: "Drupal, MySQL, ExpressJS, Laravel, VueJS, React, CakePHP, Codeception",
+        [FRAMEWORKS_USED_NAME]: "NodeJS, Kubernetes, Drupal, MySQL, ExpressJS, Laravel, VueJS, React, CakePHP, Codeception",
         [DEVELOPMENT_PROCESSES_USED_NAME]: "Scrum, Kanban, Continuous Integration, Continuous Deployment",
         [COMPANY_URL_NAME]: "https://www.jnrcorp.com/",
         [COMPANY_DESCRIPTION_NAME]: "JNR focuses to bolsters a resolute vision: to develop and implement innovative, highly effective events, meetings, and incentive-based reward and loyalty programs that drive sales performance, employee recognition, and consumer behavior."
     },
     {
+        [COMPANY_NAME]: "Terasaki Research Institute",
+        [WORK_TYPE_NAME]: "Full Time",
+        [START_DATE_NAME]: "05-2019",
+        [END_DATE_NAME]: "04-2020",
+        [EXPERIENCE_NAME]: "Developed Wellavive, a React Native mobile application, Laravel API, and Azure infrastructure written in Terraform. Wellavive is a full-stack HIPAA compliant direct-to-patient digital health platform for clinical trial and organ transplant recipient patients. Wellavive offers patients the convenience of tracking their medication, answering questionnaires for clinics, and logging their symptoms instead of traveling to the clinic.",
+        [DEVELOPMENT_TOOLS_USED_NAME]: "Docker, Kubernetes, Jenkins, Azure",
+        [PROGRAMMING_LANGUAGES_USED_NAME]: "JavaScript, PHP, SQL",
+        [SCRIPTING_LANGUAGES_USED_NAME]: "BASH/Shell",
+        [MARKUP_LANGUAGES_USED_NAME]: "HTML",
+        [STYLESHEET_LANGUAGES_USED_NAME]: "CSS, SASS/SCSS",
+        [FRAMEWORKS_USED_NAME]: "React Native, MySQL, Laravel, Jest",
+        [DEVELOPMENT_PROCESSES_USED_NAME]: "Scrum, Continuous Integration, Continuous Deployment",
+        [COMPANY_URL_NAME]: "https://terasaki.org/institute/",
+        [COMPANY_DESCRIPTION_NAME]: ""
+    },
+    {
         [COMPANY_NAME]: "Heart Cup Inc",
         [WORK_TYPE_NAME]: "Contract",
-        [START_DATE_NAME]: "05-2017",
-        [END_DATE_NAME]: "Current",
+        [START_DATE_NAME]: "08-2017",
+        [END_DATE_NAME]: "05-2019",
         [EXPERIENCE_NAME]: "Building a social network platform for community driven charitable giving that aims to improve the quality of life for individuals everywhere.\n" +
             "* Developing the web interface for site engagement using the VueJS framework.\n" +
             "* Developing a RESTful API using the Laravel framework.\n" +
