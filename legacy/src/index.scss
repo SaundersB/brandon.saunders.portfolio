@@ -1,0 +1,282 @@
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+$page-background-color: #fffeee;
+$button-color: #006ff0;
+
+$breakpoints: (
+        xs: 576px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+);
+
+.border-line {
+    border-bottom: #000000;
+}
+
+%center-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+@include media-breakpoint-up(xs) {
+    .portfolio-header {
+        font-size: 3rem;
+    }
+    .secondary-portfolio-header {
+        font-size: 2rem;
+    }
+    .header-spacing {
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .project-video {
+        min-height: 15rem;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .portfolio-header {
+        font-size: 3rem;
+    }
+    .secondary-portfolio-header {
+        font-size: 2rem;
+    }
+    .header-spacing {
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .portfolio-header {
+        font-size: 4rem;
+    }
+    .secondary-portfolio-header {
+        font-size: 3rem;
+    }
+    .header-spacing {
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .portfolio-header {
+        font-size: 5rem;
+    }
+    .secondary-portfolio-header {
+        font-size: 3rem;
+    }
+    .header-spacing {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .project-video {
+        min-height: 25rem;
+    }
+    .card-row-header {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+
+%auto-margin {
+    margin: auto;
+}
+
+%auto-padding {
+    padding: auto;
+}
+
+%full-height {
+    height: 100%;
+}
+
+%full-width {
+    width: 100%;
+}
+
+.card-text {
+    margin: 15px;
+}
+
+.card-button {
+    background-color: $button-color;
+}
+
+.card-row {
+    margin: auto;
+}
+
+.left-align-text {
+    text-align: left;
+}
+
+.maximize-window {
+    @extend %full-height;
+    @extend %full-height;
+}
+
+.center-alignment {
+    @extend %center-text;
+}
+
+
+//
+//  RESPOND ABOVE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// @include respond-above(sm) {}
+@mixin respond-above($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+//
+//  RESPOND BELOW
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// @include respond-below(sm) {}
+@mixin respond-below($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (max-width: ($breakpoint-value - 1)) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+//
+//  RESPOND BETWEEN
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// @include respond-between(sm, md) {}
+@mixin respond-between($lower, $upper) {
+
+    // If both the lower and upper breakpoints exist in the map.
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+
+        // Get the lower and upper breakpoints.
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+
+        // Write the media query.
+        @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+
+        // If one or both of the breakpoints don't exist.
+    } @else {
+
+        // If lower breakpoint is invalid.
+        @if (map-has-key($breakpoints, $lower) == false) {
+
+            // Log a warning.
+            @warn 'Your lower breakpoint was invalid: #{$lower}.';
+        }
+
+        // If upper breakpoint is invalid.
+        @if (map-has-key($breakpoints, $upper) == false) {
+
+            // Log a warning.
+            @warn 'Your upper breakpoint was invalid: #{$upper}.';
+        }
+    }
+}
+
+@media (min-width: 767px) {
+    .card {
+        margin: 1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 1em;
+    }
+}
+
+.menu {
+    margin: auto;
+}
+
+.project {
+    display:inline-block;
+}
+
+.project-image {
+    display: inline-block;
+    height: auto;
+}
+
+.project-video {
+    width: auto;
+    height: auto;
+}
+
+.image-spacing {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.maximize-window-minus-sidebar {
+    height: 100vh;
+    width: calc(100vw - 240px);
+}
+
+.body-wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.custom-tabs {
+    min-width: 60vw;
+    margin: auto;
+    padding: auto;
+
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}
+
+.vertical-align {
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+}
