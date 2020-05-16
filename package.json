@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brandon-saunders-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My personal portfolio showcasing work.",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -22,7 +22,9 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.0.0",
+    "gatsby-source-s3": "^0.0.0",
     "gh-pages": "^2.2.0",
     "prettier": "2.0.5",
     "typescript": "^3.9.2"
