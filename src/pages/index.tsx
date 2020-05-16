@@ -42,7 +42,7 @@ function IndexPage(props: any) {
 
 function getProjects(data: any) {
     let projects: object[] = [];
-    const projectsData = data.allProjectsJson.edges.forEach((project: any) => {
+    data.allProjectsJson.edges.forEach((project: any) => {
         const projectObj = new Project(project.node);
         console.log(projectObj);
         projects.push(<li key={projectObj.name}>{projectObj.name}</li>);

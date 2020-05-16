@@ -1,3 +1,11 @@
+interface ProjectInterface {
+    name: string;
+    experienceId: number;
+    url: string;
+    year: number;
+    tags: string[];
+}
+
 export default class Project {
     private readonly _name: string
     private readonly _experienceId: Number
@@ -5,12 +13,12 @@ export default class Project {
     private readonly _year: Number
     private readonly _tags: object
 
-    constructor({name, experienceId, url, year, tags}) {
-        this._name = name;
-        this._experienceId = experienceId;
-        this._url = url;
-        this._year = year;
-        this._tags = tags;
+    constructor(projectData: ProjectInterface) {
+        this._name = projectData.name;
+        this._experienceId = projectData.experienceId;
+        this._url = projectData.url;
+        this._year = projectData.year;
+        this._tags = projectData.tags;
     }
 
     get name(): string {
