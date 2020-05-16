@@ -38,5 +38,18 @@ module.exports = {
                 buckets: ['brandon.saunders.portfolio.bucket'],
             },
         },
+        {
+            resolve: 'gatsby-transformer-json',
+            options: {
+                path: `${__dirname}/src/data`
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'data',
+                path: `${__dirname}/src/data`
+            }
+        }
     ],
 };

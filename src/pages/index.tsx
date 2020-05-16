@@ -1,34 +1,53 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
-import {Constants} from "../core/Constants";
 import Project from "../lib/entities/Project";
+import {graphql, StaticQuery} from "gatsby"
 
-function IndexPage() {
-    const [projects, setProjects] = useState([]);
-    useEffect(() => {
-        fetch(Constants.BUCKET_URL + Constants.DATA_PATH + 'projects.json')
-            .then(res => res.json())
-            .then((result) => {
-                console.log(result);
-                let projectEntities = result.map((project: any) => new Project(project))
-                setProjects(projectEntities);
-            }).catch((error) => {
-                console.log(error);
-        })
-    }, []);
+export const query = graphql`
+    query projectsQuery {
+        allProjectsJson {
+            edges {
+                node {
+                    name
+                    experienceId
+                    url
+                    videoUrl
+                    description
+                    tags
+                }
+            }
+        }
+    }
+`
+
+function IndexPage(props: any) {
     return (
         <Layout>
             <SEO title="Home"/>
-            <ul>
-                {projects.map(project => (
-                    <li key={project?.name}>
-                        {project?.name}
-                    </li>
-                ))}
-            </ul>
+            <StaticQuery query={query}
+                         render={(data) => (
+                            <>
+                                <ul>
+                                    {getProjects(data)}
+                                </ul>
+                            </>
+                         )
+                     }
+            />
         </Layout>
     );
 };
+
+
+function getProjects(data: any) {
+    let projects: object[] = [];
+    const projectsData = data.allProjectsJson.edges.forEach((project: any) => {
+        const projectObj = new Project(project.node);
+        console.log(projectObj);
+        projects.push(<li key={projectObj.name}>{projectObj.name}</li>);
+    })
+    return projects;
+}
 
 export default IndexPage;
