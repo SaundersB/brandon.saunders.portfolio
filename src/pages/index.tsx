@@ -3,6 +3,7 @@ import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Project from "../lib/entities/Project";
 import {graphql, StaticQuery} from "gatsby"
+import {Constants} from "../core/Constants";
 
 export const query = graphql`
     query projectsQuery {
@@ -20,6 +21,8 @@ export const query = graphql`
         }
     }
 `
+
+
 
 function IndexPage(props: any) {
     return (
@@ -43,9 +46,16 @@ function IndexPage(props: any) {
 function getProjects(data: any) {
     let projects: object[] = [];
     data.allProjectsJson.edges.forEach((project: any) => {
+        console.log(project.node);
         const projectObj = new Project(project.node);
-        console.log(projectObj);
-        projects.push(<li key={projectObj.name}>{projectObj.name}</li>);
+        projects.push(
+            <li key={projectObj.name}>
+                <div>
+                    {projectObj.name}
+                </div>
+                <img alt={'test'} src={Constants.BUCKET_URL + Constants.IMAGES_PATH + projectObj.imageName}/>
+            </li>
+        );
     })
     return projects;
 }
