@@ -3,12 +3,11 @@ import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Project from "../lib/entities/Project";
 import {graphql, StaticQuery} from "gatsby"
-import Img from "gatsby-image"
 import {CardComponent} from "../components/common/card";
 import {defaultMargin, defaultPadding} from "../styles";
 import {header} from "../styles/typography";
-import {VideoComponent} from "../components/common/VideoComponent";
 import {ProjectMediaComponent} from "../components/projects/ProjectMediaContentComponent";
+import {TechnologiesComponent} from "../components/projects/TechnologiesComponent";
 
 export const query = graphql`
     query projectsQuery {
@@ -47,7 +46,7 @@ function IndexPage(props: any) {
                                  {getProjects(data)}
                              </>
                          )
-                         }
+                 }
             />
         </Layout>
     );
@@ -75,6 +74,11 @@ function getProjects(data: any) {
                         ...defaultPadding
                     }}>
                         {projectObj.description}
+                    </div>
+                    <div style={{
+                        ...defaultPadding
+                    }}>
+                        <TechnologiesComponent technologies={projectObj.tags}/>
                     </div>
                 </CardComponent>
             </div>
