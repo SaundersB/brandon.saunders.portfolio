@@ -1,5 +1,5 @@
 import React from 'react';
-import {header2} from "../../styles/typography";
+import {headerTwo} from "../../styles/typography";
 
 
 export function TechnologiesComponent(props: any){
@@ -14,7 +14,7 @@ export function TechnologiesComponent(props: any){
                 <tr>
                     <th>
                         <div>
-                            <div style={{...header2}}>
+                            <div style={{...headerTwo}}>
                                 Technologies
                             </div>
                         </div>

@@ -1,9 +1,7 @@
 export const header = {
     fontSize: 35,
-    fontWeight: 'bold',
 }
 
-export const header2 = {
+export const headerTwo = {
     fontSize: 30,
-    fontWeight: 'bold',
 }
