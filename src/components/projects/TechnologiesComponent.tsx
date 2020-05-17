@@ -23,7 +23,15 @@ export function TechnologiesComponent(props: any){
                 <tr>
                     <td>
                         <div style={{display: "flex", flex: 1}}>
-                            <div onClick={() => setExpanded(!expanded)} style={{flexDirection: "row"}}>
+                            <div
+                                onClick={() => setExpanded(!expanded)}
+                                style={
+                                    {
+                                        flexDirection: "row",
+                                        cursor: "pointer"
+                                    }
+                                }
+                            >
                                 Press to {actionWord} {symbol}
                             </div>
                         </div>

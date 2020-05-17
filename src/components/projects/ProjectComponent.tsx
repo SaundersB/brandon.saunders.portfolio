@@ -21,23 +21,27 @@ export default function ProjectComponent(props: ProjectComponentInterface){
             ...defaultPadding
         }}>
             <CardComponent>
-                <ProjectMediaComponent project={project}/>
-                <div style={{
-                    ...header,
-                    ...defaultPadding
-                }}>
-                    {projectObj.name + ' | ' + projectObj.years}
-                </div>
-                <div style={{
-                    ...defaultPadding
-                }}>
-                    {projectObj.description}
-                </div>
-                <div style={{
-                    ...defaultPadding
-                }}>
-                    <TechnologiesComponent technologies={projectObj.tags}/>
-                </div>
+                <ProjectMediaComponent project={project} onClick={() => setExpanded(!expanded)}/>
+                { expanded &&
+                    <div>
+                        <div style={{
+                            ...header,
+                            ...defaultPadding
+                        }}>
+                            {projectObj.name + ' | ' + projectObj.years}
+                        </div>
+                        <div style={{
+                            ...defaultPadding
+                        }}>
+                            {projectObj.description}
+                        </div>
+                        <div style={{
+                            ...defaultPadding
+                        }}>
+                            <TechnologiesComponent technologies={projectObj.tags}/>
+                        </div>
+                    </div>
+                }
             </CardComponent>
         </div>
     )

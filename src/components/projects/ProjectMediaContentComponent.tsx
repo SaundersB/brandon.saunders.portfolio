@@ -24,7 +24,19 @@ export function ProjectMediaComponent(props: any){
         <Img fluid={imageUrl} style={{...imageStyles}}/>
     ) : null;
     return (
-        <div style={{flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#000'}}>
+        <div
+            onClick={() => props.onClick()}
+            style={
+                {
+                    flex: 1,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    background: '#000',
+                    cursor: "pointer"
+                }
+            }
+        >
             {imageComponent}
             {videoComponent}
         </div>
