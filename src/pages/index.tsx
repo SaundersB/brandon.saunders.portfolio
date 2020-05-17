@@ -60,7 +60,9 @@ function getProjects(data: any) {
         const imageOrientation = project.node.imageOrientation;
         const imageStyles = imageOrientation === 'portrait' ? {
             width: '50%',
-        } : null;
+        } : {
+            width: '100%'
+        };
         const imageUrl = project.node.image?.childImageSharp?.fluid;
         const imageComponent = imageUrl !== undefined ? (
             <Img fluid={imageUrl} style={{...imageStyles}}/>
