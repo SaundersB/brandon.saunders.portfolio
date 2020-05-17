@@ -6,6 +6,7 @@ import {graphql, StaticQuery} from "gatsby"
 import Img from "gatsby-image"
 import {CardComponent} from "../components/common/card";
 import {defaultMargin, defaultPadding} from "../styles";
+import {header} from "../styles/typography";
 
 export const query = graphql`
     query projectsQuery {
@@ -67,14 +68,18 @@ function getProjects(data: any) {
                 ...defaultPadding
             }}>
                 <CardComponent>
+                    {imageComponent}
                     <div style={{
-                        width: '100%',
-                        textJustify: 'auto',
+                        ...header,
                         ...defaultPadding
                     }}>
                         {projectObj.name}
                     </div>
-                    {imageComponent}
+                    <div style={{
+                        ...defaultPadding
+                    }}>
+                        {projectObj.description}
+                    </div>
                 </CardComponent>
             </div>
         );
