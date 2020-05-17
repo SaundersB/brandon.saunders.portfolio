@@ -9,7 +9,6 @@ interface VideoComponentInterface {
 }
 
 export function VideoComponent(props: VideoComponentInterface){
-    // @ts-ignore
     return (
         <div className="video" style={{...props.wrapperStyles}}>
             <iframe
@@ -18,8 +17,6 @@ export function VideoComponent(props: VideoComponentInterface){
                 title={props.videoTitle}
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 frameBorder="0"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
                 allowFullScreen
             />
         </div>
