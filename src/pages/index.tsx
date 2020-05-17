@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import Project from "../lib/entities/Project";
 import {graphql, StaticQuery} from "gatsby"
 import Img from "gatsby-image"
+import {CardComponent} from "../components/common/card";
 
 export const query = graphql`
     query projectsQuery {
@@ -39,9 +40,7 @@ function IndexPage(props: any) {
             <StaticQuery query={query}
                          render={(data) => (
                             <>
-                                <ul>
-                                    {getProjects(data)}
-                                </ul>
+                                {getProjects(data)}
                             </>
                          )
                      }
@@ -58,12 +57,12 @@ function getProjects(data: any) {
         const imageUrl = project.node.image?.childImageSharp?.fluid;
         const imageComponent = imageUrl !== undefined ? <Img fluid={imageUrl} /> : null;
         projects.push(
-            <li key={projectObj.name}>
-                <div>
+            <div key={projectObj.name}>
+                <CardComponent>
                     {projectObj.name}
-                </div>
-                {imageComponent}
-            </li>
+                    {imageComponent}
+                </CardComponent>
+            </div>
         );
     })
     return projects;
