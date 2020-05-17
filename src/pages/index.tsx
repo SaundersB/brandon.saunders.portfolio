@@ -19,9 +19,10 @@ export const query = graphql`
                     videoUrl
                     description
                     tags
+                    imageOrientation
                     image {
                         childImageSharp {
-                            fluid(maxWidth: 1075) {
+                            fluid {
                                 ...GatsbyImageSharpFluid
 
                             }
@@ -56,11 +57,13 @@ function getProjects(data: any) {
     let projects: object[] = [];
     data.allProjectsJson.edges.forEach((project: any) => {
         const projectObj = new Project(project.node);
+        const imageOrientation = project.node.imageOrientation;
+        const imageStyles = imageOrientation === 'portrait' ? {
+            width: '50%',
+        } : null;
         const imageUrl = project.node.image?.childImageSharp?.fluid;
         const imageComponent = imageUrl !== undefined ? (
-            <div style={{padding: 15}}>
-                <Img fluid={imageUrl} />
-            </div>
+            <Img fluid={imageUrl} style={{...imageStyles}}/>
             ) : null;
         projects.push(
             <div key={projectObj.name} style={{
@@ -68,7 +71,9 @@ function getProjects(data: any) {
                 ...defaultPadding
             }}>
                 <CardComponent>
-                    {imageComponent}
+                    <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        {imageComponent}
+                    </div>
                     <div style={{
                         ...header,
                         ...defaultPadding
