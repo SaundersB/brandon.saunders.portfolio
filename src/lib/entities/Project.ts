@@ -12,7 +12,7 @@ export default class Project {
     private readonly _name: string
     private readonly _experienceId: Number
     private readonly _url: string
-    private readonly _year: Number
+    private readonly _years: Number
     private readonly _tags: object
     private readonly _image: string
     private readonly _description: string
@@ -21,7 +21,7 @@ export default class Project {
         this._name = projectData.name;
         this._experienceId = projectData.experienceId;
         this._url = projectData.url;
-        this._year = projectData.year;
+        this._years = projectData.years;
         this._tags = projectData.tags;
         this._image = projectData.image;
         this._description = projectData.description;
@@ -39,8 +39,8 @@ export default class Project {
         return this._url;
     }
 
-    get year(): Number {
-        return this._year;
+    get years(): Number {
+        return this._years;
     }
 
     get tags(): object {

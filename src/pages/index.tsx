@@ -20,6 +20,7 @@ export const query = graphql`
                     videoUrl
                     description
                     tags
+                    years
                     imageOrientation
                     image {
                         childImageSharp {
@@ -68,7 +69,7 @@ function getProjects(data: any) {
                         ...header,
                         ...defaultPadding
                     }}>
-                        {projectObj.name}
+                        {projectObj.name + ' | ' + projectObj.years}
                     </div>
                     <div style={{
                         ...defaultPadding
