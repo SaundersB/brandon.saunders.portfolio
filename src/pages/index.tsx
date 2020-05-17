@@ -5,6 +5,7 @@ import Project from "../lib/entities/Project";
 import {graphql, StaticQuery} from "gatsby"
 import Img from "gatsby-image"
 import {CardComponent} from "../components/common/card";
+import {defaultMargin, defaultPadding} from "../styles";
 
 export const query = graphql`
     query projectsQuery {
@@ -55,11 +56,24 @@ function getProjects(data: any) {
     data.allProjectsJson.edges.forEach((project: any) => {
         const projectObj = new Project(project.node);
         const imageUrl = project.node.image?.childImageSharp?.fluid;
-        const imageComponent = imageUrl !== undefined ? <Img fluid={imageUrl} /> : null;
+        const imageComponent = imageUrl !== undefined ? (
+            <div style={{padding: 15}}>
+                <Img fluid={imageUrl} />
+            </div>
+            ) : null;
         projects.push(
-            <div key={projectObj.name}>
+            <div key={projectObj.name} style={{
+                ...defaultMargin,
+                ...defaultPadding
+            }}>
                 <CardComponent>
-                    {projectObj.name}
+                    <div style={{
+                        width: '100%',
+                        textJustify: 'auto',
+                        ...defaultPadding
+                    }}>
+                        {projectObj.name}
+                    </div>
                     {imageComponent}
                 </CardComponent>
             </div>
