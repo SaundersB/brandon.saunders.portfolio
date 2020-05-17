@@ -4,7 +4,7 @@ export interface ProjectInterface {
     url: string;
     year: number;
     tags: string[];
-    imageName: string;
+    image: string;
 }
 
 export default class Project {
@@ -13,7 +13,7 @@ export default class Project {
     private readonly _url: string
     private readonly _year: Number
     private readonly _tags: object
-    private readonly _imageName: string
+    private readonly _image: string
 
     constructor(projectData: ProjectInterface) {
         this._name = projectData.name;
@@ -21,7 +21,7 @@ export default class Project {
         this._url = projectData.url;
         this._year = projectData.year;
         this._tags = projectData.tags;
-        this._imageName = projectData.imageName;
+        this._image = projectData.image;
     }
 
     get name(): string {
@@ -44,7 +44,7 @@ export default class Project {
         return this._tags;
     }
 
-    get imageName(): string {
-        return this._imageName;
+    get image(): string {
+        return this._image;
     }
 }
