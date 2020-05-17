@@ -2,7 +2,7 @@ export interface ProjectInterface {
     name: string;
     experienceId: number;
     url: string;
-    year: number;
+    years: number;
     tags: string[];
     image: string;
     description: string;

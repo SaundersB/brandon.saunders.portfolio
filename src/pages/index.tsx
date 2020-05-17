@@ -8,6 +8,7 @@ import {defaultMargin, defaultPadding} from "../styles";
 import {header} from "../styles/typography";
 import {ProjectMediaComponent} from "../components/projects/ProjectMediaContentComponent";
 import {TechnologiesComponent} from "../components/projects/TechnologiesComponent";
+import ProjectComponent from "../components/projects/ProjectComponent";
 
 export const query = graphql`
     query projectsQuery {
@@ -57,32 +58,8 @@ function IndexPage(props: any) {
 function getProjects(data: any) {
     let projects: object[] = [];
     data.allProjectsJson.edges.forEach((project: any) => {
-        const projectObj = new Project(project.node);
         projects.push(
-            <div key={projectObj.name} style={{
-                ...defaultMargin,
-                ...defaultPadding
-            }}>
-                <CardComponent>
-                    <ProjectMediaComponent project={project}/>
-                    <div style={{
-                        ...header,
-                        ...defaultPadding
-                    }}>
-                        {projectObj.name + ' | ' + projectObj.years}
-                    </div>
-                    <div style={{
-                        ...defaultPadding
-                    }}>
-                        {projectObj.description}
-                    </div>
-                    <div style={{
-                        ...defaultPadding
-                    }}>
-                        <TechnologiesComponent technologies={projectObj.tags}/>
-                    </div>
-                </CardComponent>
-            </div>
+            <ProjectComponent project={project}/>
         );
     })
     return projects;
