@@ -2,8 +2,6 @@ import React from 'react';
 import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
 
-
-
 export default function ProjectCategorySelectorComponent({ data }){
     const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('');
     const [projectsByCategory, setProjectsByCategory] = React.useState([]);
@@ -13,9 +11,15 @@ export default function ProjectCategorySelectorComponent({ data }){
     console.log(selectedCategoryKey);
 
     return (<div>
-        {
-            getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
-        }
+        <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center'
+        }}>
+            {
+                getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
+            }
+        </div>
         {
             getProjectsComponentsByCategory(projectsByCategory, selectedCategoryKey)
         }
@@ -43,7 +47,7 @@ function getCategoryComponents(categories: any, setSelectedCategoryKey: any){
             <ProjectCategoryComponent
                 onPress={() => setSelectedCategoryKey(key)}
                 categoryName={key}
-                backgroundColor={'#969696'}
+                backgroundColor={'#0088ff'}
             />
         )
     }

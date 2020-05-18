@@ -1,4 +1,5 @@
 import React from 'react';
+import {defaultMargin, defaultPadding} from "../../styles";
 
 interface ProjectCategoryComponentInterface {
     backgroundColor: string;
@@ -11,9 +12,13 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
         <div
             onClick={() => props.onPress()}
             style={{
-            width: 300,
-            height: 300,
-            backgroundColor: props.backgroundColor
+                ...defaultPadding,
+                ...defaultMargin,
+                maxHeight: 300,
+                aspectRatio: '1',
+                backgroundColor: props.backgroundColor,
+                borderRadius: 15,
+                cursor: 'pointer'
         }}>
             <div>
                 {props.categoryName}
