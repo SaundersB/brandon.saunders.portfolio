@@ -64,38 +64,3 @@ function getProjectsComponentsByCategory(projectsByCategory: any, category: stri
     }
     return projectComponents;
 }
-
-//
-// function getProjectsPage(data: any) {
-//     let projectComponents: any[] = [];
-//     let categoryComponents = [];
-//
-//
-//
-//     for(const key in projectsByCategory){
-//         console.log(key);
-//         console.log(categories[key])
-//         categoryComponents.push(
-//             <ProjectCategoryComponent
-//                 categoryName={key}
-//                 backgroundColor={'#969696'}
-//             />
-//         )
-//
-//         for(const project in categories[key]){
-//             if(typeof projectComponents[key] !== 'object'){
-//                 projectComponents[key] = [];
-//             }
-//             projectComponents[key].push(
-//                 <ProjectComponent project={project}/>
-//             );
-//         }
-//     }
-//
-//     console.log(projectComponents);
-//     return (
-//         <div>
-//             {categoryComponents}
-//         </div>
-//     );
-// }
