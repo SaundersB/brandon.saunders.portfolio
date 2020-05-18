@@ -28,7 +28,6 @@ export function ProjectMediaComponent(props: any){
     return (
         <div
             key={'video-media-' + props.project.name}
-            onClick={() => props.onClick()}
             style={
                 {
                     flex: 1,
