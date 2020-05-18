@@ -25,6 +25,7 @@ export function ProjectMediaComponent(props: any){
     ) : null;
     return (
         <div
+            key={props.project.name}
             onClick={() => props.onClick()}
             style={
                 {

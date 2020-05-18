@@ -10,6 +10,7 @@ interface ProjectCategoryComponentInterface {
 export default function ProjectCategoryComponent(props: ProjectCategoryComponentInterface){
     return (
         <div
+            key={props.categoryName}
             onClick={() => props.onPress()}
             style={{
                 ...defaultPadding,
@@ -20,7 +21,7 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
                 borderRadius: 15,
                 cursor: 'pointer'
         }}>
-            <div>
+            <div key={'category-' + props.categoryName}>
                 {props.categoryName}
             </div>
         </div>
