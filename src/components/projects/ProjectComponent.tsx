@@ -15,7 +15,7 @@ export default function ProjectComponent(props: ProjectComponentInterface){
     const projectObj = new Project(project.node);
 
     return (
-        <div key={projectObj.name} style={{
+        <div key={'project-' + projectObj.name} style={{
             ...defaultMargin,
             ...defaultPadding
         }}>
@@ -23,19 +23,20 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                 <ProjectMediaComponent
                     project={project}
                 />
-                <div>
-                    <div style={{
+                <div key={'project-info-wrapper-' + projectObj.name}>
+                    <div key={'project-name-' + projectObj.name}
+                         style={{
                         ...header,
                         ...defaultPadding
                     }}>
                         {projectObj.name + ' | ' + projectObj.years}
                     </div>
-                    <div style={{
+                    <div key={'project-description-' + projectObj.name}  style={{
                         ...defaultPadding
                     }}>
                         {projectObj.description}
                     </div>
-                    <div style={{
+                    <div key={'project-technologies-' + projectObj.name}  style={{
                         ...defaultPadding
                     }}>
                         <TechnologiesComponent technologies={projectObj.tags}/>

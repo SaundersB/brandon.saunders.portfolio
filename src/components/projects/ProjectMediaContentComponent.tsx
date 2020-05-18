@@ -8,7 +8,9 @@ export function ProjectMediaComponent(props: any){
     const projectObj = new Project(project.node);
     const videoUrl = project.node?.videoUrl;
     const videoComponent = videoUrl !== null ? (
-        <VideoComponent videoSrcURL={videoUrl} videoTitle={projectObj.name}
+        <VideoComponent
+            key={'video-' + props.project.name}
+            videoSrcURL={videoUrl} videoTitle={projectObj.name}
                         frameStyles={{minHeight: 400, width: '100%'}}
                         wrapperStyles={{height: '100%', width: '100%'}}/>
     ) : null;
@@ -21,11 +23,11 @@ export function ProjectMediaComponent(props: any){
     };
     const imageUrl = project.node.image?.childImageSharp?.fluid;
     const imageComponent = imageUrl !== undefined ? (
-        <Img fluid={imageUrl} style={{...imageStyles}}/>
+        <Img key={'image-' + props.project.name} fluid={imageUrl} style={{...imageStyles}}/>
     ) : null;
     return (
         <div
-            key={props.project.name}
+            key={'video-media-' + props.project.name}
             onClick={() => props.onClick()}
             style={
                 {

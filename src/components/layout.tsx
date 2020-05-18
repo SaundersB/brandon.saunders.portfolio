@@ -22,9 +22,6 @@ const Layout = ({ children }) => {
       >
         <Header/>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} Brandon Saunders
-        </footer>
       </div>
     </>
   )

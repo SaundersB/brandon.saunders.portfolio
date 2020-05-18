@@ -37,7 +37,9 @@ function IndexPage() {
     return (
         <Layout>
             <SEO title="Home"/>
-            <StaticQuery query={query}
+            <StaticQuery
+                key={'static-query'}
+                query={query}
                          render={(data) => (
                              <>
                                  <ProjectCategorySelectorComponent data={data}/>

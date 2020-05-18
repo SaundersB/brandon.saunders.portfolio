@@ -2,42 +2,46 @@ import React from 'react';
 import {headerTwo} from "../../styles/typography";
 
 
-export function TechnologiesComponent(props: any){
+export function TechnologiesComponent(props: any) {
     const [expanded, setExpanded] = React.useState(false);
     const technologies = props.technologies.split(', ');
-    const technologyRows = technologies.map((tech: string) => <tr><td>{tech}</td></tr>);
+    const technologyRows = technologies.map((tech: string) => <tr>
+        <td>{tech}</td>
+    </tr>);
     const symbol = expanded ? '-' : '+';
     const actionWord = expanded ? 'Collapse' : 'Expand';
     return (
         <div>
             <table>
-                <tr>
-                    <th>
-                        <div>
-                            <div style={{...headerTwo}}>
-                                Technologies
+                <tbody>
+                    <tr>
+                        <th>
+                            <div>
+                                <div style={{...headerTwo}}>
+                                    Technologies
+                                </div>
                             </div>
-                        </div>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <div style={{display: "flex", flex: 1}}>
-                            <div
-                                onClick={() => setExpanded(!expanded)}
-                                style={
-                                    {
-                                        flexDirection: "row",
-                                        cursor: "pointer"
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style={{display: "flex", flex: 1}}>
+                                <div
+                                    onClick={() => setExpanded(!expanded)}
+                                    style={
+                                        {
+                                            flexDirection: "row",
+                                            cursor: "pointer"
+                                        }
                                     }
-                                }
-                            >
-                                Press to {actionWord} {symbol}
+                                >
+                                    Press to {actionWord} {symbol}
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                </tr>
-                { expanded && technologyRows}
+                        </td>
+                    </tr>
+                    {expanded && technologyRows}
+                </tbody>
             </table>
         </div>
     )

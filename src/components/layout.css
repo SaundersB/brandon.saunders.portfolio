@@ -620,3 +620,20 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.scroll-enter {
+  opacity: 0.01;
+}
+.scroll-enter.scroll-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.scroll-leave {
+  opacity: 1;
+}
+
+.scroll-leave.scroll-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

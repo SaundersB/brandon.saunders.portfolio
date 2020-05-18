@@ -3,27 +3,29 @@ import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
 
 export default function ProjectCategorySelectorComponent({ data }){
-    const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('');
+    const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('web development');
     const [projectsByCategory, setProjectsByCategory] = React.useState([]);
     React.useEffect(() => {
         setProjectsByCategory(parseProjectsData(data));
     }, []);
-    console.log(selectedCategoryKey);
-
-    return (<div>
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center'
-        }}>
+    return (
+        <div key={'project-category-selector-wrapper'}>
+            <div
+                key={'project-category-section'}
+                style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+            }}>
+                {
+                    getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
+                }
+            </div>
             {
-                getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
+                getProjectsComponentsByCategory(projectsByCategory, selectedCategoryKey)
             }
         </div>
-        {
-            getProjectsComponentsByCategory(projectsByCategory, selectedCategoryKey)
-        }
-    </div>)
+    )
 }
 
 
@@ -43,13 +45,16 @@ function parseProjectsData(data: any): any {
 function getCategoryComponents(categories: any, setSelectedCategoryKey: any){
     let categoryComponents = [];
     for(const key in categories){
-        categoryComponents.push(
-            <ProjectCategoryComponent
-                onPress={() => setSelectedCategoryKey(key)}
-                categoryName={key}
-                backgroundColor={'#0088ff'}
-            />
-        )
+        if(categories.hasOwnProperty(key)) {
+            categoryComponents.push(
+                <ProjectCategoryComponent
+                    key={key}
+                    onPress={() => setSelectedCategoryKey(key)}
+                    categoryName={key}
+                    backgroundColor={'#0088ff'}
+                />
+            )
+        }
     }
     return categoryComponents;
 }
@@ -59,7 +64,7 @@ function getProjectsComponentsByCategory(projectsByCategory: any, category: stri
     const projects = projectsByCategory[category];
     for(const key in projects){
         projectComponents.push(
-            <ProjectComponent project={projects[key]}/>
+            <ProjectComponent key={key} project={projects[key]}/>
         );
     }
     return projectComponents;
