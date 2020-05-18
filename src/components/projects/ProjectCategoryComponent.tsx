@@ -21,7 +21,9 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
                 borderRadius: 15,
                 cursor: 'pointer'
         }}>
-            <div key={'category-' + props.categoryName}>
+            <div key={'category-' + props.categoryName} style={{
+                color: 'white'
+            }}>
                 {props.categoryName}
             </div>
         </div>

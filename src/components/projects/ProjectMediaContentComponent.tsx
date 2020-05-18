@@ -34,7 +34,6 @@ export function ProjectMediaComponent(props: any){
                     justifyContent: 'center',
                     alignItems: 'center',
                     background: '#000',
-                    cursor: "pointer"
                 }
             }
         >
