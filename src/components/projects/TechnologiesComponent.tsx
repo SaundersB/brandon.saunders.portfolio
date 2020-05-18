@@ -5,8 +5,8 @@ import {headerTwo} from "../../styles/typography";
 export function TechnologiesComponent(props: any) {
     const [expanded, setExpanded] = React.useState(false);
     const technologies = props.technologies.split(', ');
-    const technologyRows = technologies.map((tech: string) => <tr>
-        <td>{tech}</td>
+    const technologyRows = technologies.map((tech: string) => <tr key={'tr-' + tech}>
+        <td key={'td-' + tech}>{tech}</td>
     </tr>);
     const symbol = expanded ? '-' : '+';
     const actionWord = expanded ? 'Collapse' : 'Expand';
