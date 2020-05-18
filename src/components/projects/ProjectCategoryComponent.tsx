@@ -26,7 +26,7 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
                 style={{
                     color: 'white'
                 }}>
-                {props.categoryName}
+                {props.categoryName.toUpperCase()}
             </div>
         </div>
     )

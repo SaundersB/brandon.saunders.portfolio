@@ -16,7 +16,9 @@ export default function ProjectCategorySelectorComponent({ data }){
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
-            }}>
+                alignContent: 'center',
+                flexWrap: 'wrap'
+                }}>
                 {
                     getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
                 }
