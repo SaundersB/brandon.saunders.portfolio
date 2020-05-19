@@ -44,7 +44,8 @@ function IndexPage() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'black'
+                backgroundColor: '#1d1d1d',
+                backgroundImage: 'linear-gradient(#1d1d1d, #fff)'
             }}/>
             <StaticQuery
                 key={'static-query'}
