@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from "./header";
 import {SocialMediaLinksComponent} from "./common/SocialMediaLinksComponent";
+import {Link} from "gatsby";
+import {SocialMediaConstants} from "./common/SocialMediaConstants";
 
 export function StaticPlaceholderComponent(props: any){
 
@@ -18,7 +20,26 @@ export function StaticPlaceholderComponent(props: any){
         <div style={{
 
         }}>
-            <Header/>
+            <h1 style={{ margin: 'auto', padding: 50, textAlign: 'left' }}>
+                <div style={{
+                    color: '#ffffff',
+                    textDecoration: `none`,
+                    fontSize: '2rem'
+                }}>
+                    Hello. I'm Brandon, a full stack software engineer based out of Los Angeles, CA.
+                </div>
+                <div
+                    onClick={() => window.open(SocialMediaConstants.EMAIL)}
+                    style={{
+                        color: '#ffffff',
+                        fontSize: '2rem',
+                        textDecoration: 'underline',
+                        cursor: 'pointer'
+                    }}
+                >
+                    Let's work together.
+                </div>
+            </h1>
         </div>
     </div>)
 }
