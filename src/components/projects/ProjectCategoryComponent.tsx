@@ -20,7 +20,7 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
                 backgroundColor: props.backgroundColor,
                 borderRadius: 3,
                 cursor: 'pointer',
-                width: '50%',
+                width: '25%',
                 transitionProperty: 'opacity',
                 transitionDuration: '2s'
         }}>

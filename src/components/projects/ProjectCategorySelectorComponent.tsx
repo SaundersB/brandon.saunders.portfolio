@@ -18,9 +18,7 @@ export default function ProjectCategorySelectorComponent({ data }){
                 key={'project-category-section'}
                 style={{
                     display: 'flex',
-                    flexDirection: 'column',
-                    flexWrap: 'wrap',
-                    maxWidth: 960,
+                    flexDirection: 'row',
                     alignItems: 'center',
                     padding: `0 1.0875rem 1.45rem`,
                 }}>
