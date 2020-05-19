@@ -3,7 +3,9 @@ import {SocialMediaConstants} from "./SocialMediaConstants";
 
 export function SocialMediaLinksComponent(){
     return (
-        <div>
+        <div style={{
+            padding: 25
+        }}>
             <div
                 style={{
                     cursor: 'pointer'

@@ -13,7 +13,7 @@ export function StaticPlaceholderComponent(props: any){
         <div style={{
             position: 'absolute',
             top: 0,
-            right: 0
+            left: 0
         }}>
             <SocialMediaLinksComponent/>
         </div>
