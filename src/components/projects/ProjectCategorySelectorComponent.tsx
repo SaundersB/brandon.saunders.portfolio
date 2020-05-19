@@ -44,6 +44,7 @@ function parseProjectsData(data: any): any {
             if(typeof projects[category] !== 'object'){
                 projects[category] = [];
             }
+            // @ts-ignore
             projects[category].push(project);
         });
     })
@@ -71,9 +72,11 @@ function getProjectsComponentsByCategory(projectsByCategory: any, category: stri
     let projectComponents = [];
     const projects = projectsByCategory[category];
     for(const key in projects){
-        projectComponents.push(
-            <ProjectComponent key={key} project={projects[key]}/>
-        );
+        if(projects.hasOwnProperty(key)){
+            projectComponents.push(
+                <ProjectComponent key={key} project={projects[key]}/>
+            );
+        }
     }
     return projectComponents;
 }
