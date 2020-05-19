@@ -40,10 +40,11 @@ function IndexPage() {
             <SEO title="Home"/>
             <StaticPlaceholderComponent wrapperStyles={{
                 height: '100vh',
-                width: '100%',
+                width: '100vw',
                 display: 'flex',
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                backgroundColor: 'black'
             }}/>
             <StaticQuery
                 key={'static-query'}

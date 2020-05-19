@@ -9,7 +9,11 @@ export default function ProjectCategorySelectorComponent({ data }){
         setProjectsByCategory(parseProjectsData(data));
     }, []);
     return (
-        <div key={'project-category-selector-wrapper'}>
+        <div key={'project-category-selector-wrapper'} style={{
+            maxWidth: 960,
+            padding: `0 1.0875rem 1.45rem`,
+            margin: `0 auto`,
+        }}>
             <div
                 key={'project-category-section'}
                 style={{
