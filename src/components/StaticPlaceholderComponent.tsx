@@ -20,7 +20,7 @@ export function StaticPlaceholderComponent(props: any){
         <div style={{
 
         }}>
-            <h1 style={{ margin: 'auto', padding: 50, textAlign: 'left' }}>
+            <h1 style={{ margin: 'auto', padding: 60, textAlign: 'left' }}>
                 <div style={{
                     color: '#ffffff',
                     textDecoration: `none`,
