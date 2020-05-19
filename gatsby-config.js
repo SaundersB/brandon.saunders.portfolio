@@ -2,6 +2,7 @@ let env = process.env.NODE_ENV || 'development';
 require('dotenv').config({path: `./.env.${env}`});
 
 module.exports = {
+    pathPrefix: "/brandon.saunders.portfolio",
     siteMetadata: {
         title: `Brandon Saunders Portfolio`,
         description: ``,
@@ -28,16 +29,6 @@ module.exports = {
             },
         },
         'gatsby-plugin-typescript',
-        {
-            resolve: 'gatsby-source-s3',
-            options: {
-                aws: {
-                    accessKeyId: `${process.env.GATSBY_S3_ACCESS_KEY}`,
-                    secretAccessKey: `${process.env.GATSBY_S3_SECRET_ACCESS_KEY}`,
-                },
-                buckets: ['brandon.saunders.portfolio.bucket'],
-            },
-        },
         {
             resolve: 'gatsby-transformer-json',
             options: {
