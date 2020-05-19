@@ -14,21 +14,22 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
             onClick={() => props.onPress()}
             className={'grow'}
             style={{
+                flex: 1,
                 ...defaultPadding,
                 ...defaultMargin,
-                aspectRatio: '1',
                 backgroundColor: props.backgroundColor,
                 borderRadius: 3,
                 cursor: 'pointer',
-                width: '25%',
                 transitionProperty: 'opacity',
-                transitionDuration: '2s'
+                transitionDuration: '2s',
         }}>
             <div
                 key={'category-' + props.categoryName}
                 style={{
                     fontSize: '1rem',
-                    color: 'white'
+                    color: 'white',
+                    wordWrap: 'normal',
+                    textAlign: 'center',
                 }}>
                 {props.categoryName}
             </div>

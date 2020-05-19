@@ -19,8 +19,11 @@ export default function ProjectCategorySelectorComponent({ data }){
                 style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    alignItems: 'center',
-                    padding: `0 1.0875rem 1.45rem`,
+                    justifyContent: 'space-between',
+
+                    flexWrap: 'wrap',
+                    maxWidth: 960,
+                    alignItems: 'stretch',
                 }}>
                 {
                     getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
