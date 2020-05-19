@@ -17,11 +17,12 @@ export default function ProjectCategorySelectorComponent({ data }){
             <div
                 key={'project-category-section'}
                 style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignContent: 'center',
-                flexWrap: 'wrap'
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    maxWidth: 960,
+                    alignItems: 'center',
+                    padding: `0 1.0875rem 1.45rem`,
                 }}>
                 {
                     getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
@@ -57,7 +58,7 @@ function getCategoryComponents(categories: any, setSelectedCategoryKey: any){
                     key={key}
                     onPress={() => setSelectedCategoryKey(key)}
                     categoryName={key}
-                    backgroundColor={'#0088ff'}
+                    backgroundColor={'rgba(0,0,0,0.78)'}
                 />
             )
         }

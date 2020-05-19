@@ -1,6 +1,6 @@
 import React from 'react';
 import {defaultMargin, defaultPadding} from "../../styles";
-
+import "./ProjectCategoryComponent.css";
 interface ProjectCategoryComponentInterface {
     backgroundColor: string;
     categoryName: string;
@@ -12,20 +12,25 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
         <div
             key={'wrapper-' + props.categoryName}
             onClick={() => props.onPress()}
+            className={'grow'}
             style={{
                 ...defaultPadding,
                 ...defaultMargin,
                 aspectRatio: '1',
                 backgroundColor: props.backgroundColor,
-                borderRadius: 15,
+                borderRadius: 3,
                 cursor: 'pointer',
+                width: '50%',
+                transitionProperty: 'opacity',
+                transitionDuration: '2s'
         }}>
             <div
                 key={'category-' + props.categoryName}
                 style={{
+                    fontSize: '1rem',
                     color: 'white'
                 }}>
-                {props.categoryName.toUpperCase()}
+                {props.categoryName}
             </div>
         </div>
     )
