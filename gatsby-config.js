@@ -41,6 +41,12 @@ module.exports = {
                 name: 'data',
                 path: `${__dirname}/src/data`
             }
-        }
+        },
+        {
+            resolve: `gatsby-plugin-s3`,
+            options: {
+                bucketName: "brandon.saunders.portfolio.bucket",
+            },
+        },
     ],
 };

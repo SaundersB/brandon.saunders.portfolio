@@ -10,6 +10,7 @@
     "gatsby-plugin-manifest": "^2.4.2",
     "gatsby-plugin-offline": "^3.2.1",
     "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sharp": "^2.6.2",
     "gatsby-plugin-typescript": "^2.4.2",
     "gatsby-source-filesystem": "^2.3.3",
@@ -42,6 +43,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy-s3": "gatsby-plugin-s3 deploy",
     "type-check": "tsc --noEmit"
   }
 }
