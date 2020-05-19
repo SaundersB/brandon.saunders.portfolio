@@ -20,9 +20,7 @@ export default function ProjectCategorySelectorComponent({ data }: any){
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-
                     flexWrap: 'wrap',
-                    maxWidth: 960,
                     alignItems: 'stretch',
                 }}>
                 {

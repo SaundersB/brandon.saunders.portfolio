@@ -24,7 +24,8 @@ export function StaticPlaceholderComponent(props: any){
                 <div style={{
                     color: '#ffffff',
                     textDecoration: `none`,
-                    fontSize: '2rem'
+                    fontSize: '2rem',
+                    paddingTop: 15
                 }}>
                     Hello. I'm Brandon, a full stack software engineer based out of Los Angeles, CA.
                 </div>
