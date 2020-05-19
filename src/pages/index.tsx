@@ -3,6 +3,7 @@ import SEO from '../components/seo';
 import Layout from '../components/layout';
 import {graphql, StaticQuery} from "gatsby"
 import ProjectCategorySelectorComponent from "../components/projects/ProjectCategorySelectorComponent";
+import {StaticPlaceholderComponent} from "../components/StaticPlaceholderComponent";
 
 export const query = graphql`
     query projectsQuery {
@@ -37,6 +38,13 @@ function IndexPage() {
     return (
         <Layout>
             <SEO title="Home"/>
+            <StaticPlaceholderComponent wrapperStyles={{
+                height: '100vh',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}/>
             <StaticQuery
                 key={'static-query'}
                 query={query}

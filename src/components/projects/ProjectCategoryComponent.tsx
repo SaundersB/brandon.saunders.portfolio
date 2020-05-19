@@ -15,7 +15,6 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
             style={{
                 ...defaultPadding,
                 ...defaultMargin,
-                maxHeight: 300,
                 aspectRatio: '1',
                 backgroundColor: props.backgroundColor,
                 borderRadius: 15,

@@ -20,7 +20,6 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <Header/>
         <main>{children}</main>
       </div>
     </>
