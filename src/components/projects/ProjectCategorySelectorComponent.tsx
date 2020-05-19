@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
 
-export default function ProjectCategorySelectorComponent({ data }){
+export default function ProjectCategorySelectorComponent({ data }: any){
     const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('web development');
     const [projectsByCategory, setProjectsByCategory] = React.useState([]);
     React.useEffect(() => {
