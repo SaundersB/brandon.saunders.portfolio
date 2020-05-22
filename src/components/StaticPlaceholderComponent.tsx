@@ -22,7 +22,7 @@ export function StaticPlaceholderComponent(props: any){
             <div
                 onClick={() => window.scrollBy(0, window.innerHeight)}
                 style={{
-                position: 'fixed',
+                position: 'absolute',
                 bottom: '2rem',
                 right: '2rem',
                 color: '#000',
