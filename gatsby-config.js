@@ -46,6 +46,8 @@ module.exports = {
             resolve: `gatsby-plugin-s3`,
             options: {
                 bucketName: "brandonsaundersportfolio.com",
+                protocol: "https",
+                hostname: "brandonsaundersportfolio.com",
             },
         },
     ],
