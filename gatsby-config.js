@@ -45,7 +45,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-s3`,
             options: {
-                bucketName: "brandon.saunders.portfolio.bucket",
+                bucketName: "brandonsaundersportfolio.com",
             },
         },
     ],
