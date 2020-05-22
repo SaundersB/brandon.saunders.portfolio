@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {RefObject} from 'react';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import {graphql, StaticQuery} from "gatsby"
@@ -35,6 +35,8 @@ export const query = graphql`
 
 
 function IndexPage() {
+    const reference: RefObject<any> = React.createRef();
+
     return (
         <Layout>
             <SEO title="Home"/>
@@ -46,13 +48,15 @@ function IndexPage() {
                 alignItems: 'center',
                 backgroundColor: '#1d1d1d',
                 backgroundImage: 'linear-gradient(#1d1d1d, #fff)'
-            }}/>
+            }}
+                reference={reference}
+            />
             <StaticQuery
                 key={'static-query'}
                 query={query}
                          render={(data) => (
                              <>
-                                 <ProjectCategorySelectorComponent data={data}/>
+                                 <ProjectCategorySelectorComponent reference={reference} data={data}/>
                              </>
                          )
                  }
