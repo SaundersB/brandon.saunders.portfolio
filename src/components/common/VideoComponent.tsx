@@ -1,6 +1,5 @@
 import React from "react"
 
-
 interface VideoComponentInterface {
     videoSrcURL: string;
     videoTitle: string;
@@ -8,7 +7,7 @@ interface VideoComponentInterface {
     frameStyles?: object
 }
 
-export function VideoComponent(props: VideoComponentInterface){
+export default function VideoComponent(props: VideoComponentInterface){
     return (
         <div className="video" style={{...props.wrapperStyles}}>
             <iframe

@@ -1,9 +1,10 @@
 import React from 'react';
-import {defaultPadding} from "../../styles";
 
+interface CardComponentInterface {
+    children: any
+}
 
-export function CardComponent(props: any){
-
+export default function CardComponent(props: CardComponentInterface){
     return (
         <div style={{
             borderRadius: 5,

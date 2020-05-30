@@ -1,5 +1,5 @@
 import React from 'react';
-import {VideoComponent} from "../common/VideoComponent";
+import VideoComponent from "../common/VideoComponent";
 import Img from "gatsby-image";
 import Project from "../../lib/entities/Project";
 

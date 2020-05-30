@@ -1,6 +1,6 @@
 import React, {RefObject} from 'react';
 import Header from "./header";
-import {SocialMediaLinksComponent} from "./common/SocialMediaLinksComponent";
+import SocialMediaLinksComponent from "./common/SocialMediaLinksComponent";
 import {Link} from "gatsby";
 import {SocialMediaConstants} from "./common/SocialMediaConstants";
 

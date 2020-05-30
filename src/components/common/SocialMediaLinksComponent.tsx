@@ -1,7 +1,12 @@
 import React from 'react';
-import {SocialMediaConstants} from "./SocialMediaConstants";
 
-export function SocialMediaLinksComponent() {
+enum SocialMediaConstants {
+    EMAIL = "mailto:BrandonNSaunders@gmail.com",
+    LINKED_IN_URL= "https://www.linkedin.com/in/saundersbrandon/",
+    GITHUB_URL = "https://github.com/SaundersB",
+}
+
+export default function SocialMediaLinksComponent() {
     const paddingAmount = 10;
     return (
         <div style={{

@@ -3,7 +3,7 @@ import {ProjectMediaComponent} from "./ProjectMediaContentComponent";
 import {header} from "../../styles/typography";
 import {defaultMargin, defaultPadding} from "../../styles";
 import {TechnologiesComponent} from "./TechnologiesComponent";
-import {CardComponent} from "../common/card";
+import CardComponent from "../common/CardComponent";
 import Project from "../../lib/entities/Project";
 
 interface ProjectComponentInterface {
