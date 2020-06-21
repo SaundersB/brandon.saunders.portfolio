@@ -10,11 +10,17 @@ interface HeaderInterface {
 const Header = ({ siteTitle }: HeaderInterface) => (
     <div
         style={{
+            display: 'flex',
             justifyContent: 'space-between',
-            flexDirection: 'row'
+            flex: 1
         }}
     >
-        <div>
+        <div style={{
+            display: 'flex',
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center'
+        }}>
             <h1 style={{ margin: 0, textAlign: 'left', paddingLeft: 5 }}>
                 <Link
                     to="/"
@@ -27,6 +33,18 @@ const Header = ({ siteTitle }: HeaderInterface) => (
                     {siteTitle}
                 </Link>
             </h1>
+            <h5 style={{ margin: 0, paddingLeft: 55 }}>
+                <Link
+                    to="/projects"
+                    style={{
+                        color: '#000',
+                        textDecoration: `none`,
+                        fontSize: '1rem'
+                    }}
+                >
+                    Projects
+                </Link>
+            </h5>
         </div>
         <div style={{
         }}>

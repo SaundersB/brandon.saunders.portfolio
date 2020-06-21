@@ -11,15 +11,16 @@ function IndexPage() {
         <Layout>
             <SEO title="Home"/>
             <Header/>
-            <StaticPlaceholderComponent wrapperStyles={{
-                height: '100vh',
-                width: '100vw',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: '#1d1d1d',
-                backgroundImage: 'linear-gradient(#1d1d1d, #fff)'
-            }}
+            <StaticPlaceholderComponent
+                wrapperStyles={{
+                    height: '100vh',
+                    width: '100vw',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: '#1d1d1d',
+                    backgroundImage: 'linear-gradient(#1d1d1d, #fff)'
+                }}
             />
         </Layout>
     );
