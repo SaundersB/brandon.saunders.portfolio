@@ -47,6 +47,7 @@ const Header = ({ siteTitle }: HeaderInterface) => (
             </h5>
         </div>
         <div style={{
+            alignSelf: 'center'
         }}>
             <SocialMediaLinksComponent/>
         </div>
