@@ -9,27 +9,31 @@ export default function ProjectCategorySelectorComponent({ data }: any){
         setProjectsByCategory(parseProjectsData(data));
     }, []);
     return (
-        <div key={'project-category-selector-wrapper'} style={{
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-            margin: `0 auto`,
+        <div style={{
+            backgroundColor: '#e2e2e2',
         }}>
-            <div
-                key={'project-category-section'}
-                style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    flexWrap: 'wrap',
-                    alignItems: 'stretch',
-                }}>
+            <div key={'project-category-selector-wrapper'} style={{
+                maxWidth: 960,
+                padding: `0 1.0875rem 1.45rem`,
+                margin: `0 auto`,
+            }}>
+                <div
+                    key={'project-category-section'}
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        flexWrap: 'wrap',
+                        alignItems: 'stretch',
+                    }}>
+                    {
+                        getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
+                    }
+                </div>
                 {
-                    getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
+                    getProjectsComponentsByCategory(projectsByCategory, selectedCategoryKey)
                 }
             </div>
-            {
-                getProjectsComponentsByCategory(projectsByCategory, selectedCategoryKey)
-            }
         </div>
     )
 }

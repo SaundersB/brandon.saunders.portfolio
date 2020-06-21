@@ -17,13 +17,16 @@ export default function ProjectComponent(props: ProjectComponentInterface){
     return (
         <div key={'project-' + projectObj.name} style={{
             ...defaultMargin,
-            ...defaultPadding
+            ...defaultPadding,
         }}>
             <CardComponent>
                 <ProjectMediaComponent
                     project={project}
                 />
-                <div key={'project-info-wrapper-' + projectObj.name}>
+                <div key={'project-info-wrapper-' + projectObj.name} style={{
+                    backgroundColor: 'white'
+
+                }}>
                     <div key={'project-name-' + projectObj.name}
                          style={{
                         ...header,
