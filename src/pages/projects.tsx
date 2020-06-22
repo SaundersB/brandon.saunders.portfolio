@@ -49,26 +49,6 @@ function ProjectsPage(props: PageProps){
                 )
                 }
             />
-            <div
-                onClick={() => window.scrollBy(0, window.innerHeight)}
-                style={{
-                    position: 'absolute',
-                    bottom: '2rem',
-                    right: '2rem',
-                    color: '#000',
-                    fontSize: '5rem',
-                    cursor: 'pointer'
-                }}>
-                <i style={{
-                    border: 'solid black',
-                    borderWidth: '0 10px 10px 0',
-                    display: 'inline-block',
-                    padding: '15px',
-                    transform: 'rotate(45deg)',
-                    WebkitTransform: 'rotate(45deg)'
-                }
-                }/>
-            </div>
         </Layout>
     )
 }
