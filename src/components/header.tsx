@@ -12,28 +12,36 @@ const Header = ({ siteTitle }: HeaderInterface) => (
         style={{
             display: 'flex',
             justifyContent: 'space-between',
-            flex: 1
+            flex: 1,
+            minHeight: 70,
         }}
     >
+        <div style={{
+            flex: 1,
+            alignSelf: 'center'
+        }}>
+            <SocialMediaLinksComponent/>
+        </div>
         <div style={{
             display: 'flex',
             flex: 1,
             flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'flex-end'
         }}>
-            <h1 style={{ margin: 0, textAlign: 'left', paddingLeft: 5 }}>
+            <h5 style={{ margin: 0, textAlign: 'left', paddingLeft: 5 }}>
                 <Link
                     to="/"
                     style={{
                         color: '#000',
                         textDecoration: `none`,
-                        fontSize: '2rem'
+                        fontSize: '1rem'
                     }}
                 >
-                    {siteTitle}
+                    About
                 </Link>
-            </h1>
-            <h5 style={{ margin: 0, paddingLeft: 55 }}>
+            </h5>
+            <h5 style={{ margin: 0, paddingLeft: '1rem' }}>
                 <Link
                     to="/projects"
                     style={{
@@ -45,11 +53,18 @@ const Header = ({ siteTitle }: HeaderInterface) => (
                     Projects
                 </Link>
             </h5>
-        </div>
-        <div style={{
-            alignSelf: 'center'
-        }}>
-            <SocialMediaLinksComponent/>
+            <h5 style={{ margin: 0, paddingLeft: '1rem' }}>
+                <Link
+                    to="/resume"
+                    style={{
+                        color: '#000',
+                        textDecoration: `none`,
+                        fontSize: '1rem'
+                    }}
+                >
+                    Resume
+                </Link>
+            </h5>
         </div>
     </div>
 )
