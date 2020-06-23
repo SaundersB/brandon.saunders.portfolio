@@ -7,7 +7,8 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import "./layout.css"
+import "./layout.scss"
+import Header from "./header";
 
 const Layout = ({ children }) => {
   return (
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
             backgroundColor: '#fff'
         }}
       >
+        <Header/>
         <main>{children}</main>
       </div>
     </>

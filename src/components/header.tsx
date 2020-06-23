@@ -27,7 +27,8 @@ const Header = ({ siteTitle }: HeaderInterface) => (
             flex: 1,
             flexDirection: 'row',
             alignItems: 'center',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-end',
+            paddingRight: '1rem'
         }}>
             <h5 style={{ margin: 0, textAlign: 'left', paddingLeft: 5 }}>
                 <Link
@@ -53,18 +54,18 @@ const Header = ({ siteTitle }: HeaderInterface) => (
                     Projects
                 </Link>
             </h5>
-            <h5 style={{ margin: 0, paddingLeft: '1rem' }}>
-                <Link
-                    to="/resume"
-                    style={{
-                        color: '#000',
-                        textDecoration: `none`,
-                        fontSize: '1rem'
-                    }}
-                >
-                    Resume
-                </Link>
-            </h5>
+            {/*<h5 style={{ margin: 0, paddingLeft: '1rem' }}>*/}
+            {/*    <Link*/}
+            {/*        to="/resume"*/}
+            {/*        style={{*/}
+            {/*            color: '#000',*/}
+            {/*            textDecoration: `none`,*/}
+            {/*            fontSize: '1rem'*/}
+            {/*        }}*/}
+            {/*    >*/}
+            {/*        Resume*/}
+            {/*    </Link>*/}
+            {/*</h5>*/}
         </div>
     </div>
 )

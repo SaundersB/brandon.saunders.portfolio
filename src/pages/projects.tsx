@@ -38,7 +38,6 @@ function ProjectsPage(props: PageProps){
     return (
         <Layout>
             <SEO title="Projects" />
-            <Header/>
             <StaticQuery
                 key={'static-query'}
                 query={query}

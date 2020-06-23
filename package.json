@@ -1,10 +1,11 @@
 {
   "name": "brandon-saunders-portfolio",
   "private": true,
-  "description": "My personal portfolio showcasing work.",
+  "description": "My personal portfolio showcasing past work.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Brandon Saunders <brandonnsaunders@gmail.com>",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "gatsby": "^2.21.22",
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.2",
@@ -26,8 +27,10 @@
     "@typescript-eslint/parser": "^2.33.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.0.0",
+    "gatsby-plugin-sass": "^2.3.5",
     "gatsby-transformer-json": "^2.4.2",
     "gh-pages": "^2.2.0",
+    "node-sass": "^4.14.1",
     "prettier": "2.0.5",
     "typescript": "^3.9.2"
   },

@@ -50,5 +50,6 @@ module.exports = {
                 hostname: "brandonsaundersportfolio.com",
             },
         },
+        `gatsby-plugin-sass`
     ],
 };
