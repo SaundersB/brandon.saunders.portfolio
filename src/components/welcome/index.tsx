@@ -23,7 +23,7 @@ export default function Welcome(props: any) {
     return (
         <div
             style={{
-                backgroundImage: 'linear-gradient(#1d1d1d, #fff)'
+                backgroundImage: 'linear-gradient(#1d1d1d, #A52F2F2F)'
             }}
             className={'container-fluid'}>
             <div style={{
