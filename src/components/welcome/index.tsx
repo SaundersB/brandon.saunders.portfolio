@@ -20,6 +20,12 @@ export const query = graphql`
 `
 
 export default function Welcome(props: any) {
+    const mainTextStyles = {
+        color: '#ffffff',
+        textDecoration: `none`,
+        fontSize: '1rem',
+    }
+
     return (
         <div
             style={{
@@ -48,17 +54,39 @@ export default function Welcome(props: any) {
                 <div className="col-xs-6 col-md-6">
                     <h1 style={{ textAlign: 'left' }}>
                         <div style={{
+                            ...mainTextStyles
+                        }}>
+                            Hello, my name is<br/>
+                        </div>
+                        <div style={{
                             color: '#ffffff',
                             textDecoration: `none`,
                             fontSize: '2rem',
                         }}>
-                            Hello. I'm Brandon, a full stack software engineer based out of Los Angeles, CA.
+                            Brandon Saunders
+                        </div>
+                        <div style={{
+                            ...mainTextStyles
+                        }}>
+                            I'm a full-stack developer specialized in frontend and backend development for complex scalable web apps.
+                        </div>
+                        <div style={{
+                            ...mainTextStyles
+                        }}>
+                            Check out my <Link style={{
+                            ...mainTextStyles,
+                            textDecoration: 'underline',
+                            cursor: 'pointer'
+                        }} to={'/projects'}>projects</Link> and <Link style={{
+                            ...mainTextStyles,
+                            textDecoration: 'underline',
+                            cursor: 'pointer'
+                        }} to={'/resume'}>resume</Link>.
                         </div>
                         <div
                             onClick={() => window.open(SocialMediaConstants.EMAIL)}
                             style={{
-                                color: '#ffffff',
-                                fontSize: '2rem',
+                                ...mainTextStyles,
                                 textDecoration: 'underline',
                                 cursor: 'pointer'
                             }}
