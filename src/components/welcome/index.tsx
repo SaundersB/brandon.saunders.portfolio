@@ -2,6 +2,7 @@ import React from 'react';
 import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
 import Img from "gatsby-image/withIEPolyfill"
+import {defaultText} from "../../styles/typography";
 
 export const query = graphql`
     query {
@@ -16,10 +17,8 @@ export const query = graphql`
 `
 
 export default function Welcome(props: any) {
-    const mainTextStyles = {
-        color: '#ffffff',
-        textDecoration: `none`,
-        fontSize: '1rem',
+    const boldTextStyles = {
+        fontSize: '2em',
     }
 
     return (
@@ -54,35 +53,33 @@ export default function Welcome(props: any) {
                         }
                     />
                 </div>
-                <div className="col-xs-6 col-md-7 align-self-center">
-                    <h1>
+                <div className="d-flex col-xs-6 col-md-7 p-0 m-auto ml-md-0 mb-auto mt-auto">
+                    <div className="col align-content-between">
                         <div style={{
-                            ...mainTextStyles
+                            ...defaultText,
                         }}>
                             Hello, my name is<br/>
                         </div>
                         <div style={{
-                            color: '#ffffff',
-                            textDecoration: `none`,
-                            fontSize: '2rem',
-                            paddingTop: '0.5rem',
-                            paddingBottom: '0.5rem'
+                            ...defaultText,
+                            ...boldTextStyles,
                         }}>
                             Brandon Saunders
                         </div>
                         <div style={{
-                            ...mainTextStyles
+                            ...defaultText
                         }}>
                             I'm a full-stack developer specialized in frontend and backend development for complex scalable web apps.
                         </div>
                         <div style={{
-                            ...mainTextStyles
+                            ...defaultText
                         }}>
                             Check out my <Link style={{
-                            ...mainTextStyles,
+                            ...defaultText,
+                            textDecoration: 'underline',
                             cursor: 'pointer'
                         }} to={'/projects'}>projects</Link> and <Link style={{
-                            ...mainTextStyles,
+                            ...defaultText,
                             textDecoration: 'underline',
                             cursor: 'pointer'
                         }} to={'/resume'}>resume</Link>.
@@ -90,14 +87,14 @@ export default function Welcome(props: any) {
                         <div
                             onClick={() => window.open(SocialMediaConstants.EMAIL)}
                             style={{
-                                ...mainTextStyles,
+                                ...defaultText,
                                 textDecoration: 'underline',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
                             }}
                         >
                             Let's work together.
                         </div>
-                    </h1>
+                    </div>
                 </div>
             </div>
         </div>)
