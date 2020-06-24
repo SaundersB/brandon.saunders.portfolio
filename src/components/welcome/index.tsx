@@ -24,14 +24,14 @@ export default function Welcome(props: any) {
     return (
         <div
             style={{
+                minHeight: '100vh',
                 backgroundImage: 'linear-gradient(#1d1d1d, #A52F2F2F)'
             }}
             className={'container-fluid'}>
-            <div style={{
-                height: '100vh',
-                width: '100vw'
-            }} className={'row'}>
+            <div className={'d-flex row'} style={{
+            }}>
                 <div style={{
+                    flex: 1,
                     justifyContent: 'center'
                 }} className="col-xs-12 col-md-5 align-self-center pt-5 p-md-3">
                     <StaticQuery
