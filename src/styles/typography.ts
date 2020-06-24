@@ -4,7 +4,7 @@ export const defaultText = {
     fontWeight: "bold",
     textDecoration: `none`,
     textRendering: 'optimizeLegibility',
-    fontSize: '1rem'
+    fontSize: '2rem'
 }
 
 export const header = {

@@ -32,8 +32,8 @@ export default function Welcome(props: any) {
                 width: '100vw'
             }} className={'row'}>
                 <div style={{
-                    alignContent: 'flex-end'
-                }} className="col-xs-12 col-md-4 align-self-center">
+                    justifyContent: 'center'
+                }} className="col-xs-12 col-md-5 align-self-center pt-5 p-md-3">
                     <StaticQuery
                         key={'static-query'}
                         query={query}
@@ -46,14 +46,14 @@ export default function Welcome(props: any) {
                                  style={{
                                 display: 'block',
                                 borderRadius: 5,
-                                maxHeight: 250,
-                                maxWidth: 250,
+                                maxHeight: 300,
+                                maxWidth: 300,
                             }}/>
                         )
                         }
                     />
                 </div>
-                <div className="d-flex col-xs-6 col-md-7 p-0 m-auto ml-md-0 mb-auto mt-auto">
+                <div className="d-flex col-xs-12 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto">
                     <div className="col align-content-between">
                         <div style={{
                             ...defaultText,
