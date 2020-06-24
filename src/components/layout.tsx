@@ -10,7 +10,11 @@ import PropTypes from "prop-types"
 import "./layout.scss"
 import Header from "./header";
 
-const Layout = ({ children }) => {
+interface LayoutInterface {
+    children: any
+}
+
+const Layout = ({ children }: LayoutInterface) => {
   return (
     <>
       <div

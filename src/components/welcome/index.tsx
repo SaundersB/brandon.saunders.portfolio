@@ -1,18 +1,14 @@
-import React, {RefObject} from 'react';
-import Header from "../header";
-import SocialMediaLinksComponent from "../common/SocialMediaLinksComponent";
+import React from 'react';
 import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
-import ProjectCategorySelectorComponent from "../projects/ProjectCategorySelectorComponent";
-import GatsbyImage from "gatsby-image";
-import Img from "gatsby-image";
+import Img from "gatsby-image/withIEPolyfill"
 
 export const query = graphql`
     query {
         fileName: file(relativePath: {eq: "profile_photo.png"}) {
             childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
+                fixed {
+                    ...GatsbyImageSharpFixed
                 }
             }
         }
@@ -34,25 +30,32 @@ export default function Welcome(props: any) {
             className={'container-fluid'}>
             <div style={{
                 height: '100vh',
-            }} className={'row justify-content-center align-items-center'}>
-                <div className="col-xs-12 col-md-4">
+                width: '100vw'
+            }} className={'row'}>
+                <div style={{
+                    alignContent: 'flex-end'
+                }} className="col-xs-12 col-md-4 align-self-center">
                     <StaticQuery
                         key={'static-query'}
                         query={query}
                         render={(data) => (
-                            <>
-                                <Img key={'image'} fluid={data.fileName.childImageSharp.fluid} style={{
-                                    borderRadius: 5,
-                                    width: 250,
-                                    height:  250,
-                                }}/>
-                            </>
+                            <Img key={'image'}
+                                 className='m-auto mr-md-0'
+                                 fixed={data.fileName.childImageSharp.fixed}
+                                 objectFit="cover"
+                                 objectPosition="50% 50%"
+                                 style={{
+                                display: 'block',
+                                borderRadius: 5,
+                                maxHeight: 250,
+                                maxWidth: 250,
+                            }}/>
                         )
                         }
                     />
                 </div>
-                <div className="col-xs-6 col-md-6">
-                    <h1 style={{ textAlign: 'left' }}>
+                <div className="col-xs-6 col-md-7 align-self-center">
+                    <h1>
                         <div style={{
                             ...mainTextStyles
                         }}>
@@ -62,6 +65,8 @@ export default function Welcome(props: any) {
                             color: '#ffffff',
                             textDecoration: `none`,
                             fontSize: '2rem',
+                            paddingTop: '0.5rem',
+                            paddingBottom: '0.5rem'
                         }}>
                             Brandon Saunders
                         </div>
@@ -75,7 +80,6 @@ export default function Welcome(props: any) {
                         }}>
                             Check out my <Link style={{
                             ...mainTextStyles,
-                            textDecoration: 'underline',
                             cursor: 'pointer'
                         }} to={'/projects'}>projects</Link> and <Link style={{
                             ...mainTextStyles,
