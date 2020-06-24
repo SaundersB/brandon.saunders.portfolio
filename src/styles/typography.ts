@@ -4,14 +4,13 @@ export const defaultText = {
     fontWeight: "bold",
     textDecoration: `none`,
     textRendering: 'optimizeLegibility',
-    fontSize: '2rem'
 }
 
 export const header = {
-    fontSize: '2.25rem',
+    fontSize: '1.5rem',
 }
 
 export const headerTwo = {
-    fontSize: '1rem',
+    fontSize: '2.25rem',
 }
 

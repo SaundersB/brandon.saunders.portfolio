@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
 import Img from "gatsby-image/withIEPolyfill"
-import {defaultText} from "../../styles/typography";
+import {defaultText, header, headerTwo} from "../../styles/typography";
 
 export const query = graphql`
     query {
@@ -57,29 +57,34 @@ export default function Welcome(props: any) {
                     <div className="col align-content-between">
                         <div style={{
                             ...defaultText,
+                            ...header,
                         }}>
-                            Hello, my name is<br/>
+                            Hello. My name is<br/>
                         </div>
                         <div style={{
                             ...defaultText,
-                            ...boldTextStyles,
+                            ...headerTwo,
                         }}>
-                            Brandon Saunders
+                            Brandon Saunders.
                         </div>
                         <div style={{
-                            ...defaultText
+                            ...defaultText,
+                            ...header,
                         }}>
                             I'm a full-stack developer specialized in frontend and backend development for complex scalable web apps.
                         </div>
                         <div style={{
-                            ...defaultText
+                            ...defaultText,
+                            ...header,
                         }}>
                             Check out my <Link style={{
                             ...defaultText,
+                            ...header,
                             textDecoration: 'underline',
                             cursor: 'pointer'
                         }} to={'/projects'}>projects</Link> and <Link style={{
                             ...defaultText,
+                            ...header,
                             textDecoration: 'underline',
                             cursor: 'pointer'
                         }} to={'/resume'}>resume</Link>.
@@ -88,6 +93,7 @@ export default function Welcome(props: any) {
                             onClick={() => window.open(SocialMediaConstants.EMAIL)}
                             style={{
                                 ...defaultText,
+                                ...header,
                                 textDecoration: 'underline',
                                 cursor: 'pointer',
                             }}
