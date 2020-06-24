@@ -46,6 +46,7 @@ export default function Welcome(props: any) {
                                  style={{
                                 display: 'block',
                                 borderRadius: 5,
+                                width: '100%',
                                 maxHeight: 300,
                                 maxWidth: 300,
                             }}/>
