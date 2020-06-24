@@ -29,10 +29,9 @@ export default function Welcome(props: any) {
             }}
             className={'container-fluid'}>
             <div className={'d-flex row'} style={{
+                minHeight: '100vh',
             }}>
                 <div style={{
-                    flex: 1,
-                    justifyContent: 'center'
                 }} className="col-xs-12 col-md-5 align-self-center pt-5 p-md-3">
                     <StaticQuery
                         key={'static-query'}
@@ -54,7 +53,7 @@ export default function Welcome(props: any) {
                         }
                     />
                 </div>
-                <div className="d-flex col-xs-12 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto">
+                <div className="d-flex col-xs-12 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
                     <div className="col align-content-between">
                         <div style={{
                             ...defaultText,
