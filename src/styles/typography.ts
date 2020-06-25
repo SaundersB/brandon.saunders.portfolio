@@ -1,7 +1,7 @@
 export const defaultText = {
     color: '#ffffff',
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-    fontWeight: "bold",
+    fontWeight: `bold`,
     textDecoration: `none`,
     textRendering: 'optimizeLegibility',
 }

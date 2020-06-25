@@ -53,7 +53,7 @@ export default function Welcome(props: any) {
                         }
                     />
                 </div>
-                <div className="d-flex col-xs-12 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
+                <div className="d-flex col-xs-12 col-lg-4 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
                     <div className="col align-content-between">
                         <div style={{
                             ...defaultText,
@@ -82,12 +82,7 @@ export default function Welcome(props: any) {
                             ...header,
                             textDecoration: 'underline',
                             cursor: 'pointer'
-                        }} to={'/projects'}>projects</Link> and <Link style={{
-                            ...defaultText,
-                            ...header,
-                            textDecoration: 'underline',
-                            cursor: 'pointer'
-                        }} to={'/resume'}>resume</Link>.
+                        }} to={'/projects'}>projects</Link>.
                         </div>
                         <div
                             onClick={() => window.open(SocialMediaConstants.EMAIL)}
