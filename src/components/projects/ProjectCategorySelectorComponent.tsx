@@ -15,8 +15,8 @@ export default function ProjectCategorySelectorComponent({ data }: any){
             backgroundColor: baseColor
         }}>
             <div key={'project-category-selector-wrapper'} style={{
-                maxWidth: 960,
-                padding: `0 1.0875rem 1.45rem`,
+                maxWidth: 1080,
+                padding: `0 0 0`,
                 margin: `0 auto`,
             }}>
                 <div
