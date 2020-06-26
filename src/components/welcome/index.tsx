@@ -18,10 +18,6 @@ export const query = graphql`
 `
 
 export default function Welcome(props: any) {
-    const boldTextStyles = {
-        fontSize: '2em',
-    }
-
     return (
         <div
             style={{
@@ -33,13 +29,13 @@ export default function Welcome(props: any) {
                 minHeight: '100vh',
             }}>
                 <div style={{
-                }} className="col-xs-12 col-md-5 align-self-center pt-5 p-md-3">
+                }} className="col-xs-12 col-md-5 align-self-center pt-3 p-md-3">
                     <StaticQuery
                         key={'static-query'}
                         query={query}
                         render={(data) => (
                             <Img key={'image'}
-                                 className='m-auto mr-md-0'
+                                 className='mr-auto ml-auto mr-md-0'
                                  fixed={data.fileName.childImageSharp.fixed}
                                  objectFit="cover"
                                  objectPosition="50% 50%"
