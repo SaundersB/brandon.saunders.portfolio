@@ -1,7 +1,7 @@
 import React from 'react';
 import {ProjectMediaComponent} from "./ProjectMediaContentComponent";
 import {bold, defaultText, header} from "../../styles/typography";
-import {defaultMargin, defaultPadding} from "../../styles";
+import {bottomPadding, defaultMargin, defaultPadding, horizontalPadding} from "../../styles";
 import {TechnologiesComponent} from "./TechnologiesComponent";
 import CardComponent from "../common/CardComponent";
 import Project from "../../lib/entities/Project";
@@ -17,7 +17,8 @@ export default function ProjectComponent(props: ProjectComponentInterface){
     return (
         <div key={'project-' + projectObj.name} style={{
             ...defaultMargin,
-            ...defaultPadding,
+            ...bottomPadding,
+            ...horizontalPadding
         }}>
             <CardComponent>
                 <ProjectMediaComponent

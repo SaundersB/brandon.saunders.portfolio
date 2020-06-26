@@ -27,7 +27,9 @@ export default function ProjectCategorySelectorComponent({ data }: any){
                         justifyContent: 'space-between',
                         flexWrap: 'wrap',
                         alignItems: 'stretch',
-                        ...defaultPadding
+                        paddingTop: 25,
+                        paddingLeft: 5,
+                        paddingRight: 5
                     }}>
                     {
                         getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
