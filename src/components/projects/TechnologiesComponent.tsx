@@ -24,7 +24,6 @@ export function TechnologiesComponent(props: any) {
                                 </div>
                             </div>
                         </th>
-
                     </tr>
                     <tr>
                         <td>
