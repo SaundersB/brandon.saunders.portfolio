@@ -1,6 +1,7 @@
 import React, {RefObject} from 'react';
 import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
+import {defaultPadding} from "../../styles";
 
 export default function ProjectCategorySelectorComponent({ data }: any){
     const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('mobile');
@@ -10,7 +11,7 @@ export default function ProjectCategorySelectorComponent({ data }: any){
     }, []);
     return (
         <div style={{
-            backgroundColor: '#e2e2e2',
+            backgroundColor: '#2472ff'
         }}>
             <div key={'project-category-selector-wrapper'} style={{
                 maxWidth: 960,
@@ -25,6 +26,7 @@ export default function ProjectCategorySelectorComponent({ data }: any){
                         justifyContent: 'space-between',
                         flexWrap: 'wrap',
                         alignItems: 'stretch',
+                        ...defaultPadding
                     }}>
                     {
                         getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
@@ -62,7 +64,7 @@ function getCategoryComponents(categories: any, setSelectedCategoryKey: any){
                     key={key}
                     onPress={() => setSelectedCategoryKey(key)}
                     categoryName={key}
-                    backgroundColor={'rgba(0,0,0,0.78)'}
+                    backgroundColor={'#fff'}
                 />
             )
         }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {defaultMargin, defaultPadding} from "../../styles";
 import "./ProjectCategoryComponent.css";
+import {defaultText, header} from "../../styles/typography";
 interface ProjectCategoryComponentInterface {
     backgroundColor: string;
     categoryName: string;
@@ -26,8 +27,9 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
             <div
                 key={'category-' + props.categoryName}
                 style={{
-                    fontSize: '1rem',
-                    color: 'white',
+                    ...defaultText,
+                    ...header,
+                    color: 'black',
                     wordWrap: 'normal',
                     textAlign: 'center',
                 }}>

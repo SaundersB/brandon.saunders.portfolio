@@ -16,6 +16,9 @@ export const query = graphql`
     }
 `
 
+const startColor = '#1d1d1d';
+const endColor = 'rgb(79,138,246)';
+
 export default function Welcome(props: any) {
     const boldTextStyles = {
         fontSize: '2em',
@@ -25,7 +28,7 @@ export default function Welcome(props: any) {
         <div
             style={{
                 minHeight: '100vh',
-                backgroundImage: 'linear-gradient(#1d1d1d, #A52F2F2F)'
+                backgroundImage: `linear-gradient(${startColor}, ${endColor})`
             }}
             className={'container-fluid'}>
             <div className={'d-flex row'} style={{

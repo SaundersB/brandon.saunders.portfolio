@@ -4,7 +4,6 @@ import {graphql, StaticQuery} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCategorySelectorComponent from "../components/projects/ProjectCategorySelectorComponent";
-import Header from "../components/header";
 
 export const query = graphql`
     query projectsQuery {
