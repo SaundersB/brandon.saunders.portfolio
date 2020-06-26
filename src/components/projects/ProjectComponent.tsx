@@ -1,6 +1,6 @@
 import React from 'react';
 import {ProjectMediaComponent} from "./ProjectMediaContentComponent";
-import {header} from "../../styles/typography";
+import {bold, defaultText, header} from "../../styles/typography";
 import {defaultMargin, defaultPadding} from "../../styles";
 import {TechnologiesComponent} from "./TechnologiesComponent";
 import CardComponent from "../common/CardComponent";
@@ -25,22 +25,29 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                 />
                 <div key={'project-info-wrapper-' + projectObj.name} style={{
                     backgroundColor: 'white'
-
                 }}>
                     <div key={'project-name-' + projectObj.name}
                          style={{
-                        ...header,
+                         ...defaultText,
+                         ...header,
+                         ...bold,
+                         color: 'black',
                         ...defaultPadding
                     }}>
                         {projectObj.name + ' | ' + projectObj.years}
                     </div>
                     <div key={'project-description-' + projectObj.name}  style={{
-                        ...defaultPadding
+                        ...defaultPadding,
+                        ...defaultText,
+                        color: 'black',
                     }}>
                         {projectObj.description}
                     </div>
                     <div key={'project-technologies-' + projectObj.name}  style={{
-                        ...defaultPadding
+                        ...defaultPadding,
+                        ...defaultText,
+                        color: 'black',
+                        ...header,
                     }}>
                         <TechnologiesComponent technologies={projectObj.tags}/>
                     </div>
