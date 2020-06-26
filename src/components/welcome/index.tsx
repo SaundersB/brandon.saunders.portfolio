@@ -3,6 +3,7 @@ import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
 import Img from "gatsby-image/withIEPolyfill"
 import {defaultText, header, headerTwo} from "../../styles/typography";
+import {baseColor, startColor} from "../../styles/colors";
 
 export const query = graphql`
     query {
@@ -16,9 +17,6 @@ export const query = graphql`
     }
 `
 
-const startColor = '#1d1d1d';
-const endColor = 'rgb(79,138,246)';
-
 export default function Welcome(props: any) {
     const boldTextStyles = {
         fontSize: '2em',
@@ -28,7 +26,7 @@ export default function Welcome(props: any) {
         <div
             style={{
                 minHeight: '100vh',
-                backgroundImage: `linear-gradient(${startColor}, ${endColor})`
+                backgroundImage: `linear-gradient(${startColor}, ${baseColor})`
             }}
             className={'container-fluid'}>
             <div className={'d-flex row'} style={{

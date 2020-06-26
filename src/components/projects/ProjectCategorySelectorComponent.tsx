@@ -2,6 +2,7 @@ import React, {RefObject} from 'react';
 import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
 import {defaultPadding} from "../../styles";
+import {baseColor} from "../../styles/colors";
 
 export default function ProjectCategorySelectorComponent({ data }: any){
     const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('mobile');
@@ -11,7 +12,7 @@ export default function ProjectCategorySelectorComponent({ data }: any){
     }, []);
     return (
         <div style={{
-            backgroundColor: '#2472ff'
+            backgroundColor: baseColor
         }}>
             <div key={'project-category-selector-wrapper'} style={{
                 maxWidth: 960,

@@ -24,7 +24,7 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                     project={project}
                 />
                 <div key={'project-info-wrapper-' + projectObj.name} style={{
-                    backgroundColor: 'white'
+                    backgroundColor: 'white',
                 }}>
                     <div key={'project-name-' + projectObj.name}
                          style={{

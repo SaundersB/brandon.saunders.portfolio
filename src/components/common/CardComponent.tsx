@@ -8,7 +8,8 @@ export default function CardComponent(props: CardComponentInterface){
     return (
         <div style={{
             borderRadius: 5,
-            border: "2px solid grey",
+            backgroundColor: 'white',
+            border: "0.5rem solid white",
         }}>
             {props.children}
         </div>

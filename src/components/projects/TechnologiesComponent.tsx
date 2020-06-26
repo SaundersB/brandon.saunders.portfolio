@@ -31,11 +31,12 @@ export function TechnologiesComponent(props: any) {
                                     style={
                                         {
                                             flexDirection: "row",
-                                            cursor: "pointer"
+                                            cursor: "pointer",
+                                            color: "blue"
                                         }
                                     }
                                 >
-                                    Press to {actionWord} {symbol}
+                                    {actionWord} {symbol}
                                 </div>
                             </div>
                         </td>
