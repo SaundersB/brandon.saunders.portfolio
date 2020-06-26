@@ -1,5 +1,7 @@
 import React from 'react';
-import {headerTwo} from "../../styles/typography";
+import {header, headerTwo} from "../../styles/typography";
+import {baseColor} from "../../styles/colors";
+import {defaultMargin, defaultPadding} from "../../styles";
 
 
 export function TechnologiesComponent(props: any) {
@@ -17,11 +19,12 @@ export function TechnologiesComponent(props: any) {
                     <tr>
                         <th>
                             <div>
-                                <div style={{...headerTwo}}>
+                                <div style={{...header}}>
                                     Technologies
                                 </div>
                             </div>
                         </th>
+
                     </tr>
                     <tr>
                         <td>
@@ -32,7 +35,10 @@ export function TechnologiesComponent(props: any) {
                                         {
                                             flexDirection: "row",
                                             cursor: "pointer",
-                                            color: "blue"
+                                            backgroundColor: baseColor,
+                                            borderRadius: 10,
+                                            padding: 6,
+                                            color: "white",
                                         }
                                     }
                                 >
