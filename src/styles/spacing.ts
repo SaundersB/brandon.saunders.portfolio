@@ -12,5 +12,5 @@ export const horizontalPadding = {
 }
 
 export const bottomPadding = {
-    padding: 15
+    paddingBottom: 15
 }

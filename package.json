@@ -6,6 +6,7 @@
   "author": "Brandon Saunders <brandonnsaunders@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "d3": "^5.16.0",
     "gatsby": "^2.21.22",
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.2",
@@ -23,6 +24,7 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "@types/d3": "^5.7.2",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "dotenv": "^8.2.0",

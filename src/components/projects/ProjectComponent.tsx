@@ -5,6 +5,9 @@ import {bottomPadding, defaultMargin, defaultPadding, horizontalPadding} from ".
 import {TechnologiesComponent} from "./TechnologiesComponent";
 import CardComponent from "../common/CardComponent";
 import Project from "../../lib/entities/Project";
+import PieChart from "../common/PieChart";
+import ProjectSection from "./ProjectSection";
+import Header from "../header";
 
 interface ProjectComponentInterface {
     project: { node: any }
@@ -15,6 +18,8 @@ export default function ProjectComponent(props: ProjectComponentInterface){
     const projectObj = new Project(project.node);
 
     const year = projectObj.startYear !== projectObj.endYear ? projectObj.startYear + '-' + projectObj.endYear : projectObj.endYear;
+    const teamPercentage = (100 - Number(projectObj.estimatedContributionPercentage)) / 100;
+    const myPercentage = Number(projectObj.estimatedContributionPercentage) / 100;
 
     return (
         <div key={'project-' + projectObj.name} style={{
@@ -52,6 +57,20 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                         color: 'black',
                     }}>
                         <TechnologiesComponent technologies={projectObj.tags}/>
+                    </div>
+                    <div key={'project-contribution-' + projectObj.name}  style={{
+                        ...defaultPadding,
+                        ...defaultText,
+                        color: 'black',
+                    }}>
+                        <ProjectSection title={'Statistics'}>
+                            <div className={'row'}>
+                                <div className={'col align-content-center'}>
+                                    <h4>Contribution Amount</h4>
+                                    <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0} outerRadius={0}/>
+                                </div>
+                            </div>
+                        </ProjectSection>
                     </div>
                 </div>
             </CardComponent>

@@ -19,6 +19,7 @@ export const query = graphql`
                     tags
                     startYear
                     endYear
+                    estimatedContributionPercentage
                     imageOrientation
                     image {
                         childImageSharp {
