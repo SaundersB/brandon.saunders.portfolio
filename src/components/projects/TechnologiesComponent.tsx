@@ -6,7 +6,7 @@ export function TechnologiesComponent(props: any) {
     const [expanded, setExpanded] = React.useState(false);
     const technologies = props.technologies.split(', ');
     const technologyRows = technologies.map((tech: string) => <tr key={'tr-' + tech}>
-        <td key={'td-' + tech}>{tech}</td>
+        <td key={'td-' + tech}><a href={'https://en.wikipedia.org/wiki/' + tech} target={"_blank"}>{tech}</a></td>
     </tr>);
     const symbol = expanded ? '-' : '+';
     const actionWord = expanded ? 'Collapse' : 'Expand';
@@ -20,7 +20,7 @@ export function TechnologiesComponent(props: any) {
                         <th>
                             <div>
                                 <div style={{...header}}>
-                                    Technologies
+                                    Skills
                                 </div>
                             </div>
                         </th>
