@@ -1,6 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
-import {baseColor} from "../../styles/colors";
+import {baseColor, inactive} from "../../styles/colors";
 
 const Slice = props => {
     let { pie } = props;
@@ -10,7 +10,7 @@ const Slice = props => {
         .innerRadius(0)
         .outerRadius(100);
 
-    let interpolate = d3.interpolateRgb(baseColor, "#a9a9a9");
+    let interpolate = d3.interpolateRgb(baseColor, inactive);
 
     return pie.map((slice, index) => {
         let sliceColor = interpolate(index / (pie.length - 1));
@@ -34,7 +34,7 @@ const PieChart = (props: PieChartInterface) => {
     let pie = d3.pie()(props.data);
 
     return (
-        <svg height={height} width={width}>
+        <svg height={height} width={width} style={{marginBottom: 15}}>
             <g transform={`translate(${width / 2},${height / 2})`}>
                 <Slice pie={pie} />
             </g>

@@ -8,6 +8,7 @@ import Project from "../../lib/entities/Project";
 import PieChart from "../common/PieChart";
 import ProjectSection from "./ProjectSection";
 import Header from "../header";
+import {baseColor, inactive} from "../../styles/colors";
 
 interface ProjectComponentInterface {
     project: { node: any }
@@ -59,6 +60,14 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                             <div className={'col align-content-center'} style={{...topPadding}}>
                                 <h4>Contribution Breakdown</h4>
                                 <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0} outerRadius={0}/>
+                                <div className={'row align-items-center'}>
+                                    <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}> </div>
+                                    <div>My Contribution</div>
+                                </div>
+                                <div className={'row align-items-center'} >
+                                    <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}> </div>
+                                    <div>Teams Contribution</div>
+                                </div>
                             </div>
                         </div>
                     </ProjectSection>
