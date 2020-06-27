@@ -1,7 +1,7 @@
 import React from 'react';
 import {ProjectMediaComponent} from "./ProjectMediaContentComponent";
 import {bold, defaultText, header} from "../../styles/typography";
-import {bottomPadding, defaultMargin, defaultPadding, horizontalPadding} from "../../styles";
+import {bottomPadding, defaultMargin, defaultPadding, horizontalPadding, topPadding} from "../../styles";
 import {TechnologiesComponent} from "./TechnologiesComponent";
 import CardComponent from "../common/CardComponent";
 import Project from "../../lib/entities/Project";
@@ -51,27 +51,17 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                     }}>
                         {projectObj.description}
                     </div>
-                    <div key={'project-technologies-' + projectObj.name}  style={{
-                        ...defaultPadding,
-                        ...defaultText,
-                        color: 'black',
-                    }}>
+                    <ProjectSection title={'Skills'}>
                         <TechnologiesComponent technologies={projectObj.tags}/>
-                    </div>
-                    <div key={'project-contribution-' + projectObj.name}  style={{
-                        ...defaultPadding,
-                        ...defaultText,
-                        color: 'black',
-                    }}>
-                        <ProjectSection title={'Statistics'}>
-                            <div className={'row'}>
-                                <div className={'col align-content-center'}>
-                                    <h4>Contribution Amount</h4>
-                                    <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0} outerRadius={0}/>
-                                </div>
+                    </ProjectSection>
+                    <ProjectSection title={'Statistics'}>
+                        <div className={'row'}>
+                            <div className={'col align-content-center'} style={{...topPadding}}>
+                                <h4>Contribution Breakdown</h4>
+                                <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0} outerRadius={0}/>
                             </div>
-                        </ProjectSection>
-                    </div>
+                        </div>
+                    </ProjectSection>
                 </div>
             </CardComponent>
         </div>

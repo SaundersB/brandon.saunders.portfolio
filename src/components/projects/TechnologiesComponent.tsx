@@ -17,15 +17,6 @@ export function TechnologiesComponent(props: any) {
             }}>
                 <tbody>
                     <tr>
-                        <th>
-                            <div>
-                                <div style={{...header}}>
-                                    Skills
-                                </div>
-                            </div>
-                        </th>
-                    </tr>
-                    <tr>
                         <td>
                             <div style={{display: "flex", flex: 1}}>
                                 <div

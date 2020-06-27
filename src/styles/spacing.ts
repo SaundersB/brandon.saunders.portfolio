@@ -14,3 +14,8 @@ export const horizontalPadding = {
 export const bottomPadding = {
     paddingBottom: 15
 }
+
+
+export const topPadding = {
+    paddingTop: 15
+}

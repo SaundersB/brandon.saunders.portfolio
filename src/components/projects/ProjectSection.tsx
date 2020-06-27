@@ -1,5 +1,5 @@
 import React from 'react';
-import {header} from "../../styles/typography";
+import {bold, defaultText, header, headerTwo} from "../../styles/typography";
 import {bottomPadding, defaultPadding} from "../../styles";
 
 interface ProjectSectionInterface {
@@ -9,8 +9,15 @@ interface ProjectSectionInterface {
 
 export default function ProjectSection(props: ProjectSectionInterface) {
     return (
-        <div>
-            <div style={{...header, ...bottomPadding}}>
+        <div style={{
+            ...defaultPadding,
+        }}>
+            <div style={{
+                ...defaultText,
+                color: 'black',
+                ...header,
+                ...bold,
+            }}>
                 {props.title}
             </div>
             {props.children}
