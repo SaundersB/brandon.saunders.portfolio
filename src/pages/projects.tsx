@@ -7,7 +7,7 @@ import ProjectCategorySelectorComponent from "../components/projects/ProjectCate
 
 export const query = graphql`
     query projectsQuery {
-        allProjectsJson {
+        allProjectsJson(sort: {order: DESC, fields: endYear}) {
             edges {
                 node {
                     name
@@ -17,7 +17,8 @@ export const query = graphql`
                     videoUrl
                     description
                     tags
-                    years
+                    startYear
+                    endYear
                     imageOrientation
                     image {
                         childImageSharp {

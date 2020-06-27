@@ -14,6 +14,8 @@ export default function ProjectComponent(props: ProjectComponentInterface){
     const project = props.project;
     const projectObj = new Project(project.node);
 
+    const year = projectObj.startYear !== projectObj.endYear ? projectObj.startYear + '-' + projectObj.endYear : projectObj.endYear;
+
     return (
         <div key={'project-' + projectObj.name} style={{
             ...defaultMargin,
@@ -35,7 +37,7 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                          color: 'black',
                         ...defaultPadding
                     }}>
-                        {projectObj.name + ' | ' + projectObj.years}
+                        {projectObj.name + ' | ' + year}
                     </div>
                     <div key={'project-description-' + projectObj.name}  style={{
                         ...defaultPadding,
