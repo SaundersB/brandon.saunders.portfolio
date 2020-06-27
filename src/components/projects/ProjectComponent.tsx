@@ -48,7 +48,6 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                         ...defaultPadding,
                         ...defaultText,
                         color: 'black',
-                        ...header,
                     }}>
                         <TechnologiesComponent technologies={projectObj.tags}/>
                     </div>

@@ -1,8 +1,6 @@
 import React from 'react';
-import {header, headerTwo} from "../../styles/typography";
+import {header} from "../../styles/typography";
 import {baseColor} from "../../styles/colors";
-import {defaultMargin, defaultPadding} from "../../styles";
-
 
 export function TechnologiesComponent(props: any) {
     const [expanded, setExpanded] = React.useState(false);
@@ -14,7 +12,9 @@ export function TechnologiesComponent(props: any) {
     const actionWord = expanded ? 'Collapse' : 'Expand';
     return (
         <div>
-            <table>
+            <table style={{
+                marginBottom: 0
+            }}>
                 <tbody>
                     <tr>
                         <th>
