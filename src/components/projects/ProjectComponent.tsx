@@ -64,13 +64,13 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                                 <div className={'row align-items-center'}>
                                     <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}> </div>
                                     <div style={{...bold, ...defaultText}}>
-                                        My Contribution
+                                        My Contribution: {myPercentage * 100}%
                                     </div>
                                 </div>
                                 <div className={'row align-items-center'} >
                                     <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}> </div>
                                     <div style={{...bold, ...defaultText}}>
-                                        Teams Contribution
+                                        Teams Contribution: {teamPercentage * 100}%
                                     </div>
                                 </div>
                             </div>
