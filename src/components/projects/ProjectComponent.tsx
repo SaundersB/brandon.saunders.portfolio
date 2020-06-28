@@ -25,59 +25,55 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     return (
         <div key={'project-' + projectObj.name} style={{
             ...defaultMargin,
-            ...bottomPadding,
-            ...horizontalPadding
         }}>
             <CardComponent>
                 <ProjectMediaComponent
                     project={project}
                 />
-                <div key={'project-info-wrapper-' + projectObj.name} style={{
-                    backgroundColor: 'white',
+                <div key={'project-name-' + projectObj.name}
+                     style={{
+                         ...horizontalPadding,
+                         ...topPadding,
+                         ...defaultText,
+                         ...header,
+                         ...bold,
+                         color: 'black',
+                         textAlign: 'center',
+                     }}>
+                    {projectObj.name + ' | ' + year}
+                </div>
+                <div key={'project-description-' + projectObj.name} style={{
+                    ...defaultPadding,
+                    ...defaultText,
+                    color: 'black',
                 }}>
-                    <div key={'project-name-' + projectObj.name}
-                         style={{
-                             ...defaultText,
-                             ...header,
-                             ...bold,
-                             color: 'black',
-                             ...defaultPadding
-                         }}>
-                        {projectObj.name + ' | ' + year}
-                    </div>
-                    <div key={'project-description-' + projectObj.name} style={{
-                        ...defaultPadding,
-                        ...defaultText,
-                        color: 'black',
-                    }}>
-                        {projectObj.description}
-                    </div>
-                    <ProjectSection title={'Skills'}>
-                        <TechnologiesComponent technologies={projectObj.tags}/>
-                    </ProjectSection>
-                    {!soloProject && <ProjectSection title={'Statistics'}>
-                        <div className={'row'}>
-                            <div className={'col align-content-center'} style={{...topPadding}}>
-                                <h4>Contribution Breakdown</h4>
-                                <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
-                                          outerRadius={0}/>
-                                <div className={'row align-items-center'}>
-                                    <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}></div>
-                                    <div style={{...bold, ...defaultText}}>
-                                        My Contribution: {myPercentage * 100}%
-                                    </div>
+                    {projectObj.description}
+                </div>
+                <ProjectSection title={'Skills'}>
+                    <TechnologiesComponent technologies={projectObj.tags}/>
+                </ProjectSection>
+                {!soloProject && <ProjectSection title={'Statistics'}>
+                    <div className={'row'}>
+                        <div className={'col align-content-center'} style={{...topPadding}}>
+                            <h4>Contribution Breakdown</h4>
+                            <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
+                                      outerRadius={0}/>
+                            <div className={'row align-items-center'}>
+                                <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}></div>
+                                <div style={{...bold, ...defaultText}}>
+                                    My Contribution: {myPercentage * 100}%
                                 </div>
-                                <div className={'row align-items-center'}>
-                                    <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}></div>
-                                    <div style={{...bold, ...defaultText}}>
-                                        Teams Contribution: {teamPercentage * 100}%
-                                    </div>
+                            </div>
+                            <div className={'row align-items-center'}>
+                                <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}></div>
+                                <div style={{...bold, ...defaultText}}>
+                                    Teams Contribution: {teamPercentage * 100}%
                                 </div>
                             </div>
                         </div>
-                    </ProjectSection>
-                    }
-                </div>
+                    </div>
+                </ProjectSection>
+                }
             </CardComponent>
         </div>
     )
