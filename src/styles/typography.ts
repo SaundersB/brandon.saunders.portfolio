@@ -1,8 +1,11 @@
 export const defaultText = {
-    color: '#ffffff',
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
     textDecoration: `none`,
     textRendering: 'optimizeLegibility',
+}
+
+export const whiteText = {
+    color: '#ffffff',
 }
 
 export const header = {

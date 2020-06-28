@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
 import Img from "gatsby-image/withIEPolyfill"
-import {defaultText, header, headerTwo} from "../../styles/typography";
+import {defaultText, header, headerTwo, whiteText} from "../../styles/typography";
 import {baseColor, startColor} from "../../styles/colors";
 
 export const query = graphql`
@@ -54,28 +54,33 @@ export default function Welcome(props: any) {
                     <div className="col align-content-between">
                         <div style={{
                             ...defaultText,
+                            ...whiteText,
                             ...header,
                         }}>
                             Hello. My name is<br/>
                         </div>
                         <div style={{
                             ...defaultText,
+                            ...whiteText,
                             ...headerTwo,
                         }}>
                             Brandon Saunders.
                         </div>
                         <div style={{
                             ...defaultText,
+                            ...whiteText,
                             ...header,
                         }}>
                             I'm a full-stack developer specialized in frontend and backend development for complex scalable web apps.
                         </div>
                         <div style={{
                             ...defaultText,
+                            ...whiteText,
                             ...header,
                         }}>
                             Check out my <Link style={{
                             ...defaultText,
+                            ...whiteText,
                             ...header,
                             textDecoration: 'underline',
                             cursor: 'pointer'
@@ -85,6 +90,7 @@ export default function Welcome(props: any) {
                             onClick={() => window.open(SocialMediaConstants.EMAIL)}
                             style={{
                                 ...defaultText,
+                                ...whiteText,
                                 ...header,
                                 textDecoration: 'underline',
                                 cursor: 'pointer',

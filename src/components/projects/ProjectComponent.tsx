@@ -21,6 +21,7 @@ export default function ProjectComponent(props: ProjectComponentInterface){
     const year = projectObj.startYear !== projectObj.endYear ? projectObj.startYear + '-' + projectObj.endYear : projectObj.endYear;
     const teamPercentage = (100 - Number(projectObj.estimatedContributionPercentage)) / 100;
     const myPercentage = Number(projectObj.estimatedContributionPercentage) / 100;
+    const soloProject = myPercentage >= 1;
 
     return (
         <div key={'project-' + projectObj.name} style={{
@@ -55,22 +56,27 @@ export default function ProjectComponent(props: ProjectComponentInterface){
                     <ProjectSection title={'Skills'}>
                         <TechnologiesComponent technologies={projectObj.tags}/>
                     </ProjectSection>
-                    <ProjectSection title={'Statistics'}>
+                    { !soloProject && <ProjectSection title={'Statistics'}>
                         <div className={'row'}>
                             <div className={'col align-content-center'} style={{...topPadding}}>
                                 <h4>Contribution Breakdown</h4>
                                 <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0} outerRadius={0}/>
                                 <div className={'row align-items-center'}>
                                     <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}> </div>
-                                    <div>My Contribution</div>
+                                    <div style={{...bold, ...defaultText}}>
+                                        My Contribution
+                                    </div>
                                 </div>
                                 <div className={'row align-items-center'} >
                                     <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}> </div>
-                                    <div>Teams Contribution</div>
+                                    <div style={{...bold, ...defaultText}}>
+                                        Teams Contribution
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </ProjectSection>
+                    }
                 </div>
             </CardComponent>
         </div>
