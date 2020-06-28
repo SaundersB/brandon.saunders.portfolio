@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import SocialMediaLinksComponent from "./common/SocialMediaLinksComponent";
@@ -7,7 +7,7 @@ interface HeaderInterface {
     siteTitle: string
 }
 
-const Header = ({ siteTitle }: HeaderInterface) => (
+const Header = ({siteTitle}: HeaderInterface) => (
     <div
         style={{
             display: 'flex',
@@ -30,7 +30,7 @@ const Header = ({ siteTitle }: HeaderInterface) => (
             justifyContent: 'flex-end',
             paddingRight: '1rem'
         }}>
-            <h5 style={{ margin: 0, textAlign: 'left', paddingLeft: 5 }}>
+            <h5 style={{margin: 0, textAlign: 'left', paddingLeft: 5}}>
                 <Link
                     to="/"
                     style={{
@@ -42,7 +42,7 @@ const Header = ({ siteTitle }: HeaderInterface) => (
                     About
                 </Link>
             </h5>
-            <h5 style={{ margin: 0, paddingLeft: '1rem' }}>
+            <h5 style={{margin: 0, paddingLeft: '1rem'}}>
                 <Link
                     to="/projects"
                     style={{
@@ -71,11 +71,11 @@ const Header = ({ siteTitle }: HeaderInterface) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: `Brandon Saunders`,
+    siteTitle: `Brandon Saunders`,
 }
 
 export default Header

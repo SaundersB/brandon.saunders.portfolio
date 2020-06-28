@@ -1,6 +1,5 @@
 import * as React from "react";
-import {PageProps} from "gatsby"
-import {graphql, StaticQuery} from "gatsby"
+import {graphql, PageProps, StaticQuery} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCategorySelectorComponent from "../components/projects/ProjectCategorySelectorComponent";
@@ -35,10 +34,10 @@ export const query = graphql`
     }
 `
 
-function ProjectsPage(props: PageProps){
+function ProjectsPage(props: PageProps) {
     return (
         <Layout>
-            <SEO title="Projects" />
+            <SEO title="Projects"/>
             <StaticQuery
                 key={'static-query'}
                 query={query}

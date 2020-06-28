@@ -28,8 +28,7 @@ export default function Welcome(props: any) {
             <div className={'d-flex row'} style={{
                 minHeight: '100vh',
             }}>
-                <div style={{
-                }} className="col-xs-12 col-md-5 align-self-center pt-3 p-md-3">
+                <div style={{}} className="col-xs-12 col-md-5 align-self-center pt-3 p-md-3">
                     <StaticQuery
                         key={'static-query'}
                         query={query}
@@ -40,17 +39,18 @@ export default function Welcome(props: any) {
                                  objectFit="cover"
                                  objectPosition="50% 50%"
                                  style={{
-                                display: 'block',
-                                borderRadius: 5,
-                                width: '100%',
-                                maxHeight: 300,
-                                maxWidth: 300,
-                            }}/>
+                                     display: 'block',
+                                     borderRadius: 5,
+                                     width: '100%',
+                                     maxHeight: 300,
+                                     maxWidth: 300,
+                                 }}/>
                         )
                         }
                     />
                 </div>
-                <div className="d-flex col-xs-12 col-lg-4 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
+                <div
+                    className="d-flex col-xs-12 col-lg-4 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
                     <div className="col align-content-between">
                         <div style={{
                             ...defaultText,
@@ -71,7 +71,8 @@ export default function Welcome(props: any) {
                             ...whiteText,
                             ...header,
                         }}>
-                            I'm a full-stack developer specialized in frontend and backend development for complex scalable web apps.
+                            I'm a full-stack developer specialized in frontend and backend development for complex
+                            scalable web apps.
                         </div>
                         <div style={{
                             ...defaultText,

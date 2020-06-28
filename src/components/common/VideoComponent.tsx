@@ -7,7 +7,7 @@ interface VideoComponentInterface {
     frameStyles?: object
 }
 
-export default function VideoComponent(props: VideoComponentInterface){
+export default function VideoComponent(props: VideoComponentInterface) {
     return (
         <div className="video" style={{...props.wrapperStyles}}>
             <iframe

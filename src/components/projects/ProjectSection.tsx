@@ -1,6 +1,7 @@
 import React from 'react';
-import {bold, defaultText, header, headerTwo} from "../../styles/typography";
-import {bottomPadding, defaultPadding} from "../../styles";
+import {bold, defaultText, header, whiteText} from "../../styles/typography";
+import {defaultPadding, horizontalPadding} from "../../styles";
+import {baseColor} from "../../styles/colors";
 
 interface ProjectSectionInterface {
     title: string;
@@ -8,19 +9,28 @@ interface ProjectSectionInterface {
 }
 
 export default function ProjectSection(props: ProjectSectionInterface) {
+    const [open, setOpen] = React.useState(false);
+    const symbol = open ? '-' : '+';
     return (
-        <div style={{
-            ...defaultPadding,
-        }}>
-            <div style={{
-                ...defaultText,
-                color: 'black',
-                ...header,
-                ...bold,
-            }}>
-                {props.title}
+        <div style={{}}>
+            <div
+                onClick={() => setOpen(!open)}
+                style={{
+                    ...defaultText,
+                    ...defaultPadding,
+                    ...header,
+                    ...whiteText,
+                    ...bold,
+                    cursor: "pointer",
+                    backgroundColor: baseColor,
+                }}>
+                {props.title} {symbol}
             </div>
-            {props.children}
+            <div style={{
+                ...horizontalPadding,
+            }}>
+                {open && props.children}
+            </div>
         </div>
     )
 }

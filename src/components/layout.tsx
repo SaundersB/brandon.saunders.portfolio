@@ -14,23 +14,23 @@ interface LayoutInterface {
     children: any
 }
 
-const Layout = ({ children }: LayoutInterface) => {
-  return (
-    <>
-      <div
-        style={{
-            backgroundColor: '#fff'
-        }}
-      >
-        <Header/>
-        <main>{children}</main>
-      </div>
-    </>
-  )
+const Layout = ({children}: LayoutInterface) => {
+    return (
+        <>
+            <div
+                style={{
+                    backgroundColor: '#fff'
+                }}
+            >
+                <Header/>
+                <main>{children}</main>
+            </div>
+        </>
+    )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout

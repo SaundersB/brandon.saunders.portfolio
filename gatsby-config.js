@@ -2,7 +2,7 @@ let env = process.env.NODE_ENV || 'development';
 require('dotenv').config({path: `./.env.${env}`});
 
 module.exports = {
-    pathPrefix: "/brandon.saunders.portfolio",
+    pathPrefix: '/brandon.saunders.portfolio',
     siteMetadata: {
         title: `Brandon Saunders Portfolio`,
         description: ``,
@@ -32,24 +32,24 @@ module.exports = {
         {
             resolve: 'gatsby-transformer-json',
             options: {
-                path: `${__dirname}/src/data`
+                path: `${__dirname}/src/data`,
             },
         },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'data',
-                path: `${__dirname}/src/data`
-            }
+                path: `${__dirname}/src/data`,
+            },
         },
         {
             resolve: `gatsby-plugin-s3`,
             options: {
-                bucketName: "brandonsaundersportfolio.com",
-                protocol: "https",
-                hostname: "brandonsaundersportfolio.com",
+                bucketName: 'brandonsaundersportfolio.com',
+                protocol: 'https',
+                hostname: 'brandonsaundersportfolio.com',
             },
         },
-        `gatsby-plugin-sass`
+        `gatsby-plugin-sass`,
     ],
 };

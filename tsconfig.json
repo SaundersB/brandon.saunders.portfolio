@@ -4,7 +4,10 @@
         "module": "commonjs",
         "target": "esnext",
         "jsx": "preserve",
-        "lib": ["dom", "esnext"],
+        "lib": [
+            "dom",
+            "esnext"
+        ],
         "strict": true,
         "noEmit": true,
         "isolatedModules": true,
@@ -12,5 +15,9 @@
         "noUnusedLocals": false,
         "allowJs": true
     },
-    "exclude": ["node_modules", "public", ".cache"]
+    "exclude": [
+        "node_modules",
+        "public",
+        ".cache"
+    ]
 }

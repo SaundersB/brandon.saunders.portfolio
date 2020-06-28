@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import {baseColor, inactive} from "../../styles/colors";
 
 const Slice = props => {
-    let { pie } = props;
+    let {pie} = props;
 
     let arc = d3
         .arc()
@@ -14,7 +14,7 @@ const Slice = props => {
 
     return pie.map((slice, index) => {
         let sliceColor = interpolate(index / (pie.length - 1));
-        return <path d={arc(slice)} fill={sliceColor} />;
+        return <path d={arc(slice)} fill={sliceColor}/>;
     });
 };
 
@@ -36,7 +36,7 @@ const PieChart = (props: PieChartInterface) => {
     return (
         <svg height={height} width={width} style={{marginBottom: 15}}>
             <g transform={`translate(${width / 2},${height / 2})`}>
-                <Slice pie={pie} />
+                <Slice pie={pie}/>
             </g>
         </svg>
     );

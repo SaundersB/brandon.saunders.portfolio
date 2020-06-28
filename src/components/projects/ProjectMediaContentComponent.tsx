@@ -3,7 +3,7 @@ import VideoComponent from "../common/VideoComponent";
 import Img from "gatsby-image";
 import Project from "../../lib/entities/Project";
 
-export function ProjectMediaComponent(props: any){
+export function ProjectMediaComponent(props: any) {
     const project = props.project;
     const projectObj = new Project(project.node);
     const videoUrl = project.node?.videoUrl;
@@ -11,8 +11,8 @@ export function ProjectMediaComponent(props: any){
         <VideoComponent
             key={'video-' + props.project.name}
             videoSrcURL={videoUrl} videoTitle={projectObj.name}
-                        frameStyles={{minHeight: 400, width: '100%'}}
-                        wrapperStyles={{height: '100%', width: '100%'}}/>
+            frameStyles={{minHeight: 400, width: '100%'}}
+            wrapperStyles={{height: '100%', width: '100%'}}/>
     ) : null;
 
     const imageOrientation = project.node.imageOrientation;

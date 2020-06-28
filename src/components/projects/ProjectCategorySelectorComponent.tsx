@@ -3,7 +3,7 @@ import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
 import {baseColor} from "../../styles/colors";
 
-export default function ProjectCategorySelectorComponent({ data }: any){
+export default function ProjectCategorySelectorComponent({data}: any) {
     const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('mobile');
     const [projectsByCategory, setProjectsByCategory] = React.useState([]);
     React.useEffect(() => {
@@ -46,8 +46,8 @@ export default function ProjectCategorySelectorComponent({ data }: any){
 function parseProjectsData(data: any): any {
     let projects: [][] = [];
     data.allProjectsJson.edges.forEach((project: any) => {
-        project.node.categories.forEach((category:any) => {
-            if(typeof projects[category] !== 'object'){
+        project.node.categories.forEach((category: any) => {
+            if (typeof projects[category] !== 'object') {
                 projects[category] = [];
             }
             // @ts-ignore
@@ -57,10 +57,10 @@ function parseProjectsData(data: any): any {
     return projects;
 }
 
-function getCategoryComponents(categories: any, setSelectedCategoryKey: any){
+function getCategoryComponents(categories: any, setSelectedCategoryKey: any) {
     let categoryComponents = [];
-    for(const key in categories){
-        if(categories.hasOwnProperty(key)) {
+    for (const key in categories) {
+        if (categories.hasOwnProperty(key)) {
             categoryComponents.push(
                 <ProjectCategoryComponent
                     key={key}
@@ -74,11 +74,11 @@ function getCategoryComponents(categories: any, setSelectedCategoryKey: any){
     return categoryComponents;
 }
 
-function getProjectsComponentsByCategory(projectsByCategory: any, category: string){
+function getProjectsComponentsByCategory(projectsByCategory: any, category: string) {
     let projectComponents = [];
     const projects = projectsByCategory[category];
-    for(const key in projects){
-        if(projects.hasOwnProperty(key)){
+    for (const key in projects) {
+        if (projects.hasOwnProperty(key)) {
             projectComponents.push(
                 <ProjectComponent key={key} project={projects[key]}/>
             );
