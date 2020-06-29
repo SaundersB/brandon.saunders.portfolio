@@ -8,6 +8,7 @@ export interface ProjectInterface {
     image: string;
     description: string;
     estimatedContributionPercentage: number;
+    teamSize: number;
 }
 
 export default class Project {
@@ -20,6 +21,7 @@ export default class Project {
     private readonly _image: string
     private readonly _description: string
     private readonly _estimatedContributionPercentage: Number
+    private readonly _teamSize: Number
 
     constructor(projectData: ProjectInterface) {
         this._name = projectData.name;
@@ -31,6 +33,7 @@ export default class Project {
         this._image = projectData.image;
         this._description = projectData.description;
         this._estimatedContributionPercentage = projectData.estimatedContributionPercentage;
+        this._teamSize = projectData.teamSize;
     }
 
     get name(): string {
@@ -67,5 +70,9 @@ export default class Project {
 
     get estimatedContributionPercentage(): Number {
         return this._estimatedContributionPercentage;
+    }
+
+    get teamSize(): Number {
+        return this._teamSize;
     }
 }

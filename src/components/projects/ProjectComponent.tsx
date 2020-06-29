@@ -21,7 +21,10 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     const teamPercentage = (100 - Number(projectObj.estimatedContributionPercentage)) / 100;
     const myPercentage = Number(projectObj.estimatedContributionPercentage) / 100;
     const soloProject = myPercentage >= 1;
-
+    let developerIcons = [];
+    for(let i =0; i < Number(projectObj.teamSize); i++){
+        developerIcons.push(<img width={25} height={25} src="https://img.icons8.com/cotton/64/000000/developer.png" alt={'developer'}/>)
+    }
     return (
         <div key={'project-' + projectObj.name} style={{
             ...defaultMargin,
@@ -59,16 +62,22 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                             <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
                                       outerRadius={0}/>
                             <div className={'row align-items-center'}>
-                                <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}></div>
+                                <div style={{width: 15, height: 15, backgroundColor: baseColor, margin: 15}}/>
                                 <div style={{...bold, ...defaultText}}>
                                     My Contribution: {myPercentage * 100}%
                                 </div>
                             </div>
                             <div className={'row align-items-center'}>
-                                <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}></div>
+                                <div style={{width: 15, height: 15, backgroundColor: inactive, margin: 15}}/>
                                 <div style={{...bold, ...defaultText}}>
                                     Teams Contribution: {teamPercentage * 100}%
                                 </div>
+                            </div>
+                        </div>
+                        <div className={'col align-content-center'} style={{...topPadding}}>
+                            <h4>Team Size</h4>
+                            <div style={{...bold, ...defaultText}}>
+                                {developerIcons}
                             </div>
                         </div>
                     </div>
