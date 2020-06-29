@@ -18,9 +18,11 @@ const Header = ({siteTitle}: HeaderInterface) => (
     >
         <div style={{
             flex: 1,
-            alignSelf: 'center'
+            alignSelf: 'center',
         }}>
-            <SocialMediaLinksComponent/>
+            <div>
+                <SocialMediaLinksComponent/>
+            </div>
         </div>
         <div style={{
             display: 'flex',

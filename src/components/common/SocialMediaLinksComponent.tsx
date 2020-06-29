@@ -10,7 +10,6 @@ export default function SocialMediaLinksComponent() {
     const paddingAmount = 10;
     return (
         <div style={{
-            paddingTop: paddingAmount,
             paddingRight: paddingAmount,
             paddingLeft: paddingAmount,
             backgroundColor: '#fff',
