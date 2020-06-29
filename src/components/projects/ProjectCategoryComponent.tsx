@@ -29,7 +29,6 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
                 key={'category-' + props.categoryName}
                 style={{
                     ...defaultText,
-                    ...header,
                     ...bold,
                     color: 'black',
                     wordWrap: 'normal',

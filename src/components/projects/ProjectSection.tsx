@@ -18,7 +18,6 @@ export default function ProjectSection(props: ProjectSectionInterface) {
                 style={{
                     ...defaultText,
                     ...defaultPadding,
-                    ...header,
                     ...whiteText,
                     ...bold,
                     cursor: "pointer",
