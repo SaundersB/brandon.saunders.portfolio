@@ -28,7 +28,7 @@ export default function Welcome(props: any) {
             <div className={'d-flex row'} style={{
                 minHeight: '100vh',
             }}>
-                <div style={{}} className="col-xs-12 col-md-5 align-self-center pt-3 p-md-3">
+                <div className="col-xs-12 col-md-5 align-self-center pt-3 p-md-3">
                     <StaticQuery
                         key={'static-query'}
                         query={query}
