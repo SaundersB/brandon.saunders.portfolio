@@ -17,11 +17,7 @@ interface LayoutInterface {
 const Layout = ({children}: LayoutInterface) => {
     return (
         <>
-            <div
-                style={{
-                    backgroundColor: '#fff'
-                }}
-            >
+            <div>
                 <Header/>
                 <main>{children}</main>
             </div>

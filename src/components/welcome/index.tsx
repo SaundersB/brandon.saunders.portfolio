@@ -17,37 +17,24 @@ export const query = graphql`
     }
 `
 
-export default function Welcome(props: any) {
+export default function Welcome() {
     return (
         <div
-            style={{
-                minHeight: '100vh',
-                backgroundImage: `linear-gradient(${startColor}, ${baseColor})`
-            }}
-            className={'container-fluid'}>
-            <div className={'d-flex row'} style={{
-                minHeight: '100vh',
-            }}>
-                <div className="col-xs-12 col-md-5 align-self-center pt-3 p-md-3">
-                    <StaticQuery
-                        key={'static-query'}
-                        query={query}
-                        render={(data) => (
-                            <Img key={'image'}
-                                 className='mr-auto ml-auto mr-md-0'
-                                 fixed={data.fileName.childImageSharp.fixed}
-                                 objectFit="cover"
-                                 objectPosition="50% 50%"
-                                 style={{
-                                     display: 'block',
-                                     borderRadius: 5,
-                                     width: '100%',
-                                     maxHeight: 300,
-                                     maxWidth: 300,
-                                 }}/>
-                        )
-                        }
-                    />
+            className={'d-flex row gradient container'}>
+                <div className="d-flex col-xs-12 col-md-5 justify-content-center align-items-center p-15">
+                    <div className="d-flex  justify-content-end">
+                        <StaticQuery
+                            key={'static-query'}
+                            query={query}
+                            render={(data) => (
+                                <Img key={'image'}
+                                     fixed={data.fileName.childImageSharp.fixed}
+                                     className={'profile-image '}
+                                />
+                            )
+                            }
+                        />
+                    </div>
                 </div>
                 <div
                     className="d-flex col-xs-12 col-lg-4 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
@@ -101,6 +88,5 @@ export default function Welcome(props: any) {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>)
 }

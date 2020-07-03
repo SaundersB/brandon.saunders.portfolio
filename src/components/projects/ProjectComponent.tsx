@@ -1,7 +1,7 @@
 import React from 'react';
 import {ProjectMediaComponent} from "./ProjectMediaContentComponent";
 import {bold, defaultText, header} from "../../styles/typography";
-import {bottomPadding, defaultMargin, defaultPadding, horizontalPadding, topPadding} from "../../styles";
+import {defaultMargin, defaultPadding, horizontalPadding, topPadding} from "../../styles";
 import {TechnologiesComponent} from "./TechnologiesComponent";
 import CardComponent from "../common/CardComponent";
 import Project from "../../lib/entities/Project";
