@@ -37,7 +37,7 @@ export default function Welcome() {
                     </div>
                 </div>
                 <div
-                    className="d-flex col-xs-12 col-lg-7 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto text-md-left text-sm-center align-self-center">
+                    className="d-flex col-xs-12 col-lg-7 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto text-md-left text-sm-center text-center align-self-center">
                     <div className="col align-content-between">
                         <div className={'default-text white-text header'}>
                             Hello. My name is<br/>
