@@ -1,7 +1,5 @@
 import React from 'react';
-import {defaultMargin, defaultPadding} from "../../styles";
 import "./ProjectCategoryComponent.css";
-import {bold, defaultText, header} from "../../styles/typography";
 
 interface ProjectCategoryComponentInterface {
     backgroundColor: string;
@@ -14,26 +12,11 @@ export default function ProjectCategoryComponent(props: ProjectCategoryComponent
         <div
             key={'wrapper-' + props.categoryName}
             onClick={() => props.onPress()}
-            className={'grow'}
-            style={{
-                flex: 1,
-                ...defaultPadding,
-                ...defaultMargin,
-                backgroundColor: props.backgroundColor,
-                borderRadius: 3,
-                cursor: 'pointer',
-                transitionProperty: 'opacity',
-                transitionDuration: '2s',
-            }}>
+            className={'flex-fill p-2 m-2 project-category-button-wrapper'}>
             <div
+                onClick={() => props.onPress()}
                 key={'category-' + props.categoryName}
-                style={{
-                    ...defaultText,
-                    ...bold,
-                    color: 'black',
-                    wordWrap: 'normal',
-                    textAlign: 'center',
-                }}>
+                className={'default-text bold-text project-category-button'}>
                 {props.categoryName}
             </div>
         </div>

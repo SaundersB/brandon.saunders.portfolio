@@ -49,3 +49,16 @@ $inactive-color: #a9a9a9;
 .project-category-selector-wrapper {
     max-width: 1080px;
 }
+
+.project-category-button-wrapper {
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+.project-category-button {
+    color: black;
+    word-wrap: normal;
+    text-align: center;
+}
