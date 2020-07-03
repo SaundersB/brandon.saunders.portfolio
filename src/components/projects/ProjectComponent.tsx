@@ -20,7 +20,6 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     const year = projectObj.startYear !== projectObj.endYear ? projectObj.startYear + '-' + projectObj.endYear : projectObj.endYear;
     const teamPercentage = (100 - Number(projectObj.estimatedContributionPercentage)) / 100;
     const myPercentage = Number(projectObj.estimatedContributionPercentage) / 100;
-    const soloProject = myPercentage >= 1;
     let developerIcons = [];
     for(let i =0; i < Number(projectObj.teamSize); i++){
         developerIcons.push(<img width={25} height={25} src="https://img.icons8.com/cotton/64/000000/developer.png" alt={'developer'}/>)
@@ -55,7 +54,7 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                 <ProjectSection title={'Skills'}>
                     <TechnologiesComponent technologies={projectObj.tags}/>
                 </ProjectSection>
-                {!soloProject && <ProjectSection title={'Statistics'}>
+                <ProjectSection title={'Statistics'}>
                     <div className={'row'}>
                         <div className={'col align-content-center'} style={{...topPadding}}>
                             <h4>Contribution Breakdown</h4>
@@ -82,7 +81,6 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                         </div>
                     </div>
                 </ProjectSection>
-                }
             </CardComponent>
         </div>
     )
