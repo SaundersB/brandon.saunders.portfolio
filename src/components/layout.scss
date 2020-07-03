@@ -18,3 +18,27 @@ $inactive-color: #a9a9a9;
     max-height: 300px;
     max-width: 300px;
 }
+
+
+.default-text {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+}
+
+.white-text {
+    color: #ffffff
+}
+
+.header {
+    font-size: 1.5rem
+}
+
+.header-two {
+    font-size: 2.25rem;
+}
+
+.bold-text {
+    font-weight: bold
+}
+

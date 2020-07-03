@@ -29,7 +29,7 @@ export default function Welcome() {
                             render={(data) => (
                                 <Img key={'image'}
                                      fixed={data.fileName.childImageSharp.fixed}
-                                     className={'profile-image '}
+                                     className={'profile-image'}
                                 />
                             )
                             }
@@ -39,53 +39,24 @@ export default function Welcome() {
                 <div
                     className="d-flex col-xs-12 col-lg-4 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto align-self-center">
                     <div className="col align-content-between">
-                        <div style={{
-                            ...defaultText,
-                            ...whiteText,
-                            ...header,
-                        }}>
+                        <div className={'default-text white-text header'}>
                             Hello. My name is<br/>
                         </div>
-                        <div style={{
-                            ...defaultText,
-                            ...whiteText,
-                            ...headerTwo,
-                        }}>
+                        <div className={'default-text white-text header-two'}>
                             Brandon Saunders.
                         </div>
-                        <div style={{
-                            ...defaultText,
-                            ...whiteText,
-                            ...header,
-                        }}>
+                        <div className={'default-text white-text header'}>
                             I'm a full-stack developer specialized in frontend and backend development for complex
                             scalable web apps.
                         </div>
-                        <div style={{
-                            ...defaultText,
-                            ...whiteText,
-                            ...header,
-                        }}>
-                            Check out my <Link style={{
-                            ...defaultText,
-                            ...whiteText,
-                            ...header,
-                            textDecoration: 'underline',
+                        <div className={'default-text white-text header'}>
+                            Check out my <Link  className={'default-text white-text header'} style={{
                             cursor: 'pointer'
                         }} to={'/projects'}>projects</Link>.
                         </div>
-                        <div
-                            onClick={() => window.open(SocialMediaConstants.EMAIL)}
-                            style={{
-                                ...defaultText,
-                                ...whiteText,
-                                ...header,
-                                textDecoration: 'underline',
-                                cursor: 'pointer',
-                            }}
-                        >
+                        <Link className={'default-text white-text header '} onClick={() => window.open(SocialMediaConstants.EMAIL)} to={'/'}>
                             Let's work together.
-                        </div>
+                        </Link>
                     </div>
                 </div>
         </div>)
