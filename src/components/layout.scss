@@ -42,3 +42,10 @@ $inactive-color: #a9a9a9;
     font-weight: bold
 }
 
+.projects-container {
+    background-color: $base-color;
+}
+
+.project-category-selector-wrapper {
+    max-width: 1080px;
+}

@@ -11,28 +11,12 @@ export default function ProjectCategorySelectorComponent({data}: any) {
         setProjectsByCategory(parseProjectsData(data));
     }, []);
     return (
-        <div style={{
-            backgroundColor: baseColor,
-            minHeight: '100vh',
-            ...defaultPadding
-        }}>
-            <div key={'project-category-selector-wrapper'} style={{
-                maxWidth: 1080,
-                padding: `0 0 0`,
-                margin: `0 auto`,
-            }}>
+        <div className={'projects-container p-2'}>
+            <div key={'project-category-selector-wrapper'}
+                 className={'project-category-selector-wrapper p-auto m-auto'}>
                 <div
-                    key={'project-category-section'}
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        flexWrap: 'wrap',
-                        alignItems: 'stretch',
-                        paddingTop: 5,
-                        paddingLeft: 5,
-                        paddingRight: 5
-                    }}>
+                    key={'project-category-section' }
+                    className={'d-flex flex-row justify-content-space-between flex-wrap align-items-stretch'}>
                     {
                         getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
                     }
