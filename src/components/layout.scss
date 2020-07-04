@@ -1,6 +1,7 @@
 $start-color: #1d1d1d;
 $base-color: #85b4ff;
 $inactive-color: #a9a9a9;
+$blended-color: #58729c;
 
 .container {
     min-height: 100vh;
@@ -51,11 +52,11 @@ $inactive-color: #a9a9a9;
 }
 
 .projects-container {
-    background-color: $base-color;
+    background-color: $blended-color;
 }
 
 .projects-information-header {
-    background-color: #0069c8;
+    background-color: #2f3644
 }
 
 .project-category-selector-wrapper {
