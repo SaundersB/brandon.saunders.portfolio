@@ -40,12 +40,12 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                     <TechnologiesComponent technologies={projectObj.tags}/>
                 </ProjectSection>
                 <ProjectSection title={'Statistics'}>
-                    <div className={'row'}>
-                        <div className={'col align-content-center pt-2'}>
+                    <div className={'d-flex row p-2'}>
+                        <div className={'col align-content-center'}>
                             <h4>Contribution Breakdown</h4>
                             <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
                                       outerRadius={0}/>
-                            <div className={'row align-items-center'}>
+                            <div className={'row align-items-center '}>
                                 <div className={'project-statistics__my_contribution_block p-1 m-2'}/>
                                 <div className={'bold-text default-text'}>
                                     My Contribution: {myPercentage * 100}%
