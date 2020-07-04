@@ -46,13 +46,13 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                             <h4>Contribution Breakdown</h4>
                             <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
                                       outerRadius={0}/>
-                            <div className={'row align-items-center '}>
+                            <div className={'row align-items-center statistics__team-text'}>
                                 <div className={'project-statistics__my_contribution_block p-1 m-2'}/>
                                 <div className={'bold-text default-text'}>
                                     My Contribution: {myPercentage * 100}%
                                 </div>
                             </div>
-                            <div className={'row align-items-center'}>
+                            <div className={'row align-items-center statistics__team-text'}>
                                 <div className={'project-statistics__team_contribution_block p-1 m-2'}/>
                                 <div className={'bold-text default-text'}>
                                     Teams Contribution: {teamPercentage * 100}%

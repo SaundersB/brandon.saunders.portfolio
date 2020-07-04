@@ -86,4 +86,6 @@ $inactive-color: #a9a9a9;
     background-color: $inactive-color;
 }
 
-
+.statistics__team-text {
+    flex-wrap: nowrap;
+}
