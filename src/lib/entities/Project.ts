@@ -7,6 +7,7 @@ export interface ProjectInterface {
     tags: string[];
     image: string;
     description: string;
+    technologyReasoning: string;
     estimatedContributionPercentage: number;
     teamSize: number;
 }
@@ -20,6 +21,7 @@ export default class Project {
     private readonly _tags: object
     private readonly _image: string
     private readonly _description: string
+    private readonly _technologyReasoning: string
     private readonly _estimatedContributionPercentage: Number
     private readonly _teamSize: Number
 
@@ -32,6 +34,7 @@ export default class Project {
         this._tags = projectData.tags;
         this._image = projectData.image;
         this._description = projectData.description;
+        this._technologyReasoning = projectData.technologyReasoning;
         this._estimatedContributionPercentage = projectData.estimatedContributionPercentage;
         this._teamSize = projectData.teamSize;
     }
@@ -66,6 +69,10 @@ export default class Project {
 
     get description(): string {
         return this._description;
+    }
+
+    get technologyReasoning(): string {
+        return this._technologyReasoning;
     }
 
     get estimatedContributionPercentage(): Number {

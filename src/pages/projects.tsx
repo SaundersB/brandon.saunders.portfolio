@@ -15,6 +15,7 @@ export const query = graphql`
                     url
                     videoUrl
                     description
+                    technologyReasoning
                     tags
                     startYear
                     endYear

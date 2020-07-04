@@ -29,21 +29,32 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                     project={project}
                 />
                 <div key={'project-name-' + projectObj.name}
-                     className={'pl-2 pr-2 pt-2 bold-text default-text text-center black-text header'}>
+                     className={'p-2 bold-text default-text text-center black-text header'}>
                     {projectObj.name + ' | ' + year}
                 </div>
-                <div key={'project-description-' + projectObj.name}
-                     className={'default-text p-2'}>
-                    {projectObj.description}
-                </div>
+                <ProjectSection title={'Details'}>
+                    <div className={'d-flex row p-2 flex-wrap'}>
+                        <div className={'col p-0'}>
+                            <div className={'header'}>Description</div>
+                            <div className={'default-text pb-2'}>
+                                {projectObj.description}
+                            </div>
+                            <div className={'header'}>Technology Stack</div>
+                            <div className={'default-text'}>
+                                {projectObj.technologyReasoning}
+                            </div>
+                        </div>
+                    </div>
+                </ProjectSection>
+                <div className={'pb-2'}/>
                 <ProjectSection title={'Skills'}>
                     <TechnologiesComponent technologies={projectObj.tags}/>
                 </ProjectSection>
                 <div className={'pb-2'}/>
                 <ProjectSection title={'Statistics'}>
                     <div className={'d-flex row p-2 flex-wrap'}>
-                        <div className={'col align-content-center'}>
-                            <h4>Contribution Breakdown</h4>
+                        <div className={'col p-0 align-content-center'}>
+                            <div className={'header'}>Contribution Breakdown</div>
                             <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
                                       outerRadius={0}/>
                             <div className={'row align-items-center statistics__team-text'}>
@@ -59,8 +70,8 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                                 </div>
                             </div>
                         </div>
-                        <div className={'col align-content-center'}>
-                            <h4>Team Size</h4>
+                        <div className={'col p-0 align-content-center'}>
+                            <div className={'header'}>Team Size</div>
                             <div className={'bold-text default-text'}>
                                 {developerIcons}
                             </div>
