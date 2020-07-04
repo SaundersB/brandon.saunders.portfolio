@@ -1,8 +1,6 @@
 import React from 'react';
 import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
-import {baseColor} from "../../styles/colors";
-import {defaultPadding} from "../../styles";
 
 export default function ProjectCategorySelectorComponent({data}: any) {
     const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('mobile');

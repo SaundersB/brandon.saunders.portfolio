@@ -1,7 +1,4 @@
 import React from 'react';
-import {bold, defaultText, header, whiteText} from "../../styles/typography";
-import {defaultPadding, horizontalPadding} from "../../styles";
-import {baseColor} from "../../styles/colors";
 
 interface ProjectSectionInterface {
     title: string;
@@ -15,19 +12,10 @@ export default function ProjectSection(props: ProjectSectionInterface) {
         <div style={{}}>
             <div
                 onClick={() => setOpen(!open)}
-                style={{
-                    ...defaultText,
-                    ...defaultPadding,
-                    ...whiteText,
-                    ...bold,
-                    cursor: "pointer",
-                    backgroundColor: baseColor,
-                }}>
+                className={'default-text p-2 bold-text white-text projects-container mouse-pointer'}>
                 {props.title} {symbol}
             </div>
-            <div style={{
-                ...horizontalPadding,
-            }}>
+            <div className={'pl-2 pr-2'}>
                 {open && props.children}
             </div>
         </div>

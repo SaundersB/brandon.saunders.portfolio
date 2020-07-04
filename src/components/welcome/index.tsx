@@ -2,8 +2,6 @@ import React from 'react';
 import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
 import Img from "gatsby-image/withIEPolyfill"
-import {defaultText, header, headerTwo, whiteText} from "../../styles/typography";
-import {baseColor, startColor} from "../../styles/colors";
 
 export const query = graphql`
     query {

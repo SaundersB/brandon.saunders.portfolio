@@ -27,7 +27,15 @@ $inactive-color: #a9a9a9;
 }
 
 .white-text {
-    color: #ffffff
+    color: #ffffff;
+}
+
+.black-text {
+    color: #000000;
+}
+
+.mouse-pointer {
+    cursor: pointer;
 }
 
 .header {
@@ -62,3 +70,20 @@ $inactive-color: #a9a9a9;
     word-wrap: normal;
     text-align: center;
 }
+
+%project-statistics__block {
+    width: 15px;
+    height: 15px;
+}
+
+.project-statistics__my_contribution_block {
+    @extend %project-statistics__block;
+    background-color: $base-color;
+}
+
+.project-statistics__team_contribution_block {
+    @extend %project-statistics__block;
+    background-color: $inactive-color;
+}
+
+
