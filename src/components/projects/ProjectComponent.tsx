@@ -23,7 +23,7 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     }
     return (
         <div key={'project-' + projectObj.name}
-             className={'m-2'}>
+             className={'m-2 '}>
             <CardComponent>
                 <ProjectMediaComponent
                     project={project}
@@ -39,8 +39,9 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                 <ProjectSection title={'Skills'}>
                     <TechnologiesComponent technologies={projectObj.tags}/>
                 </ProjectSection>
+                <div className={'pb-2'}/>
                 <ProjectSection title={'Statistics'}>
-                    <div className={'d-flex row p-2'}>
+                    <div className={'d-flex row p-2 flex-wrap'}>
                         <div className={'col align-content-center'}>
                             <h4>Contribution Breakdown</h4>
                             <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
