@@ -9,7 +9,7 @@ export default function ProjectCategorySelectorComponent({data}: any) {
         setProjectsByCategory(parseProjectsData(data));
     }, []);
     return (
-        <div className={'projects-container p-2'}>
+        <div className={'projects-container p-2 container'}>
             <div key={'project-category-selector-wrapper'}
                  className={'project-category-selector-wrapper p-auto m-auto'}>
                 <div
