@@ -9,53 +9,31 @@ interface HeaderInterface {
 
 const Header = ({siteTitle}: HeaderInterface) => (
     <div
+        className={'d-flex justify-content-between'}
         style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            flex: 1,
             minHeight: 70,
         }}
     >
-        <div style={{
-            flex: 1,
-            alignSelf: 'center',
-        }}>
+        <div className={'align-self-center'}>
             <div>
                 <SocialMediaLinksComponent/>
             </div>
         </div>
-        <div style={{
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            paddingRight: '1rem'
-        }}>
-            <h5 style={{margin: 0, textAlign: 'left', paddingLeft: 5}}>
+        <div className={'d-flex flex-row align-items-center pr-4'}>
+            <div className={'m-0 pl-2'}>
                 <Link
                     to="/"
-                    style={{
-                        color: '#000',
-                        textDecoration: `none`,
-                        fontSize: '1rem'
-                    }}
-                >
-                    About
+                    className={'header black-text'}>
+                        About
                 </Link>
-            </h5>
-            <h5 style={{margin: 0, paddingLeft: '1rem'}}>
+            </div>
+            <div className={'m-0 pl-4'}>
                 <Link
                     to="/projects"
-                    style={{
-                        color: '#000',
-                        textDecoration: `none`,
-                        fontSize: '1rem'
-                    }}
-                >
-                    Projects
+                    className={'header black-text'}>
+                        Projects
                 </Link>
-            </h5>
+            </div>
             {/*<h5 style={{ margin: 0, paddingLeft: '1rem' }}>*/}
             {/*    <Link*/}
             {/*        to="/resume"*/}
