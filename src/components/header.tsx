@@ -28,7 +28,7 @@ const Header = ({siteTitle}: HeaderInterface) => {
                 Brandon Saunders Portfolio
             </Link>
         </div>
-        <div className="navbar__link navbar__link-toggle">
+        <div className="navbar__link navbar__link-toggle p-2">
             <FontAwesomeIcon icon={faBars} className="fas fa-bars" onClick={() => classToggle()}/>
         </div>
         <ul className={'navbar__items navbar__right_side m-0'}>
