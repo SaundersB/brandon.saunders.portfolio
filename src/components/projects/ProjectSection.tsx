@@ -9,10 +9,10 @@ export default function ProjectSection(props: ProjectSectionInterface) {
     const [open, setOpen] = React.useState(false);
     const symbol = open ? '-' : '+';
     return (
-        <div style={{}}>
+        <div>
             <div
                 onClick={() => setOpen(!open)}
-                className={'default-text p-2 bold-text white-text projects-container mouse-pointer'}>
+                className={'default-text p-2 bold-text white-text projects-information-header mouse-pointer'}>
                 {props.title} {symbol}
             </div>
             <div className={'pl-2 pr-2'}>
