@@ -39,10 +39,12 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                             <div className={'default-text pb-2'}>
                                 {projectObj.description}
                             </div>
-                            <div className={'header-three bold-text'}>TECH STACK</div>
-                            <div className={'default-text pb-2'}>
+                            { projectObj.techStack && <div><div className={'header-three bold-text'}>TECH STACK</div>
+                                <div className={'default-text pb-2'}>
                                 {projectObj.techStack}
+                                </div>
                             </div>
+                            }
                             <div className={'header-three bold-text'}>TECH SELECTION PROCESS</div>
                             <div className={'default-text'}>
                                 {projectObj.techReasoning}
