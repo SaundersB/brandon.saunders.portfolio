@@ -81,6 +81,13 @@ $blended-color: #58729c;
     height: 15px;
 }
 
+.project-card {
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px #e6e6e6, 1px 1px 1px 1px $inactive-color;
+    background-color: white;
+}
+
 .project-statistics__my_contribution_block {
     @extend %project-statistics__block;
     background-color: $base-color;

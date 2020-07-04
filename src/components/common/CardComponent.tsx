@@ -6,11 +6,7 @@ interface CardComponentInterface {
 
 export default function CardComponent(props: CardComponentInterface) {
     return (
-        <div style={{
-            borderRadius: 5,
-            backgroundColor: 'white',
-            border: "0.5rem solid white",
-        }}>
+        <div className={'p-2 mb-4 project-card'}>
             {props.children}
         </div>
     )

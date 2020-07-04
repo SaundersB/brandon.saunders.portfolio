@@ -23,7 +23,7 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     }
     return (
         <div key={'project-' + projectObj.name}
-             className={'m-2 '}>
+             className={'m-2'}>
             <CardComponent>
                 <ProjectMediaComponent
                     project={project}
