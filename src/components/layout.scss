@@ -54,16 +54,22 @@ $blended-color: #58729c;
     cursor: pointer;
 }
 
+.sub-text {
+    font-size: 0.9rem;
+}
+
 .header {
     @extend %site-font;
     font-size: 1.5rem
 }
 
 .header-two {
+    @extend %site-font;
     font-size: 1.2rem;
 }
 
 .header-three {
+    @extend %site-font;
     font-size: 1.1rem;
 }
 

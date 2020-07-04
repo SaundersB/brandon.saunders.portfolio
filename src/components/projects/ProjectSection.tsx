@@ -12,7 +12,7 @@ export default function ProjectSection(props: ProjectSectionInterface) {
         <div>
             <div
                 onClick={() => setOpen(!open)}
-                className={'header-two p-2 bold-text white-text projects-information-header mouse-pointer'}>
+                className={'sub-text p-2 bold-text white-text projects-information-header mouse-pointer'}>
                 {props.title} {symbol}
             </div>
             <div className={'pl-2 pr-2'}>
