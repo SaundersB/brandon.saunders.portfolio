@@ -3,7 +3,7 @@ import ProjectCategoryComponent from "./ProjectCategoryComponent";
 import ProjectComponent from "./ProjectComponent";
 
 export default function ProjectCategorySelectorComponent({data}: any) {
-    const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('mobile');
+    const [selectedCategoryKey, setSelectedCategoryKey] = React.useState('MOBILE');
     const [projectsByCategory, setProjectsByCategory] = React.useState([]);
     React.useEffect(() => {
         setProjectsByCategory(parseProjectsData(data));

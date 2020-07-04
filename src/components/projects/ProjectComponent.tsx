@@ -19,7 +19,7 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     const myPercentage = Number(projectObj.estimatedContributionPercentage) / 100;
     let developerIcons = [];
     for(let i =0; i < Number(projectObj.teamSize); i++){
-        developerIcons.push(<img width={25} height={25} src="https://img.icons8.com/cotton/64/000000/developer.png" alt={'developer'}/>)
+        developerIcons.push(<img className={'mr-2'} width={25} height={25} src="https://img.icons8.com/cotton/64/000000/developer.png" alt={'developer'}/>)
     }
     return (
         <div key={'project-' + projectObj.name}
@@ -29,17 +29,17 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                     project={project}
                 />
                 <div key={'project-name-' + projectObj.name}
-                     className={'p-2 bold-text default-text text-center black-text header'}>
-                    {projectObj.name + ' | ' + year}
+                     className={'p-2 default-text text-center black-text header'}>
+                    {projectObj.name.toUpperCase() + ' | ' + year}
                 </div>
-                <ProjectSection title={'Details'}>
+                <ProjectSection title={'DETAILS'}>
                     <div className={'d-flex row p-2 flex-wrap'}>
                         <div className={'col p-0'}>
-                            <div className={'header'}>Description</div>
+                            <div className={'header-three bold-text'}>DESCRIPTION</div>
                             <div className={'default-text pb-2'}>
                                 {projectObj.description}
                             </div>
-                            <div className={'header'}>Technology Stack</div>
+                            <div className={'header-three bold-text'}>TECH STACK</div>
                             <div className={'default-text'}>
                                 {projectObj.technologyReasoning}
                             </div>
@@ -47,32 +47,32 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                     </div>
                 </ProjectSection>
                 <div className={'pb-2'}/>
-                <ProjectSection title={'Skills'}>
+                <ProjectSection title={'SKILLS'}>
                     <TechnologiesComponent technologies={projectObj.tags}/>
                 </ProjectSection>
                 <div className={'pb-2'}/>
-                <ProjectSection title={'Statistics'}>
+                <ProjectSection title={'STATISTICS'}>
                     <div className={'d-flex row p-2 flex-wrap'}>
                         <div className={'col p-0 align-content-center'}>
-                            <div className={'header'}>Contribution Breakdown</div>
+                            <div className={'header-three bold-text'}>CONTRIBUTION BREAKDOWN</div>
                             <PieChart data={[myPercentage, teamPercentage]} width={200} height={200} innerRadius={0}
                                       outerRadius={0}/>
                             <div className={'row align-items-center statistics__team-text'}>
                                 <div className={'project-statistics__my_contribution_block p-1 m-2'}/>
                                 <div className={'bold-text default-text'}>
-                                    My Contribution: {myPercentage * 100}%
+                                    MY CONTRIBUTION: {myPercentage * 100}%
                                 </div>
                             </div>
                             <div className={'row align-items-center statistics__team-text'}>
                                 <div className={'project-statistics__team_contribution_block p-1 m-2'}/>
                                 <div className={'bold-text default-text'}>
-                                    Teams Contribution: {teamPercentage * 100}%
+                                    THE TEAMS CONTRIBUTION: {teamPercentage * 100}%
                                 </div>
                             </div>
                         </div>
                         <div className={'col p-0 align-content-center'}>
-                            <div className={'header'}>Team Size</div>
-                            <div className={'bold-text default-text'}>
+                            <div className={'header-three bold-text'}>TEAM SIZE</div>
+                            <div className={'pt-2 pr-2'}>
                                 {developerIcons}
                             </div>
                         </div>

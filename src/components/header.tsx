@@ -24,14 +24,14 @@ const Header = ({siteTitle}: HeaderInterface) => (
                 <Link
                     to="/"
                     className={'header black-text'}>
-                        About
+                        ABOUT
                 </Link>
             </div>
             <div className={'m-0 pl-4'}>
                 <Link
                     to="/projects"
                     className={'header black-text'}>
-                        Projects
+                        PROJECTS
                 </Link>
             </div>
             {/*<h5 style={{ margin: 0, paddingLeft: '1rem' }}>*/}
