@@ -59,7 +59,7 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                                 </div>
                             </div>
                         </div>
-                        <div className={'col align-content-center pt-2'}>
+                        <div className={'col align-content-center'}>
                             <h4>Team Size</h4>
                             <div className={'bold-text default-text'}>
                                 {developerIcons}
