@@ -19,8 +19,8 @@ const Header = ({siteTitle}: HeaderInterface) => (
                 <SocialMediaLinksComponent/>
             </div>
         </div>
-        <div className={'d-flex flex-row align-items-center pr-4'}>
-            <div className={'m-0 pl-2'}>
+        <div className={'d-flex flex-row flex-wrap align-items-center pr-4'}>
+            <div className={'m-0 pl-2 '}>
                 <Link
                     to="/"
                     className={'header black-text'}>
@@ -34,18 +34,13 @@ const Header = ({siteTitle}: HeaderInterface) => (
                         PROJECTS
                 </Link>
             </div>
-            {/*<h5 style={{ margin: 0, paddingLeft: '1rem' }}>*/}
+            {/*<div className={'m-0 pl-4'}>*/}
             {/*    <Link*/}
             {/*        to="/resume"*/}
-            {/*        style={{*/}
-            {/*            color: '#000',*/}
-            {/*            textDecoration: `none`,*/}
-            {/*            fontSize: '1rem'*/}
-            {/*        }}*/}
-            {/*    >*/}
-            {/*        Resume*/}
+            {/*        className={'header black-text'}>*/}
+            {/*        RESUME*/}
             {/*    </Link>*/}
-            {/*</h5>*/}
+            {/*</div>*/}
         </div>
     </div>
 )
