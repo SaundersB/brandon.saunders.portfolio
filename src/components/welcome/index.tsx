@@ -37,24 +37,23 @@ export default function Welcome() {
                 <div
                     className="d-flex col-xs-12 col-lg-7 col-md-7 p-0 p-md-1 m-auto ml-md-0 mb-auto mt-auto text-md-left text-sm-center text-center align-self-center">
                     <div className="col align-content-between">
-                        <div className={'default-text white-text header'}>
-                            Hello. My name is<br/>
-                        </div>
                         <div className={'default-text white-text header-two'}>
-                            Brandon Saunders.
-                        </div>
-                        <div className={'default-text white-text header'}>
+                            Hello. My name is<br/>
+                            <div className={'default-text white-text header'}>
+                                Brandon Saunders.
+                            </div>
                             I'm a full-stack developer specialized in frontend and backend development for complex
-                            scalable web apps.
+                            scalable web apps. <br/>
+                            <div>Check out my <Link  className={'default-text white-text header-two'} style={{
+                                cursor: 'pointer'
+                            }} to={'/projects'}>
+                                projects.
+                            </Link></div>
+                            <Link className={'default-text white-text header-two'}
+                                  onClick={() => window.open(SocialMediaConstants.EMAIL)} to={'/'}>
+                                 <div>Let's work together.</div>
+                            </Link>
                         </div>
-                        <div className={'default-text white-text header'}>
-                            Check out my <Link  className={'default-text white-text header'} style={{
-                            cursor: 'pointer'
-                        }} to={'/projects'}>projects</Link>.
-                        </div>
-                        <Link className={'default-text white-text header '} onClick={() => window.open(SocialMediaConstants.EMAIL)} to={'/'}>
-                            Let's work together.
-                        </Link>
                     </div>
                 </div>
         </div>)
