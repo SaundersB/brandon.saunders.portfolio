@@ -21,7 +21,7 @@ const Header = ({siteTitle}: HeaderInterface) => {
         {/*        <SocialMediaLinksComponent/>*/}
         {/*    </div>*/}
         {/*</div>*/}
-        <div className="navbar__link">
+        <div className={"navbar__link"}>
             <Link
                 to="/"
                 className={'header black-text'}>
