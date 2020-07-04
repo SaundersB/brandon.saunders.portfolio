@@ -3,6 +3,17 @@ $base-color: #85b4ff;
 $inactive-color: #a9a9a9;
 $blended-color: #58729c;
 
+%box-shadow {
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px #e6e6e6, 1px 1px 1px 1px $inactive-color;
+}
+
+%project-statistics__block {
+    width: 15px;
+    height: 15px;
+}
+
 .container {
     min-height: 100vh;
     min-width: 100vw;
@@ -64,8 +75,8 @@ $blended-color: #58729c;
 }
 
 .project-category-button-wrapper {
+    @extend %box-shadow;
     background-color: white;
-    border-radius: 3px;
     cursor: pointer;
     transition-property: opacity;
     transition-duration: 2s;
@@ -76,15 +87,8 @@ $blended-color: #58729c;
     text-align: center;
 }
 
-%project-statistics__block {
-    width: 15px;
-    height: 15px;
-}
-
 .project-card {
-    border-radius: 5px;
-    box-sizing: border-box;
-    box-shadow: 1px 1px 1px 1px #e6e6e6, 1px 1px 1px 1px $inactive-color;
+    @extend %box-shadow;
     background-color: white;
 }
 
