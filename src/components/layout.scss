@@ -77,6 +77,56 @@ $blended-color: #58729c;
     font-weight: bold
 }
 
+
+
+
+
+
+
+//d-flex flex-row flex-wrap align-items-center pr-4 justify-space-between
+.navbar {
+    display: flex;
+    min-height: 70px;
+}
+.navbar__link {
+    padding-right: 8px;
+}
+.navbar__items {
+    display: flex;
+    list-style-type: none;
+}
+.navbar__right_side {
+    margin-left: auto;
+}
+.navbar__link-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar__items,
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar__items {
+        display: none;
+    }
+    .navbar__right_side {
+        margin-left: 0;
+    }
+    .navbar__toggleShow {
+        display: flex;
+    }
+    .navbar__link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+
+
+
 .projects-container {
     background-color: $blended-color;
 }

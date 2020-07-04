@@ -1,49 +1,50 @@
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useRef} from "react"
 import SocialMediaLinksComponent from "./common/SocialMediaLinksComponent";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 interface HeaderInterface {
     siteTitle: string
 }
 
-const Header = ({siteTitle}: HeaderInterface) => (
-    <div
-        className={'d-flex justify-content-between'}
-        style={{
-            minHeight: 70,
-        }}
-    >
-        <div className={'align-self-center'}>
-            <div>
-                <SocialMediaLinksComponent/>
-            </div>
+const Header = ({siteTitle}: HeaderInterface) => {
+    function classToggle() {
+        const navs = document.querySelectorAll('.navbar__items')
+        navs.forEach(nav => nav.classList.toggle('navbar__toggleShow'));
+    }
+    return (
+    <div className={'navbar'}>
+        {/*<div className={'navbar__left_side align-self-center'}>*/}
+        {/*    <div className={'navbar__link'}>*/}
+        {/*        <SocialMediaLinksComponent/>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
+        <div className="navbar__link">
+            <Link
+                to="/"
+                className={'header black-text'}>
+                Brandon Saunders Portfolio
+            </Link>
         </div>
-        <div className={'d-flex flex-row flex-wrap align-items-center pr-4'}>
-            <div className={'m-0 pl-2 '}>
-                <Link
-                    to="/"
-                    className={'header black-text'}>
-                        ABOUT
-                </Link>
-            </div>
-            <div className={'m-0 pl-4'}>
-                <Link
-                    to="/projects"
-                    className={'header black-text'}>
-                        PROJECTS
-                </Link>
-            </div>
-            {/*<div className={'m-0 pl-4'}>*/}
-            {/*    <Link*/}
-            {/*        to="/resume"*/}
-            {/*        className={'header black-text'}>*/}
-            {/*        RESUME*/}
-            {/*    </Link>*/}
-            {/*</div>*/}
+        <div className="navbar__link navbar__link-toggle">
+            <FontAwesomeIcon icon={faBars} className="fas fa-bars" onClick={() => classToggle()}/>
         </div>
-    </div>
-)
+        <ul className={'navbar__items navbar__right_side m-0'}>
+            <Link
+                to="/projects"
+                className={'navbar__link header black-text'}>
+                PROJECTS
+            </Link>
+            {/*<Link*/}
+            {/*    to="/resume"*/}
+            {/*    className={'navbar__link header black-text'}>*/}
+            {/*    RESUME*/}
+            {/*</Link>*/}
+        </ul>
+    </div>);
+}
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
