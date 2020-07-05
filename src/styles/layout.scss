@@ -61,6 +61,9 @@ $blended-color: #58729c;
 .sub-text {
     font-size: 0.9rem;
 }
+.double-sub-text {
+    font-size: 0.6rem;
+}
 
 .header {
     @extend %site-font;
@@ -82,7 +85,7 @@ $blended-color: #58729c;
 }
 
 .rounded-corners {
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .navbar {
