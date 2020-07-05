@@ -52,11 +52,11 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                                 {projectObj.techReasoning}
                             </div>
                             <div className={'header-three bold-text'}>LENGTH OF PROJECT</div>
-                            <div className={'default-text pb-2'}>
+                            <div className={'default-text'}>
                                 {projectObj.lengthOfProject}
                             </div>
                             {projectObj.url && <div>
-                                <div className={'header-three bold-text'}>EXTERNAL LINK</div>
+                                <div className={'header-three bold-text pt-2'}>EXTERNAL LINK</div>
                                 <div className={'default-text'}>
                                     <a target={'_blank'} href={projectObj.url}>{projectObj.url}</a>
                                 </div>
