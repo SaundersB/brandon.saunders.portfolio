@@ -19,7 +19,7 @@ export default function Welcome() {
     return (
         <div
             className={'d-flex row gradient container'}>
-                <div className="d-flex col-xs-12 col-md-5 justify-content-md-end justify-content-center align-items-md-center align-items-end p-2">
+                <div className="d-flex col-xs-12 col-md-5 justify-content-md-end justify-content-center align-items-md-center align-items-end p-md-2 p-xs-0">
                     <div className="d-flex justify-content-end p-0">
                         <StaticQuery
                             key={'static-query'}
