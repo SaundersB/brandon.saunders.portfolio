@@ -21,6 +21,7 @@ export const query = graphql`
             title
             url
             description
+            achievements
             endDate
             developmentTools
             skills
@@ -90,9 +91,16 @@ function ResumePage(props: PageProps) {
                                                     <div className={'row justify-content-start pt-2'}>
                                                         {experienceObj.description}
                                                     </div>
+                                                    {experienceObj.achievements && <div className={'row pt-2'}>
+                                                        <div className={'header-two'}>Achievements</div>
+                                                        <div>{experienceObj.achievements}</div>
+                                                    </div> }
+                                                    <div className={'row pt-2'}>
+                                                        <div className={'header-two'}>Technologies Used</div>
+                                                    </div>
                                                     <div className={'row justify-content-center pt-2'}>
                                                         {experienceObj.skills.map((skill) => {
-                                                            return <div className={'p-1 m-1 base-background rounded-corners'}>{skill}</div>;
+                                                            return <div className={'p-1 m-1 base-background rounded-corners white-text'}>{skill}</div>;
                                                         })}
                                                     </div>
                                                 </div>

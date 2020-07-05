@@ -5,6 +5,7 @@ export interface ExperienceInterface {
     startDate: string;
     endDate: string;
     description: string;
+    achievements: string;
     developmentTools: string;
     skills: string;
     url: string;
@@ -19,6 +20,7 @@ export default class Experience {
     private readonly _startDate: string;
     private readonly _endDate: string;
     private readonly _description: string;
+    private readonly _achievements: string;
     private readonly _developmentTools: string[];
     private readonly _skills: string[];
     private readonly _companyDescription: string;
@@ -31,6 +33,7 @@ export default class Experience {
         this._startDate = experienceData.startDate;
         this._endDate = experienceData.endDate;
         this._description = experienceData.description;
+        this._achievements = experienceData.achievements;
         this._developmentTools = experienceData.developmentTools.split(', ');
         this._description = experienceData.description;
         this._skills = experienceData.skills.split(', ');
@@ -66,5 +69,8 @@ export default class Experience {
     }
     get title(): string {
         return this._title;
+    }
+    get achievements(): string {
+        return this._achievements;
     }
 }
