@@ -37,11 +37,11 @@ const Header = ({siteTitle}: HeaderInterface) => {
                 className={'navbar__link header black-text'}>
                 Projects
             </Link>
-            {/*<Link*/}
-            {/*    to="/resume"*/}
-            {/*    className={'navbar__link header black-text'}>*/}
-            {/*    RESUME*/}
-            {/*</Link>*/}
+            <Link
+                to="/resume"
+                className={'navbar__link header black-text'}>
+                Resume
+            </Link>
         </ul>
     </div>);
 }

@@ -27,6 +27,10 @@ $blended-color: #58729c;
     background-image: linear-gradient($start-color, $base-color);
 }
 
+.white-background {
+    background-color: white;
+}
+
 .profile-image {
     display: block;
     border-radius: 5px;
@@ -121,7 +125,7 @@ $blended-color: #58729c;
 
 
 
-.projects-container {
+.base-background {
     background-color: $blended-color;
 }
 
@@ -129,7 +133,7 @@ $blended-color: #58729c;
     background-color: #2f3644
 }
 
-.project-category-selector-wrapper {
+.content-wrapper {
     max-width: 1080px;
 }
 
@@ -146,7 +150,7 @@ $blended-color: #58729c;
     text-align: center;
 }
 
-.project-card {
+.content-card {
     @extend %box-shadow;
     background-color: white;
 }
