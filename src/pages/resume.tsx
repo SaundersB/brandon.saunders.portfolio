@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Experience from "../lib/entities/Experience";
 
 function parseEmploymentData(data: any): any {
-    let companies: [] = [];
+    let companies: any = [];
     data.allExperienceJson.edges.forEach((company: any) => companies.push(company.node))
     return companies;
 }
