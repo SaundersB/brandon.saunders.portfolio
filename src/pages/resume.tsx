@@ -77,6 +77,7 @@ function ResumePage(props: PageProps) {
                                     <div className={'header'}>Experience</div>
                                     <div className={'row pt-2'}>
                                         <div className={'resume__line'}/>
+                                        <span className="circle"/>
                                         <div className={'col'}>
                                             {experiences.map((experience: any) => {
                                                 const experienceObj = new Experience(experience);

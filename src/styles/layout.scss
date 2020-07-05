@@ -75,6 +75,11 @@ $blended-color: #58729c;
     top: 4px;
 }
 
+.circle:before {
+    content: ' \25CF';
+    font-size: 20px;
+}
+
 .header {
     @extend %site-font;
     font-size: 1.5rem
