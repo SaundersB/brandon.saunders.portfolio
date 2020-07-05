@@ -18,8 +18,9 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
     const teamPercentage = (100 - Number(projectObj.estimatedContributionPercentage)) / 100;
     const myPercentage = Number(projectObj.estimatedContributionPercentage) / 100;
     let developerIcons = [];
-    for(let i =0; i < Number(projectObj.teamSize); i++){
-        developerIcons.push(<img className={'mr-2'} width={25} height={25} src="https://img.icons8.com/cotton/64/000000/developer.png" alt={'developer'}/>)
+    for (let i = 0; i < Number(projectObj.teamSize); i++) {
+        developerIcons.push(<img className={'mr-2'} width={25} height={25}
+                                 src="https://img.icons8.com/cotton/64/000000/developer.png" alt={'developer'}/>)
     }
     return (
         <div key={'project-' + projectObj.name}
@@ -39,15 +40,20 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                             <div className={'default-text pb-2'}>
                                 {projectObj.description}
                             </div>
-                            { projectObj.techStack && <div><div className={'header-three bold-text'}>TECH STACK</div>
+                            {projectObj.techStack && <div>
+                                <div className={'header-three bold-text'}>TECH STACK</div>
                                 <div className={'default-text pb-2'}>
-                                {projectObj.techStack}
+                                    {projectObj.techStack}
                                 </div>
                             </div>
                             }
                             <div className={'header-three bold-text'}>TECH SELECTION PROCESS</div>
-                            <div className={'default-text'}>
+                            <div className={'default-text pb-2'}>
                                 {projectObj.techReasoning}
+                            </div>
+                            <div className={'header-three bold-text'}>LENGTH OF PROJECT</div>
+                            <div className={'default-text'}>
+                                {projectObj.lengthOfProject}
                             </div>
                         </div>
                     </div>

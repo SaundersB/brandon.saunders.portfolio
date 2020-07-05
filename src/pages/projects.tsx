@@ -22,6 +22,7 @@ export const query = graphql`
                     endYear
                     estimatedContributionPercentage
                     teamSize
+                    lengthOfProject
                     imageOrientation
                     image {
                         childImageSharp {

@@ -11,6 +11,7 @@ export interface ProjectInterface {
     techStack: string;
     estimatedContributionPercentage: number;
     teamSize: number;
+    lengthOfProject: number;
 }
 
 export default class Project {
@@ -26,6 +27,7 @@ export default class Project {
     private readonly _techStack: string
     private readonly _estimatedContributionPercentage: Number
     private readonly _teamSize: Number
+    private readonly _lengthOfProject: Number
 
     constructor(projectData: ProjectInterface) {
         this._name = projectData.name;
@@ -40,6 +42,7 @@ export default class Project {
         this._techStack = projectData.techStack;
         this._estimatedContributionPercentage = projectData.estimatedContributionPercentage;
         this._teamSize = projectData.teamSize;
+        this._lengthOfProject = projectData.lengthOfProject;
     }
 
     get name(): string {
@@ -88,5 +91,9 @@ export default class Project {
 
     get teamSize(): Number {
         return this._teamSize;
+    }
+
+    get lengthOfProject(): Number {
+        return this._lengthOfProject;
     }
 }
