@@ -77,34 +77,38 @@ function ResumePage(props: PageProps) {
                                     <div className={'header'}>Experience</div>
                                     <div className={'row pt-2'}>
                                         <div className={'resume__line'}/>
-                                        <span className="circle"/>
                                         <div className={'col'}>
                                             {experiences.map((experience: any) => {
                                                 const experienceObj = new Experience(experience);
                                                 return (
-                                                    <div className={'col pb-4'} key={experienceObj.name}>
-                                                        <div className={'row justify-content-between'}>
-                                                            <div className={'header-two bold-text'}>{experienceObj.title}</div>
-                                                            <div className={'header-three'}>{experienceObj.name}</div>
-                                                        </div>
-                                                        <div className={'row justify-content-start pt-2'}>
-                                                            <div>{experienceObj.startDate}</div> -
-                                                            <div>{experienceObj.endDate}</div>
-                                                        </div>
-                                                        <div className={'row justify-content-start pt-2'}>
-                                                            {experienceObj.description}
-                                                        </div>
-                                                        {experienceObj.achievements && <div className={'row pt-2'}>
-                                                            <div className={'header-two'}>Achievements</div>
-                                                            <div>{experienceObj.achievements}</div>
-                                                        </div> }
-                                                        <div className={'row pt-2'}>
-                                                            <div className={'header-two'}>Technologies Used</div>
-                                                        </div>
-                                                        <div className={'row justify-content-center pt-2'}>
-                                                            {experienceObj.skills.map((skill) => {
-                                                                return <div className={'p-1 m-1 base-background rounded-corners bold-text double-sub-text white-text'}>{skill}</div>;
-                                                            })}
+                                                    <div className='col pl-0'>
+                                                        <div className={'col pb-4'} key={experienceObj.name}>
+                                                            <div className={'row justify-content-between'}>
+                                                                <div className={'row'}>
+                                                                    <span className="circle pr-1"/>
+                                                                    <div className={'header-two bold-text'}>{experienceObj.title}</div>
+                                                                </div>
+                                                                <div className={'header-three'}>{experienceObj.name}</div>
+                                                            </div>
+                                                            <div className={'row justify-content-start pt-2'}>
+                                                                <div>{experienceObj.startDate}</div> -
+                                                                <div>{experienceObj.endDate}</div>
+                                                            </div>
+                                                            <div className={'row justify-content-start pt-2'}>
+                                                                {experienceObj.description}
+                                                            </div>
+                                                            {experienceObj.achievements && <div className={'row pt-2'}>
+                                                                <div className={'header-two'}>Achievements</div>
+                                                                <div>{experienceObj.achievements}</div>
+                                                            </div> }
+                                                            <div className={'row pt-2'}>
+                                                                <div className={'header-two'}>Technologies Used</div>
+                                                            </div>
+                                                            <div className={'row justify-content-center pt-2'}>
+                                                                {experienceObj.skills.map((skill) => {
+                                                                    return <div className={'p-1 m-1 base-background rounded-corners bold-text double-sub-text white-text'}>{skill}</div>;
+                                                                })}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 )
