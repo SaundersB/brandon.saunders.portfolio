@@ -2,6 +2,7 @@ import * as React from "react";
 import {graphql, PageProps, StaticQuery} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Experience from "../lib/entities/Experience";
 
 function parseEmploymentData(data: any): any {
     let companies: [] = [];
@@ -17,6 +18,7 @@ export const query = graphql`
             id
             companyDescription
             name
+            title
             url
             description
             endDate
@@ -37,14 +39,14 @@ function ResumePage(props: PageProps) {
                 key={'static-query'}
                 query={query}
                 render={(data) => {
-                    const companies = parseEmploymentData(data);
-                    console.log(companies);
+                    const experiences = parseEmploymentData(data);
+                    console.log(experiences);
                     return (
-                        <div className={'d-flex row gradient container'}>
-                            <div className={'content-wrapper p-auto m-auto white-background p-4'}>
-                                <div className={'col p-0'}>
-                                    <div className={'row p-0'}>
-                                        <div className={'col p-0'}>
+                        <div className={'row gradient container justify-content-center align-content-center'}>
+                            <div className={'content-wrapper p-2 m-2 white-background p-4'}>
+                                <div className={'col'}>
+                                    <div className={'row'}>
+                                        <div className={'col'}>
                                             <div className={'header'}>
                                                 Brandon Saunders
                                             </div>
@@ -58,7 +60,7 @@ function ResumePage(props: PageProps) {
                                                 <a href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col p-0'}>
+                                        <div className={'col'}>
                                             <div>
                                                 <a href={'https://www.linkedin.com/in/saundersbrandon/'} target={'_blank'}>linkedin.com/in/saundersbrandon</a>
                                             </div>
@@ -67,12 +69,35 @@ function ResumePage(props: PageProps) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={'row p-0'}>
+                                    <div className={'col pt-2'}>
                                         <div className={'header'}>Career Summary</div>
                                         <div>Full stack software engineer with 5 years of experience building professional web and mobile applications, back- end cloud infrastructure, DevOps pipelines, and unique software experiences. Skilled with developing software in HIPAA and PCI DSS regulated industries to ensure highly secure software systems.</div>
                                     </div>
-                                    <div className={'row p-0'}>
+                                    <div className={'col pt-2'}>
                                         <div className={'header'}>Experience</div>
+                                        {experiences.map((experience: any) => {
+                                            const experienceObj = new Experience(experience);
+                                            return (
+                                                <div className={'col pb-4'} key={experienceObj.name}>
+                                                    <div className={'row justify-content-between'}>
+                                                        <div className={'header-two bold-text'}>{experienceObj.title}</div>
+                                                        <div className={'header-three'}>{experienceObj.name}</div>
+                                                    </div>
+                                                    <div className={'row justify-content-start pt-2'}>
+                                                        <div>{experienceObj.startDate}</div> -
+                                                        <div>{experienceObj.endDate}</div>
+                                                    </div>
+                                                    <div className={'row justify-content-start pt-2'}>
+                                                        {experienceObj.description}
+                                                    </div>
+                                                    <div className={'row justify-content-center pt-2'}>
+                                                        {experienceObj.skills.map((skill) => {
+                                                            return <div className={'p-1 m-1 base-background rounded-corners'}>{skill}</div>;
+                                                        })}
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>

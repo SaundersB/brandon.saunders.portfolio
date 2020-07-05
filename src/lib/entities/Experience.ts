@@ -1,5 +1,6 @@
 export interface ExperienceInterface {
     name: string;
+    title: string;
     workType: string;
     startDate: string;
     endDate: string;
@@ -12,6 +13,7 @@ export interface ExperienceInterface {
 
 export default class Experience {
     private readonly _name: string;
+    private readonly _title: string;
     private readonly _workType: string;
     private readonly _url: string;
     private readonly _startDate: string;
@@ -23,6 +25,7 @@ export default class Experience {
 
     constructor(experienceData: ExperienceInterface) {
         this._name = experienceData.name;
+        this._title = experienceData.title;
         this._workType = experienceData.workType;
         this._url = experienceData.url;
         this._startDate = experienceData.startDate;
@@ -60,5 +63,8 @@ export default class Experience {
     }
     get name(): string {
         return this._name;
+    }
+    get title(): string {
+        return this._title;
     }
 }

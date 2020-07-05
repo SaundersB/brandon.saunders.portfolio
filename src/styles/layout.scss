@@ -81,6 +81,10 @@ $blended-color: #58729c;
     font-weight: bold
 }
 
+.rounded-corners {
+    border-radius: 5px;
+}
+
 .navbar {
     display: flex;
     min-height: 70px;
@@ -121,9 +125,6 @@ $blended-color: #58729c;
         cursor: pointer;
     }
 }
-
-
-
 
 .base-background {
     background-color: $blended-color;
