@@ -82,7 +82,7 @@ function ResumePage(props: PageProps) {
                                                 const experienceObj = new Experience(experience);
                                                 return (
                                                     <div className='col pl-0'>
-                                                        <div className={'col pb-4'} key={experienceObj.name}>
+                                                        <div className={'col pb-4 flex-wrap'} key={experienceObj.name}>
                                                             <div className={'row justify-content-between'}>
                                                                 <div className={'row'}>
                                                                     <span className="circle pr-1"/>
