@@ -46,7 +46,7 @@ function ResumePage(props: PageProps) {
                         <div className={'row gradient container p-2 justify-content-center align-content-center'}>
                             <div className={'content-wrapper p-2 m-2 white-background p-4'}>
                                 <div className={'col'}>
-                                    <div className={'row'}>
+                                    <div className={'row flex-wrap'}>
                                         <div className={'col'}>
                                             <div className={'header'}>
                                                 Brandon Saunders
@@ -58,11 +58,11 @@ function ResumePage(props: PageProps) {
                                                 <a href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
                                             </div>
                                             <div>
-                                                <a href={'#'} target={'_blank'}>626-991-9323</a>
+                                                <a  href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col'}>
-                                            <div>
+                                        <div className={'col flex-wrap'}>
+                                            <div >
                                                 <a href={'https://www.linkedin.com/in/saundersbrandon/'} target={'_blank'}>linkedin.com/in/saundersbrandon</a>
                                             </div>
                                             <div>
