@@ -46,7 +46,7 @@ function ResumePage(props: PageProps) {
                     console.log(experiences);
                     return (
                         <div className={'row gradient justify-content-center align-content-center'}>
-                            <div className={'content-wrapper m-2 white-background'}>
+                            <div className={'content-wrapper m-md-5 white-background'}>
                                 <div className={'col'}>
                                     <div className={'row base-background'}>
                                         <div className={'col-md-3'}>
