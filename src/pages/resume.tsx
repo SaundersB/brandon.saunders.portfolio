@@ -45,33 +45,37 @@ function ResumePage(props: PageProps) {
                     console.log(experiences);
                     return (
                         <div className={'row gradient container justify-content-center align-content-center'}>
-                            <div className={'content-wrapper m-2 white-background'}>
+                            <div className={'content-wrapper m-2 p-2 white-background'}>
                                 <div className={'col'}>
                                     <div className={'row'}>
-                                        <div className={'col'}>
-                                            <div className={'header'}>
-                                                Brandon Saunders
+                                        <div className={'col-md-6'}>
+                                            <div className={'row'}>
+                                                <div className={'header'}>
+                                                    Brandon Saunders
+                                                </div>
                                             </div>
-                                            <div className={'header-two'}>
-                                                Full Stack Software Engineer
+                                            <div className={'row'}>
+                                                <div className={'header-two'}>
+                                                    Full Stack Software Engineer
+                                                </div>
                                             </div>
-                                            <div >
+                                            <div className={'row'}>
                                                 <a href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
                                             </div>
-                                            <div >
+                                            <div className={'row'}>
                                                 <a href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col mt-auto '}>
-                                            <div className={'row m-auto  flex-wrap'}>
+                                        <div className={'col-md-6'}>
+                                            <div className={'row'}>
                                                 <a href={'https://www.linkedin.com/in/saundersbrandon/'}
                                                    target={'_blank'}>linkedin.com/in/saundersbrandon</a>
                                             </div>
-                                            <div className={'row m-auto'}>
+                                            <div className={'row'}>
                                                 <a href={'https://github.com/SaundersB'}
                                                    target={'_blank'}>github.com/in/SaundersB</a>
                                             </div>
-                                            <div className={'row m-auto'}>
+                                            <div className={'row'}>
                                                 <a href={'https://brandonsaundersportfolio.com'}
                                                    target={'_blank'}>BrandonSaundersPortfolio.com</a>
                                             </div>
