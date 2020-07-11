@@ -50,25 +50,25 @@ function ResumePage(props: PageProps) {
                                 <div className={'col'}>
                                     <div className={'row base-background'}>
                                         <div className={'col-md-3'}>
-                                            <div className={'row p-2 p-md-0 justify-content-md-start justify-content-center'}>
+                                            <div className={'row justify-content-md-start justify-content-center'}>
                                                 <ProfilePhoto/>
                                             </div>
                                         </div>
                                         <div className={'col-md-5 justify-content-around d-flex flex-column'}>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
                                                 <div className={'header white-text'}>
                                                     Brandon Saunders
                                                 </div>
                                             </div>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
                                                 <div className={'header-two white-text'}>
                                                     Full Stack Software Engineer
                                                 </div>
                                             </div>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'} href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
                                             </div>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'} href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>

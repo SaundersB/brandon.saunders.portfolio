@@ -34,17 +34,16 @@ $blended-color: #58729c;
 @media only screen and (max-width: 768px) {
     .profile-image {
         border-radius: 5px;
-        width: 25%;
-        max-height: 50px;
-        max-width: 50px;
+        width: 100%;
+        max-height: 125px;
+        max-width: 125px;
+        margin: 2rem;
     }
 }
 
 .profile-image {
     display: block;
     width: 100%;
-    max-height: 250px;
-    max-width: 250px;
 }
 
 .word-wrap {
