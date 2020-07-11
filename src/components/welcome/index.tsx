@@ -2,18 +2,7 @@ import React from 'react';
 import {graphql, Link, StaticQuery} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
 import Img from "gatsby-image/withIEPolyfill"
-
-export const query = graphql`
-    query {
-        fileName: file(relativePath: {eq: "profile_photo.png"}) {
-            childImageSharp {
-                fixed {
-                    ...GatsbyImageSharpFixed
-                }
-            }
-        }
-    }
-`
+import ProfilePhoto from "../common/ProfilePhoto";
 
 export default function Welcome() {
     return (
@@ -21,17 +10,7 @@ export default function Welcome() {
             className={'d-flex row gradient container'}>
                 <div className="d-flex col-xs-12 col-md-5 justify-content-md-end justify-content-center align-items-md-center align-items-end p-md-2 p-xs-0">
                     <div className="d-flex justify-content-end p-0">
-                        <StaticQuery
-                            key={'static-query'}
-                            query={query}
-                            render={(data) => (
-                                <Img key={'image'}
-                                     fixed={data.fileName.childImageSharp.fixed}
-                                     className={'profile-image'}
-                                />
-                            )
-                            }
-                        />
+                        <ProfilePhoto/>
                     </div>
                 </div>
                 <div

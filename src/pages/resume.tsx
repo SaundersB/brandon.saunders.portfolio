@@ -3,6 +3,7 @@ import {graphql, PageProps, StaticQuery} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Experience from "../lib/entities/Experience";
+import ProfilePhoto from "../components/common/ProfilePhoto";
 
 function parseEmploymentData(data: any): any {
     let companies: any = [];
@@ -10,7 +11,7 @@ function parseEmploymentData(data: any): any {
     return companies;
 }
 
-export const query = graphql`
+export const experienceQuery = graphql`
     query experienceQuery {
         allExperienceJson(sort: {order: DESC, fields: endDate}) {
         edges {
@@ -39,7 +40,7 @@ function ResumePage(props: PageProps) {
             <SEO title="Resume"/>
             <StaticQuery
                 key={'static-query'}
-                query={query}
+                query={experienceQuery}
                 render={(data) => {
                     const experiences = parseEmploymentData(data);
                     console.log(experiences);
@@ -48,7 +49,10 @@ function ResumePage(props: PageProps) {
                             <div className={'content-wrapper m-2 p-2 white-background'}>
                                 <div className={'col'}>
                                     <div className={'row p-2'}>
-                                        <div className={'col-md-6'}>
+                                        <div className={'col-md-4'}>
+                                            <ProfilePhoto/>
+                                        </div>
+                                        <div className={'col-md-4'}>
                                             <div className={'row'}>
                                                 <div className={'header'}>
                                                     Brandon Saunders
@@ -66,7 +70,7 @@ function ResumePage(props: PageProps) {
                                                 <a href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col-md-6'}>
+                                        <div className={'col-md-4'}>
                                             <div className={'row'}>
                                                 <a href={'https://www.linkedin.com/in/saundersbrandon/'}
                                                    target={'_blank'}>linkedin.com/in/saundersbrandon</a>
