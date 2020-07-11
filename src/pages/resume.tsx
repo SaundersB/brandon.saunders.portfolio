@@ -46,40 +46,42 @@ function ResumePage(props: PageProps) {
                     console.log(experiences);
                     return (
                         <div className={'row gradient container justify-content-center align-content-center'}>
-                            <div className={'content-wrapper m-2 p-2 white-background'}>
+                            <div className={'content-wrapper m-2 white-background'}>
                                 <div className={'col'}>
-                                    <div className={'row p-2'}>
-                                        <div className={'col-md-4'}>
-                                            <ProfilePhoto/>
+                                    <div className={'row base-background'}>
+                                        <div className={'col-lg-4'}>
+                                            <div className={'row p-2 p-lg-0 justify-content-lg-start justify-content-center'}>
+                                                <ProfilePhoto/>
+                                            </div>
                                         </div>
-                                        <div className={'col-md-4'}>
-                                            <div className={'row'}>
-                                                <div className={'header'}>
+                                        <div className={'col-lg-4'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
+                                                <div className={'header white-text'}>
                                                     Brandon Saunders
                                                 </div>
                                             </div>
-                                            <div className={'row'}>
-                                                <div className={'header-two'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
+                                                <div className={'header-two white-text'}>
                                                     Full Stack Software Engineer
                                                 </div>
                                             </div>
-                                            <div className={'row'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
                                                 <a href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
                                             </div>
-                                            <div className={'row'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
                                                 <a href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col-md-4'}>
-                                            <div className={'row'}>
+                                        <div className={'col-lg-4'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
                                                 <a href={'https://www.linkedin.com/in/saundersbrandon/'}
                                                    target={'_blank'}>linkedin.com/in/saundersbrandon</a>
                                             </div>
-                                            <div className={'row'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
                                                 <a href={'https://github.com/SaundersB'}
                                                    target={'_blank'}>github.com/in/SaundersB</a>
                                             </div>
-                                            <div className={'row'}>
+                                            <div className={'row justify-content-lg-start justify-content-center'}>
                                                 <a href={'https://brandonsaundersportfolio.com'}
                                                    target={'_blank'}>BrandonSaundersPortfolio.com</a>
                                             </div>

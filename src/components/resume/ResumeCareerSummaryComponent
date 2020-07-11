@@ -1,0 +1,16 @@
+import * as React from "react";
+import {graphql, PageProps, StaticQuery} from "gatsby"
+
+const query = graphql`
+    query allResume {
+      allResumeJson {
+        edges {
+          node {
+          
+            careerSummary
+            
+          }
+        }
+      }
+    }
+`

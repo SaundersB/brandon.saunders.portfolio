@@ -31,12 +31,20 @@ $blended-color: #58729c;
     background-color: white;
 }
 
+@media only screen and (max-width: 991px) {
+    .profile-image {
+        border-radius: 5px;
+        width: 25%;
+        max-height: 50px;
+        max-width: 50px;
+    }
+}
+
 .profile-image {
     display: block;
-    border-radius: 5px;
     width: 100%;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 250px;
+    max-width: 250px;
 }
 
 
@@ -101,6 +109,10 @@ $blended-color: #58729c;
 
 .rounded-corners {
     border-radius: 25px;
+}
+
+.light-rounded-corners {
+    border-radius: 5px;
 }
 
 .navbar {

@@ -7,8 +7,8 @@ export const query = graphql`
     query {
         fileName: file(relativePath: {eq: "profile_photo.png"}) {
             childImageSharp {
-                fixed {
-                    ...GatsbyImageSharpFixed
+                fluid {
+                    ...GatsbyImageSharpFluid
                 }
             }
         }
@@ -23,7 +23,7 @@ export default function ProfilePhoto() {
             query={query}
             render={(data) => (
                 <Img key={'image'}
-                     fixed={data.fileName.childImageSharp.fixed}
+                     fluid={data.fileName.childImageSharp.fluid}
                      className={'profile-image'}
                 />
             )
