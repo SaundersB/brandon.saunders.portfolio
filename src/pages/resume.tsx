@@ -47,7 +47,7 @@ function ResumePage(props: PageProps) {
                         <div className={'row gradient container justify-content-center align-content-center'}>
                             <div className={'content-wrapper m-2 p-2 white-background'}>
                                 <div className={'col'}>
-                                    <div className={'row'}>
+                                    <div className={'row p-2'}>
                                         <div className={'col-md-6'}>
                                             <div className={'row'}>
                                                 <div className={'header'}>
@@ -82,7 +82,7 @@ function ResumePage(props: PageProps) {
                                         </div>
                                     </div>
                                     <div className={'row'}>
-                                        <div className={'col pt-2'}>
+                                        <div className={'col p-2'}>
                                             <div className={'header'}>Career Summary</div>
                                             <div>Full stack software engineer with 5 years of experience building
                                                 professional web and mobile applications, back- end cloud infrastructure,
@@ -93,11 +93,11 @@ function ResumePage(props: PageProps) {
                                         </div>
                                     </div>
                                     <div className={'row'}>
-                                        <div className={'col pt-2'}>
+                                        <div className={'col p-2'}>
                                             <div className={'header'}>Experience</div>
                                         </div>
                                     </div>
-                                    <div className={'row pt-2'}>
+                                    <div className={'row pt-2 p-0'}>
                                         <div className={'resume__line'}/>
                                         <div className={'col'}>
                                             {experiences.map((experience: any) => {
