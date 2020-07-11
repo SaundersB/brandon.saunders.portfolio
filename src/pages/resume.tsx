@@ -75,7 +75,9 @@ function ResumePage(props: PageProps) {
                                             <ResumeLinkComponent link={'https://github.com/SaundersB'}
                                                                  title={'github.com/in/SaundersB'}/>
                                             <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
-                                                                 title={'BrandonSaundersPortfolio.com'}/>
+                                                                 title={'brandonsaundersportfolio.com'}/>
+                                             <ResumeLinkComponent link={'https://stackoverflow.com/users/2466819/saundersb'}
+                                                                  title={'stackoverflow/saundersb'}/>
                                         </div>
                                     </div>
                                     <div className={'row'}>
