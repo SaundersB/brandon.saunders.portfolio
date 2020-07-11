@@ -22,16 +22,16 @@ const Header = ({siteTitle}: HeaderInterface) => {
         {/*    </div>*/}
         {/*</div>*/}
         <div className={"navbar__link p-0"}>
-            <Link
-                to="/"
-                className={'header black-text'}>
-                Brandon Saunders Portfolio
-            </Link>
         </div>
         <div className="navbar__link navbar__link-toggle p-2">
             <FontAwesomeIcon icon={faBars} className="fas fa-bars" onClick={() => classToggle()}/>
         </div>
         <ul className={'navbar__items navbar__right_side m-0'}>
+            <Link
+                to="/"
+                className={'navbar__link header black-text'}>
+                About
+            </Link>
             <Link
                 to="/projects"
                 className={'navbar__link header black-text'}>

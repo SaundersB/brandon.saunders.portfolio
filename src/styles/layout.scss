@@ -126,7 +126,7 @@ $blended-color: #58729c;
     min-height: 70px;
 }
 .navbar__link {
-    padding-right: 8px;
+    padding-right: 1.5rem;
 }
 .navbar__items {
     display: flex;
@@ -147,6 +147,9 @@ $blended-color: #58729c;
     .navbar__items {
         align-items: center;
         display: none;
+    }
+    .navbar__link {
+        padding: 0.5rem;
     }
     .navbar__right_side {
         margin-left: 0;
