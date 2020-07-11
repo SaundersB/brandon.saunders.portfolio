@@ -32,6 +32,7 @@ export const query = graphql`
       }
     }
 `
+
 function ResumePage(props: PageProps) {
     return (
         <Layout>
@@ -43,10 +44,10 @@ function ResumePage(props: PageProps) {
                     const experiences = parseEmploymentData(data);
                     console.log(experiences);
                     return (
-                        <div className={'row gradient container p-2 justify-content-center align-content-center'}>
-                            <div className={'content-wrapper p-2 m-2 white-background p-4'}>
+                        <div className={'row gradient container justify-content-center align-content-center'}>
+                            <div className={'content-wrapper m-2 white-background'}>
                                 <div className={'col'}>
-                                    <div className={'row flex-wrap'}>
+                                    <div className={'row'}>
                                         <div className={'col'}>
                                             <div className={'header'}>
                                                 Brandon Saunders
@@ -54,27 +55,44 @@ function ResumePage(props: PageProps) {
                                             <div className={'header-two'}>
                                                 Full Stack Software Engineer
                                             </div>
-                                            <div>
+                                            <div >
                                                 <a href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
                                             </div>
-                                            <div>
-                                                <a  href={'#'} target={'_blank'}>626-991-9323</a>
-                                            </div>
-                                        </div>
-                                        <div className={'col flex-wrap'}>
                                             <div >
-                                                <a href={'https://www.linkedin.com/in/saundersbrandon/'} target={'_blank'}>linkedin.com/in/saundersbrandon</a>
+                                                <a href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
-                                            <div>
-                                                <a href={'https://github.com/SaundersB'} target={'_blank'}>github.com/in/SaundersB</a>
+                                        </div>
+                                        <div className={'col mt-auto '}>
+                                            <div className={'row m-auto  flex-wrap'}>
+                                                <a href={'https://www.linkedin.com/in/saundersbrandon/'}
+                                                   target={'_blank'}>linkedin.com/in/saundersbrandon</a>
+                                            </div>
+                                            <div className={'row m-auto'}>
+                                                <a href={'https://github.com/SaundersB'}
+                                                   target={'_blank'}>github.com/in/SaundersB</a>
+                                            </div>
+                                            <div className={'row m-auto'}>
+                                                <a href={'https://brandonsaundersportfolio.com'}
+                                                   target={'_blank'}>BrandonSaundersPortfolio.com</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={'col p-0 pt-2'}>
-                                        <div className={'header'}>Career Summary</div>
-                                        <div>Full stack software engineer with 5 years of experience building professional web and mobile applications, back- end cloud infrastructure, DevOps pipelines, and unique software experiences. Skilled with developing software in HIPAA and PCI DSS regulated industries to ensure highly secure software systems.</div>
+                                    <div className={'row'}>
+                                        <div className={'col pt-2'}>
+                                            <div className={'header'}>Career Summary</div>
+                                            <div>Full stack software engineer with 5 years of experience building
+                                                professional web and mobile applications, back- end cloud infrastructure,
+                                                DevOps pipelines, and unique software experiences. Skilled with developing
+                                                software in HIPAA and PCI DSS regulated industries to ensure highly secure
+                                                software systems.
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className={'header'}>Experience</div>
+                                    <div className={'row'}>
+                                        <div className={'col pt-2'}>
+                                            <div className={'header'}>Experience</div>
+                                        </div>
+                                    </div>
                                     <div className={'row pt-2'}>
                                         <div className={'resume__line'}/>
                                         <div className={'col'}>
@@ -86,12 +104,15 @@ function ResumePage(props: PageProps) {
                                                             <div className={'row justify-content-between'}>
                                                                 <div className={'row'}>
                                                                     <span className="circle pr-1"/>
-                                                                    <div className={'header-two bold-text'}>{experienceObj.title}</div>
+                                                                    <div
+                                                                        className={'header-two bold-text'}>{experienceObj.title}</div>
                                                                 </div>
-                                                                <div className={'header-three'}>{experienceObj.name}</div>
+                                                                <div
+                                                                    className={'header-three'}>{experienceObj.name}</div>
                                                             </div>
                                                             <div className={'row justify-content-start pt-2'}>
-                                                                <div>{experienceObj.startDate}</div> -
+                                                                <div>{experienceObj.startDate}</div>
+                                                                -
                                                                 <div>{experienceObj.endDate}</div>
                                                             </div>
                                                             <div className={'row justify-content-start pt-2'}>
@@ -100,13 +121,14 @@ function ResumePage(props: PageProps) {
                                                             {experienceObj.achievements && <div className={'row pt-2'}>
                                                                 <div className={'header-two'}>Achievements</div>
                                                                 <div>{experienceObj.achievements}</div>
-                                                            </div> }
+                                                            </div>}
                                                             <div className={'row pt-2'}>
                                                                 <div className={'header-two'}>Technologies Used</div>
                                                             </div>
                                                             <div className={'row justify-content-center pt-2'}>
                                                                 {experienceObj.skills.map((skill) => {
-                                                                    return <div className={'p-1 m-1 base-background rounded-corners bold-text double-sub-text white-text'}>{skill}</div>;
+                                                                    return <div
+                                                                        className={'p-1 m-1 base-background rounded-corners bold-text double-sub-text white-text'}>{skill}</div>;
                                                                 })}
                                                             </div>
                                                         </div>
@@ -119,7 +141,7 @@ function ResumePage(props: PageProps) {
                             </div>
                         </div>
                     );
-                    }
+                }
                 }
             />
         </Layout>
