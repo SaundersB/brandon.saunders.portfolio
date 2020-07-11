@@ -72,18 +72,18 @@ function ResumePage(props: PageProps) {
                                                 <a className={'hyperlink'} href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col-md-4'}>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                        <div className={'col-md-4 justify-content-end d-flex flex-column'}>
+                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'}
                                                    href={'https://www.linkedin.com/in/saundersbrandon/'}
                                                    target={'_blank'}>linkedin.com/in/saundersbrandon</a>
                                             </div>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'}
                                                    href={'https://github.com/SaundersB'}
                                                    target={'_blank'}>github.com/in/SaundersB</a>
                                             </div>
-                                            <div className={'row justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'}
                                                    href={'https://brandonsaundersportfolio.com'}
                                                    target={'_blank'}>BrandonSaundersPortfolio.com</a>
