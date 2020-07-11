@@ -55,30 +55,30 @@ function ResumePage(props: PageProps) {
                                             </div>
                                         </div>
                                         <div className={'col-md-5 justify-content-around d-flex flex-column'}>
-                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
-                                                <div className={'header white-text'}>
-                                                    Brandon Saunders
+                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
+                                                <div className={'header white-text bold-text'}>
+                                                    BRANDON SAUNDERS
                                                 </div>
                                             </div>
-                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
                                                 <div className={'header-two white-text'}>
                                                     Full Stack Software Engineer
                                                 </div>
                                             </div>
-                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'} href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
                                             </div>
-                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'} href={'#'} target={'_blank'}>626-991-9323</a>
                                             </div>
                                         </div>
-                                        <div className={'col-md-4 justify-content-end d-flex flex-column'}>
-                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
+                                        <div className={'col-md-4 mb-3 justify-content-end d-flex flex-column'}>
+                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'}
                                                    href={'https://www.linkedin.com/in/saundersbrandon/'}
                                                    target={'_blank'}>linkedin.com/in/saundersbrandon</a>
                                             </div>
-                                            <div className={'row pb-3 justify-content-md-start justify-content-center'}>
+                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
                                                 <a className={'hyperlink'}
                                                    href={'https://github.com/SaundersB'}
                                                    target={'_blank'}>github.com/in/SaundersB</a>

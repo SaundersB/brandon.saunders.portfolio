@@ -31,6 +31,10 @@ $blended-color: #58729c;
     background-color: white;
 }
 
+.left-align-text {
+    text-align: left;
+}
+
 @media only screen and (max-width: 768px) {
     .profile-image {
         border-radius: 5px;
