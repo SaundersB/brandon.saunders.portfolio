@@ -31,7 +31,7 @@ $blended-color: #58729c;
     background-color: white;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
     .profile-image {
         border-radius: 5px;
         width: 25%;
@@ -47,6 +47,9 @@ $blended-color: #58729c;
     max-width: 250px;
 }
 
+.word-wrap {
+    word-wrap: break-word;
+}
 
 .default-text {
     @extend %site-font;
@@ -198,4 +201,17 @@ $blended-color: #58729c;
 
 .statistics__team-text {
     flex-wrap: nowrap;
+}
+
+.hyperlink {
+    /* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
