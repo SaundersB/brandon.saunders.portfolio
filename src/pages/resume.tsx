@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Experience from "../lib/entities/Experience";
 import ProfilePhoto from "../components/common/ProfilePhoto";
+import ResumeLinkComponent from "../components/common/ResumeLinkComponent";
 
 function parseEmploymentData(data: any): any {
     let companies: any = [];
@@ -65,29 +66,16 @@ function ResumePage(props: PageProps) {
                                                     Full Stack Software Engineer
                                                 </div>
                                             </div>
-                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
-                                                <a className={'hyperlink'} href={'mailto:BrandonNSaunders@gmail.com'}>BrandonNSaunders@gmail.com</a>
-                                            </div>
-                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
-                                                <a className={'hyperlink'} href={'#'} target={'_blank'}>626-991-9323</a>
-                                            </div>
+                                            <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'} title={'BrandonNSaunders@gmail.com'}/>
+                                            <ResumeLinkComponent link={'#'} title={'626-991-9323'}/>
                                         </div>
                                         <div className={'col-md-4 mb-3 justify-content-end d-flex flex-column'}>
-                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
-                                                <a className={'hyperlink'}
-                                                   href={'https://www.linkedin.com/in/saundersbrandon/'}
-                                                   target={'_blank'}>linkedin.com/in/saundersbrandon</a>
-                                            </div>
-                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
-                                                <a className={'hyperlink'}
-                                                   href={'https://github.com/SaundersB'}
-                                                   target={'_blank'}>github.com/in/SaundersB</a>
-                                            </div>
-                                            <div className={'row pb-2 justify-content-md-start justify-content-center'}>
-                                                <a className={'hyperlink'}
-                                                   href={'https://brandonsaundersportfolio.com'}
-                                                   target={'_blank'}>BrandonSaundersPortfolio.com</a>
-                                            </div>
+                                            <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
+                                                                 title={'linkedin.com/in/saundersbrandon'}/>
+                                            <ResumeLinkComponent link={'https://github.com/SaundersB'}
+                                                                 title={'github.com/in/SaundersB'}/>
+                                            <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
+                                                                 title={'BrandonSaundersPortfolio.com'}/>
                                         </div>
                                     </div>
                                     <div className={'row'}>

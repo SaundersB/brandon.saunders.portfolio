@@ -217,4 +217,10 @@ $blended-color: #58729c;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+    color: white;
+}
+
+.hyperlink:hover {
+    color: $base-color;
+    text-decoration: none;
 }
