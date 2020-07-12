@@ -301,6 +301,11 @@ $shade-darker-white: #eceef0;
     text-decoration: none;
 }
 
+.center-unordered-list {
+    display: table;
+    margin: 0 auto;
+}
+
 .no-bullets {
     list-style-type: none;
 }

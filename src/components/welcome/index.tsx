@@ -63,9 +63,9 @@ export default function Welcome() {
                 <div className={'row p-5'}>
                     <div className={'col-md-4'}>
                         <CardComponent children={
-                            <div className={''}>
+                            <div className={'my-3'}>
                                 <h3 className={'text-center'}>Frontend</h3>
-                                <ul className={'no-bullets pl-2'}>
+                                <ul className={'center-unordered-list no-bullets pl-2'}>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />React/Redux</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />JavaScript</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Vue</li>
@@ -77,9 +77,9 @@ export default function Welcome() {
                     </div>
                     <div className={'col-md-4'}>
                         <CardComponent children={
-                            <div className={''}>
+                            <div className={'my-3'}>
                                 <h3 className={'text-center'}>Backend</h3>
-                                <ul className={'no-bullets pl-2'}>
+                                <ul className={'center-unordered-list no-bullets pl-2'}>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />PHP</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Python</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Node.js</li>
@@ -92,9 +92,9 @@ export default function Welcome() {
                     </div>
                     <div className={'col-md-4'}>
                         <CardComponent children={
-                            <div>
+                            <div className={'my-3'}>
                                 <h3 className={'text-center'}>Others</h3>
-                                <ul className={'no-bullets pl-2'}>
+                                <ul className={'center-unordered-list no-bullets pl-2'}>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />DevOps</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />AWS Certified</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Automated Testing</li>
