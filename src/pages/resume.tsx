@@ -50,7 +50,7 @@ function ResumePage(props: PageProps) {
                     console.log(experiences);
                     return (
                         <div className={'row gradient full-size justify-content-center align-content-center'}>
-                            <div className={'inner-content-wrapper white-background'}>
+                            <div className={'inner-content-wrapper white-background mt-lg-4'}>
                                 <div className={'col'}>
                                     <div className={'row base-background'}>
                                         <div className={'col-md-3'}>

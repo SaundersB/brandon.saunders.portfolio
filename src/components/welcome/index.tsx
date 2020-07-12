@@ -30,7 +30,11 @@ export default function Welcome() {
                             <div>Check out my <Link  className={'default-text white-text header-two'} style={{
                                 cursor: 'pointer'
                             }} to={'/projects'}>
-                                projects.
+                                projects
+                            </Link> and <Link  className={'default-text white-text header-two'} style={{
+                                cursor: 'pointer'
+                            }} to={'/resume'}>
+                                resume.
                             </Link></div>
                             <Link className={'default-text white-text header-two'}
                                   onClick={() => window.open(SocialMediaConstants.EMAIL)} to={'/'}>
