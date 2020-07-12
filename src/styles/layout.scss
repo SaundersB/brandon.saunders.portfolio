@@ -147,16 +147,11 @@ $darker-base-color: #0964b0;
     display: flex;
     min-height: 70px;
 }
-.navbar__link {
-    padding-right: 1.5rem;
-}
 .navbar__items {
     display: flex;
     list-style-type: none;
 }
-.navbar__right_side {
-    margin-left: auto;
-}
+
 .navbar__link-toggle {
     display: none;
 }
@@ -167,11 +162,13 @@ $darker-base-color: #0964b0;
         flex-direction: column;
     }
     .navbar__items {
-        align-items: center;
+        align-items: start;
         display: none;
     }
     .navbar__link {
-        padding: 0.5rem;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-top: 0.5rem;
     }
     .navbar__right_side {
         margin-left: 0;

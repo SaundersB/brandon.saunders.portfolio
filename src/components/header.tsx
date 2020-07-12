@@ -15,34 +15,27 @@ const Header = ({siteTitle}: HeaderInterface) => {
         navs.forEach(nav => nav.classList.toggle('navbar__toggleShow'));
     }
     return (
-    <div className={'navbar darker-base-background'}>
-        {/*<div className={'navbar__left_side align-self-center'}>*/}
-        {/*    <div className={'navbar__link'}>*/}
-        {/*        <SocialMediaLinksComponent/>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
-        <div className={"navbar__link p-0"}>
-        </div>
-        <div className="navbar__link navbar__link-toggle p-auto">
-            <FontAwesomeIcon icon={faBars} color={'white'} className="fas fa-bars" onClick={() => classToggle()}/>
-        </div>
-        <ul className={'navbar__items navbar__right_side m-auto p-auto'}>
+    <div className={'navbar darker-base-background align-content-start'}>
+        <ul className={'navbar__items pl-0 m-0'}>
             <Link
                 to="/"
-                className={'navbar__link header white-text hyperlink'}>
+                className={'header white-text hyperlink'}>
                 About
             </Link>
             <Link
                 to="/projects"
-                className={'navbar__link header white-text hyperlink'}>
+                className={'pl-md-4 header white-text hyperlink'}>
                 Projects
             </Link>
             <Link
                 to="/resume"
-                className={'navbar__link header white-text hyperlink'}>
+                className={'pl-md-4 header white-text hyperlink'}>
                 Resume
             </Link>
         </ul>
+        <div className=" navbar__link-toggle p-2">
+            <FontAwesomeIcon icon={faBars} color={'white'} className="fas fa-bars" onClick={() => classToggle()}/>
+        </div>
     </div>);
 }
 
