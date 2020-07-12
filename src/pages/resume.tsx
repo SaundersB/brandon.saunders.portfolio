@@ -84,8 +84,8 @@ function ResumePage(props: PageProps) {
                                                 title={'stackoverflow/saundersb'}/>
                                         </div>
                                     </div>
-                                    <div className={'row'}>
-                                        <div className={'col p-2'}>
+                                    <div className={'row p-2'}>
+                                        <div className={'col'}>
                                             <div className={'header'}>Career Summary</div>
                                             <div>Full stack software engineer with 5 years of experience building
                                                 professional web and mobile applications, back- end cloud
@@ -98,12 +98,12 @@ function ResumePage(props: PageProps) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={'row'}>
-                                        <div className={'col p-2'}>
+                                    <div className={'row p-2'}>
+                                        <div className={'col'}>
                                             <div className={'header'}>Experience</div>
                                         </div>
                                     </div>
-                                    <div className={'row pt-2 p-0'}>
+                                    <div className={'row p-2'}>
                                         <div className={'resume__line'}/>
                                         <div className={'col'}>
                                             {experiences.map((experience: any) => {
