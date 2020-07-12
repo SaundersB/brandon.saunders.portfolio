@@ -15,7 +15,7 @@ const Header = ({siteTitle}: HeaderInterface) => {
         navs.forEach(nav => nav.classList.toggle('navbar__toggleShow'));
     }
     return (
-    <div className={'navbar'}>
+    <div className={'navbar darker-base-background'}>
         {/*<div className={'navbar__left_side align-self-center'}>*/}
         {/*    <div className={'navbar__link'}>*/}
         {/*        <SocialMediaLinksComponent/>*/}

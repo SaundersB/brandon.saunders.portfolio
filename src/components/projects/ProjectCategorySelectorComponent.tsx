@@ -9,7 +9,7 @@ export default function ProjectCategorySelectorComponent({data}: any) {
         setProjectsByCategory(parseProjectsData(data));
     }, []);
     return (
-        <div className={'flex-fill base-background pb-2'}>
+        <div className={'flex-fill pb-2'}>
             <div className={'inner-content-wrapper p-auto m-auto'}>
                 <div
                     key={'project-category-section' }

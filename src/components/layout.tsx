@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "../styles/layout.scss"
 import Header from "./header";
+import Footer from "./footer";
 
 interface LayoutInterface {
     children: any
@@ -20,6 +21,7 @@ const Layout = ({children}: LayoutInterface) => {
             <div>
                 <Header/>
                 <main>{children}</main>
+                <Footer/>
             </div>
         </>
     )

@@ -1,7 +1,8 @@
 $start-color: #1d1d1d;
-$base-color: #85b4ff;
+$base-color: #3f9eeb;
 $inactive-color: #a9a9a9;
 $blended-color: #58729c;
+$darker-base-color: #0964b0;
 
 %site-font {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -10,7 +11,7 @@ $blended-color: #58729c;
 %box-shadow {
     border-radius: 5px;
     box-sizing: border-box;
-    box-shadow: 1px 1px 1px 1px #e6e6e6, 1px 1px 1px 1px $inactive-color;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important;
 }
 
 %project-statistics__block {
@@ -21,6 +22,18 @@ $blended-color: #58729c;
 .full-size {
     min-height: 100vh;
     min-width: 100vw;
+}
+
+.darker-base-background {
+    background-color: $darker-base-color;
+}
+
+.base-background {
+    background-color: $base-color;
+}
+
+.blended-background {
+    background-color: $blended-color;
 }
 
 .gradient {
@@ -174,9 +187,6 @@ $blended-color: #58729c;
     }
 }
 
-.base-background {
-    background-color: $blended-color;
-}
 
 .projects-information-header {
     background-color: #2f3644
