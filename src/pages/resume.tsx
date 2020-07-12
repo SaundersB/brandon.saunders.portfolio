@@ -105,7 +105,7 @@ function ResumePage(props: PageProps) {
                                         <div className={'col'}>
                                             <div className={'header'}>Career Summary</div>
                                             <div>Full stack software engineer with 5 years of experience building
-                                                professional web and mobile applications, back- end cloud
+                                                professional web and mobile applications, back-end cloud
                                                 infrastructure,
                                                 DevOps pipelines, and unique software experiences. Skilled with
                                                 developing
