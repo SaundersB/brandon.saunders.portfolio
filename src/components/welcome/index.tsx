@@ -64,7 +64,7 @@ export default function Welcome() {
                     <div className={'col-md-4'}>
                         <CardComponent children={
                             <div className={'my-3'}>
-                                <h3 className={'text-center'}>Frontend</h3>
+                                <h3 className={'text-center'}>Front end</h3>
                                 <ul className={'center-unordered-list no-bullets pl-2'}>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />React/Redux</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />JavaScript</li>
@@ -78,7 +78,7 @@ export default function Welcome() {
                     <div className={'col-md-4'}>
                         <CardComponent children={
                             <div className={'my-3'}>
-                                <h3 className={'text-center'}>Backend</h3>
+                                <h3 className={'text-center'}>Back end</h3>
                                 <ul className={'center-unordered-list no-bullets pl-2'}>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />PHP</li>
                                     <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Python</li>
