@@ -85,20 +85,20 @@ function ResumePage(props: PageProps) {
                                         <div className={'col-md-5 ml-md-auto pt-2 mt-2'}>
                                             <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
                                                                  icon={faLinkedin}
-                                                                 wrapperStyles={'pl-2'}
+                                                                 wrapperStyles={'pl-md-2'}
                                                                  title={'linkedin.com/in/saundersbrandon'}/>
                                             <ResumeLinkComponent link={'https://github.com/SaundersB'}
                                                                  icon={faGithub}
-                                                                 wrapperStyles={'pl-2'}
+                                                                 wrapperStyles={'pl-md-2'}
                                                                  title={'github.com/in/SaundersB'}/>
                                             <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
                                                                  icon={faHome}
-                                                                 wrapperStyles={'pl-2'}
+                                                                 wrapperStyles={'pl-md-2'}
                                                                  title={'brandonsaundersportfolio.com'}/>
                                             <ResumeLinkComponent
                                                                     link={'https://stackoverflow.com/users/2466819/saundersb'}
                                                                     icon={faStackOverflow}
-                                                                    wrapperStyles={'pl-2'}
+                                                                    wrapperStyles={'pl-md-2 mb-3'}
                                                                     title={'stackoverflow/saundersb'}/>
                                         </div>
                                     </div>
