@@ -143,6 +143,14 @@ $darker-base-color: #0964b0;
     border-radius: 5px;
 }
 
+.footer {
+    display: flex;
+    min-height: 320px;
+}
+.footer-text {
+    max-width: 50%;
+}
+
 .navbar {
     display: flex;
     min-height: 70px;

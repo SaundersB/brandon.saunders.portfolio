@@ -11,17 +11,12 @@ interface FooterInterface {
 
 const Footer = ({siteTitle}: FooterInterface) => {
     return (
-    <div className={'navbar darker-base-background'}>
-        {/*<div className={'navbar__left_side align-self-center'}>*/}
-        {/*    <div className={'navbar__link'}>*/}
-        {/*        <SocialMediaLinksComponent/>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
-        <div>
-            <FontAwesomeIcon icon={faEnvelope} color={'white'} className={'mt-1 mb-1 mr-2'} />
-            <div className={'align-self-end'}>
-                <a className={'black-text sub-text'} target={'_#'} href={'BrandonNSaunders@gmail.com'}>Email</a>
-            </div>
+    <div className={'footer base-background justify-content-center align-items-center py-5'}>
+        <div className={'white-text footer-text'}>
+            <h3>Interested in hiring me for your project?</h3>
+            Looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at
+            <a className={'alt-hyperlink white-text sub-text'} target={'_#'} href={'mailto:BrandonNSaunders@gmail.com'}> BrandonNSaunders@gmail.com</a>
+            .
         </div>
     </div>);
 }
