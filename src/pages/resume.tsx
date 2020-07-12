@@ -58,7 +58,7 @@ function ResumePage(props: PageProps) {
                                                 <ProfilePhoto/>
                                             </div>
                                         </div>
-                                        <div className={'col-md-5 p-0 pl-4 justify-content-between d-flex flex-column'}>
+                                        <div className={'col-md-5 ml-md-auto pl-md-4 justify-content-between d-flex flex-column'}>
                                             <div className={'mt-2'}>
                                                 <div
                                                     className={'row pb-2 justify-content-md-start justify-content-center'}>
