@@ -20,7 +20,7 @@ export default function Welcome() {
                     className="col-xs-12 col-md-7 p-0 p-md-1 p-sm-0 m-auto ml-md-0 mb-auto mt-auto
                                 text-md-left text-sm-center text-center align-self-center">
                     <div className="col align-content-between">
-                        <div className={'default-text white-text header-two'}>
+                        <div className={'default-text white-text header-two p-2 m-2'}>
                             Hello. My name is<br/>
                             <div className={'default-text white-text header'}>
                                 Brandon Saunders.
