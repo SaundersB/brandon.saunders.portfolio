@@ -13,7 +13,7 @@ export default function ProjectCategorySelectorComponent({data}: any) {
             <div className={'inner-content-wrapper p-auto m-auto'}>
                 <div
                     key={'project-category-section' }
-                    className={'d-flex flex-row justify-content-space-between flex-wrap align-items-stretch'}>
+                    className={'pt-md-3 d-flex flex-row justify-content-space-between flex-wrap align-items-stretch'}>
                     {
                         getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
                     }
