@@ -223,6 +223,7 @@ $blended-color: #58729c;
 }
 
 .hyperlink:hover {
+    cursor: pointer;
     color: $base-color;
     text-decoration: none;
 }
