@@ -5,7 +5,9 @@ import SEO from "../components/seo"
 import Experience from "../lib/entities/Experience";
 import ProfilePhoto from "../components/common/ProfilePhoto";
 import ResumeLinkComponent from "../components/common/ResumeLinkComponent";
+
 import { faGithub, faLinkedin, faWpexplorer, faPhp, faTelegram, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 function parseEmploymentData(data: any): any {
     let companies: any = [];
@@ -70,10 +72,10 @@ function ResumePage(props: PageProps) {
                                                 </div>
                                             </div>
                                             <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'}
-                                                                 icon={faTelegram}
+                                                                 icon={faEnvelope}
                                                                  title={'BrandonNSaunders@gmail.com'}/>
                                             <ResumeLinkComponent link={'#'} title={'626-991-9323'}
-                                                                 icon={faPhp}
+                                                                 icon={faPhone}
                                             />
                                         </div>
                                         <div className={'col-md-4 mb-md-1 mb-sm-4 mb-4 justify-content-around d-flex flex-column'}>
@@ -84,7 +86,7 @@ function ResumePage(props: PageProps) {
                                                                  icon={faGithub}
                                                                  title={'github.com/in/SaundersB'}/>
                                             <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
-                                                                 icon={faWpexplorer}
+                                                                 icon={faHome}
                                                                  title={'brandonsaundersportfolio.com'}/>
                                             <ResumeLinkComponent
                                                 link={'https://stackoverflow.com/users/2466819/saundersb'}
