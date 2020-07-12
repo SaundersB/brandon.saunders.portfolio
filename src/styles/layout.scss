@@ -86,6 +86,11 @@ $darker-base-color: #0964b0;
     color: #ffffff;
 }
 
+.white-text:hover {
+    color: $base-color;
+    text-decoration: none;
+}
+
 .black-text {
     color: #000000;
 }
