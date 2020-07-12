@@ -15,7 +15,7 @@ export const query = graphql`
     }
 `
 
-export default function ProfilePhoto() {
+export default function ProfilePhoto(props: {customStyles?: string}) {
 
     return (
         <StaticQuery
@@ -24,7 +24,7 @@ export default function ProfilePhoto() {
             render={(data) => (
                 <Img key={'image'}
                      fluid={data.fileName.childImageSharp.fluid}
-                     className={'profile-image'}
+                     className={'profile-image ' + props.customStyles}
                 />
             )
             }
