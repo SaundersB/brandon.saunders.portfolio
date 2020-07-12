@@ -58,6 +58,11 @@ $blended-color: #58729c;
     word-wrap: break-word;
 }
 
+.row-no-wrap {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .default-text {
     @extend %site-font;
     text-decoration: none;
@@ -214,16 +219,7 @@ $blended-color: #58729c;
 }
 
 .hyperlink {
-    /* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
-    -ms-word-break: break-all;
-    word-break: break-all;
-    /* Non standard for webkit */
-    word-break: break-word;
 
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
     color: white;
 }
 

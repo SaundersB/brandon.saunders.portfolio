@@ -50,7 +50,7 @@ function ResumePage(props: PageProps) {
                     console.log(experiences);
                     return (
                         <div className={'row gradient justify-content-center align-content-center'}>
-                            <div className={'content-wrapper m-md-5 white-background'}>
+                            <div className={'content-wrapper mt-md-4 white-background'}>
                                 <div className={'col'}>
                                     <div className={'row base-background'}>
                                         <div className={'col-md-3'}>
@@ -58,40 +58,48 @@ function ResumePage(props: PageProps) {
                                                 <ProfilePhoto/>
                                             </div>
                                         </div>
-                                        <div className={'col-md-4 justify-content-around d-flex flex-column'}>
-                                            <div
-                                                className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
-                                                <div className={'header white-text bold-text'}>
-                                                    BRANDON SAUNDERS
+                                        <div className={'col-md-4 pl-4 justify-content-between d-flex flex-column'}>
+                                            <div className={'mt-2'}>
+                                                <div
+                                                    className={'row pb-2 justify-content-md-start justify-content-center'}>
+                                                    <div className={'header white-text bold-text'}>
+                                                        BRANDON SAUNDERS
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className={'row justify-content-md-start justify-content-center'}>
+                                                    <div className={'header-two white-text'}>
+                                                        Full Stack Software Engineer
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div
-                                                className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
-                                                <div className={'header-two white-text'}>
-                                                    Full Stack Software Engineer
-                                                </div>
+                                            <div>
+                                                <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'}
+                                                                     icon={faEnvelope}
+                                                                     title={'BrandonNSaunders@gmail.com'}/>
+                                                <ResumeLinkComponent link={'#'} title={'626-991-9323'}
+                                                                     icon={faPhone}
+                                                />
                                             </div>
-                                            <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'}
-                                                                 icon={faEnvelope}
-                                                                 title={'BrandonNSaunders@gmail.com'}/>
-                                            <ResumeLinkComponent link={'#'} title={'626-991-9323'}
-                                                                 icon={faPhone}
-                                            />
                                         </div>
-                                        <div className={'col-md-5 mb-md-1 mb-sm-4 mb-4 justify-content-around d-flex flex-column'}>
+                                        <div className={'col-md-5 ml-md-auto pt-2 mt-2'}>
                                             <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
                                                                  icon={faLinkedin}
+                                                                 wrapperStyles={'pl-2'}
                                                                  title={'linkedin.com/in/saundersbrandon'}/>
                                             <ResumeLinkComponent link={'https://github.com/SaundersB'}
                                                                  icon={faGithub}
+                                                                 wrapperStyles={'pl-2'}
                                                                  title={'github.com/in/SaundersB'}/>
                                             <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
                                                                  icon={faHome}
+                                                                 wrapperStyles={'pl-2'}
                                                                  title={'brandonsaundersportfolio.com'}/>
                                             <ResumeLinkComponent
-                                                link={'https://stackoverflow.com/users/2466819/saundersb'}
-                                                icon={faStackOverflow}
-                                                title={'stackoverflow/saundersb'}/>
+                                                                    link={'https://stackoverflow.com/users/2466819/saundersb'}
+                                                                    icon={faStackOverflow}
+                                                                    wrapperStyles={'pl-2'}
+                                                                    title={'stackoverflow/saundersb'}/>
                                         </div>
                                     </div>
                                     <div className={'row p-2'}>

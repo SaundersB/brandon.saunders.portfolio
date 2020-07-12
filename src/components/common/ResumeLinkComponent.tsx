@@ -6,13 +6,14 @@ interface ResumeLinkPropsInterface {
     link: string;
     title: string;
     icon: any;
+    wrapperStyles?: string;
 }
 
 export default function ResumeLinkComponent(props: ResumeLinkPropsInterface){
     return (
-        <div className={'row justify-content-md-start justify-content-center'}>
-            <FontAwesomeIcon icon={props.icon} className={'m-2'}/>
-            <div className={'align-self-end mb-1'}>
+        <div className={'row mb-3 justify-content-md-start justify-content-center ' + props.wrapperStyles}>
+            <FontAwesomeIcon icon={props.icon} className={'mt-1 mb-1 mr-1'}/>
+            <div className={'align-self-end'}>
                 <a className={'hyperlink sub-text'} target={'_#'} href={props.link}>{props.title}</a>
             </div>
         </div>
