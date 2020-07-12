@@ -34,11 +34,11 @@ export default function Welcome() {
                             <div>Check out my <Link className={'default-text white-text header-two alt-hyperlink'}
                                                     style={{
                                                         cursor: 'pointer'
-                                                    }} to={'/projects'}>
+                                                    }} to={'/projects/'}>
                                 projects
                             </Link> and <Link className={'default-text white-text header-two alt-hyperlink'} style={{
                                 cursor: 'pointer'
-                            }} to={'/resume'}>
+                            }} to={'/resume/'}>
                                 resume.
                             </Link></div>
                             <Link className={'default-text white-text header-two alt-hyperlink'}
@@ -58,7 +58,7 @@ export default function Welcome() {
                         about
                         my experience? <Link className={'default-text white-background-hyperlink'} style={{
                         cursor: 'pointer'
-                    }} to={'/resume'}>Check out my online resume</Link>
+                    }} to={'/resume/'}>Check out my online resume</Link>
                 </div>
                 <div className={'row p-5'}>
                     <div className={'col-md-4'}>
