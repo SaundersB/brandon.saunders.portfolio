@@ -1,5 +1,4 @@
 import * as React from "react";
-import IconComponent from "./IconComponent";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface ResumeLinkPropsInterface {
