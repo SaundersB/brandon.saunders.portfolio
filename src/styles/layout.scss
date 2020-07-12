@@ -3,6 +3,7 @@ $base-color: #3f9eeb;
 $inactive-color: #a9a9a9;
 $blended-color: #58729c;
 $darker-base-color: #0964b0;
+$shade-darker-white: #eceef0;
 
 %site-font {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -24,6 +25,10 @@ $darker-base-color: #0964b0;
     min-width: 100vw;
 }
 
+.full-width {
+    min-width: 100vw;
+}
+
 .darker-base-background {
     background-color: $darker-base-color;
 }
@@ -42,6 +47,10 @@ $darker-base-color: #0964b0;
 
 .white-background {
     background-color: white;
+}
+
+.shade-darker-white-background {
+    background-color: $shade-darker-white;
 }
 
 .left-align-text {
@@ -114,6 +123,11 @@ $darker-base-color: #0964b0;
 .circle:before {
     content: ' \25CF';
     font-size: 15px;
+}
+
+.large-header {
+    @extend %site-font;
+    font-size: 3rem
 }
 
 .header {
@@ -206,6 +220,10 @@ $darker-base-color: #0964b0;
     max-width: 1080px;
 }
 
+.secondary-inner-wrapper {
+    max-width: 80%;
+}
+
 .project-category-button-wrapper {
     @extend %box-shadow;
     background-color: white;
@@ -254,6 +272,16 @@ $darker-base-color: #0964b0;
 
 
 .alt-hyperlink:hover {
+    cursor: pointer;
+    color: $darker-base-color;
+    text-decoration: none;
+}
+
+.white-background-hyperlink {
+    color: $base-color;
+}
+
+.white-background-hyperlink:hover {
     cursor: pointer;
     color: $darker-base-color;
     text-decoration: none;

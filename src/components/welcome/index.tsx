@@ -7,7 +7,7 @@ export default function Welcome() {
     return (
         <div
             className={'flex-fill d-flex row base-background full-size justify-content-center align-content-center'}>
-            <div className={'row'}>
+            <div className={'row py-5 my-5'}>
                 <div className={'col-md-2'}/>
                 <div className="col-xs-12 col-md-2 p-md-2 p-xs-0
                                 align-self-center
@@ -22,16 +22,17 @@ export default function Welcome() {
                     <div className="col align-content-between">
                         <div className={'default-text white-text header-two p-2 m-2'}>
                             Hello. My name is<br/>
-                            <div className={'default-text white-text header'}>
+                            <div className={'default-text white-text large-header bold-text'}>
                                 Brandon Saunders.
                             </div>
                             I'm a full-stack developer specialized in frontend and backend development for complex
                             scalable web apps. <br/>
-                            <div>Check out my <Link  className={'default-text white-text header-two alt-hyperlink'} style={{
-                                cursor: 'pointer'
-                            }} to={'/projects'}>
+                            <div>Check out my <Link className={'default-text white-text header-two alt-hyperlink'}
+                                                    style={{
+                                                        cursor: 'pointer'
+                                                    }} to={'/projects'}>
                                 projects
-                            </Link> and <Link  className={'default-text white-text header-two alt-hyperlink'} style={{
+                            </Link> and <Link className={'default-text white-text header-two alt-hyperlink'} style={{
                                 cursor: 'pointer'
                             }} to={'/resume'}>
                                 resume.
@@ -43,7 +44,19 @@ export default function Welcome() {
                         </div>
                     </div>
                 </div>
-                <div className={'col-md-1'}/>
             </div>
+            <div className={'flex-fill shade-darker-white-background d-flex p-5 row white-background'}>
+                <div className={'secondary-inner-wrapper text-center m-auto'}>
+                    <h2>Skills Overview</h2>
+                        I have more than 5 years' experience building rich web applications for several clients and
+                        businesses.
+                        Below is a quick overview of my main technical skill sets and tools I use. Want to find out more
+                        about
+                        my experience? <Link className={'default-text white-background-hyperlink'} style={{
+                        cursor: 'pointer'
+                    }} to={'/resume'}>Check out my online resume</Link>
+                </div>
+            </div>
+            <div className={'col-md-1'}/>
         </div>)
 }
