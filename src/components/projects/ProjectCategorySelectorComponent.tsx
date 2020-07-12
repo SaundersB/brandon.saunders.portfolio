@@ -10,10 +10,16 @@ export default function ProjectCategorySelectorComponent({data}: any) {
     }, []);
     return (
         <div className={'flex-fill pb-2'}>
+            <div className={'base-background text-white py-5'}>
+                <div className={'pl-5'}>
+                    <h1>Projects</h1>
+                    In-depth Case Studies that provide insight into what I can offer and the way I work
+                </div>
+            </div>
             <div className={'inner-content-wrapper p-auto m-auto'}>
                 <div
                     key={'project-category-section' }
-                    className={'pt-2 d-flex flex-row justify-content-space-between flex-wrap align-items-stretch'}>
+                    className={'py-2 d-flex flex-row justify-content-space-between flex-wrap align-items-stretch'}>
                     {
                         getCategoryComponents(projectsByCategory, setSelectedCategoryKey)
                     }
