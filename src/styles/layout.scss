@@ -164,6 +164,11 @@ $darker-base-color: #0964b0;
     display: none;
 }
 
+.active {
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+}
+
 @media only screen and (max-width: 768px) {
     .navbar__items,
     .navbar {

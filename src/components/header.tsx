@@ -17,21 +17,30 @@ const Header = ({siteTitle}: HeaderInterface) => {
     return (
     <div className={'navbar darker-base-background align-content-start'}>
         <ul className={'navbar__items pl-0 m-0'}>
-            <Link
-                to="/"
-                className={'header white-text hyperlink'}>
-                About
-            </Link>
-            <Link
-                to="/projects"
-                className={'pl-md-4 header white-text hyperlink'}>
-                Projects
-            </Link>
-            <Link
-                to="/resume"
-                className={'pl-md-4 header white-text hyperlink'}>
-                Resume
-            </Link>
+            <div>
+                <Link
+                    to="/"
+                    activeClassName="active"
+                    className={'header white-text hyperlink'}>
+                    About
+                </Link>
+            </div>
+            <div className={'pl-md-4'}>
+                <Link
+                    to="/projects/"
+                    activeClassName="active"
+                    className={'header white-text hyperlink'}>
+                    Projects
+                </Link>
+            </div>
+            <div className={'pl-md-4'}>
+                <Link
+                    to="/resume/"
+                    activeClassName="active"
+                    className={'header white-text hyperlink'}>
+                    Resume
+                </Link>
+            </div>
         </ul>
         <div className=" navbar__link-toggle p-2">
             <FontAwesomeIcon icon={faBars} color={'white'} className="fas fa-bars" onClick={() => classToggle()}/>
