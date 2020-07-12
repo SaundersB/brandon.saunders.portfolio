@@ -58,7 +58,7 @@ function ResumePage(props: PageProps) {
                                                 <ProfilePhoto/>
                                             </div>
                                         </div>
-                                        <div className={'col-md-5 justify-content-around d-flex flex-column'}>
+                                        <div className={'col-md-4 justify-content-around d-flex flex-column'}>
                                             <div
                                                 className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
                                                 <div className={'header white-text bold-text'}>
@@ -78,7 +78,7 @@ function ResumePage(props: PageProps) {
                                                                  icon={faPhone}
                                             />
                                         </div>
-                                        <div className={'col-md-4 mb-md-1 mb-sm-4 mb-4 justify-content-around d-flex flex-column'}>
+                                        <div className={'col-md-5 mb-md-1 mb-sm-4 mb-4 justify-content-around d-flex flex-column'}>
                                             <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
                                                                  icon={faLinkedin}
                                                                  title={'linkedin.com/in/saundersbrandon'}/>

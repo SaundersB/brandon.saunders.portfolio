@@ -10,11 +10,10 @@ interface ResumeLinkPropsInterface {
 
 export default function ResumeLinkComponent(props: ResumeLinkPropsInterface){
     return (
-        <div className={'row ml-1 pt-2 justify-content-md-start justify-content-center align-self-start'}>
-            <FontAwesomeIcon icon={props.icon} />
-            {/*<IconComponent iconData={props.iconData}/>*/}
-            <div className={'align-self-end'}>
-                <a className={'hyperlink'} target={'_#'} href={props.link}>{props.title}</a>
+        <div className={'row justify-content-md-start justify-content-center'}>
+            <FontAwesomeIcon icon={props.icon} className={'m-2'}/>
+            <div className={'align-self-end mb-1'}>
+                <a className={'hyperlink sub-text'} target={'_#'} href={props.link}>{props.title}</a>
             </div>
         </div>
     )
