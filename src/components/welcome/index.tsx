@@ -1,7 +1,6 @@
 import React from 'react';
-import {graphql, Link, StaticQuery} from "gatsby";
+import {Link} from "gatsby";
 import {SocialMediaConstants} from "../common/SocialMediaConstants";
-import Img from "gatsby-image/withIEPolyfill"
 import ProfilePhoto from "../common/ProfilePhoto";
 
 export default function Welcome() {
