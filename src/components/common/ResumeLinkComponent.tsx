@@ -7,7 +7,7 @@ interface ResumeLinkPropsInterface {
 
 export default function ResumeLinkComponent(props: ResumeLinkPropsInterface){
     return (
-        <div className={'row ml-1 justify-content-md-start justify-content-center'}>
+        <div className={'row ml-1 pt-2 justify-content-md-start justify-content-center'}>
             <a className={'hyperlink'} target={'_#'} href={props.link}>{props.title}</a>
         </div>
     )

@@ -72,7 +72,7 @@ function ResumePage(props: PageProps) {
                                                                  title={'BrandonNSaunders@gmail.com'}/>
                                             <ResumeLinkComponent link={'#'} title={'626-991-9323'}/>
                                         </div>
-                                        <div className={'col-md-4 mb-3 justify-content-around d-flex flex-column'}>
+                                        <div className={'col-md-4 mb-md-1 mb-sm-4 mb-4 justify-content-around d-flex flex-column'}>
                                             <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
                                                                  title={'linkedin.com/in/saundersbrandon'}/>
                                             <ResumeLinkComponent link={'https://github.com/SaundersB'}
