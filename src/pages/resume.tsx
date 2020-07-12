@@ -56,17 +56,20 @@ function ResumePage(props: PageProps) {
                                             </div>
                                         </div>
                                         <div className={'col-md-5 justify-content-around d-flex flex-column'}>
-                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
+                                            <div
+                                                className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
                                                 <div className={'header white-text bold-text'}>
                                                     BRANDON SAUNDERS
                                                 </div>
                                             </div>
-                                            <div className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
+                                            <div
+                                                className={'row pb-2 ml-1 justify-content-md-start justify-content-center'}>
                                                 <div className={'header-two white-text'}>
                                                     Full Stack Software Engineer
                                                 </div>
                                             </div>
-                                            <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'} title={'BrandonNSaunders@gmail.com'}/>
+                                            <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'}
+                                                                 title={'BrandonNSaunders@gmail.com'}/>
                                             <ResumeLinkComponent link={'#'} title={'626-991-9323'}/>
                                         </div>
                                         <div className={'col-md-4 mb-3 justify-content-around d-flex flex-column'}>
@@ -76,17 +79,21 @@ function ResumePage(props: PageProps) {
                                                                  title={'github.com/in/SaundersB'}/>
                                             <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
                                                                  title={'brandonsaundersportfolio.com'}/>
-                                             <ResumeLinkComponent link={'https://stackoverflow.com/users/2466819/saundersb'}
-                                                                  title={'stackoverflow/saundersb'}/>
+                                            <ResumeLinkComponent
+                                                link={'https://stackoverflow.com/users/2466819/saundersb'}
+                                                title={'stackoverflow/saundersb'}/>
                                         </div>
                                     </div>
                                     <div className={'row'}>
                                         <div className={'col p-2'}>
                                             <div className={'header'}>Career Summary</div>
                                             <div>Full stack software engineer with 5 years of experience building
-                                                professional web and mobile applications, back- end cloud infrastructure,
-                                                DevOps pipelines, and unique software experiences. Skilled with developing
-                                                software in HIPAA and PCI DSS regulated industries to ensure highly secure
+                                                professional web and mobile applications, back- end cloud
+                                                infrastructure,
+                                                DevOps pipelines, and unique software experiences. Skilled with
+                                                developing
+                                                software in HIPAA and PCI DSS regulated industries to ensure highly
+                                                secure
                                                 software systems.
                                             </div>
                                         </div>

@@ -14,7 +14,7 @@ export default function Welcome() {
                                 align-self-center
                                 justify-self-center">
                     <div className={'row justify-content-md-start justify-content-center'}>
-                        <ProfilePhoto customStyles={'resume-image'}/>
+                        <ProfilePhoto customStyles={'welcome-profile-image'}/>
                     </div>
                 </div>
                 <div
