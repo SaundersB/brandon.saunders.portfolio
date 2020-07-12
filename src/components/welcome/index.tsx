@@ -27,16 +27,16 @@ export default function Welcome() {
                             </div>
                             I'm a full-stack developer specialized in frontend and backend development for complex
                             scalable web apps. <br/>
-                            <div>Check out my <Link  className={'default-text white-text header-two'} style={{
+                            <div>Check out my <Link  className={'default-text white-text header-two alt-hyperlink'} style={{
                                 cursor: 'pointer'
                             }} to={'/projects'}>
                                 projects
-                            </Link> and <Link  className={'default-text white-text header-two'} style={{
+                            </Link> and <Link  className={'default-text white-text header-two alt-hyperlink'} style={{
                                 cursor: 'pointer'
                             }} to={'/resume'}>
                                 resume.
                             </Link></div>
-                            <Link className={'default-text white-text header-two'}
+                            <Link className={'default-text white-text header-two alt-hyperlink'}
                                   onClick={() => window.open(SocialMediaConstants.EMAIL)} to={'/'}>
                                 <div>Let's work together.</div>
                             </Link>

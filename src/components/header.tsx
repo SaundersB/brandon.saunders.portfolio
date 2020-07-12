@@ -29,17 +29,17 @@ const Header = ({siteTitle}: HeaderInterface) => {
         <ul className={'navbar__items navbar__right_side m-auto p-auto'}>
             <Link
                 to="/"
-                className={'navbar__link header white-text'}>
+                className={'navbar__link header white-text hyperlink'}>
                 About
             </Link>
             <Link
                 to="/projects"
-                className={'navbar__link header white-text'}>
+                className={'navbar__link header white-text hyperlink'}>
                 Projects
             </Link>
             <Link
                 to="/resume"
-                className={'navbar__link header white-text'}>
+                className={'navbar__link header white-text hyperlink'}>
                 Resume
             </Link>
         </ul>

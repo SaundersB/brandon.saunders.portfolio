@@ -86,11 +86,6 @@ $darker-base-color: #0964b0;
     color: #ffffff;
 }
 
-.white-text:hover {
-    color: $base-color;
-    text-decoration: none;
-}
-
 .black-text {
     color: #000000;
 }
@@ -240,6 +235,17 @@ $darker-base-color: #0964b0;
 .hyperlink:hover {
     cursor: pointer;
     color: $base-color;
+    text-decoration: none;
+}
+
+.alt-hyperlink {
+    color: white;
+}
+
+
+.alt-hyperlink:hover {
+    cursor: pointer;
+    color: $darker-base-color;
     text-decoration: none;
 }
 
