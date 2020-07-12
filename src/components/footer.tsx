@@ -11,8 +11,8 @@ interface FooterInterface {
 
 const Footer = ({siteTitle}: FooterInterface) => {
     return (
-    <div className={'footer base-background justify-content-center align-items-center py-5'}>
-        <div className={'white-text px-5 mx-5 text-center'}>
+    <div className={'footer base-background justify-content-center align-items-center p-5'}>
+        <div className={'white-text secondary-inner-wrapper text-center'}>
             <h3>Interested in hiring me for your project?</h3>
             Looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at
             <a className={'alt-hyperlink white-text sub-text'} target={'_#'} href={'mailto:BrandonNSaunders@gmail.com'}> BrandonNSaunders@gmail.com</a>
