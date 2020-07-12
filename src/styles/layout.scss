@@ -18,7 +18,7 @@ $blended-color: #58729c;
     height: 15px;
 }
 
-.container {
+.full-size {
     min-height: 100vh;
     min-width: 100vw;
 }
@@ -182,7 +182,7 @@ $blended-color: #58729c;
     background-color: #2f3644
 }
 
-.content-wrapper {
+.inner-content-wrapper {
     max-width: 1080px;
 }
 
@@ -219,7 +219,6 @@ $blended-color: #58729c;
 }
 
 .hyperlink {
-
     color: white;
 }
 
@@ -230,4 +229,8 @@ $blended-color: #58729c;
 
 .no-bullets {
     list-style-type: none;
+}
+
+.hide-overflow {
+    overflow: hidden;
 }

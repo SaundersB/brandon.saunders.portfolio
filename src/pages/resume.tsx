@@ -49,8 +49,8 @@ function ResumePage(props: PageProps) {
                     const experiences = parseEmploymentData(data);
                     console.log(experiences);
                     return (
-                        <div className={'row gradient justify-content-center align-content-center'}>
-                            <div className={'content-wrapper mt-md-4 white-background'}>
+                        <div className={'row gradient full-size justify-content-center align-content-center'}>
+                            <div className={'inner-content-wrapper white-background'}>
                                 <div className={'col'}>
                                     <div className={'row base-background'}>
                                         <div className={'col-md-3'}>
@@ -58,7 +58,7 @@ function ResumePage(props: PageProps) {
                                                 <ProfilePhoto/>
                                             </div>
                                         </div>
-                                        <div className={'col-md-4 pl-4 justify-content-between d-flex flex-column'}>
+                                        <div className={'col-md-5 p-0 pl-4 justify-content-between d-flex flex-column'}>
                                             <div className={'mt-2'}>
                                                 <div
                                                     className={'row pb-2 justify-content-md-start justify-content-center'}>
@@ -76,30 +76,29 @@ function ResumePage(props: PageProps) {
                                             <div>
                                                 <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'}
                                                                      icon={faEnvelope}
-                                                                     title={'BrandonNSaunders@gmail.com'}/>
+                                                                     title={'Email'}/>
                                                 <ResumeLinkComponent link={'#'} title={'626-991-9323'}
                                                                      icon={faPhone}
                                                 />
                                             </div>
                                         </div>
-                                        <div className={'col-md-5 ml-md-auto pt-2 mt-2'}>
-                                            <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
+                                        <div className={'col-md-4 ml-md-auto pt-2 mt-2'}>                                            <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
                                                                  icon={faLinkedin}
                                                                  wrapperStyles={'pl-md-2'}
-                                                                 title={'linkedin.com/in/saundersbrandon'}/>
+                                                                 title={'LinkedIn'}/>
                                             <ResumeLinkComponent link={'https://github.com/SaundersB'}
                                                                  icon={faGithub}
                                                                  wrapperStyles={'pl-md-2'}
-                                                                 title={'github.com/in/SaundersB'}/>
+                                                                 title={'Github'}/>
                                             <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
                                                                  icon={faHome}
                                                                  wrapperStyles={'pl-md-2'}
-                                                                 title={'brandonsaundersportfolio.com'}/>
+                                                                 title={'Personal Site'}/>
                                             <ResumeLinkComponent
                                                                     link={'https://stackoverflow.com/users/2466819/saundersb'}
                                                                     icon={faStackOverflow}
                                                                     wrapperStyles={'pl-md-2 mb-3'}
-                                                                    title={'stackoverflow/saundersb'}/>
+                                                                    title={'Stack Overflow'}/>
                                         </div>
                                     </div>
                                     <div className={'row p-2'}>

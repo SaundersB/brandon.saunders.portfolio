@@ -10,7 +10,7 @@ export default function ProjectCategorySelectorComponent({data}: any) {
     }, []);
     return (
         <div className={'flex-fill base-background pb-2'}>
-            <div className={'content-wrapper p-auto m-auto'}>
+            <div className={'inner-content-wrapper p-auto m-auto'}>
                 <div
                     key={'project-category-section' }
                     className={'d-flex flex-row justify-content-space-between flex-wrap align-items-stretch'}>

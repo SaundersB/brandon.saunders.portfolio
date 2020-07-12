@@ -6,7 +6,7 @@ import ProfilePhoto from "../common/ProfilePhoto";
 export default function Welcome() {
     return (
         <div
-            className={'flex-fill d-flex row gradient container justify-content-center align-content-center'}>
+            className={'flex-fill d-flex row gradient full-size justify-content-center align-content-center'}>
             <div className={'row'}>
                 <div className={'col-md-2'}/>
                 <div className="col-xs-12 col-md-2 p-md-2 p-xs-0
