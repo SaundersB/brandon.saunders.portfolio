@@ -31,7 +31,7 @@ export default function ProjectComponent(props: ProjectComponentInterface) {
                 />
                 <div key={'project-name-' + projectObj.name}
                      className={'p-2 default-text text-center black-text header'}>
-                    {projectObj.name.toUpperCase() + ' | ' + year}
+                    {projectObj.name + ' | ' + year}
                 </div>
                 <ProjectSection title={'DETAILS'}>
                     <div className={'d-flex row p-2 flex-wrap'}>

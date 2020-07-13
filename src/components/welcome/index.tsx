@@ -50,7 +50,7 @@ export default function Welcome() {
                 </div>
             </div>
             <div className={'flex-column flex-fill shade-darker-white-background d-flex p-5 row'}>
-                <div className={'secondary-inner-wrapper text-center m-auto'}>
+                <div className={'secondary-inner-wrapper text-center m-auto default-text'}>
                     <h2>Skills Overview</h2>
                         I have more than 5 years' experience building rich web applications for several clients and
                         businesses.
@@ -64,13 +64,13 @@ export default function Welcome() {
                     <div className={'col-md-4'}>
                         <CardComponent children={
                             <div className={'my-3'}>
-                                <h3 className={'text-center'}>Front end</h3>
+                                <h3 className={'text-center default-text'}>Front end</h3>
                                 <ul className={'center-unordered-list no-bullets pl-2'}>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />React/Redux</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />JavaScript</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Vue</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Node.js</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />HTML/CSS/SCSS</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />React/Redux</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />JavaScript</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Vue</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Node.js</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />HTML/CSS/SCSS</li>
                                 </ul>
                             </div>
                         }/>
@@ -78,14 +78,14 @@ export default function Welcome() {
                     <div className={'col-md-4'}>
                         <CardComponent children={
                             <div className={'my-3'}>
-                                <h3 className={'text-center'}>Back end</h3>
+                                <h3 className={'text-center default-text'}>Back end</h3>
                                 <ul className={'center-unordered-list no-bullets pl-2'}>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />PHP</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Python</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Node.js</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Java</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />MySQL</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />MongoDB</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />PHP</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Python</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Node.js</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Java</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />MySQL</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />MongoDB</li>
                                 </ul>
                             </div>
                         }/>
@@ -93,14 +93,14 @@ export default function Welcome() {
                     <div className={'col-md-4'}>
                         <CardComponent children={
                             <div className={'my-3'}>
-                                <h3 className={'text-center'}>Others</h3>
+                                <h3 className={'text-center default-text'}>Others</h3>
                                 <ul className={'center-unordered-list no-bullets pl-2'}>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />DevOps</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />AWS Certified</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Automated Testing</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Product Development</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Agile</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Scrum Certified</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />DevOps</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />AWS Certified</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Automated Testing</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Product Development</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Agile</li>
+                                    <li className={'default-text'}><FontAwesomeIcon icon={faCheckCircle} color={baseColor} className={'mr-2'} />Scrum Certified</li>
                                 </ul>
                             </div>
                         }/>

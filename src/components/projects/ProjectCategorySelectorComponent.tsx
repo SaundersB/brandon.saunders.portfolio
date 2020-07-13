@@ -11,9 +11,11 @@ export default function ProjectCategorySelectorComponent({data}: any) {
     return (
         <div className={'flex-fill pb-2'}>
             <div className={'base-background text-white py-5'}>
-                <div className={'pl-5'}>
+                <div className={'pl-5  default-text'}>
                     <h1>Projects</h1>
-                    In-depth Case Studies that provide insight into what I can offer and the way I work
+                    <div>
+                        In-depth Case Studies that provide insight into what I can offer and the way I work
+                    </div>
                 </div>
             </div>
             <div className={'inner-content-wrapper p-auto m-auto'}>

@@ -103,7 +103,7 @@ function ResumePage(props: PageProps) {
                                     <div className={'row p-2'}>
                                         <div className={'col'}>
                                             <div className={'header'}>Career Summary</div>
-                                            <div>Full stack software engineer with 5 years of experience building
+                                            <div className={'default-text'}>Full stack software engineer with 5 years of experience building
                                                 professional web and mobile applications, back-end cloud
                                                 infrastructure,
                                                 DevOps pipelines, and unique software experiences. Skilled with
@@ -141,12 +141,12 @@ function ResumePage(props: PageProps) {
                                                                 -
                                                                 <div>{experienceObj.endDate}</div>
                                                             </div>
-                                                            <div className={'row justify-content-start pt-2'}>
+                                                            <div className={'row justify-content-start pt-2 default-text'}>
                                                                 {experienceObj.description}
                                                             </div>
                                                             {experienceObj.achievements && <div className={'row pt-2'}>
                                                                 <div className={'header-two'}>Achievements</div>
-                                                                <div>{experienceObj.achievements}</div>
+                                                                <div className={'default-text'}>{experienceObj.achievements}</div>
                                                             </div>}
                                                             <div className={'row pt-2'}>
                                                                 <div className={'header-two'}>Technologies Used</div>
