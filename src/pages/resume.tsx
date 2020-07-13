@@ -167,7 +167,7 @@ function ResumePage(props: PageProps) {
                                         <div className={'col pb-4 flex-wrap'}>
                                             <div className={'header'}>Education</div>
                                             <div className={'row justify-content-between p-auto m-auto'}>
-                                                <div className={'header-two'}>Bachelor of Science, Computer Science - 2016</div>
+                                                <div className={'header-two bold-text'}>Bachelor of Science, Computer Science - 2016</div>
                                                 <div className={'header-three'}>
                                                     California State University of San Bernardino
                                                 </div>
