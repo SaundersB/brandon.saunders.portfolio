@@ -191,6 +191,7 @@ $shade-darker-white: #eceef0;
     .navbar__items,
     .navbar {
         flex-direction: column;
+        justify-content: center;
     }
     .navbar__items {
         align-items: start;

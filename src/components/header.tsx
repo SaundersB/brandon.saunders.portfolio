@@ -43,7 +43,7 @@ const Header = ({siteTitle}: HeaderInterface) => {
             </div>
         </ul>
         <div className="navbar__link-toggle m-auto p-auto" >
-            <FontAwesomeIcon icon={faBars} size={'2x'} color={'white'} className="fas fa-bars " onClick={() => classToggle()}/>
+            <FontAwesomeIcon icon={faBars} size={'2x'} color={'white'} className="fas fa-bars m-auto" onClick={() => classToggle()}/>
         </div>
     </div>);
 }
