@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import "../styles/layout.scss"
 import Header from "./header";
 import Footer from "./footer";
+import {Helmet} from "react-helmet";
+
 
 interface LayoutInterface {
     children: any
@@ -19,6 +21,9 @@ const Layout = ({children}: LayoutInterface) => {
     return (
         <>
             <div>
+                <Helmet>
+                    <link rel="icon" href={'../image/favicon.ico'} />
+                </Helmet>
                 <Header/>
                 <main>{children}</main>
                 <Footer/>
