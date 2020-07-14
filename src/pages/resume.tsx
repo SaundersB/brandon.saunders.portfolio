@@ -6,7 +6,14 @@ import Experience from "../lib/entities/Experience";
 import ProfilePhoto from "../components/common/ProfilePhoto";
 import ResumeLinkComponent from "../components/common/ResumeLinkComponent";
 
-import { faGithub, faLinkedin, faWpexplorer, faPhp, faTelegram, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
+import {
+    faGithub,
+    faLinkedin,
+    faWpexplorer,
+    faPhp,
+    faTelegram,
+    faStackOverflow
+} from '@fortawesome/free-brands-svg-icons'
 import {faEnvelope, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 function parseEmploymentData(data: any): any {
@@ -48,7 +55,8 @@ function ResumePage(props: PageProps) {
                 render={(data) => {
                     const experiences = parseEmploymentData(data);
                     console.log(experiences);
-                    return (<div className={'row white-background full-size justify-content-center align-content-center pb-4'}>
+                    return (<div
+                            className={'row white-background full-size justify-content-center align-content-center pb-4'}>
                             <div className={'inner-content-wrapper content-card white-background mt-lg-4'}>
                                 <div className={'col'}>
                                     <div className={'row base-background'}>
@@ -57,10 +65,11 @@ function ResumePage(props: PageProps) {
                                                 <ProfilePhoto/>
                                             </div>
                                         </div>
-                                        <div className={'col-md-5 ml-md-auto pl-md-4 justify-content-between d-flex flex-column'}>
+                                        <div
+                                            className={'col-md-5 ml-md-auto pl-md-4 justify-content-between d-flex flex-column'}>
                                             <div className={'mt-2'}>
                                                 <div
-                                                    className={'row pb-2 justify-content-md-start justify-content-center'}>
+                                                    className={'row pb-md-2 justify-content-md-start justify-content-center'}>
                                                     <div className={'header white-text bold-text'}>
                                                         BRANDON SAUNDERS
                                                     </div>
@@ -73,37 +82,44 @@ function ResumePage(props: PageProps) {
                                                 </div>
                                             </div>
                                             <div>
-                                                <ResumeLinkComponent link={'mailto:BrandonNSaunders@gmail.com'}
-                                                                     icon={faEnvelope}
-                                                                     title={'Email'}/>
-                                                <ResumeLinkComponent link={'#'} title={'626-991-9323'}
-                                                                     icon={faPhone}
+                                                <ResumeLinkComponent
+                                                    link={'mailto:BrandonNSaunders@gmail.com'}
+                                                    icon={faEnvelope}
+                                                    title={'Email'}/>
+                                                <ResumeLinkComponent
+                                                    link={'#'} title={'626-991-9323'}
+                                                    icon={faPhone}
                                                 />
                                             </div>
                                         </div>
-                                        <div className={'col-md-4 ml-md-auto pt-2 mt-2'}>                                            <ResumeLinkComponent link={'https://www.linkedin.com/in/saundersbrandon/'}
-                                                                 icon={faLinkedin}
-                                                                 wrapperStyles={'pl-md-2'}
-                                                                 title={'LinkedIn'}/>
-                                            <ResumeLinkComponent link={'https://github.com/SaundersB'}
-                                                                 icon={faGithub}
-                                                                 wrapperStyles={'pl-md-2'}
-                                                                 title={'Github'}/>
-                                            <ResumeLinkComponent link={'https://brandonsaundersportfolio.com'}
-                                                                 icon={faHome}
-                                                                 wrapperStyles={'pl-md-2'}
-                                                                 title={'Personal Site'}/>
+                                        <div className={'col-md-4 ml-md-auto pt-2 mt-2'}>
                                             <ResumeLinkComponent
-                                                                    link={'https://stackoverflow.com/users/2466819/saundersb'}
-                                                                    icon={faStackOverflow}
-                                                                    wrapperStyles={'pl-md-2 mb-3'}
-                                                                    title={'Stack Overflow'}/>
+                                                link={'https://www.linkedin.com/in/saundersbrandon/'}
+                                                icon={faLinkedin}
+                                                wrapperStyles={'pl-md-2'}
+                                                title={'LinkedIn'}/>
+                                            <ResumeLinkComponent
+                                                link={'https://github.com/SaundersB'}
+                                                icon={faGithub}
+                                                wrapperStyles={'pl-md-2'}
+                                                title={'Github'}/>
+                                            <ResumeLinkComponent
+                                                link={'https://brandonsaundersportfolio.com'}
+                                                icon={faHome}
+                                                wrapperStyles={'pl-md-2'}
+                                                title={'Personal Site'}/>
+                                            <ResumeLinkComponent
+                                                link={'https://stackoverflow.com/users/2466819/saundersb'}
+                                                icon={faStackOverflow}
+                                                wrapperStyles={'pl-md-2 mb-3'}
+                                                title={'Stack Overflow'}/>
                                         </div>
                                     </div>
                                     <div className={'row p-2'}>
                                         <div className={'col'}>
                                             <div className={'header'}>Career Summary</div>
-                                            <div className={'default-text'}>Full stack software engineer with 5 years of experience building
+                                            <div className={'default-text'}>Full stack software engineer with 5 years of
+                                                experience building
                                                 professional web and mobile applications, back-end cloud
                                                 infrastructure,
                                                 DevOps pipelines, and unique software experiences. Skilled with
@@ -141,12 +157,14 @@ function ResumePage(props: PageProps) {
                                                                 -
                                                                 <div>{experienceObj.endDate}</div>
                                                             </div>
-                                                            <div className={'row justify-content-start pt-2 default-text'}>
+                                                            <div
+                                                                className={'row justify-content-start pt-2 default-text'}>
                                                                 {experienceObj.description}
                                                             </div>
                                                             {experienceObj.achievements && <div className={'row pt-2'}>
                                                                 <div className={'header-two'}>Achievements</div>
-                                                                <div className={'default-text'}>{experienceObj.achievements}</div>
+                                                                <div
+                                                                    className={'default-text'}>{experienceObj.achievements}</div>
                                                             </div>}
                                                             <div className={'row pt-2'}>
                                                                 <div className={'header-two'}>Technologies Used</div>
@@ -167,7 +185,9 @@ function ResumePage(props: PageProps) {
                                         <div className={'col pb-4 flex-wrap'}>
                                             <div className={'header'}>Education</div>
                                             <div className={'row justify-content-between p-auto m-auto'}>
-                                                <div className={'header-two bold-text'}>Bachelor of Science, Computer Science - 2016</div>
+                                                <div className={'header-two bold-text'}>Bachelor of Science, Computer
+                                                    Science - 2016
+                                                </div>
                                                 <div className={'header-three'}>
                                                     California State University of San Bernardino
                                                 </div>
