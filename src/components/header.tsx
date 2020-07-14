@@ -42,8 +42,8 @@ const Header = ({siteTitle}: HeaderInterface) => {
                 </Link>
             </div>
         </ul>
-        <div className=" navbar__link-toggle pr-2 m-2">
-            <FontAwesomeIcon icon={faBars} size={'lg'} color={'white'} className="fas fa-bars " onClick={() => classToggle()}/>
+        <div className="navbar__link-toggle m-auto p-auto" >
+            <FontAwesomeIcon icon={faBars} size={'2x'} color={'white'} className="fas fa-bars " onClick={() => classToggle()}/>
         </div>
     </div>);
 }
