@@ -6,7 +6,7 @@ import Welcome from "../components/welcome";
 function IndexPage() {
     return (
         <Layout>
-            <SEO title="Home"/>
+            <SEO title="Brandon Saunders" description={"Brandon Saunders Portfolio"} lang={"en"}/>
             <Welcome/>
         </Layout>
     );

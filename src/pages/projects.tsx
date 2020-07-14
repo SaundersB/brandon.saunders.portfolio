@@ -41,7 +41,7 @@ export const query = graphql`
 function ProjectsPage(props: PageProps) {
     return (
         <Layout>
-            <SEO title="Projects"/>
+            <SEO title="Projects" description={"Brandon Saunders Projects"} lang={"en"} pathname={props.location.pathname}/>
             <StaticQuery
                 key={'static-query'}
                 query={query}

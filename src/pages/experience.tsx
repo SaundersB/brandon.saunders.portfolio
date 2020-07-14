@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 function ExperiencePage(props: PageProps) {
     return (
         <Layout>
-            <SEO title="Experience"/>
+            <SEO title="About" description={"Brandon Saunders Portfolio"} lang={"en"} pathname={props.location.pathname}/>
             <Link to="/">About</Link>
         </Layout>
     )

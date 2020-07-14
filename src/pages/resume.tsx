@@ -41,7 +41,7 @@ export const experienceQuery = graphql`
 function ResumePage(props: PageProps) {
     return (
         <Layout>
-            <SEO title="Resume"/>
+            <SEO title="Resume" description={"Brandon Saunders Resume"} lang={"en"} pathname={props.location.pathname}/>
             <StaticQuery
                 key={'static-query'}
                 query={experienceQuery}
