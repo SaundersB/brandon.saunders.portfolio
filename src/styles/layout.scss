@@ -169,6 +169,11 @@ $shade-darker-white: #eceef0;
     max-width: 50%;
 }
 
+.middle {
+    display: flex;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
     min-height: 70px;
