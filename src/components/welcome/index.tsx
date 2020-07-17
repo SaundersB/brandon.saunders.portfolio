@@ -10,7 +10,7 @@ export default function Welcome() {
     const baseColor = '';
     return (
         <div
-            className={'flex-fill d-flex row base-background full-size justify-content-center align-content-center'}>
+            className={'container flex-fill d-flex row base-background full-size justify-content-center align-content-center'}>
             <div className={'row py-5 my-5'}>
                 <div className={'col-md-2'}/>
                 <div className="col-xs-12 col-md-2 p-md-2 p-xs-0
