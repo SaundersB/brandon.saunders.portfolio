@@ -63,7 +63,7 @@ export default function Welcome() {
                             cursor: 'pointer'
                         }} to={'/resume/'}>Check out my online resume</Link>
                         </div>
-                        <div className={'row p-5 m-auto'}>
+                        <div className={'row pt-5 p-md-5 m-auto'}>
                             <div className={'col-lg-4'}>
                                 <CardComponent children={
                                     <div className={'my-3'}>
