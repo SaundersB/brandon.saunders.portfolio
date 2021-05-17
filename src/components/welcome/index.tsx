@@ -67,13 +67,25 @@ export default function Welcome() {
                             <div className={'col-lg-4'}>
                                 <CardComponent children={
                                     <div className={'my-3'}>
-                                        <h3 className={'text-center default-text'}>Front end</h3>
+                                        <h3 className={'text-center default-text'}>Front-end</h3>
                                         <ul className={'center-unordered-list no-bullets pl-2'}>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon
                                                     icon={faCheckCircle}
                                                     color={baseColor}
+                                                    className={'mr-2'}/>Web Components
+                                            </li>
+                                            <li className={'default-text'}>
+                                                <FontAwesomeIcon
+                                                    icon={faCheckCircle}
+                                                    color={baseColor}
                                                     className={'mr-2'}/>React/Redux
+                                            </li>
+                                            <li className={'default-text'}>
+                                                <FontAwesomeIcon
+                                                    icon={faCheckCircle}
+                                                    color={baseColor}
+                                                    className={'mr-2'}/>React Native
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon
@@ -85,13 +97,22 @@ export default function Welcome() {
                                                 <FontAwesomeIcon
                                                     icon={faCheckCircle}
                                                     color={baseColor}
-                                                    className={'mr-2'}/>Vue
+                                                    className={'mr-2'}/>TypeScript
+                                            </li>
+                                            <li className={'default-text'}>
+                                                <FontAwesomeIcon
+                                                    icon={faCheckCircle}
+                                                    color={baseColor}
+                                                    className={'mr-2'}/>Vue/Vuex
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon
                                                     icon={faCheckCircle}
                                                     color={baseColor}
                                                     className={'mr-2'}/>Node.js
+                                                    <ul>
+                                                        <li>WebPack</li>
+                                                    </ul>
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon
@@ -106,12 +127,21 @@ export default function Welcome() {
                             <div className={'col-lg-4'}>
                                 <CardComponent children={
                                     <div className={'my-3'}>
-                                        <h3 className={'text-center default-text'}>Back end</h3>
+                                        <h3 className={'text-center default-text'}>Back-end</h3>
                                         <ul className={'center-unordered-list no-bullets pl-2'}>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
                                                                  color={baseColor}
-                                                                 className={'mr-2'}/>PHP
+                                                                 className={'mr-2'}/>JS/TS
+                                            </li>
+                                            <li className={'default-text'}>
+                                                <FontAwesomeIcon icon={faCheckCircle}
+                                                                 color={baseColor}
+                                                                 className={'mr-2'}/>Node.js
+                                                <ul>
+                                                    <li>Lambda v12</li>
+                                                    <li>Commander</li>
+                                                </ul>
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
@@ -121,22 +151,23 @@ export default function Welcome() {
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
                                                                  color={baseColor}
-                                                                 className={'mr-2'}/>Node.js
+                                                                 className={'mr-2'}/>PHP
+                                                <ul>
+                                                    <li>Laravel</li>
+                                                </ul>
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
                                                                  color={baseColor}
                                                                  className={'mr-2'}/>Java
+                                                <ul>
+                                                    Android
+                                                </ul>
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
                                                                  color={baseColor}
                                                                  className={'mr-2'}/>MySQL
-                                            </li>
-                                            <li className={'default-text'}>
-                                                <FontAwesomeIcon icon={faCheckCircle}
-                                                                 color={baseColor}
-                                                                 className={'mr-2'}/>MongoDB
                                             </li>
                                         </ul>
                                     </div>
@@ -155,8 +186,19 @@ export default function Welcome() {
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
                                                                  color={baseColor}
-                                                                 className={'mr-2'}/>AWS
-                                                Certified
+                                                                 className={'mr-2'}/>AWS Certified
+                                                <ul>
+                                                    <li>EC2/ECS</li>
+                                                    <li>Lambda</li>
+                                                    <li>S3/CloudFront</li>
+                                                    <li>RDS</li>
+                                                    <li>CloudFormation</li>
+                                                    <li>ElasticSearch</li>
+                                                    <li>DynamoDB</li>
+                                                    <li>Aurora Serverless</li>
+                                                    <li>Kinesis Data Stream</li>
+                                                    <li>Kinesis Firehose</li>
+                                                </ul>
                                             </li>
                                             <li className={'default-text'}>
                                                 <FontAwesomeIcon icon={faCheckCircle}
